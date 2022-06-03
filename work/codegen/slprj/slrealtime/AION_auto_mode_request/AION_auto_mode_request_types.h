@@ -3,9 +3,9 @@
  *
  * Code generation for model "AION_auto_mode_request".
  *
- * Model version              : 1.93
+ * Model version              : 1.96
  * Simulink Coder version : 9.5 (R2021a) 14-Nov-2020
- * C++ source code generated on : Fri May 27 16:03:47 2022
+ * C++ source code generated on : Fri Jun  3 20:59:46 2022
  *
  * Target selection: slrealtime.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -37,9 +37,7 @@ typedef enum {
 struct AION_Lateral_Control_Info
 {
   Control_request set_LatCtrlReq;
-  real_T set_SteerWhlTorqReq;
   real_T set_SteerAngReq;
-  real_T set_SteerAngSpdLimt;
 };
 
 #endif
@@ -153,57 +151,11 @@ struct ADCU_Info
 struct BCS_Info
 {
   uint8_T get_ABSActiveSt;
-  uint8_T get_ABSFaultSt;
-  uint8_T get_VDCActiveSt;
-  uint8_T get_VDCFaultSt;
   real_T get_VehSpd;
   uint8_T get_VehSpdVD;
-  uint32_T get_FLWheelSpdEdgesSum;
-  uint8_T get_FLWheelSpdEdgesSumVD;
-  uint32_T get_FRWheelSpdEdgesSum;
-  uint8_T get_FRWheelSpdEdgesSumVD;
-  uint32_T get_RLWheelSpdEdgesSum;
-  uint8_T get_RLWheelSpdEdgesSumVD;
-  uint32_T get_RRWheelSpdEdgesSum;
-  uint8_T get_RRWheelSpdEdgesSumVD;
   real_T get_YawRate;
-  real_T get_YawRateOffset;
-  uint8_T get_YawRateSt;
-  uint8_T get_HDCCtrlSt;
-  uint8_T get_HDCErrSt;
-  uint8_T get_AEBActive;
-  uint8_T get_AEBAvailable;
-  uint8_T get_CDDActive;
-  uint8_T get_CDDAvailable;
-  uint8_T get_CDDFail;
-  real_T get_MasterCylinderPr;
-  real_T get_MasterCylinderPrOffset;
-  uint8_T get_MasterCylinderPrOffsetVD;
-  uint8_T get_MasterCylinderPrVD;
-  uint8_T get_NoBrakeForce;
-  uint8_T get_VehicleStandStillSt;
-  uint8_T get_FLWheelRotatedDirection;
-  uint8_T get_FLWheelRotatedDirectionVD;
-  real_T get_FLWheelSpd;
-  uint8_T get_FLWheelSpdVD;
-  uint8_T get_FRWheelRotatedDirection;
-  uint8_T get_FRWheelRotatedDirectionVD;
-  real_T get_FRWheelSpd;
-  uint8_T get_FRWheelSpdVD;
-  uint8_T get_RLWheelRotatedDirection;
-  uint8_T get_RLWheelRotatedDirectionVD;
-  real_T get_RLWheelSpd;
-  uint8_T get_RLWheelSpdVD;
-  uint8_T get_RRWheelRotatedDirection;
-  uint8_T get_RRWheelRotatedDirectionVD;
-  real_T get_RRWheelSpd;
-  uint8_T get_RRWheelSpdVD;
   real_T get_ActVehLaltrlAccel;
-  uint8_T get_ActVehLaltrlAccelVD;
   real_T get_ActVehLongAccel;
-  uint8_T get_ActVehLongAccelVD;
-  real_T get_VehLaltrlAccelOffset;
-  real_T get_VehLongAccelOffset;
 };
 
 #endif
@@ -250,28 +202,17 @@ typedef enum {
 
 struct VCU_Info
 {
+  uint32_T get_ActVehWheelTorq;
   uint8_T get_GearLeverIntv;
   Drive_status get_VehDrvMod;
   Ready_status get_VehRdySt;
   uint32_T get_VehRng;
-  uint32_T get_ActRecpTorq;
-  uint8_T get_ActRecpTorqSt;
   Gear_status get_CrntGearLvl;
   uint8_T get_CrntGearLvlVD;
-  real_T get_ACCMaxRecpDecel;
-  uint8_T get_ACCMaxRecpDecelVD;
-  uint32_T get_ActVehWheelTorq;
-  uint8_T get_LateralAssistBtnInfo;
-  uint8_T get_LateralAssistBtnInfoVD;
-  uint32_T get_ACCButtInfo;
-  uint8_T get_AccElecECFail;
   real_T get_GasPedalActPst;
-  uint8_T get_GasPedalActPstVD;
+  uint8_T get_AccElecECFail;
   uint32_T get_VehWheelTorqMax;
   uint8_T get_BrkPedalSt;
-  uint8_T get_BrkPedalStVD;
-  real_T get_GasPedalVirtualPst;
-  uint8_T get_GasPedalVirtualPstVD;
 };
 
 #endif
@@ -293,18 +234,6 @@ typedef enum {
 
 struct SCU_Info
 {
-  uint32_T get_Checksum1;
-  uint32_T get_MsgCounter1;
-  uint32_T get_Checksum10;
-  uint32_T get_MsgCounter10;
-  uint32_T get_Checksum11;
-  uint32_T get_MsgCounter11;
-  uint32_T get_Checksum12;
-  uint32_T get_MsgCounter12;
-  uint32_T get_Checksum13;
-  uint32_T get_MsgCounter13;
-  uint8_T get_EStopSwSt;
-  uint8_T get_EStopSwStVD;
   uint32_T get_LatAutoCheckReport;
   Control_status get_LatCtrlMode;
   uint32_T get_LatQuitReport;
@@ -312,39 +241,7 @@ struct SCU_Info
   Control_status get_LngCtrlMode;
   uint32_T get_LngQuitReport;
   uint8_T get_StrngWhlIntv;
-  uint32_T get_Checksum16;
-  uint32_T get_MsgCounter16;
-  uint32_T get_Checksum17;
-  uint32_T get_MsgCounter17;
-  uint32_T get_Checksum18;
-  uint32_T get_MsgCounter18;
-  uint32_T get_Checksum2;
-  uint32_T get_MsgCounter2;
-  uint32_T get_Checksum3;
-  uint32_T get_MsgCounter3;
-  uint32_T get_Checksum4;
-  uint32_T get_MsgCounter4;
-  uint32_T get_Checksum5;
-  uint32_T get_MsgCounter5;
-  uint32_T get_Checksum6;
-  uint32_T get_MsgCounter6;
-  uint32_T get_Checksum7;
-  uint32_T get_MsgCounter7;
-  uint32_T get_Checksum8;
-  uint32_T get_MsgCounter8;
-  uint32_T get_Checksum9;
-  uint32_T get_MsgCounter9;
 };
-
-#endif
-
-#ifndef DEFINED_TYPEDEF_FOR_Error_status_
-#define DEFINED_TYPEDEF_FOR_Error_status_
-
-typedef enum {
-  NoError = 0,                         /* Default value */
-  Error
-} Error_status;
 
 #endif
 
@@ -353,9 +250,6 @@ typedef enum {
 
 struct EPB_Info
 {
-  Error_status get_FailSt;
-  uint8_T get_SwitchSt;
-  uint8_T get_SwitchStVD;
   uint8_T get_SysSt;
 };
 
@@ -382,9 +276,6 @@ struct EPS_Info
   uint8_T get_SteeringAngleSpdVD;
   uint8_T get_SteeringAngleVD;
   real_T get_StrngWhlTorq;
-  uint8_T get_StrngWhlTorqVD;
-  uint8_T get_ThermalSt;
-  uint8_T get_WarnLamp;
 };
 
 #endif
@@ -409,37 +300,18 @@ typedef enum {
 
 #endif
 
-#ifndef DEFINED_TYPEDEF_FOR_Fault_status_
-#define DEFINED_TYPEDEF_FOR_Fault_status_
-
-typedef enum {
-  NotFault = 0,                        /* Default value */
-  Fault
-} Fault_status;
-
-#endif
-
 #ifndef DEFINED_TYPEDEF_FOR_BCM_Info_
 #define DEFINED_TYPEDEF_FOR_BCM_Info_
 
 struct BCM_Info
 {
   Available_status get_CtrlAvailable;
-  uint8_T get_DriverDoorAjarSt;
-  uint8_T get_FrontFogLampSt;
-  uint8_T get_FrontWiperSt;
   Active_status get_HazardLampSt;
   Active_status get_HighBeamSt;
   Active_status get_HornSt;
   uint8_T get_KeySt;
-  Fault_status get_LeftTurnLampFaultSt;
   Active_status get_LeftTurnLampSt;
   Active_status get_LowBeamSt;
-  uint8_T get_PsngrDoorAjarSt;
-  uint8_T get_RLDoorAjarSt;
-  uint8_T get_RRDoorAjarSt;
-  uint8_T get_RearFogLampSt;
-  Fault_status get_RightTurnLampFaultSt;
   Active_status get_RightTurnLampSt;
 };
 

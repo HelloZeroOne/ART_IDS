@@ -6,9 +6,9 @@
  *
  * Code generation for model "AION_signal_transfer".
  *
- * Model version              : 4.42
+ * Model version              : 4.82
  * Simulink Coder version : 10.3 R2021a
- * C source code generated on : Tue May 17 14:10:51 2022
+ * C source code generated on : Fri Jun 03 16:43:12 2022
  *
  * Target selection: slrealtime.tlc
  * Embedded hardware selection: Intel->x86-64 (Linux 64)
@@ -797,1809 +797,1093 @@ ASAP2_VERSION  1 71
 
   /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion1 ""  
     UBYTE AION_signal_transfer_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205BB8
+    ECU_ADDRESS                       0x00204540
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion10 ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x00205B70
+    ECU_ADDRESS                       0x002044B8
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion11 ""  
     UBYTE AION_signal_transfer_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205BBB
+    ECU_ADDRESS                       0x0020454D
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion12 ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double_Nm       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x00205B78
+  /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion13 ""  
+    UBYTE AION_signal_transfer_CM_uint8       0             0       0 255  
+    ECU_ADDRESS                       0x00204541
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion14 ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x00205B80
+    ECU_ADDRESS                       0x002044C0
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion15 ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x00205B88
+    ECU_ADDRESS                       0x002044C8
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion16 ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double_deg       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x00205B90
+    ECU_ADDRESS                       0x002044D0
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion17 ""  
+    SLONG AION_signal_transfer_CM_Control_status       0             0       0 3  
+    ECU_ADDRESS                       0x0020451C
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion18 ""  
     SLONG AION_signal_transfer_CM_Control_status       0             0       0 3  
-    ECU_ADDRESS                       0x00205BB0
+    ECU_ADDRESS                       0x00204520
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion19 ""  
+    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x002044D8
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion2 ""  
     UBYTE AION_signal_transfer_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205BB9
+    ECU_ADDRESS                       0x00204542
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion20 ""  
-    SLONG AION_signal_transfer_CM_Control_status       0             0       0 3  
-    ECU_ADDRESS                       0x00205BB4
+    SLONG AION_signal_transfer_CM_Available_status       0             0       0 1  
+    ECU_ADDRESS                       0x00204524
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion21 ""  
+    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x002044E0
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion22 ""  
+    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x002044E8
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion25 ""  
+    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x002044F0
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion26 ""  
+    UBYTE AION_signal_transfer_CM_uint8__       0             0       0 255  
+    ECU_ADDRESS                       0x0020454E
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion27 ""  
+    UBYTE AION_signal_transfer_CM_uint8__       0             0       0 255  
+    ECU_ADDRESS                       0x0020454F
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion28 ""  
+    UBYTE AION_signal_transfer_CM_uint8__       0             0       0 255  
+    ECU_ADDRESS                       0x00204550
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion29 ""  
+    UBYTE AION_signal_transfer_CM_uint8__       0             0       0 255  
+    ECU_ADDRESS                       0x00204551
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion3 ""  
     UBYTE AION_signal_transfer_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205BBA
+    ECU_ADDRESS                       0x0020454C
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion34 ""  
+    SLONG AION_signal_transfer_CM_Gear_status       0             0       0 4  
+    ECU_ADDRESS                       0x00204514
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion35 ""  
+    UBYTE AION_signal_transfer_CM_uint8       0             0       0 255  
+    ECU_ADDRESS                       0x00204543
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion36 ""  
+    UBYTE AION_signal_transfer_CM_uint8       0             0       0 255  
+    ECU_ADDRESS                       0x00204544
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion37 ""  
+    SLONG AION_signal_transfer_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x00204528
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion38 ""  
+    UBYTE AION_signal_transfer_CM_uint8       0             0       0 255  
+    ECU_ADDRESS                       0x00204545
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion39 ""  
+    SLONG AION_signal_transfer_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x0020452C
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion4 ""  
+    A_UINT64 AION_signal_transfer_CM_uint64       0             0       0.0 1.844674407370955e+19  
+    ECU_ADDRESS                       0x002044A0
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion40 ""  
     UBYTE AION_signal_transfer_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205BBC
+    ECU_ADDRESS                       0x00204546
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion41 ""  
+    SLONG AION_signal_transfer_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x00204530
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion42 ""  
+    UBYTE AION_signal_transfer_CM_uint8       0             0       0 255  
+    ECU_ADDRESS                       0x00204547
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion43 ""  
+    SLONG AION_signal_transfer_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x00204534
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion44 ""  
+    UBYTE AION_signal_transfer_CM_uint8       0             0       0 255  
+    ECU_ADDRESS                       0x00204548
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion45 ""  
+    SLONG AION_signal_transfer_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x00204538
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion46 ""  
+    UBYTE AION_signal_transfer_CM_uint8       0             0       0 255  
+    ECU_ADDRESS                       0x00204549
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion47 ""  
+    SLONG AION_signal_transfer_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x0020453C
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion48 ""  
+    UBYTE AION_signal_transfer_CM_uint8__       0             0       0 255  
+    ECU_ADDRESS                       0x0020454A
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion49 ""  
+    SLONG AION_signal_transfer_CM_Ready_status__       0             0       0 1  
+    ECU_ADDRESS                       0x00204510
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion5 ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double_Nm       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x00205B98
+    ECU_ADDRESS                       0x002044F8
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion6 ""  
-    UBYTE AION_signal_transfer_CM_uint8_Nm       0             0       0 255  
-    ECU_ADDRESS                       0x00205BBD
+  /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion50 ""  
+    SLONG AION_signal_transfer_CM_Drive_status__       0             0       0 5  
+    ECU_ADDRESS                       0x00204518
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion51 ""  
+    UBYTE AION_signal_transfer_CM_uint8__       0             0       0 255  
+    ECU_ADDRESS                       0x0020454B
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion7 ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double_m_s_2       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x00205BA0
+    ECU_ADDRESS                       0x00204500
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion8 ""  
-    UBYTE AION_signal_transfer_CM_uint8_m_s_2       0             0       0 255  
-    ECU_ADDRESS                       0x00205BBE
+    FLOAT64_IEEE AION_signal_transfer_CM_double_deg       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x002044B0
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_B.DataTypeConversion9 ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x00205BA8
+    ECU_ADDRESS                       0x00204508
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_signal_transfer_B.get_EPS_steering_angle ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x00205B60
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_B.get_vehicle_spd ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x00205B68
+  /begin MEASUREMENT  AION_signal_transfer_B.get_VehSpd ""  
+    FLOAT64_IEEE AION_signal_transfer_CM_double_km_h       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x002044A8
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_10_EPS_SteeringAngle ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double_deg       0             0       -780 779.9  
-    ECU_ADDRESS                       0x002056A0
+    ECU_ADDRESS                       0x00204258
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_10_EPS_SteeringAngleSpd ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double_deg_sec       0             0       0 1016  
-    ECU_ADDRESS                       0x002056A8
+    ECU_ADDRESS                       0x00204260
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_10_EPS_SteeringAngleSpdVD ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002056B0
+    ECU_ADDRESS                       0x00204268
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_10_EPS_SteeringAngleVD ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002056B8
+    ECU_ADDRESS                       0x00204270
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_10_EPS_StrngWhlTorq ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double_Nm       0             0       -12.5 12.5  
-    ECU_ADDRESS                       0x002056C0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_10_EPS_StrngWhlTorqVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002056C8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_10_EPS_ThermalSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 3  
-    ECU_ADDRESS                       0x002056D0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_10_EPS_WarnLamp ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002056D8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_10_SCU_10_Checksum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 255  
-    ECU_ADDRESS                       0x002056E0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_10_SCU_10_MsgCounter ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 15  
-    ECU_ADDRESS                       0x002056E8
+    ECU_ADDRESS                       0x00204278
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_11_BCM_CtrlAvailable ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002056F0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_11_BCM_DriverDoorAjarSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002056F8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_11_BCM_FrontFogLampSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205700
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_11_BCM_FrontWiperSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 3  
-    ECU_ADDRESS                       0x00205708
+    ECU_ADDRESS                       0x00204280
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_11_BCM_HazardLampSt ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205710
+    ECU_ADDRESS                       0x00204288
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_11_BCM_HighBeamSt ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205718
+    ECU_ADDRESS                       0x00204290
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_11_BCM_HornSt ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205720
+    ECU_ADDRESS                       0x00204298
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_11_BCM_KeySt ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 3  
-    ECU_ADDRESS                       0x00205728
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_11_BCM_LeftTurnLampFaultSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205730
+    ECU_ADDRESS                       0x002042A0
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_11_BCM_LeftTurnLampSt ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205738
+    ECU_ADDRESS                       0x002042A8
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_11_BCM_LowBeamSt ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205740
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_11_BCM_PsngrDoorAjarSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205748
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_11_BCM_RLDoorAjarSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205750
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_11_BCM_RRDoorAjarSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205758
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_11_BCM_RearFogLampSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205760
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_11_BCM_RightTurnLampFaultSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205768
+    ECU_ADDRESS                       0x002042B0
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_11_BCM_RightTurnLampSt ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205770
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_11_SCU_11_Checksum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 255  
-    ECU_ADDRESS                       0x00205778
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_11_SCU_11_MsgCounter ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 15  
-    ECU_ADDRESS                       0x00205780
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_12_SCU_12_Checksum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 255  
-    ECU_ADDRESS                       0x00205788
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_12_SCU_12_MsgCounter ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 15  
-    ECU_ADDRESS                       0x00205790
+    ECU_ADDRESS                       0x002042B8
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_12_SRS_DriverSeatBeltSt ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 3  
-    ECU_ADDRESS                       0x00205798
+    ECU_ADDRESS                       0x002042C0
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_12_SRS_PsngrSeatBeltSt ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 3  
-    ECU_ADDRESS                       0x002057A0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_13_SCU_13_Checksum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 255  
-    ECU_ADDRESS                       0x002057A8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_13_SCU_13_MsgCounter ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 15  
-    ECU_ADDRESS                       0x002057B0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_13_SCU_EStopSwSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002057B8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_13_SCU_EStopSwStVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002057C0
+    ECU_ADDRESS                       0x002042C8
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_13_SCU_LatAutoCheckReport ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 15  
-    ECU_ADDRESS                       0x002057C8
+    ECU_ADDRESS                       0x002042D0
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_13_SCU_LatCtrlMode ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 3  
-    ECU_ADDRESS                       0x002057D0
+    ECU_ADDRESS                       0x002042D8
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_13_SCU_LatQuitReport ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 255  
-    ECU_ADDRESS                       0x002057D8
+    ECU_ADDRESS                       0x002042E0
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_13_SCU_LngAutoChecklReport ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 65535  
-    ECU_ADDRESS                       0x002057E0
+    ECU_ADDRESS                       0x002042E8
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_13_SCU_LngCtrlMode ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 3  
-    ECU_ADDRESS                       0x002057E8
+    ECU_ADDRESS                       0x002042F0
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_13_SCU_LngQuitReport ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 65535  
-    ECU_ADDRESS                       0x002057F0
+    ECU_ADDRESS                       0x002042F8
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_13_SCU_StrngWhlIntv ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002057F8
+    ECU_ADDRESS                       0x00204300
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_13_VCU_GearLeverIntv ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205800
+    ECU_ADDRESS                       0x00204308
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_14_VCU_VehDrvMod ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 7  
-    ECU_ADDRESS                       0x00205808
+    ECU_ADDRESS                       0x00204310
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_14_VCU_VehRdySt ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 1  
-    ECU_ADDRESS                       0x00205810
+    ECU_ADDRESS                       0x00204318
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_14_VCU_VehRng ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double_km       0             0       0 1000  
-    ECU_ADDRESS                       0x00205818
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_15_VCU_ActRecpTorq ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double_Nm       0             0       0 2000  
-    ECU_ADDRESS                       0x00205820
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_15_VCU_ActRecpTorqSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 3  
-    ECU_ADDRESS                       0x00205828
+    ECU_ADDRESS                       0x00204320
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_15_VCU_CrntGearLvl ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 7  
-    ECU_ADDRESS                       0x00205830
+    ECU_ADDRESS                       0x00204328
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_15_VCU_CrntGearLvlVD ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205838
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_16_SCU_16_Checksum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 205  
-    ECU_ADDRESS                       0x00205840
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_16_SCU_16_MsgCounter ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 15  
-    ECU_ADDRESS                       0x00205848
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_16_VCU_ACCMaxRecpDecel ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double_m_s2       0             0       -5 7.75  
-    ECU_ADDRESS                       0x00205850
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_16_VCU_ACCMaxRecpDecelVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205858
+    ECU_ADDRESS                       0x00204330
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_16_VCU_ActVehWheelTorq ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double_Nm       0             0       0 10000  
-    ECU_ADDRESS                       0x00205860
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_16_VCU_LateralAssistBtnInfo ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205868
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_16_VCU_LateralAssistBtnInfoVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205870
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_17_SCU_17_Checksum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 255  
-    ECU_ADDRESS                       0x00205878
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_17_SCU_17_MsgCounter ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 15  
-    ECU_ADDRESS                       0x00205880
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_17_VCU_ACCButtInfo ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 255  
-    ECU_ADDRESS                       0x00205888
+    ECU_ADDRESS                       0x00204338
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_17_VCU_AccElecECFail ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 1  
-    ECU_ADDRESS                       0x00205890
+    ECU_ADDRESS                       0x00204340
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_17_VCU_GasPedalActPst ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 99.96  
-    ECU_ADDRESS                       0x00205898
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_17_VCU_GasPedalActPstVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002058A0
+    ECU_ADDRESS                       0x00204348
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_17_VCU_VehWheelTorqMax ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double_Nm       0             0       0 10000  
-    ECU_ADDRESS                       0x002058A8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_18_SCU_18_Checksum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 255  
-    ECU_ADDRESS                       0x002058B0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_18_SCU_18_MsgCounter ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 15  
-    ECU_ADDRESS                       0x002058B8
+    ECU_ADDRESS                       0x00204350
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_18_VCU_BrkPedalSt ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002058C0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_18_VCU_BrkPedalStVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002058C8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_18_VCU_GasPedalVirtualPst ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 99.96  
-    ECU_ADDRESS                       0x002058D0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_18_VCU_GasPedalVirtualPstVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002058D8
+    ECU_ADDRESS                       0x00204358
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_1_BCS_ABSActiveSt ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 1  
-    ECU_ADDRESS                       0x00205660
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_1_BCS_ABSFaultSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 1  
-    ECU_ADDRESS                       0x00205668
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_1_BCS_VDCActiveSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 1  
-    ECU_ADDRESS                       0x00205670
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_1_BCS_VDCFaultSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 1  
-    ECU_ADDRESS                       0x00205678
+    ECU_ADDRESS                       0x00204240
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_1_BCS_VehSpd ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double_km_h       0             0       0 240  
-    ECU_ADDRESS                       0x00205680
+    ECU_ADDRESS                       0x00204248
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_1_BCS_VehSpdVD ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 1  
-    ECU_ADDRESS                       0x00205688
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_1_SCU_1_Checksum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 255  
-    ECU_ADDRESS                       0x00205690
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_1_SCU_1_MsgCounter ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 15  
-    ECU_ADDRESS                       0x00205698
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_2_BCS_FLWheelSpdEdgesSum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 4095  
-    ECU_ADDRESS                       0x002058E0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_2_BCS_FLWheelSpdEdgesSumVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002058E8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_2_BCS_FRWheelSpdEdgesSum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 4095  
-    ECU_ADDRESS                       0x002058F0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_2_BCS_FRWheelSpdEdgesSumVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002058F8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_2_BCS_RLWheelSpdEdgesSum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 4095  
-    ECU_ADDRESS                       0x00205900
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_2_BCS_RLWheelSpdEdgesSumVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205908
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_2_BCS_RRWheelSpdEdgesSum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 4095  
-    ECU_ADDRESS                       0x00205910
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_2_BCS_RRWheelSpdEdgesSumVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205918
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_2_SCU_2_Checksum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 255  
-    ECU_ADDRESS                       0x00205920
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_2_SCU_2_MsgCounter ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 15  
-    ECU_ADDRESS                       0x00205928
+    ECU_ADDRESS                       0x00204250
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_3_BCS_YawRate ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double_rad_s       0             0       -2.0943 1.9047234375  
-    ECU_ADDRESS                       0x00205930
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_3_BCS_YawRateOffset ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double_rad_s       0             0       -0.13 0.13  
-    ECU_ADDRESS                       0x00205938
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_3_BCS_YawRateSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205940
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_3_SCU_3_Checksum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 255  
-    ECU_ADDRESS                       0x00205948
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_3_SCU_3_MsgCounter ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 15  
-    ECU_ADDRESS                       0x00205950
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_4_BCS_HDCCtrlSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 3  
-    ECU_ADDRESS                       0x00205958
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_4_BCS_HDCErrSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 1  
-    ECU_ADDRESS                       0x00205960
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_4_SCU_4_Checksum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 255  
-    ECU_ADDRESS                       0x00205968
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_4_SCU_4_MsgCounter ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 15  
-    ECU_ADDRESS                       0x00205970
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_5_BCS_AEBActive ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205978
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_5_BCS_AEBAvailable ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205980
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_5_BCS_CDDActive ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205988
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_5_BCS_CDDAvailable ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205990
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_5_BCS_CDDFail ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205998
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_5_BCS_MasterCylinderPr ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double_bar       0             0       0 250  
-    ECU_ADDRESS                       0x002059A0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_5_BCS_MasterCylinderPrOffset ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double_bar       0             0       -15 15  
-    ECU_ADDRESS                       0x002059A8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_5_BCS_MasterCylinderPrOffsetVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 1  
-    ECU_ADDRESS                       0x002059B0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_5_BCS_MasterCylinderPrVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 1  
-    ECU_ADDRESS                       0x002059B8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_5_BCS_NoBrakeForce ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002059C0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_5_BCS_VehicleStandStillSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 3  
-    ECU_ADDRESS                       0x002059C8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_5_SCU_5_Checksum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 255  
-    ECU_ADDRESS                       0x002059D0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_5_SCU_5_MsgCounter ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 15  
-    ECU_ADDRESS                       0x002059D8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_6_BCS_FLWheelRotatedDirection ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002059E0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_6_BCS_FLWheelRotatedDirectionVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002059E8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_6_BCS_FLWheelSpd ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double_km_h       0             0       0 240  
-    ECU_ADDRESS                       0x002059F0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_6_BCS_FLWheelSpdVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002059F8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_6_BCS_FRWheelRotatedDirection ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205A00
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_6_BCS_FRWheelRotatedDirectionVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205A08
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_6_BCS_FRWheelSpd ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double_km_h       0             0       0 240  
-    ECU_ADDRESS                       0x00205A10
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_6_BCS_FRWheelSpdVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205A18
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_6_SCU_6_Checksum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 255  
-    ECU_ADDRESS                       0x00205A20
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_6_SCU_6_MsgCounter ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 15  
-    ECU_ADDRESS                       0x00205A28
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_7_BCS_RLWheelRotatedDirection ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205A30
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_7_BCS_RLWheelRotatedDirectionVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205A38
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_7_BCS_RLWheelSpd ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double_km_h       0             0       0 240  
-    ECU_ADDRESS                       0x00205A40
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_7_BCS_RLWheelSpdVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205A48
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_7_BCS_RRWheelRotatedDirection ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205A50
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_7_BCS_RRWheelRotatedDirectionVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205A58
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_7_BCS_RRWheelSpd ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double_km_h       0             0       0 240  
-    ECU_ADDRESS                       0x00205A60
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_7_BCS_RRWheelSpdVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205A68
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_7_SCU_7_Checksum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 255  
-    ECU_ADDRESS                       0x00205A70
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_7_SCU_7_MsgCounter ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 15  
-    ECU_ADDRESS                       0x00205A78
+    ECU_ADDRESS                       0x00204360
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_8_BCS_ActVehLaltrlAccel ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double_m_s_2       0             0       -21.593 21.593  
-    ECU_ADDRESS                       0x00205A80
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_8_BCS_ActVehLaltrlAccelVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205A88
+    ECU_ADDRESS                       0x00204368
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_8_BCS_ActVehLongAccel ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double_m_s_2       0             0       -21.593 21.593  
-    ECU_ADDRESS                       0x00205A90
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_8_BCS_ActVehLongAccelVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205A98
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_8_BCS_VehLaltrlAccelOffset ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double_m_s_2       0             0       -21.593 21.593  
-    ECU_ADDRESS                       0x00205AA0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_8_BCS_VehLongAccelOffset ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double_m_s_2       0             0       -21.593 21.593  
-    ECU_ADDRESS                       0x00205AA8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_8_SCU_8_Checksum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 255  
-    ECU_ADDRESS                       0x00205AB0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_8_SCU_8_MsgCounter ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 15  
-    ECU_ADDRESS                       0x00205AB8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_9_EPB_FailSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205AC0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_9_EPB_SwitchSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 3  
-    ECU_ADDRESS                       0x00205AC8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_9_EPB_SwitchStVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205AD0
+    ECU_ADDRESS                       0x00204370
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_9_EPB_SysSt ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 7  
-    ECU_ADDRESS                       0x00205AD8
+    ECU_ADDRESS                       0x00204378
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_9_SCU_9_Checksum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 255  
-    ECU_ADDRESS                       0x00205AE0
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_BCM_info_get_CtrlAvailable ""  
+    SLONG AION_signal_transfer_CM_Available_status       0             0       0 1  
+    ECU_ADDRESS                       0x00204470
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_9_SCU_9_MsgCounter ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 15  
-    ECU_ADDRESS                       0x00205AE8
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_BCM_info_get_HazardLampSt ""  
+    SLONG AION_signal_transfer_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x00204474
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_AION_lateral_control_info_get_EPS_steering_angle ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x00205B18
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_BCM_info_get_HighBeamSt ""  
+    SLONG AION_signal_transfer_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x00204478
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_AION_lateral_control_info_get_lateral_control_status ""  
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_BCM_info_get_HornSt ""  
+    SLONG AION_signal_transfer_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x0020447C
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_BCM_info_get_KeySt ""  
+    UBYTE AION_signal_transfer_CM_uint8       0             0       0 3  
+    ECU_ADDRESS                       0x00204480
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_BCM_info_get_LeftTurnLampSt ""  
+    SLONG AION_signal_transfer_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x00204484
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_BCM_info_get_LowBeamSt ""  
+    SLONG AION_signal_transfer_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x00204488
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_BCM_info_get_RightTurnLampSt ""  
+    SLONG AION_signal_transfer_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x0020448C
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_BCS_info_get_ABSActiveSt ""  
+    UBYTE AION_signal_transfer_CM_uint8__       0             0       0 1  
+    ECU_ADDRESS                       0x002043D8
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_BCS_info_get_ActVehLaltrlAccel ""  
+    FLOAT64_IEEE AION_signal_transfer_CM_double_m_s_2       0             0       -21.593 21.593  
+    ECU_ADDRESS                       0x002043F8
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_BCS_info_get_ActVehLongAccel ""  
+    FLOAT64_IEEE AION_signal_transfer_CM_double_m_s_2       0             0       -21.593 21.593  
+    ECU_ADDRESS                       0x00204400
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_BCS_info_get_VehSpd ""  
+    FLOAT64_IEEE AION_signal_transfer_CM_double_km_h       0             0       0 240  
+    ECU_ADDRESS                       0x002043E0
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_BCS_info_get_VehSpdVD ""  
+    UBYTE AION_signal_transfer_CM_uint8__       0             0       0 1  
+    ECU_ADDRESS                       0x002043E8
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_BCS_info_get_YawRate ""  
+    FLOAT64_IEEE AION_signal_transfer_CM_double_rad_s       0             0       -2.0943 1.9047234375  
+    ECU_ADDRESS                       0x002043F0
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_EPB_info_get_SysSt ""  
+    UBYTE AION_signal_transfer_CM_uint8       0             0       0 7  
+    ECU_ADDRESS                       0x00204455
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_EPS_info_get_SteeringAngle ""  
+    FLOAT64_IEEE AION_signal_transfer_CM_double_deg       0             0       -780 779.9  
+    ECU_ADDRESS                       0x00204458
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_EPS_info_get_SteeringAngleSpd ""  
+    ULONG AION_signal_transfer_CM_uint32_deg_sec       0             0       0 1016  
+    ECU_ADDRESS                       0x00204460
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_EPS_info_get_SteeringAngleSpdVD ""  
+    UBYTE AION_signal_transfer_CM_uint8       0             0       0 1  
+    ECU_ADDRESS                       0x00204464
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_EPS_info_get_SteeringAngleVD ""  
+    UBYTE AION_signal_transfer_CM_uint8       0             0       0 1  
+    ECU_ADDRESS                       0x00204465
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_EPS_info_get_StrngWhlTorq ""  
+    FLOAT64_IEEE AION_signal_transfer_CM_double_Nm       0             0       -12.5 12.5  
+    ECU_ADDRESS                       0x00204468
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_SCU_info_get_LatAutoCheckReport ""  
+    ULONG AION_signal_transfer_CM_uint32       0             0       0 15  
+    ECU_ADDRESS                       0x0020443C
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_SCU_info_get_LatCtrlMode ""  
     SLONG AION_signal_transfer_CM_Control_status       0             0       0 3  
-    ECU_ADDRESS                       0x00205B10
+    ECU_ADDRESS                       0x00204440
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_AION_lateral_control_info_set_lateral_control_request ""  
-    SLONG AION_signal_transfer_CM_Control_request       0             0       0 3  
-    ECU_ADDRESS                       0x00205AF0
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_SCU_info_get_LatQuitReport ""  
+    ULONG AION_signal_transfer_CM_uint32       0             0       0 255  
+    ECU_ADDRESS                       0x00204444
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_AION_lateral_control_info_set_steer_ang_spd_limit ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x00205B08
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_SCU_info_get_LngAutoCheckIReport ""  
+    ULONG AION_signal_transfer_CM_uint32       0             0       0 65535  
+    ECU_ADDRESS                       0x00204448
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_AION_lateral_control_info_set_steer_angle_request ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x00205B00
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_AION_lateral_control_info_set_steer_torque_request ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x00205AF8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_AION_longitudinal_control_info_get_longitudinal_control_status ""  
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_SCU_info_get_LngCtrlMode ""  
     SLONG AION_signal_transfer_CM_Control_status       0             0       0 3  
-    ECU_ADDRESS                       0x00205B28
+    ECU_ADDRESS                       0x0020444C
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_AION_longitudinal_control_info_get_vehicle_spd ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x00205B20
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_SCU_info_get_LngQuitReport ""  
+    ULONG AION_signal_transfer_CM_uint32       0             0       0 65535  
+    ECU_ADDRESS                       0x00204450
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_AION_longitudinal_control_info_set_brake_request ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 []  
-    ECU_ADDRESS                       0x00205B30
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_SCU_info_get_StrngWhlIntv ""  
+    UBYTE AION_signal_transfer_CM_uint8       0             0       0 1  
+    ECU_ADDRESS                       0x00204454
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_AION_longitudinal_control_info_set_gear_level_req_val ""  
-    SLONG AION_signal_transfer_CM_Validation       0             0       0 1  
-    ECU_ADDRESS                       0x00205B3C
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_SRS_info_get_DriverSeatBeltSt ""  
+    UBYTE AION_signal_transfer_CM_uint8       0             0       0 3  
+    ECU_ADDRESS                       0x00204456
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_AION_longitudinal_control_info_set_gear_level_request ""  
-    SLONG AION_signal_transfer_CM_AION_gear       0             0       0 7  
-    ECU_ADDRESS                       0x00205B38
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_SRS_info_get_PsngrSeatBeltSt ""  
+    UBYTE AION_signal_transfer_CM_uint8       0             0       0 3  
+    ECU_ADDRESS                       0x00204457
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_AION_longitudinal_control_info_set_longitudinal_control_request ""  
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_VCU_info_get_AccElecECFail ""  
+    UBYTE AION_signal_transfer_CM_uint8__       0             0       0 1  
+    ECU_ADDRESS                       0x00204430
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_VCU_info_get_ActVehWheelTorq ""  
+    ULONG AION_signal_transfer_CM_uint32_Nm       0             0       0 10000  
+    ECU_ADDRESS                       0x00204408
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_VCU_info_get_BrkPedalSt ""  
+    UBYTE AION_signal_transfer_CM_uint8       0             0       0 1  
+    ECU_ADDRESS                       0x00204438
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_VCU_info_get_CrntGearLvl ""  
+    SLONG AION_signal_transfer_CM_Gear_status       0             0       0 4  
+    ECU_ADDRESS                       0x0020441C
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_VCU_info_get_CrntGearLvlVD ""  
+    UBYTE AION_signal_transfer_CM_uint8       0             0       0 1  
+    ECU_ADDRESS                       0x00204420
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_VCU_info_get_GasPedalActPst ""  
+    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 100  
+    ECU_ADDRESS                       0x00204428
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_VCU_info_get_GearLeverIntv ""  
+    UBYTE AION_signal_transfer_CM_uint8       0             0       0 1  
+    ECU_ADDRESS                       0x0020440C
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_VCU_info_get_VehDrvMod ""  
+    SLONG AION_signal_transfer_CM_Drive_status__       0             0       0 5  
+    ECU_ADDRESS                       0x00204410
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_VCU_info_get_VehRdySt ""  
+    SLONG AION_signal_transfer_CM_Ready_status__       0             0       0 1  
+    ECU_ADDRESS                       0x00204414
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_VCU_info_get_VehRng ""  
+    ULONG AION_signal_transfer_CM_uint32_km       0             0       0 1000  
+    ECU_ADDRESS                       0x00204418
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_get_VCU_info_get_VehWheelTorqMax ""  
+    ULONG AION_signal_transfer_CM_uint32_Nm       0             0       0 10000  
+    ECU_ADDRESS                       0x00204434
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_set_ADCU_info_set_BeamReq ""  
+    SLONG AION_signal_transfer_CM_Beam_request__       0             0       0 3  
+    ECU_ADDRESS                       0x002043C8
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_set_ADCU_info_set_BodyCtrlReq ""  
+    SLONG AION_signal_transfer_CM_Enable_request__       0             0       0 1  
+    ECU_ADDRESS                       0x002043CC
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_set_ADCU_info_set_Checksum1 ""  
+    ULONG AION_signal_transfer_CM_uint32       0             0       0 255  
+    ECU_ADDRESS                       0x002043B0
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_set_ADCU_info_set_Checksum2 ""  
+    ULONG AION_signal_transfer_CM_uint32       0             0       0 255  
+    ECU_ADDRESS                       0x002043B8
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_set_ADCU_info_set_Checksum3 ""  
+    ULONG AION_signal_transfer_CM_uint32__       0             0       0 255  
+    ECU_ADDRESS                       0x002043C0
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_set_ADCU_info_set_HornRingReq ""  
+    SLONG AION_signal_transfer_CM_Active_request__       0             0       0 1  
+    ECU_ADDRESS                       0x002043D0
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_set_ADCU_info_set_MsgCounter1 ""  
+    ULONG AION_signal_transfer_CM_uint32       0             0       0 15  
+    ECU_ADDRESS                       0x002043B4
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_set_ADCU_info_set_MsgCounter2 ""  
+    ULONG AION_signal_transfer_CM_uint32       0             0       0 15  
+    ECU_ADDRESS                       0x002043BC
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_set_ADCU_info_set_MsgCounter3 ""  
+    ULONG AION_signal_transfer_CM_uint32__       0             0       0 15  
+    ECU_ADDRESS                       0x002043C4
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_set_ADCU_info_set_TurnLightReq ""  
+    SLONG AION_signal_transfer_CM_Light_request__       0             0       0 3  
+    ECU_ADDRESS                       0x002043D4
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_set_lateral_control_info_set_LatCtrlReq ""  
     SLONG AION_signal_transfer_CM_Control_request       0             0       0 3  
-    ECU_ADDRESS                       0x00205B2C
+    ECU_ADDRESS                       0x00204380
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_AION_longitudinal_control_info_set_torque_request ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 []  
-    ECU_ADDRESS                       0x00205B40
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_AION_lateral_control_info_get_EPS_steering_angle ""  
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_set_lateral_control_info_set_SteerAngReq ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x002050E8
+    ECU_ADDRESS                       0x00204388
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_AION_lateral_control_info_get_lateral_control_status ""  
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_set_longitudinal_control_info_set_AutoTrqWhlReq ""  
+    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 5000  
+    ECU_ADDRESS                       0x00204398
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_set_longitudinal_control_info_set_BrakeReq ""  
+    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       -16 16  
+    ECU_ADDRESS                       0x002043A0
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_set_longitudinal_control_info_set_GearLvlReq ""  
+    SLONG AION_signal_transfer_CM_Gear_request       0             0       0 7  
+    ECU_ADDRESS                       0x002043A8
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_set_longitudinal_control_info_set_GearLvlReqVD ""  
+    SLONG AION_signal_transfer_CM_Validation_status       0             0       0 1  
+    ECU_ADDRESS                       0x002043AC
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_U.ADCU_InternalOutputPort_set_longitudinal_control_info_set_LngCtrlReq ""  
+    SLONG AION_signal_transfer_CM_Control_request       0             0       0 3  
+    ECU_ADDRESS                       0x00204390
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_BCM_info_get_CtrlAvailable ""  
+    SLONG AION_signal_transfer_CM_Available_status       0             0       0 1  
+    ECU_ADDRESS                       0x002041B0
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_BCM_info_get_HazardLampSt ""  
+    SLONG AION_signal_transfer_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x002041B4
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_BCM_info_get_HighBeamSt ""  
+    SLONG AION_signal_transfer_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x002041B8
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_BCM_info_get_HornSt ""  
+    SLONG AION_signal_transfer_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x002041BC
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_BCM_info_get_KeySt ""  
+    UBYTE AION_signal_transfer_CM_uint8       0             0       0 3  
+    ECU_ADDRESS                       0x002041C0
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_BCM_info_get_LeftTurnLampSt ""  
+    SLONG AION_signal_transfer_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x002041C4
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_BCM_info_get_LowBeamSt ""  
+    SLONG AION_signal_transfer_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x002041C8
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_BCM_info_get_RightTurnLampSt ""  
+    SLONG AION_signal_transfer_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x002041CC
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_BCS_info_get_ABSActiveSt ""  
+    UBYTE AION_signal_transfer_CM_uint8__       0             0       0 1  
+    ECU_ADDRESS                       0x00204118
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_BCS_info_get_ActVehLaltrlAccel ""  
+    FLOAT64_IEEE AION_signal_transfer_CM_double_m_s_2       0             0       -21.593 21.593  
+    ECU_ADDRESS                       0x00204138
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_BCS_info_get_ActVehLongAccel ""  
+    FLOAT64_IEEE AION_signal_transfer_CM_double_m_s_2       0             0       -21.593 21.593  
+    ECU_ADDRESS                       0x00204140
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_BCS_info_get_VehSpd ""  
+    FLOAT64_IEEE AION_signal_transfer_CM_double_km_h       0             0       0 240  
+    ECU_ADDRESS                       0x00204120
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_BCS_info_get_VehSpdVD ""  
+    UBYTE AION_signal_transfer_CM_uint8__       0             0       0 1  
+    ECU_ADDRESS                       0x00204128
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_BCS_info_get_YawRate ""  
+    FLOAT64_IEEE AION_signal_transfer_CM_double_rad_s       0             0       -2.0943 1.9047234375  
+    ECU_ADDRESS                       0x00204130
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_EPB_info_get_SysSt ""  
+    UBYTE AION_signal_transfer_CM_uint8       0             0       0 7  
+    ECU_ADDRESS                       0x00204195
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_EPS_info_get_SteeringAngle ""  
+    FLOAT64_IEEE AION_signal_transfer_CM_double_deg       0             0       -780 779.9  
+    ECU_ADDRESS                       0x00204198
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_EPS_info_get_SteeringAngleSpd ""  
+    ULONG AION_signal_transfer_CM_uint32_deg_sec       0             0       0 1016  
+    ECU_ADDRESS                       0x002041A0
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_EPS_info_get_SteeringAngleSpdVD ""  
+    UBYTE AION_signal_transfer_CM_uint8       0             0       0 1  
+    ECU_ADDRESS                       0x002041A4
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_EPS_info_get_SteeringAngleVD ""  
+    UBYTE AION_signal_transfer_CM_uint8       0             0       0 1  
+    ECU_ADDRESS                       0x002041A5
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_EPS_info_get_StrngWhlTorq ""  
+    FLOAT64_IEEE AION_signal_transfer_CM_double_Nm       0             0       -12.5 12.5  
+    ECU_ADDRESS                       0x002041A8
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_SCU_info_get_LatAutoCheckReport ""  
+    ULONG AION_signal_transfer_CM_uint32       0             0       0 15  
+    ECU_ADDRESS                       0x0020417C
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_SCU_info_get_LatCtrlMode ""  
     SLONG AION_signal_transfer_CM_Control_status       0             0       0 3  
-    ECU_ADDRESS                       0x002050E0
+    ECU_ADDRESS                       0x00204180
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_AION_lateral_control_info_set_lateral_control_request ""  
-    SLONG AION_signal_transfer_CM_Control_request       0             0       0 3  
-    ECU_ADDRESS                       0x002050C0
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_SCU_info_get_LatQuitReport ""  
+    ULONG AION_signal_transfer_CM_uint32       0             0       0 255  
+    ECU_ADDRESS                       0x00204184
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_AION_lateral_control_info_set_steer_ang_spd_limit ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x002050D8
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_SCU_info_get_LngAutoCheckIReport ""  
+    ULONG AION_signal_transfer_CM_uint32       0             0       0 65535  
+    ECU_ADDRESS                       0x00204188
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_AION_lateral_control_info_set_steer_angle_request ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x002050D0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_AION_lateral_control_info_set_steer_torque_request ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x002050C8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_AION_longitudinal_control_info_get_longitudinal_control_status ""  
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_SCU_info_get_LngCtrlMode ""  
     SLONG AION_signal_transfer_CM_Control_status       0             0       0 3  
-    ECU_ADDRESS                       0x002050F8
+    ECU_ADDRESS                       0x0020418C
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_AION_longitudinal_control_info_get_vehicle_spd ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x002050F0
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_SCU_info_get_LngQuitReport ""  
+    ULONG AION_signal_transfer_CM_uint32       0             0       0 65535  
+    ECU_ADDRESS                       0x00204190
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_AION_longitudinal_control_info_set_brake_request ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 []  
-    ECU_ADDRESS                       0x00205100
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_SCU_info_get_StrngWhlIntv ""  
+    UBYTE AION_signal_transfer_CM_uint8       0             0       0 1  
+    ECU_ADDRESS                       0x00204194
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_AION_longitudinal_control_info_set_gear_level_req_val ""  
-    SLONG AION_signal_transfer_CM_Validation       0             0       0 1  
-    ECU_ADDRESS                       0x0020510C
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_SRS_info_get_DriverSeatBeltSt ""  
+    UBYTE AION_signal_transfer_CM_uint8       0             0       0 3  
+    ECU_ADDRESS                       0x00204196
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_AION_longitudinal_control_info_set_gear_level_request ""  
-    SLONG AION_signal_transfer_CM_AION_gear       0             0       0 7  
-    ECU_ADDRESS                       0x00205108
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_SRS_info_get_PsngrSeatBeltSt ""  
+    UBYTE AION_signal_transfer_CM_uint8       0             0       0 3  
+    ECU_ADDRESS                       0x00204197
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_AION_longitudinal_control_info_set_longitudinal_control_request ""  
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_VCU_info_get_AccElecECFail ""  
+    UBYTE AION_signal_transfer_CM_uint8__       0             0       0 1  
+    ECU_ADDRESS                       0x00204170
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_VCU_info_get_ActVehWheelTorq ""  
+    ULONG AION_signal_transfer_CM_uint32_Nm       0             0       0 10000  
+    ECU_ADDRESS                       0x00204148
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_VCU_info_get_BrkPedalSt ""  
+    UBYTE AION_signal_transfer_CM_uint8       0             0       0 1  
+    ECU_ADDRESS                       0x00204178
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_VCU_info_get_CrntGearLvl ""  
+    SLONG AION_signal_transfer_CM_Gear_status       0             0       0 4  
+    ECU_ADDRESS                       0x0020415C
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_VCU_info_get_CrntGearLvlVD ""  
+    UBYTE AION_signal_transfer_CM_uint8       0             0       0 1  
+    ECU_ADDRESS                       0x00204160
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_VCU_info_get_GasPedalActPst ""  
+    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 100  
+    ECU_ADDRESS                       0x00204168
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_VCU_info_get_GearLeverIntv ""  
+    UBYTE AION_signal_transfer_CM_uint8       0             0       0 1  
+    ECU_ADDRESS                       0x0020414C
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_VCU_info_get_VehDrvMod ""  
+    SLONG AION_signal_transfer_CM_Drive_status__       0             0       0 5  
+    ECU_ADDRESS                       0x00204150
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_VCU_info_get_VehRdySt ""  
+    SLONG AION_signal_transfer_CM_Ready_status__       0             0       0 1  
+    ECU_ADDRESS                       0x00204154
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_VCU_info_get_VehRng ""  
+    ULONG AION_signal_transfer_CM_uint32_km       0             0       0 1000  
+    ECU_ADDRESS                       0x00204158
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_get_VCU_info_get_VehWheelTorqMax ""  
+    ULONG AION_signal_transfer_CM_uint32_Nm       0             0       0 10000  
+    ECU_ADDRESS                       0x00204174
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_set_ADCU_info_set_BeamReq ""  
+    SLONG AION_signal_transfer_CM_Beam_request__       0             0       0 3  
+    ECU_ADDRESS                       0x00204108
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_set_ADCU_info_set_BodyCtrlReq ""  
+    SLONG AION_signal_transfer_CM_Enable_request__       0             0       0 1  
+    ECU_ADDRESS                       0x0020410C
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_set_ADCU_info_set_Checksum1 ""  
+    ULONG AION_signal_transfer_CM_uint32       0             0       0 255  
+    ECU_ADDRESS                       0x002040F0
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_set_ADCU_info_set_Checksum2 ""  
+    ULONG AION_signal_transfer_CM_uint32       0             0       0 255  
+    ECU_ADDRESS                       0x002040F8
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_set_ADCU_info_set_Checksum3 ""  
+    ULONG AION_signal_transfer_CM_uint32__       0             0       0 255  
+    ECU_ADDRESS                       0x00204100
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_set_ADCU_info_set_HornRingReq ""  
+    SLONG AION_signal_transfer_CM_Active_request__       0             0       0 1  
+    ECU_ADDRESS                       0x00204110
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_set_ADCU_info_set_MsgCounter1 ""  
+    ULONG AION_signal_transfer_CM_uint32       0             0       0 15  
+    ECU_ADDRESS                       0x002040F4
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_set_ADCU_info_set_MsgCounter2 ""  
+    ULONG AION_signal_transfer_CM_uint32       0             0       0 15  
+    ECU_ADDRESS                       0x002040FC
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_set_ADCU_info_set_MsgCounter3 ""  
+    ULONG AION_signal_transfer_CM_uint32__       0             0       0 15  
+    ECU_ADDRESS                       0x00204104
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_set_ADCU_info_set_TurnLightReq ""  
+    SLONG AION_signal_transfer_CM_Light_request__       0             0       0 3  
+    ECU_ADDRESS                       0x00204114
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_set_lateral_control_info_set_LatCtrlReq ""  
     SLONG AION_signal_transfer_CM_Control_request       0             0       0 3  
-    ECU_ADDRESS                       0x002050FC
+    ECU_ADDRESS                       0x002040C0
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_AION_longitudinal_control_info_set_torque_request ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 []  
-    ECU_ADDRESS                       0x00205110
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_set_lateral_control_info_set_SteerAngReq ""  
+    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x002040C8
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_1_ADCU_1_Checksum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 255  
-    ECU_ADDRESS                       0x00205118
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_set_longitudinal_control_info_set_AutoTrqWhlReq ""  
+    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 5000  
+    ECU_ADDRESS                       0x002040D8
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_1_ADCU_1_MsgCounter ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 15  
-    ECU_ADDRESS                       0x00205120
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_set_longitudinal_control_info_set_BrakeReq ""  
+    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       -16 16  
+    ECU_ADDRESS                       0x002040E0
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_set_longitudinal_control_info_set_GearLvlReq ""  
+    SLONG AION_signal_transfer_CM_Gear_request       0             0       0 7  
+    ECU_ADDRESS                       0x002040E8
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_set_longitudinal_control_info_set_GearLvlReqVD ""  
+    SLONG AION_signal_transfer_CM_Validation_status       0             0       0 1  
+    ECU_ADDRESS                       0x002040EC
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_InternalInputPort_set_longitudinal_control_info_set_LngCtrlReq ""  
+    SLONG AION_signal_transfer_CM_Control_request       0             0       0 3  
+    ECU_ADDRESS                       0x002040D0
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_1_ADCU_AutoTrqWhlReq ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double_Nm       0             0       -5000 5000  
-    ECU_ADDRESS                       0x00205128
+    ECU_ADDRESS                       0x002041D0
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_1_ADCU_BrakeReq ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double_m_s_2       0             0       -16 16  
-    ECU_ADDRESS                       0x00205130
+    ECU_ADDRESS                       0x002041D8
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_1_ADCU_GearLvlReq ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 7  
-    ECU_ADDRESS                       0x00205138
+    ECU_ADDRESS                       0x002041E0
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_1_ADCU_GearLvlReqVD ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205140
+    ECU_ADDRESS                       0x002041E8
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_1_ADCU_LngCtrlReq ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 3  
-    ECU_ADDRESS                       0x00205148
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_1_ADCU_ParkingReqToEPB ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205150
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_1_ADCU_ParkingReqToEPBVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205158
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_2_ADCU_2_Checksum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 255  
-    ECU_ADDRESS                       0x00205160
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_2_ADCU_2_MsgCounter ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 15  
-    ECU_ADDRESS                       0x00205168
+    ECU_ADDRESS                       0x002041F0
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_2_ADCU_LatCtrlReq ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 1  
-    ECU_ADDRESS                       0x00205170
+    ECU_ADDRESS                       0x002041F8
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_2_ADCU_SteerAngReq ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double_deg       0             0       -780 779.9  
-    ECU_ADDRESS                       0x00205178
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_2_ADCU_SteerAngSpdLimt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double_deg_s       0             0       0 1080  
-    ECU_ADDRESS                       0x00205180
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_2_ADCU_SteerWhlTorqReq ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double_Nm       0             0       -10.24 10.23  
-    ECU_ADDRESS                       0x00205188
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_3_ADCU_3_Checksum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 255  
-    ECU_ADDRESS                       0x00205190
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_3_ADCU_3_MsgCounter ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 15  
-    ECU_ADDRESS                       0x00205198
+    ECU_ADDRESS                       0x00204200
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_3_ADCU_BeamReq ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 3  
-    ECU_ADDRESS                       0x002051A0
+    ECU_ADDRESS                       0x00204208
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_3_ADCU_BodyCtrlReq ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 1  
-    ECU_ADDRESS                       0x002051A8
+    ECU_ADDRESS                       0x00204210
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_3_ADCU_HornRingReq ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 1  
-    ECU_ADDRESS                       0x002051B0
+    ECU_ADDRESS                       0x00204218
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_3_ADCU_TurnLightReq ""  
     FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 3  
-    ECU_ADDRESS                       0x002051B8
+    ECU_ADDRESS                       0x00204220
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_10_EPS_SteeringAngle ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double_deg       0             0       -780 779.9  
-    ECU_ADDRESS                       0x00205200
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_10_EPS_SteeringAngleSpd ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double_deg_sec       0             0       0 1016  
-    ECU_ADDRESS                       0x00205208
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_10_EPS_SteeringAngleSpdVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205210
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_10_EPS_SteeringAngleVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205218
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_10_EPS_StrngWhlTorq ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double_Nm       0             0       -12.5 12.5  
-    ECU_ADDRESS                       0x00205220
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_10_EPS_StrngWhlTorqVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205228
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_10_EPS_ThermalSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 3  
-    ECU_ADDRESS                       0x00205230
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_10_EPS_WarnLamp ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205238
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_10_SCU_10_Checksum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 255  
-    ECU_ADDRESS                       0x00205240
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_10_SCU_10_MsgCounter ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 15  
-    ECU_ADDRESS                       0x00205248
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_11_BCM_CtrlAvailable ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205250
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_11_BCM_DriverDoorAjarSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205258
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_11_BCM_FrontFogLampSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205260
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_11_BCM_FrontWiperSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 3  
-    ECU_ADDRESS                       0x00205268
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_11_BCM_HazardLampSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205270
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_11_BCM_HighBeamSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205278
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_11_BCM_HornSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205280
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_11_BCM_KeySt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 3  
-    ECU_ADDRESS                       0x00205288
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_11_BCM_LeftTurnLampFaultSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205290
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_11_BCM_LeftTurnLampSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205298
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_11_BCM_LowBeamSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002052A0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_11_BCM_PsngrDoorAjarSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002052A8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_11_BCM_RLDoorAjarSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002052B0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_11_BCM_RRDoorAjarSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002052B8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_11_BCM_RearFogLampSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002052C0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_11_BCM_RightTurnLampFaultSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002052C8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_11_BCM_RightTurnLampSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002052D0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_11_SCU_11_Checksum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 255  
-    ECU_ADDRESS                       0x002052D8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_11_SCU_11_MsgCounter ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 15  
-    ECU_ADDRESS                       0x002052E0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_12_SCU_12_Checksum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 255  
-    ECU_ADDRESS                       0x002052E8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_12_SCU_12_MsgCounter ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 15  
-    ECU_ADDRESS                       0x002052F0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_12_SRS_DriverSeatBeltSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 3  
-    ECU_ADDRESS                       0x002052F8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_12_SRS_PsngrSeatBeltSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 3  
-    ECU_ADDRESS                       0x00205300
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_13_SCU_13_Checksum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 255  
-    ECU_ADDRESS                       0x00205308
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_13_SCU_13_MsgCounter ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 15  
-    ECU_ADDRESS                       0x00205310
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_13_SCU_EStopSwSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205318
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_13_SCU_EStopSwStVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205320
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_13_SCU_LatAutoCheckReport ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 15  
-    ECU_ADDRESS                       0x00205328
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_13_SCU_LatCtrlMode ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 3  
-    ECU_ADDRESS                       0x00205330
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_13_SCU_LatQuitReport ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 255  
-    ECU_ADDRESS                       0x00205338
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_13_SCU_LngAutoChecklReport ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 65535  
-    ECU_ADDRESS                       0x00205340
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_13_SCU_LngCtrlMode ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 3  
-    ECU_ADDRESS                       0x00205348
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_13_SCU_LngQuitReport ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 65535  
-    ECU_ADDRESS                       0x00205350
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_13_SCU_StrngWhlIntv ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205358
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_13_VCU_GearLeverIntv ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205360
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_14_VCU_VehDrvMod ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 7  
-    ECU_ADDRESS                       0x00205368
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_14_VCU_VehRdySt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 1  
-    ECU_ADDRESS                       0x00205370
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_14_VCU_VehRng ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double_km       0             0       0 1000  
-    ECU_ADDRESS                       0x00205378
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_15_VCU_ActRecpTorq ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double_Nm       0             0       0 2000  
-    ECU_ADDRESS                       0x00205380
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_15_VCU_ActRecpTorqSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 3  
-    ECU_ADDRESS                       0x00205388
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_15_VCU_CrntGearLvl ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 7  
-    ECU_ADDRESS                       0x00205390
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_15_VCU_CrntGearLvlVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205398
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_16_SCU_16_Checksum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 205  
-    ECU_ADDRESS                       0x002053A0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_16_SCU_16_MsgCounter ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 15  
-    ECU_ADDRESS                       0x002053A8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_16_VCU_ACCMaxRecpDecel ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double_m_s2       0             0       -5 7.75  
-    ECU_ADDRESS                       0x002053B0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_16_VCU_ACCMaxRecpDecelVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002053B8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_16_VCU_ActVehWheelTorq ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double_Nm       0             0       0 10000  
-    ECU_ADDRESS                       0x002053C0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_16_VCU_LateralAssistBtnInfo ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002053C8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_16_VCU_LateralAssistBtnInfoVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002053D0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_17_SCU_17_Checksum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 255  
-    ECU_ADDRESS                       0x002053D8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_17_SCU_17_MsgCounter ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 15  
-    ECU_ADDRESS                       0x002053E0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_17_VCU_ACCButtInfo ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 255  
-    ECU_ADDRESS                       0x002053E8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_17_VCU_AccElecECFail ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 1  
-    ECU_ADDRESS                       0x002053F0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_17_VCU_GasPedalActPst ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 99.96  
-    ECU_ADDRESS                       0x002053F8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_17_VCU_GasPedalActPstVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205400
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_17_VCU_VehWheelTorqMax ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double_Nm       0             0       0 10000  
-    ECU_ADDRESS                       0x00205408
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_18_SCU_18_Checksum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 255  
-    ECU_ADDRESS                       0x00205410
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_18_SCU_18_MsgCounter ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 15  
-    ECU_ADDRESS                       0x00205418
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_18_VCU_BrkPedalSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205420
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_18_VCU_BrkPedalStVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205428
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_18_VCU_GasPedalVirtualPst ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 99.96  
-    ECU_ADDRESS                       0x00205430
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_18_VCU_GasPedalVirtualPstVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205438
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_1_BCS_ABSActiveSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 1  
-    ECU_ADDRESS                       0x002051C0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_1_BCS_ABSFaultSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 1  
-    ECU_ADDRESS                       0x002051C8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_1_BCS_VDCActiveSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 1  
-    ECU_ADDRESS                       0x002051D0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_1_BCS_VDCFaultSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 1  
-    ECU_ADDRESS                       0x002051D8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_1_BCS_VehSpd ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double_km_h       0             0       0 240  
-    ECU_ADDRESS                       0x002051E0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_1_BCS_VehSpdVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 1  
-    ECU_ADDRESS                       0x002051E8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_1_SCU_1_Checksum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 255  
-    ECU_ADDRESS                       0x002051F0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_1_SCU_1_MsgCounter ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 15  
-    ECU_ADDRESS                       0x002051F8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_2_BCS_FLWheelSpdEdgesSum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 4095  
-    ECU_ADDRESS                       0x00205440
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_2_BCS_FLWheelSpdEdgesSumVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205448
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_2_BCS_FRWheelSpdEdgesSum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 4095  
-    ECU_ADDRESS                       0x00205450
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_2_BCS_FRWheelSpdEdgesSumVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205458
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_2_BCS_RLWheelSpdEdgesSum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 4095  
-    ECU_ADDRESS                       0x00205460
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_2_BCS_RLWheelSpdEdgesSumVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205468
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_2_BCS_RRWheelSpdEdgesSum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 4095  
-    ECU_ADDRESS                       0x00205470
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_2_BCS_RRWheelSpdEdgesSumVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205478
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_2_SCU_2_Checksum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 255  
-    ECU_ADDRESS                       0x00205480
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_2_SCU_2_MsgCounter ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 15  
-    ECU_ADDRESS                       0x00205488
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_3_BCS_YawRate ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double_rad_s       0             0       -2.0943 1.9047234375  
-    ECU_ADDRESS                       0x00205490
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_3_BCS_YawRateOffset ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double_rad_s       0             0       -0.13 0.13  
-    ECU_ADDRESS                       0x00205498
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_3_BCS_YawRateSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002054A0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_3_SCU_3_Checksum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 255  
-    ECU_ADDRESS                       0x002054A8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_3_SCU_3_MsgCounter ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 15  
-    ECU_ADDRESS                       0x002054B0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_4_BCS_HDCCtrlSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 3  
-    ECU_ADDRESS                       0x002054B8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_4_BCS_HDCErrSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 1  
-    ECU_ADDRESS                       0x002054C0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_4_SCU_4_Checksum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 255  
-    ECU_ADDRESS                       0x002054C8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_4_SCU_4_MsgCounter ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 15  
-    ECU_ADDRESS                       0x002054D0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_5_BCS_AEBActive ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002054D8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_5_BCS_AEBAvailable ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002054E0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_5_BCS_CDDActive ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002054E8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_5_BCS_CDDAvailable ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002054F0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_5_BCS_CDDFail ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002054F8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_5_BCS_MasterCylinderPr ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double_bar       0             0       0 250  
-    ECU_ADDRESS                       0x00205500
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_5_BCS_MasterCylinderPrOffset ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double_bar       0             0       -15 15  
-    ECU_ADDRESS                       0x00205508
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_5_BCS_MasterCylinderPrOffsetVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 1  
-    ECU_ADDRESS                       0x00205510
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_5_BCS_MasterCylinderPrVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 1  
-    ECU_ADDRESS                       0x00205518
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_5_BCS_NoBrakeForce ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205520
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_5_BCS_VehicleStandStillSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 3  
-    ECU_ADDRESS                       0x00205528
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_5_SCU_5_Checksum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double__       0             0       0 255  
-    ECU_ADDRESS                       0x00205530
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_5_SCU_5_MsgCounter ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 15  
-    ECU_ADDRESS                       0x00205538
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_6_BCS_FLWheelRotatedDirection ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205540
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_6_BCS_FLWheelRotatedDirectionVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205548
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_6_BCS_FLWheelSpd ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double_km_h       0             0       0 240  
-    ECU_ADDRESS                       0x00205550
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_6_BCS_FLWheelSpdVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205558
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_6_BCS_FRWheelRotatedDirection ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205560
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_6_BCS_FRWheelRotatedDirectionVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205568
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_6_BCS_FRWheelSpd ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double_km_h       0             0       0 240  
-    ECU_ADDRESS                       0x00205570
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_6_BCS_FRWheelSpdVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205578
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_6_SCU_6_Checksum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 255  
-    ECU_ADDRESS                       0x00205580
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_6_SCU_6_MsgCounter ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 15  
-    ECU_ADDRESS                       0x00205588
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_7_BCS_RLWheelRotatedDirection ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205590
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_7_BCS_RLWheelRotatedDirectionVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205598
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_7_BCS_RLWheelSpd ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double_km_h       0             0       0 240  
-    ECU_ADDRESS                       0x002055A0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_7_BCS_RLWheelSpdVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002055A8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_7_BCS_RRWheelRotatedDirection ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002055B0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_7_BCS_RRWheelRotatedDirectionVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002055B8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_7_BCS_RRWheelSpd ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double_km_h       0             0       0 240  
-    ECU_ADDRESS                       0x002055C0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_7_BCS_RRWheelSpdVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002055C8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_7_SCU_7_Checksum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 255  
-    ECU_ADDRESS                       0x002055D0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_7_SCU_7_MsgCounter ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 15  
-    ECU_ADDRESS                       0x002055D8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_8_BCS_ActVehLaltrlAccel ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double_m_s_2       0             0       -21.593 21.593  
-    ECU_ADDRESS                       0x002055E0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_8_BCS_ActVehLaltrlAccelVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002055E8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_8_BCS_ActVehLongAccel ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double_m_s_2       0             0       -21.593 21.593  
-    ECU_ADDRESS                       0x002055F0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_8_BCS_ActVehLongAccelVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x002055F8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_8_BCS_VehLaltrlAccelOffset ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double_m_s_2       0             0       -21.593 21.593  
-    ECU_ADDRESS                       0x00205600
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_8_BCS_VehLongAccelOffset ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double_m_s_2       0             0       -21.593 21.593  
-    ECU_ADDRESS                       0x00205608
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_8_SCU_8_Checksum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 255  
-    ECU_ADDRESS                       0x00205610
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_8_SCU_8_MsgCounter ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 15  
-    ECU_ADDRESS                       0x00205618
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_9_EPB_FailSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205620
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_9_EPB_SwitchSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 3  
-    ECU_ADDRESS                       0x00205628
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_9_EPB_SwitchStVD ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 1  
-    ECU_ADDRESS                       0x00205630
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_9_EPB_SysSt ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 7  
-    ECU_ADDRESS                       0x00205638
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_9_SCU_9_Checksum ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 255  
-    ECU_ADDRESS                       0x00205640
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_aaa_SCU2ADCU_bus_SCU_9_SCU_9_MsgCounter ""  
-    FLOAT64_IEEE AION_signal_transfer_CM_double       0             0       0 15  
-    ECU_ADDRESS                       0x00205648
-  /end MEASUREMENT 
-
-  /begin COMPU_METHOD AION_signal_transfer_CM_AION_gear ""  
-    TAB_VERB "%0.6" ""  
-    COMPU_TAB_REF VTAB_FOR_AION_signal_transfer_CM_AION_gear  
+  /begin COMPU_METHOD AION_signal_transfer_CM_Active_request__ ""  
+    TAB_VERB "%0.6" "-"  
+    COMPU_TAB_REF VTAB_FOR_AION_signal_transfer_CM_Active_request__  
   /end COMPU_METHOD
 
-  /begin COMPU_VTAB VTAB_FOR_AION_signal_transfer_CM_AION_gear "Enumerated data type: AION_gear"  
-    TAB_VERB 8  
-    0 "No_request"  
-    1 "P"  
-    2 "R"  
-    3 "N"  
-    4 "D"  
-    5 "Reserved_gear"  
-    6 "Reserved1_gear"  
-    7 "Reserved2_gear"  
+  /begin COMPU_VTAB VTAB_FOR_AION_signal_transfer_CM_Active_request__ "Enumerated data type: Active_request"  
+    TAB_VERB 2  
+    0 "NotActiveRequest"  
+    1 "ActiveRequest"  
+  /end COMPU_VTAB
+
+  /begin COMPU_METHOD AION_signal_transfer_CM_Active_status ""  
+    TAB_VERB "%0.6" ""  
+    COMPU_TAB_REF VTAB_FOR_AION_signal_transfer_CM_Active_status  
+  /end COMPU_METHOD
+
+  /begin COMPU_VTAB VTAB_FOR_AION_signal_transfer_CM_Active_status "Enumerated data type: Active_status"  
+    TAB_VERB 2  
+    0 "NotActiveStatus"  
+    1 "ActiveStatus"  
+  /end COMPU_VTAB
+
+  /begin COMPU_METHOD AION_signal_transfer_CM_Available_status ""  
+    TAB_VERB "%0.6" ""  
+    COMPU_TAB_REF VTAB_FOR_AION_signal_transfer_CM_Available_status  
+  /end COMPU_METHOD
+
+  /begin COMPU_VTAB VTAB_FOR_AION_signal_transfer_CM_Available_status "Enumerated data type: Available_status"  
+    TAB_VERB 2  
+    0 "NotAvailable"  
+    1 "Available"  
+  /end COMPU_VTAB
+
+  /begin COMPU_METHOD AION_signal_transfer_CM_Beam_request__ ""  
+    TAB_VERB "%0.6" "-"  
+    COMPU_TAB_REF VTAB_FOR_AION_signal_transfer_CM_Beam_request__  
+  /end COMPU_METHOD
+
+  /begin COMPU_VTAB VTAB_FOR_AION_signal_transfer_CM_Beam_request__ "Enumerated data type: Beam_request"  
+    TAB_VERB 4  
+    0 "NoBeamRequest"  
+    1 "LowBeam"  
+    2 "HighBeam"  
+    3 "BeamReserved"  
   /end COMPU_VTAB
 
   /begin COMPU_METHOD AION_signal_transfer_CM_Control_request ""  
@@ -2622,18 +1906,99 @@ ASAP2_VERSION  1 71
 
   /begin COMPU_VTAB VTAB_FOR_AION_signal_transfer_CM_Control_status "Enumerated data type: Control_status"  
     TAB_VERB 4  
-    0 "Manual_status"  
-    1 "Quit_status"  
-    2 "Auto_status"  
-    3 "Fault_status"  
+    0 "ManualStatus"  
+    1 "QuitStatus"  
+    2 "AutoStatus"  
+    3 "FaultStatus"  
   /end COMPU_VTAB
 
-  /begin COMPU_METHOD AION_signal_transfer_CM_Validation ""  
-    TAB_VERB "%0.6" ""  
-    COMPU_TAB_REF VTAB_FOR_AION_signal_transfer_CM_Validation  
+  /begin COMPU_METHOD AION_signal_transfer_CM_Drive_status__ ""  
+    TAB_VERB "%0.6" "-"  
+    COMPU_TAB_REF VTAB_FOR_AION_signal_transfer_CM_Drive_status__  
   /end COMPU_METHOD
 
-  /begin COMPU_VTAB VTAB_FOR_AION_signal_transfer_CM_Validation "Enumerated data type: Validation"  
+  /begin COMPU_VTAB VTAB_FOR_AION_signal_transfer_CM_Drive_status__ "Enumerated data type: Drive_status"  
+    TAB_VERB 6  
+    0 "InvalidDriveStatus"  
+    1 "EcoPlusModeStatus"  
+    2 "EcoModeStatus"  
+    3 "NormalModeStatus"  
+    4 "DrivingModeStatus"  
+    5 "SportModeStatus"  
+  /end COMPU_VTAB
+
+  /begin COMPU_METHOD AION_signal_transfer_CM_Enable_request__ ""  
+    TAB_VERB "%0.6" "-"  
+    COMPU_TAB_REF VTAB_FOR_AION_signal_transfer_CM_Enable_request__  
+  /end COMPU_METHOD
+
+  /begin COMPU_VTAB VTAB_FOR_AION_signal_transfer_CM_Enable_request__ "Enumerated data type: Enable_request"  
+    TAB_VERB 2  
+    0 "Disable"  
+    1 "Enable"  
+  /end COMPU_VTAB
+
+  /begin COMPU_METHOD AION_signal_transfer_CM_Gear_request ""  
+    TAB_VERB "%0.6" ""  
+    COMPU_TAB_REF VTAB_FOR_AION_signal_transfer_CM_Gear_request  
+  /end COMPU_METHOD
+
+  /begin COMPU_VTAB VTAB_FOR_AION_signal_transfer_CM_Gear_request "Enumerated data type: Gear_request"  
+    TAB_VERB 8  
+    0 "NoRequest"  
+    1 "P"  
+    2 "R"  
+    3 "N"  
+    4 "D"  
+    5 "Reserved_gear"  
+    6 "Reserved1_gear"  
+    7 "Reserved2_gear"  
+  /end COMPU_VTAB
+
+  /begin COMPU_METHOD AION_signal_transfer_CM_Gear_status ""  
+    TAB_VERB "%0.6" ""  
+    COMPU_TAB_REF VTAB_FOR_AION_signal_transfer_CM_Gear_status  
+  /end COMPU_METHOD
+
+  /begin COMPU_VTAB VTAB_FOR_AION_signal_transfer_CM_Gear_status "Enumerated data type: Gear_status"  
+    TAB_VERB 5  
+    0 "InvalidGearStatus"  
+    1 "DriveGearStatus"  
+    2 "NeutralGearStatus"  
+    3 "ReverseGearStatus"  
+    4 "ParkGearStatus"  
+  /end COMPU_VTAB
+
+  /begin COMPU_METHOD AION_signal_transfer_CM_Light_request__ ""  
+    TAB_VERB "%0.6" "-"  
+    COMPU_TAB_REF VTAB_FOR_AION_signal_transfer_CM_Light_request__  
+  /end COMPU_METHOD
+
+  /begin COMPU_VTAB VTAB_FOR_AION_signal_transfer_CM_Light_request__ "Enumerated data type: Light_request"  
+    TAB_VERB 4  
+    0 "NoLightRequest"  
+    1 "TurnLeftLight"  
+    2 "TurnRightLight"  
+    3 "EmergencyLight"  
+  /end COMPU_VTAB
+
+  /begin COMPU_METHOD AION_signal_transfer_CM_Ready_status__ ""  
+    TAB_VERB "%0.6" "-"  
+    COMPU_TAB_REF VTAB_FOR_AION_signal_transfer_CM_Ready_status__  
+  /end COMPU_METHOD
+
+  /begin COMPU_VTAB VTAB_FOR_AION_signal_transfer_CM_Ready_status__ "Enumerated data type: Ready_status"  
+    TAB_VERB 2  
+    0 "NotReady"  
+    1 "Ready"  
+  /end COMPU_VTAB
+
+  /begin COMPU_METHOD AION_signal_transfer_CM_Validation_status ""  
+    TAB_VERB "%0.6" ""  
+    COMPU_TAB_REF VTAB_FOR_AION_signal_transfer_CM_Validation_status  
+  /end COMPU_METHOD
+
+  /begin COMPU_VTAB VTAB_FOR_AION_signal_transfer_CM_Validation_status "Enumerated data type: Validation_status"  
     TAB_VERB 2  
     0 "Invalid"  
     1 "Valid"  
@@ -2651,16 +2016,8 @@ ASAP2_VERSION  1 71
     IDENTICAL "%15.10" "-"  
   /end COMPU_METHOD
 
-  /begin COMPU_METHOD AION_signal_transfer_CM_double_bar ""  
-    IDENTICAL "%15.10" "bar"  
-  /end COMPU_METHOD
-
   /begin COMPU_METHOD AION_signal_transfer_CM_double_deg ""  
     IDENTICAL "%15.10" "deg"  
-  /end COMPU_METHOD
-
-  /begin COMPU_METHOD AION_signal_transfer_CM_double_deg_s ""  
-    IDENTICAL "%15.10" "deg/s"  
   /end COMPU_METHOD
 
   /begin COMPU_METHOD AION_signal_transfer_CM_double_deg_sec ""  
@@ -2675,10 +2032,6 @@ ASAP2_VERSION  1 71
     IDENTICAL "%15.10" "km/h"  
   /end COMPU_METHOD
 
-  /begin COMPU_METHOD AION_signal_transfer_CM_double_m_s2 ""  
-    IDENTICAL "%15.10" "m/s2"  
-  /end COMPU_METHOD
-
   /begin COMPU_METHOD AION_signal_transfer_CM_double_m_s_2 ""  
     IDENTICAL "%15.10" "m/s^2"  
   /end COMPU_METHOD
@@ -2687,17 +2040,41 @@ ASAP2_VERSION  1 71
     IDENTICAL "%15.10" "rad/s"  
   /end COMPU_METHOD
 
+  /begin COMPU_METHOD AION_signal_transfer_CM_uint32 ""  
+    IDENTICAL "%10.0" ""  
+  /end COMPU_METHOD
+
+  /begin COMPU_METHOD AION_signal_transfer_CM_uint32_Nm ""  
+    IDENTICAL "%10.0" "Nm"  
+  /end COMPU_METHOD
+
+  /begin COMPU_METHOD AION_signal_transfer_CM_uint32__ ""  
+    IDENTICAL "%10.0" "-"  
+  /end COMPU_METHOD
+
+  /begin COMPU_METHOD AION_signal_transfer_CM_uint32_deg_sec ""  
+    IDENTICAL "%10.0" "deg/sec"  
+  /end COMPU_METHOD
+
+  /begin COMPU_METHOD AION_signal_transfer_CM_uint32_km ""  
+    IDENTICAL "%10.0" "km"  
+  /end COMPU_METHOD
+
+  /begin COMPU_METHOD AION_signal_transfer_CM_uint64 ""  
+    IDENTICAL "%20.0" ""  
+  /end COMPU_METHOD
+
   /begin COMPU_METHOD AION_signal_transfer_CM_uint8 ""  
     IDENTICAL "%3.0" ""  
   /end COMPU_METHOD
 
-  /begin COMPU_METHOD AION_signal_transfer_CM_uint8_Nm ""  
-    IDENTICAL "%3.0" "Nm"  
+  /begin COMPU_METHOD AION_signal_transfer_CM_uint8__ ""  
+    IDENTICAL "%3.0" "-"  
   /end COMPU_METHOD
 
-  /begin COMPU_METHOD AION_signal_transfer_CM_uint8_m_s_2 ""  
-    IDENTICAL "%3.0" "m/s^2"  
-  /end COMPU_METHOD
+  /begin  RECORD_LAYOUT Scalar_A_UINT64
+    FNC_VALUES 1 A_UINT64 COLUMN_DIR DIRECT
+  /end  RECORD_LAYOUT 
 
   /begin  RECORD_LAYOUT Scalar_FLOAT64_IEEE
     FNC_VALUES 1 FLOAT64_IEEE COLUMN_DIR DIRECT
@@ -2709,6 +2086,10 @@ ASAP2_VERSION  1 71
 
   /begin  RECORD_LAYOUT Scalar_UBYTE
     FNC_VALUES 1 UBYTE COLUMN_DIR DIRECT
+  /end  RECORD_LAYOUT 
+
+  /begin  RECORD_LAYOUT Scalar_ULONG
+    FNC_VALUES 1 ULONG COLUMN_DIR DIRECT
   /end  RECORD_LAYOUT 
 
   /begin GROUP AION_signal_transfer "AION_signal_transfer" ROOT  

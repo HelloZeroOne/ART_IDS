@@ -3,9 +3,9 @@
  *
  * Code generation for model "AION_signal_transfer".
  *
- * Model version              : 4.81
+ * Model version              : 4.84
  * Simulink Coder version : 9.5 (R2021a) 14-Nov-2020
- * C++ source code generated on : Fri May 27 15:32:19 2022
+ * C++ source code generated on : Fri Jun  3 21:00:20 2022
  *
  * Target selection: slrealtime.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping

@@ -3,9 +3,9 @@
  *
  * Code generation for model "AION_signal_transfer".
  *
- * Model version              : 4.42
+ * Model version              : 4.82
  * Simulink Coder version : 9.5 (R2021a) 14-Nov-2020
- * C++ source code generated on : Tue May 17 14:10:21 2022
+ * C++ source code generated on : Fri Jun  3 16:42:51 2022
  *
  * Target selection: slrealtime.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -25,13 +25,8 @@
 struct SCU2ADCU_SCU_1
 {
   real_T BCS_ABSActiveSt;
-  real_T BCS_ABSFaultSt;
-  real_T BCS_VDCActiveSt;
-  real_T BCS_VDCFaultSt;
   real_T BCS_VehSpd;
   real_T BCS_VehSpdVD;
-  real_T SCU_1_Checksum;
-  real_T SCU_1_MsgCounter;
 };
 
 #endif
@@ -46,11 +41,6 @@ struct SCU2ADCU_SCU_10
   real_T EPS_SteeringAngleSpdVD;
   real_T EPS_SteeringAngleVD;
   real_T EPS_StrngWhlTorq;
-  real_T EPS_StrngWhlTorqVD;
-  real_T EPS_ThermalSt;
-  real_T EPS_WarnLamp;
-  real_T SCU_10_Checksum;
-  real_T SCU_10_MsgCounter;
 };
 
 #endif
@@ -61,24 +51,13 @@ struct SCU2ADCU_SCU_10
 struct SCU2ADCU_SCU_11
 {
   real_T BCM_CtrlAvailable;
-  real_T BCM_DriverDoorAjarSt;
-  real_T BCM_FrontFogLampSt;
-  real_T BCM_FrontWiperSt;
   real_T BCM_HazardLampSt;
   real_T BCM_HighBeamSt;
   real_T BCM_HornSt;
   real_T BCM_KeySt;
-  real_T BCM_LeftTurnLampFaultSt;
   real_T BCM_LeftTurnLampSt;
   real_T BCM_LowBeamSt;
-  real_T BCM_PsngrDoorAjarSt;
-  real_T BCM_RLDoorAjarSt;
-  real_T BCM_RRDoorAjarSt;
-  real_T BCM_RearFogLampSt;
-  real_T BCM_RightTurnLampFaultSt;
   real_T BCM_RightTurnLampSt;
-  real_T SCU_11_Checksum;
-  real_T SCU_11_MsgCounter;
 };
 
 #endif
@@ -88,8 +67,6 @@ struct SCU2ADCU_SCU_11
 
 struct SCU2ADCU_SCU_12
 {
-  real_T SCU_12_Checksum;
-  real_T SCU_12_MsgCounter;
   real_T SRS_DriverSeatBeltSt;
   real_T SRS_PsngrSeatBeltSt;
 };
@@ -101,10 +78,6 @@ struct SCU2ADCU_SCU_12
 
 struct SCU2ADCU_SCU_13
 {
-  real_T SCU_13_Checksum;
-  real_T SCU_13_MsgCounter;
-  real_T SCU_EStopSwSt;
-  real_T SCU_EStopSwStVD;
   real_T SCU_LatAutoCheckReport;
   real_T SCU_LatCtrlMode;
   real_T SCU_LatQuitReport;
@@ -134,8 +107,6 @@ struct SCU2ADCU_SCU_14
 
 struct SCU2ADCU_SCU_15
 {
-  real_T VCU_ActRecpTorq;
-  real_T VCU_ActRecpTorqSt;
   real_T VCU_CrntGearLvl;
   real_T VCU_CrntGearLvlVD;
 };
@@ -147,13 +118,7 @@ struct SCU2ADCU_SCU_15
 
 struct SCU2ADCU_SCU_16
 {
-  real_T SCU_16_Checksum;
-  real_T SCU_16_MsgCounter;
-  real_T VCU_ACCMaxRecpDecel;
-  real_T VCU_ACCMaxRecpDecelVD;
   real_T VCU_ActVehWheelTorq;
-  real_T VCU_LateralAssistBtnInfo;
-  real_T VCU_LateralAssistBtnInfoVD;
 };
 
 #endif
@@ -163,12 +128,8 @@ struct SCU2ADCU_SCU_16
 
 struct SCU2ADCU_SCU_17
 {
-  real_T SCU_17_Checksum;
-  real_T SCU_17_MsgCounter;
-  real_T VCU_ACCButtInfo;
   real_T VCU_AccElecECFail;
   real_T VCU_GasPedalActPst;
-  real_T VCU_GasPedalActPstVD;
   real_T VCU_VehWheelTorqMax;
 };
 
@@ -179,31 +140,7 @@ struct SCU2ADCU_SCU_17
 
 struct SCU2ADCU_SCU_18
 {
-  real_T SCU_18_Checksum;
-  real_T SCU_18_MsgCounter;
   real_T VCU_BrkPedalSt;
-  real_T VCU_BrkPedalStVD;
-  real_T VCU_GasPedalVirtualPst;
-  real_T VCU_GasPedalVirtualPstVD;
-};
-
-#endif
-
-#ifndef DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_2_
-#define DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_2_
-
-struct SCU2ADCU_SCU_2
-{
-  real_T BCS_FLWheelSpdEdgesSum;
-  real_T BCS_FLWheelSpdEdgesSumVD;
-  real_T BCS_FRWheelSpdEdgesSum;
-  real_T BCS_FRWheelSpdEdgesSumVD;
-  real_T BCS_RLWheelSpdEdgesSum;
-  real_T BCS_RLWheelSpdEdgesSumVD;
-  real_T BCS_RRWheelSpdEdgesSum;
-  real_T BCS_RRWheelSpdEdgesSumVD;
-  real_T SCU_2_Checksum;
-  real_T SCU_2_MsgCounter;
 };
 
 #endif
@@ -214,83 +151,6 @@ struct SCU2ADCU_SCU_2
 struct SCU2ADCU_SCU_3
 {
   real_T BCS_YawRate;
-  real_T BCS_YawRateOffset;
-  real_T BCS_YawRateSt;
-  real_T SCU_3_Checksum;
-  real_T SCU_3_MsgCounter;
-};
-
-#endif
-
-#ifndef DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_4_
-#define DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_4_
-
-struct SCU2ADCU_SCU_4
-{
-  real_T BCS_HDCCtrlSt;
-  real_T BCS_HDCErrSt;
-  real_T SCU_4_Checksum;
-  real_T SCU_4_MsgCounter;
-};
-
-#endif
-
-#ifndef DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_5_
-#define DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_5_
-
-struct SCU2ADCU_SCU_5
-{
-  real_T BCS_AEBActive;
-  real_T BCS_AEBAvailable;
-  real_T BCS_CDDActive;
-  real_T BCS_CDDAvailable;
-  real_T BCS_CDDFail;
-  real_T BCS_MasterCylinderPr;
-  real_T BCS_MasterCylinderPrOffset;
-  real_T BCS_MasterCylinderPrOffsetVD;
-  real_T BCS_MasterCylinderPrVD;
-  real_T BCS_NoBrakeForce;
-  real_T BCS_VehicleStandStillSt;
-  real_T SCU_5_Checksum;
-  real_T SCU_5_MsgCounter;
-};
-
-#endif
-
-#ifndef DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_6_
-#define DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_6_
-
-struct SCU2ADCU_SCU_6
-{
-  real_T BCS_FLWheelRotatedDirection;
-  real_T BCS_FLWheelRotatedDirectionVD;
-  real_T BCS_FLWheelSpd;
-  real_T BCS_FLWheelSpdVD;
-  real_T BCS_FRWheelRotatedDirection;
-  real_T BCS_FRWheelRotatedDirectionVD;
-  real_T BCS_FRWheelSpd;
-  real_T BCS_FRWheelSpdVD;
-  real_T SCU_6_Checksum;
-  real_T SCU_6_MsgCounter;
-};
-
-#endif
-
-#ifndef DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_7_
-#define DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_7_
-
-struct SCU2ADCU_SCU_7
-{
-  real_T BCS_RLWheelRotatedDirection;
-  real_T BCS_RLWheelRotatedDirectionVD;
-  real_T BCS_RLWheelSpd;
-  real_T BCS_RLWheelSpdVD;
-  real_T BCS_RRWheelRotatedDirection;
-  real_T BCS_RRWheelRotatedDirectionVD;
-  real_T BCS_RRWheelSpd;
-  real_T BCS_RRWheelSpdVD;
-  real_T SCU_7_Checksum;
-  real_T SCU_7_MsgCounter;
 };
 
 #endif
@@ -301,13 +161,7 @@ struct SCU2ADCU_SCU_7
 struct SCU2ADCU_SCU_8
 {
   real_T BCS_ActVehLaltrlAccel;
-  real_T BCS_ActVehLaltrlAccelVD;
   real_T BCS_ActVehLongAccel;
-  real_T BCS_ActVehLongAccelVD;
-  real_T BCS_VehLaltrlAccelOffset;
-  real_T BCS_VehLongAccelOffset;
-  real_T SCU_8_Checksum;
-  real_T SCU_8_MsgCounter;
 };
 
 #endif
@@ -317,12 +171,7 @@ struct SCU2ADCU_SCU_8
 
 struct SCU2ADCU_SCU_9
 {
-  real_T EPB_FailSt;
-  real_T EPB_SwitchSt;
-  real_T EPB_SwitchStVD;
   real_T EPB_SysSt;
-  real_T SCU_9_Checksum;
-  real_T SCU_9_MsgCounter;
 };
 
 #endif
@@ -342,12 +191,7 @@ struct SCU2ADCU
   SCU2ADCU_SCU_16 SCU_16;
   SCU2ADCU_SCU_17 SCU_17;
   SCU2ADCU_SCU_18 SCU_18;
-  SCU2ADCU_SCU_2 SCU_2;
   SCU2ADCU_SCU_3 SCU_3;
-  SCU2ADCU_SCU_4 SCU_4;
-  SCU2ADCU_SCU_5 SCU_5;
-  SCU2ADCU_SCU_6 SCU_6;
-  SCU2ADCU_SCU_7 SCU_7;
   SCU2ADCU_SCU_8 SCU_8;
   SCU2ADCU_SCU_9 SCU_9;
 };
@@ -386,38 +230,22 @@ typedef enum {
 
 #endif
 
-#ifndef DEFINED_TYPEDEF_FOR_Control_status_
-#define DEFINED_TYPEDEF_FOR_Control_status_
-
-typedef enum {
-  Manual_status = 0,                   /* Default value */
-  Quit_status,
-  Auto_status,
-  Fault_status
-} Control_status;
-
-#endif
-
 #ifndef DEFINED_TYPEDEF_FOR_AION_Lateral_Control_Info_
 #define DEFINED_TYPEDEF_FOR_AION_Lateral_Control_Info_
 
 struct AION_Lateral_Control_Info
 {
-  Control_request set_lateral_control_request;
-  real_T set_steer_torque_request;
-  real_T set_steer_angle_request;
-  real_T set_steer_ang_spd_limit;
-  Control_status get_lateral_control_status;
-  real_T get_EPS_steering_angle;
+  Control_request set_LatCtrlReq;
+  real_T set_SteerAngReq;
 };
 
 #endif
 
-#ifndef DEFINED_TYPEDEF_FOR_AION_gear_
-#define DEFINED_TYPEDEF_FOR_AION_gear_
+#ifndef DEFINED_TYPEDEF_FOR_Gear_request_
+#define DEFINED_TYPEDEF_FOR_Gear_request_
 
 typedef enum {
-  No_request = 0,                      /* Default value */
+  NoRequest = 0,                       /* Default value */
   P,
   R,
   N,
@@ -425,17 +253,17 @@ typedef enum {
   Reserved_gear,
   Reserved1_gear,
   Reserved2_gear
-} AION_gear;
+} Gear_request;
 
 #endif
 
-#ifndef DEFINED_TYPEDEF_FOR_Validation_
-#define DEFINED_TYPEDEF_FOR_Validation_
+#ifndef DEFINED_TYPEDEF_FOR_Validation_status_
+#define DEFINED_TYPEDEF_FOR_Validation_status_
 
 typedef enum {
   Invalid = 0,                         /* Default value */
   Valid
-} Validation;
+} Validation_status;
 
 #endif
 
@@ -444,13 +272,246 @@ typedef enum {
 
 struct AION_Longitudinal_Control_Info
 {
-  real_T get_vehicle_spd;
-  Control_status get_longitudinal_control_status;
-  Control_request set_longitudinal_control_request;
-  real_T set_brake_request;
-  AION_gear set_gear_level_request;
-  Validation set_gear_level_req_val;
-  real_T set_torque_request;
+  Control_request set_LngCtrlReq;
+  real_T set_AutoTrqWhlReq;
+  real_T set_BrakeReq;
+  Gear_request set_GearLvlReq;
+  Validation_status set_GearLvlReqVD;
+};
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_Beam_request_
+#define DEFINED_TYPEDEF_FOR_Beam_request_
+
+typedef enum {
+  NoBeamRequest = 0,                   /* Default value */
+  LowBeam,
+  HighBeam,
+  BeamReserved
+} Beam_request;
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_Enable_request_
+#define DEFINED_TYPEDEF_FOR_Enable_request_
+
+typedef enum {
+  Disable = 0,                         /* Default value */
+  Enable
+} Enable_request;
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_Active_request_
+#define DEFINED_TYPEDEF_FOR_Active_request_
+
+typedef enum {
+  NotActiveRequest = 0,                /* Default value */
+  ActiveRequest
+} Active_request;
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_Light_request_
+#define DEFINED_TYPEDEF_FOR_Light_request_
+
+typedef enum {
+  NoLightRequest = 0,                  /* Default value */
+  TurnLeftLight,
+  TurnRightLight,
+  EmergencyLight
+} Light_request;
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_ADCU_Info_
+#define DEFINED_TYPEDEF_FOR_ADCU_Info_
+
+struct ADCU_Info
+{
+  uint32_T set_Checksum1;
+  uint32_T set_MsgCounter1;
+  uint32_T set_Checksum2;
+  uint32_T set_MsgCounter2;
+  uint32_T set_Checksum3;
+  uint32_T set_MsgCounter3;
+  Beam_request set_BeamReq;
+  Enable_request set_BodyCtrlReq;
+  Active_request set_HornRingReq;
+  Light_request set_TurnLightReq;
+};
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_BCS_Info_
+#define DEFINED_TYPEDEF_FOR_BCS_Info_
+
+struct BCS_Info
+{
+  uint8_T get_ABSActiveSt;
+  real_T get_VehSpd;
+  uint8_T get_VehSpdVD;
+  real_T get_YawRate;
+  real_T get_ActVehLaltrlAccel;
+  real_T get_ActVehLongAccel;
+};
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_Drive_status_
+#define DEFINED_TYPEDEF_FOR_Drive_status_
+
+typedef enum {
+  InvalidDriveStatus = 0,              /* Default value */
+  EcoPlusModeStatus,
+  EcoModeStatus,
+  NormalModeStatus,
+  DrivingModeStatus,
+  SportModeStatus
+} Drive_status;
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_Ready_status_
+#define DEFINED_TYPEDEF_FOR_Ready_status_
+
+typedef enum {
+  NotReady = 0,                        /* Default value */
+  Ready
+} Ready_status;
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_Gear_status_
+#define DEFINED_TYPEDEF_FOR_Gear_status_
+
+typedef enum {
+  InvalidGearStatus = 0,               /* Default value */
+  DriveGearStatus,
+  NeutralGearStatus,
+  ReverseGearStatus,
+  ParkGearStatus
+} Gear_status;
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_VCU_Info_
+#define DEFINED_TYPEDEF_FOR_VCU_Info_
+
+struct VCU_Info
+{
+  uint32_T get_ActVehWheelTorq;
+  uint8_T get_GearLeverIntv;
+  Drive_status get_VehDrvMod;
+  Ready_status get_VehRdySt;
+  uint32_T get_VehRng;
+  Gear_status get_CrntGearLvl;
+  uint8_T get_CrntGearLvlVD;
+  real_T get_GasPedalActPst;
+  uint8_T get_AccElecECFail;
+  uint32_T get_VehWheelTorqMax;
+  uint8_T get_BrkPedalSt;
+};
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_Control_status_
+#define DEFINED_TYPEDEF_FOR_Control_status_
+
+typedef enum {
+  ManualStatus = 0,                    /* Default value */
+  QuitStatus,
+  AutoStatus,
+  FaultStatus
+} Control_status;
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_SCU_Info_
+#define DEFINED_TYPEDEF_FOR_SCU_Info_
+
+struct SCU_Info
+{
+  uint32_T get_LatAutoCheckReport;
+  Control_status get_LatCtrlMode;
+  uint32_T get_LatQuitReport;
+  uint32_T get_LngAutoCheckIReport;
+  Control_status get_LngCtrlMode;
+  uint32_T get_LngQuitReport;
+  uint8_T get_StrngWhlIntv;
+};
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_EPB_Info_
+#define DEFINED_TYPEDEF_FOR_EPB_Info_
+
+struct EPB_Info
+{
+  uint8_T get_SysSt;
+};
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_SRS_Info_
+#define DEFINED_TYPEDEF_FOR_SRS_Info_
+
+struct SRS_Info
+{
+  uint8_T get_DriverSeatBeltSt;
+  uint8_T get_PsngrSeatBeltSt;
+};
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_EPS_Info_
+#define DEFINED_TYPEDEF_FOR_EPS_Info_
+
+struct EPS_Info
+{
+  real_T get_SteeringAngle;
+  uint32_T get_SteeringAngleSpd;
+  uint8_T get_SteeringAngleSpdVD;
+  uint8_T get_SteeringAngleVD;
+  real_T get_StrngWhlTorq;
+};
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_Available_status_
+#define DEFINED_TYPEDEF_FOR_Available_status_
+
+typedef enum {
+  NotAvailable = 0,                    /* Default value */
+  Available
+} Available_status;
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_Active_status_
+#define DEFINED_TYPEDEF_FOR_Active_status_
+
+typedef enum {
+  NotActiveStatus = 0,                 /* Default value */
+  ActiveStatus
+} Active_status;
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_BCM_Info_
+#define DEFINED_TYPEDEF_FOR_BCM_Info_
+
+struct BCM_Info
+{
+  Available_status get_CtrlAvailable;
+  Active_status get_HazardLampSt;
+  Active_status get_HighBeamSt;
+  Active_status get_HornSt;
+  uint8_T get_KeySt;
+  Active_status get_LeftTurnLampSt;
+  Active_status get_LowBeamSt;
+  Active_status get_RightTurnLampSt;
 };
 
 #endif
@@ -460,8 +521,16 @@ struct AION_Longitudinal_Control_Info
 
 struct AION_ApplicationBus
 {
-  AION_Lateral_Control_Info AION_lateral_control_info;
-  AION_Longitudinal_Control_Info AION_longitudinal_control_info;
+  AION_Lateral_Control_Info set_lateral_control_info;
+  AION_Longitudinal_Control_Info set_longitudinal_control_info;
+  ADCU_Info set_ADCU_info;
+  BCS_Info get_BCS_info;
+  VCU_Info get_VCU_info;
+  SCU_Info get_SCU_info;
+  EPB_Info get_EPB_info;
+  SRS_Info get_SRS_info;
+  EPS_Info get_EPS_info;
+  BCM_Info get_BCM_info;
 };
 
 #endif
@@ -471,15 +540,11 @@ struct AION_ApplicationBus
 
 struct ADCU2SCU_ADCU_1
 {
-  real_T ADCU_1_Checksum;
-  real_T ADCU_1_MsgCounter;
   real_T ADCU_AutoTrqWhlReq;
   real_T ADCU_BrakeReq;
   real_T ADCU_GearLvlReq;
   real_T ADCU_GearLvlReqVD;
   real_T ADCU_LngCtrlReq;
-  real_T ADCU_ParkingReqToEPB;
-  real_T ADCU_ParkingReqToEPBVD;
 };
 
 #endif
@@ -489,12 +554,8 @@ struct ADCU2SCU_ADCU_1
 
 struct ADCU2SCU_ADCU_2
 {
-  real_T ADCU_2_Checksum;
-  real_T ADCU_2_MsgCounter;
   real_T ADCU_LatCtrlReq;
   real_T ADCU_SteerAngReq;
-  real_T ADCU_SteerAngSpdLimt;
-  real_T ADCU_SteerWhlTorqReq;
 };
 
 #endif
@@ -504,8 +565,6 @@ struct ADCU2SCU_ADCU_2
 
 struct ADCU2SCU_ADCU_3
 {
-  real_T ADCU_3_Checksum;
-  real_T ADCU_3_MsgCounter;
   real_T ADCU_BeamReq;
   real_T ADCU_BodyCtrlReq;
   real_T ADCU_HornRingReq;
@@ -522,7 +581,6 @@ struct ADCU2SCU
   ADCU2SCU_ADCU_1 ADCU_1;
   ADCU2SCU_ADCU_2 ADCU_2;
   ADCU2SCU_ADCU_3 ADCU_3;
-  InputCAN aaa;
 };
 
 #endif

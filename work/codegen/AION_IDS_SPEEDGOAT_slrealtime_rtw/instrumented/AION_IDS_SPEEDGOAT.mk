@@ -2,7 +2,7 @@
 ## Makefile generated for component 'AION_IDS_SPEEDGOAT'. 
 ## 
 ## Makefile     : AION_IDS_SPEEDGOAT.mk
-## Generated on : Fri May 27 16:05:13 2022
+## Generated on : Fri Jun 03 21:01:13 2022
 ## Final product: $(START_DIR)/AION_IDS_SPEEDGOAT_slrealtime_rtw/AION_IDS_SPEEDGOAT
 ## Product type : executable
 ## 
@@ -21,7 +21,7 @@ MAKEFILE                  = AION_IDS_SPEEDGOAT.mk
 MATLAB_ROOT               = D:/R2021a
 MATLAB_BIN                = D:/R2021a/bin
 MATLAB_ARCH_BIN           = $(MATLAB_BIN)/win64
-START_DIR                 = D:/GitHub/ART-IDS-Team/ART_IDS/work/codegen
+START_DIR                 = E:/GitHub/HelloZeroOne/ART_IDS/work/codegen
 SOLVER                    = 
 SOLVER_OBJ                = 
 CLASSIC_INTERFACE         = 0

@@ -14,49 +14,49 @@ struct AION_IDS_SPEEDGOAT_cal_type {
                  * Referenced by: synthesized block
                  */
   CAN_DATATYPE RT2_InitialCondition; /* Computed Parameter: RT2_InitialCondition
-                                      * Referenced by: '<S28>/RT2'
+                                      * Referenced by: '<S13>/RT2'
                                       */
   real_T SCU2ADCU_CAN_read_P1_Size[2];
                                 /* Computed Parameter: SCU2ADCU_CAN_read_P1_Size
-                                 * Referenced by: '<S25>/SCU2ADCU_CAN_read'
+                                 * Referenced by: '<S10>/SCU2ADCU_CAN_read'
                                  */
   real_T SCU2ADCU_CAN_read_P1;         /* Expression: id
-                                        * Referenced by: '<S25>/SCU2ADCU_CAN_read'
+                                        * Referenced by: '<S10>/SCU2ADCU_CAN_read'
                                         */
   real_T SCU2ADCU_CAN_read_P2_Size[2];
                                 /* Computed Parameter: SCU2ADCU_CAN_read_P2_Size
-                                 * Referenced by: '<S25>/SCU2ADCU_CAN_read'
+                                 * Referenced by: '<S10>/SCU2ADCU_CAN_read'
                                  */
   real_T SCU2ADCU_CAN_read_P2;         /* Expression: sampleTime
-                                        * Referenced by: '<S25>/SCU2ADCU_CAN_read'
+                                        * Referenced by: '<S10>/SCU2ADCU_CAN_read'
                                         */
   real_T SCU2ADCU_CAN_read_P3_Size[2];
                                 /* Computed Parameter: SCU2ADCU_CAN_read_P3_Size
-                                 * Referenced by: '<S25>/SCU2ADCU_CAN_read'
+                                 * Referenced by: '<S10>/SCU2ADCU_CAN_read'
                                  */
   real_T SCU2ADCU_CAN_read_P3;         /* Expression: messageType
-                                        * Referenced by: '<S25>/SCU2ADCU_CAN_read'
+                                        * Referenced by: '<S10>/SCU2ADCU_CAN_read'
                                         */
   real_T SCU2ADCU_CAN_read_P4_Size[2];
                                 /* Computed Parameter: SCU2ADCU_CAN_read_P4_Size
-                                 * Referenced by: '<S25>/SCU2ADCU_CAN_read'
+                                 * Referenced by: '<S10>/SCU2ADCU_CAN_read'
                                  */
   real_T SCU2ADCU_CAN_read_P4[5];    /* Computed Parameter: SCU2ADCU_CAN_read_P4
-                                      * Referenced by: '<S25>/SCU2ADCU_CAN_read'
+                                      * Referenced by: '<S10>/SCU2ADCU_CAN_read'
                                       */
   real_T SCU2ADCU_CAN_read_P5_Size[2];
                                 /* Computed Parameter: SCU2ADCU_CAN_read_P5_Size
-                                 * Referenced by: '<S25>/SCU2ADCU_CAN_read'
+                                 * Referenced by: '<S10>/SCU2ADCU_CAN_read'
                                  */
   real_T SCU2ADCU_CAN_read_P5;         /* Expression: ptIdx
-                                        * Referenced by: '<S25>/SCU2ADCU_CAN_read'
+                                        * Referenced by: '<S10>/SCU2ADCU_CAN_read'
                                         */
   real_T SCU2ADCU_CAN_read_P6_Size[2];
                                 /* Computed Parameter: SCU2ADCU_CAN_read_P6_Size
-                                 * Referenced by: '<S25>/SCU2ADCU_CAN_read'
+                                 * Referenced by: '<S10>/SCU2ADCU_CAN_read'
                                  */
   real_T SCU2ADCU_CAN_read_P6;         /* Expression: isFDMod
-                                        * Referenced by: '<S25>/SCU2ADCU_CAN_read'
+                                        * Referenced by: '<S10>/SCU2ADCU_CAN_read'
                                         */
   real_T CANSetup_P1_Size[2];          /* Computed Parameter: CANSetup_P1_Size
                                         * Referenced by: '<S2>/CAN Setup'
@@ -246,103 +246,103 @@ struct AION_IDS_SPEEDGOAT_cal_type {
                                         */
   real_T ADCU2SCU_Brake_Command_CAN_write_P1_Size[2];
                  /* Computed Parameter: ADCU2SCU_Brake_Command_CAN_write_P1_Size
-                  * Referenced by: '<S28>/ADCU2SCU_Brake_Command_CAN_write'
+                  * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
                   */
   real_T ADCU2SCU_Brake_Command_CAN_write_P1;/* Expression: id
-                                              * Referenced by: '<S28>/ADCU2SCU_Brake_Command_CAN_write'
+                                              * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
                                               */
   real_T ADCU2SCU_Brake_Command_CAN_write_P2_Size[2];
                  /* Computed Parameter: ADCU2SCU_Brake_Command_CAN_write_P2_Size
-                  * Referenced by: '<S28>/ADCU2SCU_Brake_Command_CAN_write'
+                  * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
                   */
   real_T ADCU2SCU_Brake_Command_CAN_write_P2;/* Expression: sampleTime
-                                              * Referenced by: '<S28>/ADCU2SCU_Brake_Command_CAN_write'
+                                              * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
                                               */
   real_T ADCU2SCU_Brake_Command_CAN_write_P3_Size[2];
                  /* Computed Parameter: ADCU2SCU_Brake_Command_CAN_write_P3_Size
-                  * Referenced by: '<S28>/ADCU2SCU_Brake_Command_CAN_write'
+                  * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
                   */
   real_T ADCU2SCU_Brake_Command_CAN_write_P3;/* Expression: messageType
-                                              * Referenced by: '<S28>/ADCU2SCU_Brake_Command_CAN_write'
+                                              * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
                                               */
   real_T ADCU2SCU_Brake_Command_CAN_write_P4_Size[2];
                  /* Computed Parameter: ADCU2SCU_Brake_Command_CAN_write_P4_Size
-                  * Referenced by: '<S28>/ADCU2SCU_Brake_Command_CAN_write'
+                  * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
                   */
   real_T ADCU2SCU_Brake_Command_CAN_write_P4;/* Expression: enaStatusPort
-                                              * Referenced by: '<S28>/ADCU2SCU_Brake_Command_CAN_write'
+                                              * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
                                               */
   real_T ADCU2SCU_Brake_Command_CAN_write_P5_Size[2];
                  /* Computed Parameter: ADCU2SCU_Brake_Command_CAN_write_P5_Size
-                  * Referenced by: '<S28>/ADCU2SCU_Brake_Command_CAN_write'
+                  * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
                   */
   real_T ADCU2SCU_Brake_Command_CAN_write_P5[5];
                       /* Computed Parameter: ADCU2SCU_Brake_Command_CAN_write_P5
-                       * Referenced by: '<S28>/ADCU2SCU_Brake_Command_CAN_write'
+                       * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
                        */
   real_T ADCU2SCU_Brake_Command_CAN_write_P6_Size[2];
                  /* Computed Parameter: ADCU2SCU_Brake_Command_CAN_write_P6_Size
-                  * Referenced by: '<S28>/ADCU2SCU_Brake_Command_CAN_write'
+                  * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
                   */
   real_T ADCU2SCU_Brake_Command_CAN_write_P6;/* Expression: ptIdx
-                                              * Referenced by: '<S28>/ADCU2SCU_Brake_Command_CAN_write'
+                                              * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
                                               */
   real_T ADCU2SCU_Brake_Command_CAN_write_P7_Size[2];
                  /* Computed Parameter: ADCU2SCU_Brake_Command_CAN_write_P7_Size
-                  * Referenced by: '<S28>/ADCU2SCU_Brake_Command_CAN_write'
+                  * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
                   */
   real_T ADCU2SCU_Brake_Command_CAN_write_P7;/* Expression: isFDMod
-                                              * Referenced by: '<S28>/ADCU2SCU_Brake_Command_CAN_write'
+                                              * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
                                               */
   real_T ADCU2SCU_Gear_Command_CAN_write_P1_Size[2];
                   /* Computed Parameter: ADCU2SCU_Gear_Command_CAN_write_P1_Size
-                   * Referenced by: '<S28>/ADCU2SCU_Gear_Command_CAN_write'
+                   * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
                    */
   real_T ADCU2SCU_Gear_Command_CAN_write_P1;/* Expression: id
-                                             * Referenced by: '<S28>/ADCU2SCU_Gear_Command_CAN_write'
+                                             * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
                                              */
   real_T ADCU2SCU_Gear_Command_CAN_write_P2_Size[2];
                   /* Computed Parameter: ADCU2SCU_Gear_Command_CAN_write_P2_Size
-                   * Referenced by: '<S28>/ADCU2SCU_Gear_Command_CAN_write'
+                   * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
                    */
   real_T ADCU2SCU_Gear_Command_CAN_write_P2;/* Expression: sampleTime
-                                             * Referenced by: '<S28>/ADCU2SCU_Gear_Command_CAN_write'
+                                             * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
                                              */
   real_T ADCU2SCU_Gear_Command_CAN_write_P3_Size[2];
                   /* Computed Parameter: ADCU2SCU_Gear_Command_CAN_write_P3_Size
-                   * Referenced by: '<S28>/ADCU2SCU_Gear_Command_CAN_write'
+                   * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
                    */
   real_T ADCU2SCU_Gear_Command_CAN_write_P3;/* Expression: messageType
-                                             * Referenced by: '<S28>/ADCU2SCU_Gear_Command_CAN_write'
+                                             * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
                                              */
   real_T ADCU2SCU_Gear_Command_CAN_write_P4_Size[2];
                   /* Computed Parameter: ADCU2SCU_Gear_Command_CAN_write_P4_Size
-                   * Referenced by: '<S28>/ADCU2SCU_Gear_Command_CAN_write'
+                   * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
                    */
   real_T ADCU2SCU_Gear_Command_CAN_write_P4;/* Expression: enaStatusPort
-                                             * Referenced by: '<S28>/ADCU2SCU_Gear_Command_CAN_write'
+                                             * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
                                              */
   real_T ADCU2SCU_Gear_Command_CAN_write_P5_Size[2];
                   /* Computed Parameter: ADCU2SCU_Gear_Command_CAN_write_P5_Size
-                   * Referenced by: '<S28>/ADCU2SCU_Gear_Command_CAN_write'
+                   * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
                    */
   real_T ADCU2SCU_Gear_Command_CAN_write_P5[5];
                        /* Computed Parameter: ADCU2SCU_Gear_Command_CAN_write_P5
-                        * Referenced by: '<S28>/ADCU2SCU_Gear_Command_CAN_write'
+                        * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
                         */
   real_T ADCU2SCU_Gear_Command_CAN_write_P6_Size[2];
                   /* Computed Parameter: ADCU2SCU_Gear_Command_CAN_write_P6_Size
-                   * Referenced by: '<S28>/ADCU2SCU_Gear_Command_CAN_write'
+                   * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
                    */
   real_T ADCU2SCU_Gear_Command_CAN_write_P6;/* Expression: ptIdx
-                                             * Referenced by: '<S28>/ADCU2SCU_Gear_Command_CAN_write'
+                                             * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
                                              */
   real_T ADCU2SCU_Gear_Command_CAN_write_P7_Size[2];
                   /* Computed Parameter: ADCU2SCU_Gear_Command_CAN_write_P7_Size
-                   * Referenced by: '<S28>/ADCU2SCU_Gear_Command_CAN_write'
+                   * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
                    */
   real_T ADCU2SCU_Gear_Command_CAN_write_P7;/* Expression: isFDMod
-                                             * Referenced by: '<S28>/ADCU2SCU_Gear_Command_CAN_write'
+                                             * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
                                              */
   real_T AutoTrqWhlReq_test_InitialCondition;/* Expression: 0
                                               * Referenced by: synthesized block
@@ -353,416 +353,211 @@ struct AION_IDS_SPEEDGOAT_cal_type {
   real_T TmpRTBAtAION_auto_mode_requestInport2_InitialCondition;/* Expression: 0
                                                                  * Referenced by: synthesized block
                                                                  */
-  real_T TmpRTBAtAION_auto_mode_requestInport3_InitialCondition;/* Expression: 0
-                                                                 * Referenced by: synthesized block
-                                                                 */
-  real_T RT1_141_InitialCondition;     /* Expression: 0
+  real_T RT1_19_InitialCondition;      /* Expression: 0
                                         * Referenced by: '<S1>/RT1'
                                         */
-  real_T RT1_145_InitialCondition;     /* Expression: 0
+  real_T RT1_21_InitialCondition;      /* Expression: 0
                                         * Referenced by: '<S1>/RT1'
                                         */
-  real_T RT1_24_InitialCondition;      /* Expression: 0
+  real_T RT1_22_InitialCondition;      /* Expression: 0
                                         * Referenced by: '<S1>/RT1'
                                         */
-  real_T RT1_34_InitialCondition;      /* Expression: 0
+  real_T RT1_23_InitialCondition;      /* Expression: 0
                                         * Referenced by: '<S1>/RT1'
                                         */
-  real_T RT1_35_InitialCondition;      /* Expression: 0
-                                        * Referenced by: '<S1>/RT1'
-                                        */
-  real_T RT1_4_InitialCondition;       /* Expression: 0
-                                        * Referenced by: '<S1>/RT1'
-                                        */
-  real_T RT1_44_InitialCondition;      /* Expression: 0
+  real_T RT1_31_InitialCondition;      /* Expression: 0
                                         * Referenced by: '<S1>/RT1'
                                         */
   real_T RT1_45_InitialCondition;      /* Expression: 0
                                         * Referenced by: '<S1>/RT1'
                                         */
-  real_T RT1_52_InitialCondition;      /* Expression: 0
-                                        * Referenced by: '<S1>/RT1'
-                                        */
-  real_T RT1_56_InitialCondition;      /* Expression: 0
-                                        * Referenced by: '<S1>/RT1'
-                                        */
-  real_T RT1_60_InitialCondition;      /* Expression: 0
-                                        * Referenced by: '<S1>/RT1'
-                                        */
-  real_T RT1_64_InitialCondition;      /* Expression: 0
-                                        * Referenced by: '<S1>/RT1'
-                                        */
-  real_T RT1_66_InitialCondition;      /* Expression: 0
-                                        * Referenced by: '<S1>/RT1'
-                                        */
-  real_T RT1_68_InitialCondition;      /* Expression: 0
-                                        * Referenced by: '<S1>/RT1'
-                                        */
-  real_T RT1_70_InitialCondition;      /* Expression: 0
-                                        * Referenced by: '<S1>/RT1'
-                                        */
-  real_T RT1_71_InitialCondition;      /* Expression: 0
-                                        * Referenced by: '<S1>/RT1'
-                                        */
-  real_T RT1_80_InitialCondition;      /* Expression: 0
-                                        * Referenced by: '<S1>/RT1'
-                                        */
-  real_T RT1_87_InitialCondition;      /* Expression: 0
-                                        * Referenced by: '<S1>/RT1'
-                                        */
-  real_T RT1_92_InitialCondition;      /* Expression: 0
+  real_T RT1_49_InitialCondition;      /* Expression: 0
                                         * Referenced by: '<S1>/RT1'
                                         */
   real_T ADCU2SCU_Steer_Command_CAN_write_P1_Size[2];
                  /* Computed Parameter: ADCU2SCU_Steer_Command_CAN_write_P1_Size
-                  * Referenced by: '<S28>/ADCU2SCU_Steer_Command_CAN_write'
+                  * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
                   */
   real_T ADCU2SCU_Steer_Command_CAN_write_P1;/* Expression: id
-                                              * Referenced by: '<S28>/ADCU2SCU_Steer_Command_CAN_write'
+                                              * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
                                               */
   real_T ADCU2SCU_Steer_Command_CAN_write_P2_Size[2];
                  /* Computed Parameter: ADCU2SCU_Steer_Command_CAN_write_P2_Size
-                  * Referenced by: '<S28>/ADCU2SCU_Steer_Command_CAN_write'
+                  * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
                   */
   real_T ADCU2SCU_Steer_Command_CAN_write_P2;/* Expression: sampleTime
-                                              * Referenced by: '<S28>/ADCU2SCU_Steer_Command_CAN_write'
+                                              * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
                                               */
   real_T ADCU2SCU_Steer_Command_CAN_write_P3_Size[2];
                  /* Computed Parameter: ADCU2SCU_Steer_Command_CAN_write_P3_Size
-                  * Referenced by: '<S28>/ADCU2SCU_Steer_Command_CAN_write'
+                  * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
                   */
   real_T ADCU2SCU_Steer_Command_CAN_write_P3;/* Expression: messageType
-                                              * Referenced by: '<S28>/ADCU2SCU_Steer_Command_CAN_write'
+                                              * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
                                               */
   real_T ADCU2SCU_Steer_Command_CAN_write_P4_Size[2];
                  /* Computed Parameter: ADCU2SCU_Steer_Command_CAN_write_P4_Size
-                  * Referenced by: '<S28>/ADCU2SCU_Steer_Command_CAN_write'
+                  * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
                   */
   real_T ADCU2SCU_Steer_Command_CAN_write_P4;/* Expression: enaStatusPort
-                                              * Referenced by: '<S28>/ADCU2SCU_Steer_Command_CAN_write'
+                                              * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
                                               */
   real_T ADCU2SCU_Steer_Command_CAN_write_P5_Size[2];
                  /* Computed Parameter: ADCU2SCU_Steer_Command_CAN_write_P5_Size
-                  * Referenced by: '<S28>/ADCU2SCU_Steer_Command_CAN_write'
+                  * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
                   */
   real_T ADCU2SCU_Steer_Command_CAN_write_P5[5];
                       /* Computed Parameter: ADCU2SCU_Steer_Command_CAN_write_P5
-                       * Referenced by: '<S28>/ADCU2SCU_Steer_Command_CAN_write'
+                       * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
                        */
   real_T ADCU2SCU_Steer_Command_CAN_write_P6_Size[2];
                  /* Computed Parameter: ADCU2SCU_Steer_Command_CAN_write_P6_Size
-                  * Referenced by: '<S28>/ADCU2SCU_Steer_Command_CAN_write'
+                  * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
                   */
   real_T ADCU2SCU_Steer_Command_CAN_write_P6;/* Expression: ptIdx
-                                              * Referenced by: '<S28>/ADCU2SCU_Steer_Command_CAN_write'
+                                              * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
                                               */
   real_T ADCU2SCU_Steer_Command_CAN_write_P7_Size[2];
                  /* Computed Parameter: ADCU2SCU_Steer_Command_CAN_write_P7_Size
-                  * Referenced by: '<S28>/ADCU2SCU_Steer_Command_CAN_write'
+                  * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
                   */
   real_T ADCU2SCU_Steer_Command_CAN_write_P7;/* Expression: isFDMod
-                                              * Referenced by: '<S28>/ADCU2SCU_Steer_Command_CAN_write'
+                                              * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
                                               */
-  Active_request TmpRTBAtAION_auto_mode_requestInport18_InitialCondition;
-  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport18_InitialCondition
+  Active_request TmpRTBAtAION_auto_mode_requestInport16_InitialCondition;
+  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport16_InitialCondition
    * Referenced by: synthesized block
    */
-  Active_status RT1_153_InitialCondition;
-                                 /* Computed Parameter: RT1_153_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  Active_status RT1_154_InitialCondition;
-                                 /* Computed Parameter: RT1_154_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  Active_status RT1_155_InitialCondition;
-                                 /* Computed Parameter: RT1_155_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  Active_status RT1_158_InitialCondition;
-                                 /* Computed Parameter: RT1_158_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  Active_status RT1_159_InitialCondition;
-                                 /* Computed Parameter: RT1_159_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  Active_status RT1_165_InitialCondition;
-                                 /* Computed Parameter: RT1_165_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  Available_status RT1_149_InitialCondition;
-                                 /* Computed Parameter: RT1_149_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  Beam_request TmpRTBAtAION_auto_mode_requestInport16_InitialCondition;
-  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport16_InitialCondition
+  Active_status RT1_51_InitialCondition;
+                                  /* Computed Parameter: RT1_51_InitialCondition
+                                   * Referenced by: '<S1>/RT1'
+                                   */
+  Active_status RT1_52_InitialCondition;
+                                  /* Computed Parameter: RT1_52_InitialCondition
+                                   * Referenced by: '<S1>/RT1'
+                                   */
+  Active_status RT1_53_InitialCondition;
+                                  /* Computed Parameter: RT1_53_InitialCondition
+                                   * Referenced by: '<S1>/RT1'
+                                   */
+  Active_status RT1_55_InitialCondition;
+                                  /* Computed Parameter: RT1_55_InitialCondition
+                                   * Referenced by: '<S1>/RT1'
+                                   */
+  Active_status RT1_56_InitialCondition;
+                                  /* Computed Parameter: RT1_56_InitialCondition
+                                   * Referenced by: '<S1>/RT1'
+                                   */
+  Active_status RT1_57_InitialCondition;
+                                  /* Computed Parameter: RT1_57_InitialCondition
+                                   * Referenced by: '<S1>/RT1'
+                                   */
+  Available_status RT1_50_InitialCondition;
+                                  /* Computed Parameter: RT1_50_InitialCondition
+                                   * Referenced by: '<S1>/RT1'
+                                   */
+  Beam_request TmpRTBAtAION_auto_mode_requestInport14_InitialCondition;
+  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport14_InitialCondition
    * Referenced by: synthesized block
    */
   Control_request TmpRTBAtAION_auto_mode_requestInport1_InitialCondition;
   /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport1_InitialCondition
    * Referenced by: synthesized block
    */
-  Control_request TmpRTBAtAION_auto_mode_requestInport5_InitialCondition;
-  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport5_InitialCondition
+  Control_request TmpRTBAtAION_auto_mode_requestInport3_InitialCondition;
+  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport3_InitialCondition
    * Referenced by: synthesized block
    */
-  Control_status RT1_107_InitialCondition;
-                                 /* Computed Parameter: RT1_107_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  Control_status RT1_110_InitialCondition;
-                                 /* Computed Parameter: RT1_110_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  Drive_status RT1_73_InitialCondition;
-                                  /* Computed Parameter: RT1_73_InitialCondition
+  Control_status RT1_36_InitialCondition;
+                                  /* Computed Parameter: RT1_36_InitialCondition
                                    * Referenced by: '<S1>/RT1'
                                    */
-  Enable_request TmpRTBAtAION_auto_mode_requestInport17_InitialCondition;
+  Control_status RT1_39_InitialCondition;
+                                  /* Computed Parameter: RT1_39_InitialCondition
+                                   * Referenced by: '<S1>/RT1'
+                                   */
+  Drive_status RT1_26_InitialCondition;
+                                  /* Computed Parameter: RT1_26_InitialCondition
+                                   * Referenced by: '<S1>/RT1'
+                                   */
+  Enable_request TmpRTBAtAION_auto_mode_requestInport15_InitialCondition;
+  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport15_InitialCondition
+   * Referenced by: synthesized block
+   */
+  Gear_request TmpRTBAtAION_auto_mode_requestInport6_InitialCondition;
+  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport6_InitialCondition
+   * Referenced by: synthesized block
+   */
+  Gear_status RT1_29_InitialCondition;
+                                  /* Computed Parameter: RT1_29_InitialCondition
+                                   * Referenced by: '<S1>/RT1'
+                                   */
+  Light_request TmpRTBAtAION_auto_mode_requestInport17_InitialCondition;
   /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport17_InitialCondition
    * Referenced by: synthesized block
    */
-  Error_status RT1_135_InitialCondition;
-                                 /* Computed Parameter: RT1_135_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  Fault_status RT1_157_InitialCondition;
-                                 /* Computed Parameter: RT1_157_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  Fault_status RT1_164_InitialCondition;
-                                 /* Computed Parameter: RT1_164_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  Gear_request TmpRTBAtAION_auto_mode_requestInport8_InitialCondition;
-  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport8_InitialCondition
-   * Referenced by: synthesized block
-   */
-  Gear_status RT1_78_InitialCondition;
-                                  /* Computed Parameter: RT1_78_InitialCondition
+  Ready_status RT1_27_InitialCondition;
+                                  /* Computed Parameter: RT1_27_InitialCondition
                                    * Referenced by: '<S1>/RT1'
                                    */
-  Light_request TmpRTBAtAION_auto_mode_requestInport19_InitialCondition;
-  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport19_InitialCondition
-   * Referenced by: synthesized block
-   */
-  Ready_status RT1_74_InitialCondition;
-                                  /* Computed Parameter: RT1_74_InitialCondition
-                                   * Referenced by: '<S1>/RT1'
-                                   */
-  Validation_status TmpRTBAtAION_auto_mode_requestInport9_InitialCondition;
-  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport9_InitialCondition
+  Validation_status TmpRTBAtAION_auto_mode_requestInport7_InitialCondition;
+  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport7_InitialCondition
    * Referenced by: synthesized block
    */
   uint32_T RT1_10_InitialCondition;
                                   /* Computed Parameter: RT1_10_InitialCondition
                                    * Referenced by: '<S1>/RT1'
                                    */
-  uint32_T RT1_100_InitialCondition;
-                                 /* Computed Parameter: RT1_100_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  uint32_T RT1_101_InitialCondition;
-                                 /* Computed Parameter: RT1_101_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  uint32_T RT1_102_InitialCondition;
-                                 /* Computed Parameter: RT1_102_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  uint32_T RT1_103_InitialCondition;
-                                 /* Computed Parameter: RT1_103_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  uint32_T RT1_106_InitialCondition;
-                                 /* Computed Parameter: RT1_106_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  uint32_T RT1_108_InitialCondition;
-                                 /* Computed Parameter: RT1_108_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  uint32_T RT1_109_InitialCondition;
-                                 /* Computed Parameter: RT1_109_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
   uint32_T RT1_11_InitialCondition;
                                   /* Computed Parameter: RT1_11_InitialCondition
                                    * Referenced by: '<S1>/RT1'
                                    */
-  uint32_T RT1_111_InitialCondition;
-                                 /* Computed Parameter: RT1_111_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  uint32_T RT1_113_InitialCondition;
-                                 /* Computed Parameter: RT1_113_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  uint32_T RT1_114_InitialCondition;
-                                 /* Computed Parameter: RT1_114_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  uint32_T RT1_115_InitialCondition;
-                                 /* Computed Parameter: RT1_115_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  uint32_T RT1_116_InitialCondition;
-                                 /* Computed Parameter: RT1_116_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  uint32_T RT1_117_InitialCondition;
-                                 /* Computed Parameter: RT1_117_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  uint32_T RT1_118_InitialCondition;
-                                 /* Computed Parameter: RT1_118_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  uint32_T RT1_119_InitialCondition;
-                                 /* Computed Parameter: RT1_119_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
   uint32_T RT1_12_InitialCondition;
                                   /* Computed Parameter: RT1_12_InitialCondition
                                    * Referenced by: '<S1>/RT1'
                                    */
-  uint32_T RT1_120_InitialCondition;
-                                 /* Computed Parameter: RT1_120_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  uint32_T RT1_121_InitialCondition;
-                                 /* Computed Parameter: RT1_121_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  uint32_T RT1_122_InitialCondition;
-                                 /* Computed Parameter: RT1_122_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  uint32_T RT1_123_InitialCondition;
-                                 /* Computed Parameter: RT1_123_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  uint32_T RT1_124_InitialCondition;
-                                 /* Computed Parameter: RT1_124_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  uint32_T RT1_125_InitialCondition;
-                                 /* Computed Parameter: RT1_125_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  uint32_T RT1_126_InitialCondition;
-                                 /* Computed Parameter: RT1_126_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  uint32_T RT1_127_InitialCondition;
-                                 /* Computed Parameter: RT1_127_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  uint32_T RT1_128_InitialCondition;
-                                 /* Computed Parameter: RT1_128_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  uint32_T RT1_129_InitialCondition;
-                                 /* Computed Parameter: RT1_129_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
   uint32_T RT1_13_InitialCondition;
                                   /* Computed Parameter: RT1_13_InitialCondition
                                    * Referenced by: '<S1>/RT1'
                                    */
-  uint32_T RT1_130_InitialCondition;
-                                 /* Computed Parameter: RT1_130_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  uint32_T RT1_131_InitialCondition;
-                                 /* Computed Parameter: RT1_131_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  uint32_T RT1_132_InitialCondition;
-                                 /* Computed Parameter: RT1_132_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  uint32_T RT1_133_InitialCondition;
-                                 /* Computed Parameter: RT1_133_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  uint32_T RT1_134_InitialCondition;
-                                 /* Computed Parameter: RT1_134_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  uint32_T RT1_14_InitialCondition;
-                                  /* Computed Parameter: RT1_14_InitialCondition
-                                   * Referenced by: '<S1>/RT1'
-                                   */
-  uint32_T RT1_142_InitialCondition;
-                                 /* Computed Parameter: RT1_142_InitialCondition
-                                  * Referenced by: '<S1>/RT1'
-                                  */
-  uint32_T RT1_15_InitialCondition;
-                                  /* Computed Parameter: RT1_15_InitialCondition
-                                   * Referenced by: '<S1>/RT1'
-                                   */
-  uint32_T RT1_26_InitialCondition;
-                                  /* Computed Parameter: RT1_26_InitialCondition
+  uint32_T RT1_24_InitialCondition;
+                                  /* Computed Parameter: RT1_24_InitialCondition
                                    * Referenced by: '<S1>/RT1'
                                    */
   uint32_T RT1_28_InitialCondition;
                                   /* Computed Parameter: RT1_28_InitialCondition
                                    * Referenced by: '<S1>/RT1'
                                    */
-  uint32_T RT1_30_InitialCondition;
-                                  /* Computed Parameter: RT1_30_InitialCondition
+  uint32_T RT1_33_InitialCondition;
+                                  /* Computed Parameter: RT1_33_InitialCondition
                                    * Referenced by: '<S1>/RT1'
                                    */
-  uint32_T RT1_32_InitialCondition;
-                                  /* Computed Parameter: RT1_32_InitialCondition
+  uint32_T RT1_35_InitialCondition;
+                                  /* Computed Parameter: RT1_35_InitialCondition
                                    * Referenced by: '<S1>/RT1'
                                    */
-  uint32_T RT1_75_InitialCondition;
-                                  /* Computed Parameter: RT1_75_InitialCondition
+  uint32_T RT1_37_InitialCondition;
+                                  /* Computed Parameter: RT1_37_InitialCondition
                                    * Referenced by: '<S1>/RT1'
                                    */
-  uint32_T RT1_76_InitialCondition;
-                                  /* Computed Parameter: RT1_76_InitialCondition
+  uint32_T RT1_38_InitialCondition;
+                                  /* Computed Parameter: RT1_38_InitialCondition
                                    * Referenced by: '<S1>/RT1'
                                    */
-  uint32_T RT1_82_InitialCondition;
-                                  /* Computed Parameter: RT1_82_InitialCondition
+  uint32_T RT1_40_InitialCondition;
+                                  /* Computed Parameter: RT1_40_InitialCondition
                                    * Referenced by: '<S1>/RT1'
                                    */
-  uint32_T RT1_85_InitialCondition;
-                                  /* Computed Parameter: RT1_85_InitialCondition
+  uint32_T RT1_46_InitialCondition;
+                                  /* Computed Parameter: RT1_46_InitialCondition
                                    * Referenced by: '<S1>/RT1'
                                    */
-  uint32_T RT1_89_InitialCondition;
-                                  /* Computed Parameter: RT1_89_InitialCondition
-                                   * Referenced by: '<S1>/RT1'
-                                   */
-  uint32_T RT1_94_InitialCondition;
-                                  /* Computed Parameter: RT1_94_InitialCondition
-                                   * Referenced by: '<S1>/RT1'
-                                   */
-  uint32_T RT1_95_InitialCondition;
-                                  /* Computed Parameter: RT1_95_InitialCondition
-                                   * Referenced by: '<S1>/RT1'
-                                   */
-  uint32_T RT1_96_InitialCondition;
-                                  /* Computed Parameter: RT1_96_InitialCondition
-                                   * Referenced by: '<S1>/RT1'
-                                   */
-  uint32_T RT1_97_InitialCondition;
-                                  /* Computed Parameter: RT1_97_InitialCondition
-                                   * Referenced by: '<S1>/RT1'
-                                   */
-  uint32_T RT1_98_InitialCondition;
-                                  /* Computed Parameter: RT1_98_InitialCondition
-                                   * Referenced by: '<S1>/RT1'
-                                   */
-  uint32_T RT1_99_InitialCondition;
-                                  /* Computed Parameter: RT1_99_InitialCondition
-                                   * Referenced by: '<S1>/RT1'
-                                   */
+  uint32_T RT1_8_InitialCondition; /* Computed Parameter: RT1_8_InitialCondition
+                                    * Referenced by: '<S1>/RT1'
+                                    */
+  uint32_T RT1_9_InitialCondition; /* Computed Parameter: RT1_9_InitialCondition
+                                    * Referenced by: '<S1>/RT1'
+                                    */
 };
 
 /* Storage class 'PageSwitching' */
