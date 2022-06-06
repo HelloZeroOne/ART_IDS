@@ -353,26 +353,26 @@ struct AION_IDS_SPEEDGOAT_cal_type {
   real_T TmpRTBAtAION_auto_mode_requestInport2_InitialCondition;/* Expression: 0
                                                                  * Referenced by: synthesized block
                                                                  */
-  real_T RT1_19_InitialCondition;      /* Expression: 0
-                                        * Referenced by: '<S1>/RT1'
+  real_T get_ActVehLaltrlAccel_InitialCondition;/* Expression: 0
+                                                 * Referenced by: synthesized block
+                                                 */
+  real_T get_ActVehLongAccel_InitialCondition;/* Expression: 0
+                                               * Referenced by: synthesized block
+                                               */
+  real_T get_GasPedalActPst_InitialCondition;/* Expression: 0
+                                              * Referenced by: synthesized block
+                                              */
+  real_T get_SteeringAngle_InitialCondition;/* Expression: 0
+                                             * Referenced by: synthesized block
+                                             */
+  real_T get_StrngWhlTorq_InitialCondition;/* Expression: 0
+                                            * Referenced by: synthesized block
+                                            */
+  real_T get_VehSpd_InitialCondition;  /* Expression: 0
+                                        * Referenced by: synthesized block
                                         */
-  real_T RT1_21_InitialCondition;      /* Expression: 0
-                                        * Referenced by: '<S1>/RT1'
-                                        */
-  real_T RT1_22_InitialCondition;      /* Expression: 0
-                                        * Referenced by: '<S1>/RT1'
-                                        */
-  real_T RT1_23_InitialCondition;      /* Expression: 0
-                                        * Referenced by: '<S1>/RT1'
-                                        */
-  real_T RT1_31_InitialCondition;      /* Expression: 0
-                                        * Referenced by: '<S1>/RT1'
-                                        */
-  real_T RT1_45_InitialCondition;      /* Expression: 0
-                                        * Referenced by: '<S1>/RT1'
-                                        */
-  real_T RT1_49_InitialCondition;      /* Expression: 0
-                                        * Referenced by: '<S1>/RT1'
+  real_T get_YawRate_InitialCondition; /* Expression: 0
+                                        * Referenced by: synthesized block
                                         */
   real_T ADCU2SCU_Steer_Command_CAN_write_P1_Size[2];
                  /* Computed Parameter: ADCU2SCU_Steer_Command_CAN_write_P1_Size
@@ -428,34 +428,34 @@ struct AION_IDS_SPEEDGOAT_cal_type {
   /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport16_InitialCondition
    * Referenced by: synthesized block
    */
-  Active_status RT1_51_InitialCondition;
-                                  /* Computed Parameter: RT1_51_InitialCondition
-                                   * Referenced by: '<S1>/RT1'
-                                   */
-  Active_status RT1_52_InitialCondition;
-                                  /* Computed Parameter: RT1_52_InitialCondition
-                                   * Referenced by: '<S1>/RT1'
-                                   */
-  Active_status RT1_53_InitialCondition;
-                                  /* Computed Parameter: RT1_53_InitialCondition
-                                   * Referenced by: '<S1>/RT1'
-                                   */
-  Active_status RT1_55_InitialCondition;
-                                  /* Computed Parameter: RT1_55_InitialCondition
-                                   * Referenced by: '<S1>/RT1'
-                                   */
-  Active_status RT1_56_InitialCondition;
-                                  /* Computed Parameter: RT1_56_InitialCondition
-                                   * Referenced by: '<S1>/RT1'
-                                   */
-  Active_status RT1_57_InitialCondition;
-                                  /* Computed Parameter: RT1_57_InitialCondition
-                                   * Referenced by: '<S1>/RT1'
-                                   */
-  Available_status RT1_50_InitialCondition;
-                                  /* Computed Parameter: RT1_50_InitialCondition
-                                   * Referenced by: '<S1>/RT1'
-                                   */
+  Active_status get_HazardLampSt_InitialCondition;
+                        /* Computed Parameter: get_HazardLampSt_InitialCondition
+                         * Referenced by: synthesized block
+                         */
+  Active_status get_HighBeamSt_InitialCondition;
+                          /* Computed Parameter: get_HighBeamSt_InitialCondition
+                           * Referenced by: synthesized block
+                           */
+  Active_status get_HornSt_InitialCondition;
+                              /* Computed Parameter: get_HornSt_InitialCondition
+                               * Referenced by: synthesized block
+                               */
+  Active_status get_LeftTurnLampSt_InitialCondition;
+                      /* Computed Parameter: get_LeftTurnLampSt_InitialCondition
+                       * Referenced by: synthesized block
+                       */
+  Active_status get_LowBeamSt_InitialCondition;
+                           /* Computed Parameter: get_LowBeamSt_InitialCondition
+                            * Referenced by: synthesized block
+                            */
+  Active_status get_RightTurnLampSt_InitialCondition;
+                     /* Computed Parameter: get_RightTurnLampSt_InitialCondition
+                      * Referenced by: synthesized block
+                      */
+  Available_status get_CtrlAvailable_InitialCondition;
+                       /* Computed Parameter: get_CtrlAvailable_InitialCondition
+                        * Referenced by: synthesized block
+                        */
   Beam_request TmpRTBAtAION_auto_mode_requestInport14_InitialCondition;
   /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport14_InitialCondition
    * Referenced by: synthesized block
@@ -468,18 +468,18 @@ struct AION_IDS_SPEEDGOAT_cal_type {
   /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport3_InitialCondition
    * Referenced by: synthesized block
    */
-  Control_status RT1_36_InitialCondition;
-                                  /* Computed Parameter: RT1_36_InitialCondition
-                                   * Referenced by: '<S1>/RT1'
-                                   */
-  Control_status RT1_39_InitialCondition;
-                                  /* Computed Parameter: RT1_39_InitialCondition
-                                   * Referenced by: '<S1>/RT1'
-                                   */
-  Drive_status RT1_26_InitialCondition;
-                                  /* Computed Parameter: RT1_26_InitialCondition
-                                   * Referenced by: '<S1>/RT1'
-                                   */
+  Control_status get_LatCtrlMode_InitialCondition;
+                         /* Computed Parameter: get_LatCtrlMode_InitialCondition
+                          * Referenced by: synthesized block
+                          */
+  Control_status get_LngCtrlMode_InitialCondition;
+                         /* Computed Parameter: get_LngCtrlMode_InitialCondition
+                          * Referenced by: synthesized block
+                          */
+  Drive_status get_VehDrvMod_InitialCondition;
+                           /* Computed Parameter: get_VehDrvMod_InitialCondition
+                            * Referenced by: synthesized block
+                            */
   Enable_request TmpRTBAtAION_auto_mode_requestInport15_InitialCondition;
   /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport15_InitialCondition
    * Referenced by: synthesized block
@@ -488,76 +488,78 @@ struct AION_IDS_SPEEDGOAT_cal_type {
   /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport6_InitialCondition
    * Referenced by: synthesized block
    */
-  Gear_status RT1_29_InitialCondition;
-                                  /* Computed Parameter: RT1_29_InitialCondition
-                                   * Referenced by: '<S1>/RT1'
-                                   */
+  Gear_status get_CrntGearLvl_InitialCondition;
+                         /* Computed Parameter: get_CrntGearLvl_InitialCondition
+                          * Referenced by: synthesized block
+                          */
   Light_request TmpRTBAtAION_auto_mode_requestInport17_InitialCondition;
   /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport17_InitialCondition
    * Referenced by: synthesized block
    */
-  Ready_status RT1_27_InitialCondition;
-                                  /* Computed Parameter: RT1_27_InitialCondition
-                                   * Referenced by: '<S1>/RT1'
-                                   */
+  Ready_status get_VehRdySt_InitialCondition;
+                            /* Computed Parameter: get_VehRdySt_InitialCondition
+                             * Referenced by: synthesized block
+                             */
   Validation_status TmpRTBAtAION_auto_mode_requestInport7_InitialCondition;
   /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport7_InitialCondition
    * Referenced by: synthesized block
    */
-  uint32_T RT1_10_InitialCondition;
-                                  /* Computed Parameter: RT1_10_InitialCondition
-                                   * Referenced by: '<S1>/RT1'
-                                   */
-  uint32_T RT1_11_InitialCondition;
-                                  /* Computed Parameter: RT1_11_InitialCondition
-                                   * Referenced by: '<S1>/RT1'
-                                   */
-  uint32_T RT1_12_InitialCondition;
-                                  /* Computed Parameter: RT1_12_InitialCondition
-                                   * Referenced by: '<S1>/RT1'
-                                   */
-  uint32_T RT1_13_InitialCondition;
-                                  /* Computed Parameter: RT1_13_InitialCondition
-                                   * Referenced by: '<S1>/RT1'
-                                   */
-  uint32_T RT1_24_InitialCondition;
-                                  /* Computed Parameter: RT1_24_InitialCondition
-                                   * Referenced by: '<S1>/RT1'
-                                   */
-  uint32_T RT1_28_InitialCondition;
-                                  /* Computed Parameter: RT1_28_InitialCondition
-                                   * Referenced by: '<S1>/RT1'
-                                   */
-  uint32_T RT1_33_InitialCondition;
-                                  /* Computed Parameter: RT1_33_InitialCondition
-                                   * Referenced by: '<S1>/RT1'
-                                   */
-  uint32_T RT1_35_InitialCondition;
-                                  /* Computed Parameter: RT1_35_InitialCondition
-                                   * Referenced by: '<S1>/RT1'
-                                   */
-  uint32_T RT1_37_InitialCondition;
-                                  /* Computed Parameter: RT1_37_InitialCondition
-                                   * Referenced by: '<S1>/RT1'
-                                   */
-  uint32_T RT1_38_InitialCondition;
-                                  /* Computed Parameter: RT1_38_InitialCondition
-                                   * Referenced by: '<S1>/RT1'
-                                   */
-  uint32_T RT1_40_InitialCondition;
-                                  /* Computed Parameter: RT1_40_InitialCondition
-                                   * Referenced by: '<S1>/RT1'
-                                   */
-  uint32_T RT1_46_InitialCondition;
-                                  /* Computed Parameter: RT1_46_InitialCondition
-                                   * Referenced by: '<S1>/RT1'
-                                   */
-  uint32_T RT1_8_InitialCondition; /* Computed Parameter: RT1_8_InitialCondition
-                                    * Referenced by: '<S1>/RT1'
-                                    */
-  uint32_T RT1_9_InitialCondition; /* Computed Parameter: RT1_9_InitialCondition
-                                    * Referenced by: '<S1>/RT1'
-                                    */
+  uint32_T get_ActVehWheelTorq_InitialCondition;
+                     /* Computed Parameter: get_ActVehWheelTorq_InitialCondition
+                      * Referenced by: synthesized block
+                      */
+  uint32_T get_LatAutoCheckReport_InitialCondition;
+                  /* Computed Parameter: get_LatAutoCheckReport_InitialCondition
+                   * Referenced by: synthesized block
+                   */
+  uint32_T get_LatQuitReport_InitialCondition;
+                       /* Computed Parameter: get_LatQuitReport_InitialCondition
+                        * Referenced by: synthesized block
+                        */
+  uint32_T get_LngAutoCheckIReport_InitialCondition;
+                 /* Computed Parameter: get_LngAutoCheckIReport_InitialCondition
+                  * Referenced by: synthesized block
+                  */
+  uint32_T get_LngQuitReport_InitialCondition;
+                       /* Computed Parameter: get_LngQuitReport_InitialCondition
+                        * Referenced by: synthesized block
+                        */
+  uint32_T get_SteeringAngleSpd_InitialCondition;
+                    /* Computed Parameter: get_SteeringAngleSpd_InitialCondition
+                     * Referenced by: synthesized block
+                     */
+  uint32_T get_VehRng_InitialCondition;
+                              /* Computed Parameter: get_VehRng_InitialCondition
+                               * Referenced by: synthesized block
+                               */
+  uint32_T get_VehWheelTorqMax_InitialCondition;
+                     /* Computed Parameter: get_VehWheelTorqMax_InitialCondition
+                      * Referenced by: synthesized block
+                      */
+  uint32_T set_Checksum1_InitialCondition;
+                           /* Computed Parameter: set_Checksum1_InitialCondition
+                            * Referenced by: synthesized block
+                            */
+  uint32_T set_Checksum2_InitialCondition;
+                           /* Computed Parameter: set_Checksum2_InitialCondition
+                            * Referenced by: synthesized block
+                            */
+  uint32_T set_Checksum3_InitialCondition;
+                           /* Computed Parameter: set_Checksum3_InitialCondition
+                            * Referenced by: synthesized block
+                            */
+  uint32_T set_MsgCounter1_InitialCondition;
+                         /* Computed Parameter: set_MsgCounter1_InitialCondition
+                          * Referenced by: synthesized block
+                          */
+  uint32_T set_MsgCounter2_InitialCondition;
+                         /* Computed Parameter: set_MsgCounter2_InitialCondition
+                          * Referenced by: synthesized block
+                          */
+  uint32_T set_MsgCounter3_InitialCondition;
+                         /* Computed Parameter: set_MsgCounter3_InitialCondition
+                          * Referenced by: synthesized block
+                          */
 };
 
 /* Storage class 'PageSwitching' */

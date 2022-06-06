@@ -2,9 +2,9 @@
  * Code generation for system model 'AION_signal_transfer'
  *
  * Model                      : AION_signal_transfer
- * Model version              : 4.84
+ * Model version              : 4.85
  * Simulink Coder version : 9.5 (R2021a) 14-Nov-2020
- * C++ source code generated on : Fri Jun  3 21:00:20 2022
+ * C++ source code generated on : Mon Jun  6 13:09:21 2022
  *
  * Note that the functions contained in this file are part of a Simulink
  * model, and are not self-contained algorithms.

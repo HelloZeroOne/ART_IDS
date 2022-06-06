@@ -717,37 +717,37 @@ AION_IDS_SPEEDGOAT_cal_type AION_IDS_SPEEDGOAT_cal_impl = {
   0.0,
 
   /* Expression: 0
-   * Referenced by: '<S1>/RT1'
+   * Referenced by: synthesized block
    */
   0.0,
 
   /* Expression: 0
-   * Referenced by: '<S1>/RT1'
+   * Referenced by: synthesized block
    */
   0.0,
 
   /* Expression: 0
-   * Referenced by: '<S1>/RT1'
+   * Referenced by: synthesized block
    */
   0.0,
 
   /* Expression: 0
-   * Referenced by: '<S1>/RT1'
+   * Referenced by: synthesized block
    */
   0.0,
 
   /* Expression: 0
-   * Referenced by: '<S1>/RT1'
+   * Referenced by: synthesized block
    */
   0.0,
 
   /* Expression: 0
-   * Referenced by: '<S1>/RT1'
+   * Referenced by: synthesized block
    */
   0.0,
 
   /* Expression: 0
-   * Referenced by: '<S1>/RT1'
+   * Referenced by: synthesized block
    */
   0.0,
 
@@ -826,38 +826,38 @@ AION_IDS_SPEEDGOAT_cal_type AION_IDS_SPEEDGOAT_cal_impl = {
    */
   NotActiveRequest,
 
-  /* Computed Parameter: RT1_51_InitialCondition
-   * Referenced by: '<S1>/RT1'
+  /* Computed Parameter: get_HazardLampSt_InitialCondition
+   * Referenced by: synthesized block
    */
   NotActiveStatus,
 
-  /* Computed Parameter: RT1_52_InitialCondition
-   * Referenced by: '<S1>/RT1'
+  /* Computed Parameter: get_HighBeamSt_InitialCondition
+   * Referenced by: synthesized block
    */
   NotActiveStatus,
 
-  /* Computed Parameter: RT1_53_InitialCondition
-   * Referenced by: '<S1>/RT1'
+  /* Computed Parameter: get_HornSt_InitialCondition
+   * Referenced by: synthesized block
    */
   NotActiveStatus,
 
-  /* Computed Parameter: RT1_55_InitialCondition
-   * Referenced by: '<S1>/RT1'
+  /* Computed Parameter: get_LeftTurnLampSt_InitialCondition
+   * Referenced by: synthesized block
    */
   NotActiveStatus,
 
-  /* Computed Parameter: RT1_56_InitialCondition
-   * Referenced by: '<S1>/RT1'
+  /* Computed Parameter: get_LowBeamSt_InitialCondition
+   * Referenced by: synthesized block
    */
   NotActiveStatus,
 
-  /* Computed Parameter: RT1_57_InitialCondition
-   * Referenced by: '<S1>/RT1'
+  /* Computed Parameter: get_RightTurnLampSt_InitialCondition
+   * Referenced by: synthesized block
    */
   NotActiveStatus,
 
-  /* Computed Parameter: RT1_50_InitialCondition
-   * Referenced by: '<S1>/RT1'
+  /* Computed Parameter: get_CtrlAvailable_InitialCondition
+   * Referenced by: synthesized block
    */
   NotAvailable,
 
@@ -876,18 +876,18 @@ AION_IDS_SPEEDGOAT_cal_type AION_IDS_SPEEDGOAT_cal_impl = {
    */
   Manual,
 
-  /* Computed Parameter: RT1_36_InitialCondition
-   * Referenced by: '<S1>/RT1'
+  /* Computed Parameter: get_LatCtrlMode_InitialCondition
+   * Referenced by: synthesized block
    */
   ManualStatus,
 
-  /* Computed Parameter: RT1_39_InitialCondition
-   * Referenced by: '<S1>/RT1'
+  /* Computed Parameter: get_LngCtrlMode_InitialCondition
+   * Referenced by: synthesized block
    */
   ManualStatus,
 
-  /* Computed Parameter: RT1_26_InitialCondition
-   * Referenced by: '<S1>/RT1'
+  /* Computed Parameter: get_VehDrvMod_InitialCondition
+   * Referenced by: synthesized block
    */
   InvalidDriveStatus,
 
@@ -901,8 +901,8 @@ AION_IDS_SPEEDGOAT_cal_type AION_IDS_SPEEDGOAT_cal_impl = {
    */
   NoRequest,
 
-  /* Computed Parameter: RT1_29_InitialCondition
-   * Referenced by: '<S1>/RT1'
+  /* Computed Parameter: get_CrntGearLvl_InitialCondition
+   * Referenced by: synthesized block
    */
   InvalidGearStatus,
 
@@ -911,8 +911,8 @@ AION_IDS_SPEEDGOAT_cal_type AION_IDS_SPEEDGOAT_cal_impl = {
    */
   NoLightRequest,
 
-  /* Computed Parameter: RT1_27_InitialCondition
-   * Referenced by: '<S1>/RT1'
+  /* Computed Parameter: get_VehRdySt_InitialCondition
+   * Referenced by: synthesized block
    */
   NotReady,
 
@@ -921,73 +921,73 @@ AION_IDS_SPEEDGOAT_cal_type AION_IDS_SPEEDGOAT_cal_impl = {
    */
   Invalid,
 
-  /* Computed Parameter: RT1_10_InitialCondition
-   * Referenced by: '<S1>/RT1'
+  /* Computed Parameter: get_ActVehWheelTorq_InitialCondition
+   * Referenced by: synthesized block
    */
   0U,
 
-  /* Computed Parameter: RT1_11_InitialCondition
-   * Referenced by: '<S1>/RT1'
+  /* Computed Parameter: get_LatAutoCheckReport_InitialCondition
+   * Referenced by: synthesized block
    */
   0U,
 
-  /* Computed Parameter: RT1_12_InitialCondition
-   * Referenced by: '<S1>/RT1'
+  /* Computed Parameter: get_LatQuitReport_InitialCondition
+   * Referenced by: synthesized block
    */
   0U,
 
-  /* Computed Parameter: RT1_13_InitialCondition
-   * Referenced by: '<S1>/RT1'
+  /* Computed Parameter: get_LngAutoCheckIReport_InitialCondition
+   * Referenced by: synthesized block
    */
   0U,
 
-  /* Computed Parameter: RT1_24_InitialCondition
-   * Referenced by: '<S1>/RT1'
+  /* Computed Parameter: get_LngQuitReport_InitialCondition
+   * Referenced by: synthesized block
    */
   0U,
 
-  /* Computed Parameter: RT1_28_InitialCondition
-   * Referenced by: '<S1>/RT1'
+  /* Computed Parameter: get_SteeringAngleSpd_InitialCondition
+   * Referenced by: synthesized block
    */
   0U,
 
-  /* Computed Parameter: RT1_33_InitialCondition
-   * Referenced by: '<S1>/RT1'
+  /* Computed Parameter: get_VehRng_InitialCondition
+   * Referenced by: synthesized block
    */
   0U,
 
-  /* Computed Parameter: RT1_35_InitialCondition
-   * Referenced by: '<S1>/RT1'
+  /* Computed Parameter: get_VehWheelTorqMax_InitialCondition
+   * Referenced by: synthesized block
    */
   0U,
 
-  /* Computed Parameter: RT1_37_InitialCondition
-   * Referenced by: '<S1>/RT1'
+  /* Computed Parameter: set_Checksum1_InitialCondition
+   * Referenced by: synthesized block
    */
   0U,
 
-  /* Computed Parameter: RT1_38_InitialCondition
-   * Referenced by: '<S1>/RT1'
+  /* Computed Parameter: set_Checksum2_InitialCondition
+   * Referenced by: synthesized block
    */
   0U,
 
-  /* Computed Parameter: RT1_40_InitialCondition
-   * Referenced by: '<S1>/RT1'
+  /* Computed Parameter: set_Checksum3_InitialCondition
+   * Referenced by: synthesized block
    */
   0U,
 
-  /* Computed Parameter: RT1_46_InitialCondition
-   * Referenced by: '<S1>/RT1'
+  /* Computed Parameter: set_MsgCounter1_InitialCondition
+   * Referenced by: synthesized block
    */
   0U,
 
-  /* Computed Parameter: RT1_8_InitialCondition
-   * Referenced by: '<S1>/RT1'
+  /* Computed Parameter: set_MsgCounter2_InitialCondition
+   * Referenced by: synthesized block
    */
   0U,
 
-  /* Computed Parameter: RT1_9_InitialCondition
-   * Referenced by: '<S1>/RT1'
+  /* Computed Parameter: set_MsgCounter3_InitialCondition
+   * Referenced by: synthesized block
    */
   0U
 };

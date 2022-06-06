@@ -3,9 +3,9 @@
  *
  * Code generation for model "AION_auto_mode_request".
  *
- * Model version              : 1.96
+ * Model version              : 1.98
  * Simulink Coder version : 9.5 (R2021a) 14-Nov-2020
- * C++ source code generated on : Fri Jun  3 20:59:46 2022
+ * C++ source code generated on : Mon Jun  6 13:08:50 2022
  *
  * Target selection: slrealtime.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping

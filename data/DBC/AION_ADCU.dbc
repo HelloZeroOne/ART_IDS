@@ -153,35 +153,35 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ BCS_ABSFaultSt : 0|1@0+ (1,0) [0|1] "-" Vector__XXX
  SG_ BCS_YawRateOffset : 0|12@0+ (0.0009765625,-0.13) [-0.13|0.13] "rad/s" Vector__XXX
 
-BO_ 640 ADCU_3: 1 ADCU
+BO_ 640 ADCU_3: 8 ADCU
  SG_ ADCU_BeamReq : 3|2@0+ (1,0) [0|3] "-"  SCU
  SG_ ADCU_HornRingReq : 5|1@0+ (1,0) [0|1] "-"  SCU
  SG_ ADCU_TurnLightReq : 1|2@0+ (1,0) [0|3] "-"  SCU
  SG_ ADCU_BodyCtrlReq : 4|1@0+ (1,0) [0|1] "-"  SCU
 
-BO_ 545 ADCU_2: 6 ADCU
+BO_ 545 ADCU_2: 8 ADCU
  SG_ ADCU_SteerAngReq : 7|16@0+ (0.1,-780) [-780|779.9] "deg"  SCU
  SG_ ADCU_LatCtrlReq : 44|1@0+ (1,0) [0|1] "-"  SCU
 
-BO_ 544 ADCU_1: 5 ADCU
+BO_ 544 ADCU_1: 8 ADCU
  SG_ ADCU_GearLvlReq : 39|3@0+ (1,0) [0|7] ""  SCU
  SG_ ADCU_GearLvlReqVD : 36|1@0+ (1,0) [0|1] ""  SCU
  SG_ ADCU_AutoTrqWhlReq : 23|14@0+ (1,-5000) [-5000|5000] "Nm"  SCU
  SG_ ADCU_LngCtrlReq : 25|2@0+ (1,0) [0|3] ""  SCU
  SG_ ADCU_BrakeReq : 7|16@0+ (0.0004882,-16) [-16|16] "m/s^2"  SCU
 
-BO_ 559 SCU_18: 7 SCU
+BO_ 559 SCU_18: 8 SCU
  SG_ VCU_BrkPedalSt : 53|1@0+ (1,0) [0|1] ""  ADCU
 
-BO_ 557 SCU_17: 6 SCU
+BO_ 557 SCU_17: 8 SCU
  SG_ VCU_GasPedalActPst : 47|8@0+ (0.392,0) [0|99.96] "%"  ADCU
  SG_ VCU_AccElecECFail : 30|1@0+ (1,0) [0|1] "-"  ADCU
  SG_ VCU_VehWheelTorqMax : 7|14@0+ (1,0) [0|10000] "Nm"  ADCU
 
-BO_ 556 SCU_16: 6 SCU
+BO_ 556 SCU_16: 8 SCU
  SG_ VCU_ActVehWheelTorq : 39|14@0+ (1,0) [0|10000] "Nm"  ADCU
 
-BO_ 555 SCU_15: 5 SCU
+BO_ 555 SCU_15: 8 SCU
  SG_ VCU_CrntGearLvl : 38|3@0+ (1,0) [0|7] ""  ADCU
  SG_ VCU_CrntGearLvlVD : 35|1@0+ (1,0) [0|1] ""  ADCU
 
@@ -190,21 +190,21 @@ BO_ 706 SCU_14: 8 SCU
  SG_ VCU_VehDrvMod : 13|3@0+ (1,0) [0|7] "-"  ADCU
  SG_ VCU_VehRdySt : 10|1@0+ (1,0) [0|1] "-"  ADCU
 
-BO_ 554 SCU_13: 7 SCU
- SG_ SCU_LngAutoChecklReport : 39|16@0+ (1,0) [0|65535] "" Vector__XXX
- SG_ SCU_LatAutoCheckReport : 55|4@0+ (1,0) [0|15] "" Vector__XXX
- SG_ SCU_LngQuitReport : 15|16@0+ (1,0) [0|65535] "" Vector__XXX
- SG_ SCU_LatQuitReport : 31|8@0+ (1,0) [0|255] "" Vector__XXX
+BO_ 554 SCU_13: 8 SCU
+ SG_ SCU_LngAutoChecklReport : 39|16@0+ (1,0) [0|65535] ""  ADCU
+ SG_ SCU_LatAutoCheckReport : 55|4@0+ (1,0) [0|15] ""  ADCU
+ SG_ SCU_LngQuitReport : 15|16@0+ (1,0) [0|65535] ""  ADCU
+ SG_ SCU_LatQuitReport : 31|8@0+ (1,0) [0|255] ""  ADCU
  SG_ SCU_StrngWhlIntv : 7|1@0+ (1,0) [0|1] ""  ADCU
  SG_ VCU_GearLeverIntv : 6|1@0+ (1,0) [0|1] ""  ADCU
  SG_ SCU_LatCtrlMode : 3|2@0+ (1,0) [0|3] ""  ADCU
  SG_ SCU_LngCtrlMode : 1|2@0+ (1,0) [0|3] ""  ADCU
 
-BO_ 705 SCU_12: 1 SCU
+BO_ 705 SCU_12: 8 SCU
  SG_ SRS_DriverSeatBeltSt : 3|2@0+ (1,0) [0|3] ""  ADCU
  SG_ SRS_PsngrSeatBeltSt : 1|2@0+ (1,0) [0|3] ""  ADCU
 
-BO_ 704 SCU_11: 3 SCU
+BO_ 704 SCU_11: 8 SCU
  SG_ BCM_CtrlAvailable : 18|1@0+ (1,0) [0|1] ""  ADCU
  SG_ BCM_HornSt : 17|1@0+ (1,0) [0|1] ""  ADCU
  SG_ BCM_HazardLampSt : 16|1@0+ (1,0) [0|1] ""  ADCU
@@ -214,32 +214,24 @@ BO_ 704 SCU_11: 3 SCU
  SG_ BCM_LowBeamSt : 4|1@0+ (1,0) [0|1] ""  ADCU
  SG_ BCM_KeySt : 3|2@0+ (1,0) [0|3] ""  ADCU
 
-BO_ 553 SCU_10: 6 SCU
+BO_ 553 SCU_10: 8 SCU
  SG_ EPS_StrngWhlTorq : 47|8@0+ (0.1,-12.7) [-12.5|12.5] "Nm"  ADCU
  SG_ EPS_SteeringAngleSpd : 29|8@0+ (4,0) [0|1016] "deg/sec"  ADCU
  SG_ EPS_SteeringAngleVD : 34|1@0+ (1,0) [0|1] ""  ADCU
  SG_ EPS_SteeringAngle : 15|16@0+ (0.1,-780) [-780|779.9] "deg"  ADCU
  SG_ EPS_SteeringAngleSpdVD : 7|1@0+ (1,0) [0|1] ""  ADCU
 
-BO_ 552 SCU_9: 2 SCU
+BO_ 552 SCU_9: 8 SCU
  SG_ EPB_SysSt : 10|3@0+ (1,0) [0|7] ""  ADCU
 
-BO_ 551 SCU_8: 5 SCU
+BO_ 551 SCU_8: 8 SCU
  SG_ BCS_ActVehLaltrlAccel : 31|12@0+ (0.027126736,-21.593) [-21.593|21.593] "m/s^2"  ADCU
  SG_ BCS_ActVehLongAccel : 7|12@0+ (0.027126736,-21.593) [-21.593|21.593] "m/s^2"  ADCU
 
-BO_ 549 SCU_6: 0 SCU
-
-BO_ 385 SCU_5: 0 SCU
-
-BO_ 548 SCU_4: 0 SCU
-
-BO_ 547 SCU_3: 2 SCU
+BO_ 547 SCU_3: 8 SCU
  SG_ BCS_YawRate : 3|12@0+ (0.0009765625,-2.0943) [-2.0943|1.9047234375] "rad/s"  ADCU
 
-BO_ 546 SCU_2: 0 SCU
-
-BO_ 384 SCU_1: 6 SCU
+BO_ 384 SCU_1: 8 SCU
  SG_ BCS_VehSpd : 36|13@0+ (0.05625,0) [0|240] "km/h"  ADCU
  SG_ BCS_VehSpdVD : 37|1@0+ (1,0) [0|1] "-"  ADCU
  SG_ BCS_ABSActiveSt : 1|1@0+ (1,0) [0|1] "-"  ADCU
@@ -477,21 +469,9 @@ BA_ "GenMsgSendType" BO_ 552 0;
 BA_ "GenMsgCycleTime" BO_ 551 20;
 BA_ "GenMsgCycleTimeFast" BO_ 551 0;
 BA_ "GenMsgSendType" BO_ 551 0;
-BA_ "GenMsgCycleTime" BO_ 549 20;
-BA_ "GenMsgCycleTimeFast" BO_ 549 0;
-BA_ "GenMsgSendType" BO_ 549 0;
-BA_ "GenMsgCycleTime" BO_ 385 10;
-BA_ "GenMsgCycleTimeFast" BO_ 385 0;
-BA_ "GenMsgSendType" BO_ 385 0;
-BA_ "GenMsgCycleTime" BO_ 548 20;
-BA_ "GenMsgCycleTimeFast" BO_ 548 0;
-BA_ "GenMsgSendType" BO_ 548 0;
 BA_ "GenMsgCycleTime" BO_ 547 20;
 BA_ "GenMsgCycleTimeFast" BO_ 547 0;
 BA_ "GenMsgSendType" BO_ 547 0;
-BA_ "GenMsgCycleTime" BO_ 546 20;
-BA_ "GenMsgCycleTimeFast" BO_ 546 0;
-BA_ "GenMsgSendType" BO_ 546 0;
 BA_ "GenMsgCycleTime" BO_ 384 10;
 BA_ "GenMsgCycleTimeFast" BO_ 384 0;
 BA_ "GenMsgSendType" BO_ 384 0;
