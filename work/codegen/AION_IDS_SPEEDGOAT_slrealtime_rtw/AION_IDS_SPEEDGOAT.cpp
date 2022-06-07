@@ -3,9 +3,9 @@
  *
  * Code generation for model "AION_IDS_SPEEDGOAT".
  *
- * Model version              : 4.265
+ * Model version              : 4.271
  * Simulink Coder version : 9.5 (R2021a) 14-Nov-2020
- * C++ source code generated on : Mon Jun  6 14:59:08 2022
+ * C++ source code generated on : Tue Jun  7 16:28:53 2022
  *
  * Target selection: slrealtime.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -20,7 +20,8 @@
 const AION_ApplicationBus AION_IDS_SPEEDGOAT_rtZAION_ApplicationBus = {
   {
     Manual,                            /* set_LatCtrlReq */
-    0.0                                /* set_SteerAngReq */
+    0.0,                               /* set_SteerAngReq */
+    0.0                                /* set_SteerWhlTorqReq */
   },                                   /* set_lateral_control_info */
 
   {
@@ -1808,6 +1809,7 @@ void AION_IDS_SPEEDGOAT_step1(void)    /* Sample time: [0.02s, 0.0s] */
                        &AION_IDS_SPEEDGOAT_B.SCU2ADCU_Brake_Status_CAN_unpack12_o1,
                        &AION_IDS_SPEEDGOAT_B.UnitDelay.set_lateral_control_info.set_LatCtrlReq,
                        &AION_IDS_SPEEDGOAT_B.UnitDelay.set_lateral_control_info.set_SteerAngReq,
+                       &AION_IDS_SPEEDGOAT_B.UnitDelay.set_lateral_control_info.set_SteerWhlTorqReq,
                        &AION_IDS_SPEEDGOAT_B.UnitDelay.set_longitudinal_control_info.set_LngCtrlReq,
                        &AION_IDS_SPEEDGOAT_B.UnitDelay.set_longitudinal_control_info.set_AutoTrqWhlReq,
                        &AION_IDS_SPEEDGOAT_B.UnitDelay.set_longitudinal_control_info.set_BrakeReq,
@@ -1819,6 +1821,7 @@ void AION_IDS_SPEEDGOAT_step1(void)    /* Sample time: [0.02s, 0.0s] */
                        &AION_IDS_SPEEDGOAT_B.UnitDelay.set_ADCU_info.set_TurnLightReq,
                        &AION_IDS_SPEEDGOAT_B.set_LatCtrlReq,
                        &AION_IDS_SPEEDGOAT_B.set_SteerAngReq,
+                       &AION_IDS_SPEEDGOAT_B.set_SteerWhlTorqReq,
                        &AION_IDS_SPEEDGOAT_B.set_LngCtrlReq,
                        &AION_IDS_SPEEDGOAT_B.set_AutoTrqWhlReq,
                        &AION_IDS_SPEEDGOAT_B.set_BrakeReq,
@@ -1881,6 +1884,7 @@ void AION_IDS_SPEEDGOAT_step1(void)    /* Sample time: [0.02s, 0.0s] */
                        &AION_IDS_SPEEDGOAT_B.ADCU_LngCtrlReq,
                        &AION_IDS_SPEEDGOAT_B.ADCU_LatCtrlReq,
                        &AION_IDS_SPEEDGOAT_B.ADCU_SteerAngReq,
+                       &AION_IDS_SPEEDGOAT_B.ADCU_SteerWhlTorqReq,
                        &AION_IDS_SPEEDGOAT_B.ADCU_BeamReq,
                        &AION_IDS_SPEEDGOAT_B.ADCU_BodyCtrlReq,
                        &AION_IDS_SPEEDGOAT_B.ADCU_HornRingReq,
@@ -2233,6 +2237,53 @@ void AION_IDS_SPEEDGOAT_step1(void)    /* Sample time: [0.02s, 0.0s] */
               AION_IDS_SPEEDGOAT_B.ADCU2SCU_Gear_Command_CAN_pack.Data[0] |
               (uint8_T)((uint16_T)((uint16_T)(packedValue & (uint16_T)0xFF00U) >>
               8));
+          }
+        }
+      }
+    }
+
+    /* --------------- START Packing signal 2 ------------------
+     *  startBit                = 45
+     *  length                  = 11
+     *  desiredSignalByteLayout = BIGENDIAN
+     *  dataType                = UNSIGNED
+     *  factor                  = 0.01
+     *  offset                  = -10.24
+     *  minimum                 = 0.0
+     *  maximum                 = 0.0
+     * -----------------------------------------------------------------------*/
+    {
+      real64_T outValue = 0;
+
+      {
+        real64_T result = AION_IDS_SPEEDGOAT_B.ADCU_SteerWhlTorqReq;
+
+        /* full scaling operation */
+        result = (result - -10.24) * (1 / 0.01);
+
+        /* round to closest integer value for integer CAN signal */
+        outValue = round(result);
+      }
+
+      {
+        uint16_T packedValue;
+        if (outValue > (real64_T)(2047)) {
+          packedValue = (uint16_T) 2047;
+        } else if (outValue < (real64_T)(0)) {
+          packedValue = (uint16_T) 0;
+        } else {
+          packedValue = (uint16_T) (outValue);
+        }
+
+        {
+          {
+            AION_IDS_SPEEDGOAT_B.ADCU2SCU_Gear_Command_CAN_pack.Data[5] =
+              AION_IDS_SPEEDGOAT_B.ADCU2SCU_Gear_Command_CAN_pack.Data[5] |
+              (uint8_T)((uint16_T)((uint16_T)(packedValue & (uint16_T)0x7U) << 5));
+            AION_IDS_SPEEDGOAT_B.ADCU2SCU_Gear_Command_CAN_pack.Data[4] =
+              AION_IDS_SPEEDGOAT_B.ADCU2SCU_Gear_Command_CAN_pack.Data[4] |
+              (uint8_T)((uint16_T)((uint16_T)(packedValue & (uint16_T)0x7F8U) >>
+              3));
           }
         }
       }
@@ -2675,15 +2726,15 @@ void AION_IDS_SPEEDGOAT_step1(void)    /* Sample time: [0.02s, 0.0s] */
 
   /* RateTransition generated from: '<S1>/AION_auto_mode_request' */
   rtw_slrealtime_mutex_lock
-    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport14_d0_SEMAPHORE);
+    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport15_d0_SEMAPHORE);
   wrBufIdx = static_cast<int8_T>
-    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport14_LstBufWR + 1);
+    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport15_LstBufWR + 1);
   if (wrBufIdx == 3) {
     wrBufIdx = 0;
   }
 
   if (wrBufIdx ==
-      AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport14_RDBuf) {
+      AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport15_RDBuf) {
     wrBufIdx = static_cast<int8_T>(wrBufIdx + 1);
     if (wrBufIdx == 3) {
       wrBufIdx = 0;
@@ -2691,25 +2742,25 @@ void AION_IDS_SPEEDGOAT_step1(void)    /* Sample time: [0.02s, 0.0s] */
   }
 
   rtw_slrealtime_mutex_unlock
-    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport14_d0_SEMAPHORE);
+    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport15_d0_SEMAPHORE);
   switch (wrBufIdx) {
    case 0:
-    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport14_Buf0 =
+    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport15_Buf0 =
       AION_IDS_SPEEDGOAT_B.DataTypeConversion18;
     break;
 
    case 1:
-    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport14_Buf1 =
+    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport15_Buf1 =
       AION_IDS_SPEEDGOAT_B.DataTypeConversion18;
     break;
 
    case 2:
-    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport14_Buf2 =
+    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport15_Buf2 =
       AION_IDS_SPEEDGOAT_B.DataTypeConversion18;
     break;
   }
 
-  AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport14_LstBufWR =
+  AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport15_LstBufWR =
     wrBufIdx;
 
   /* DataTypeConversion: '<S5>/Data Type Conversion11' incorporates:
@@ -2733,15 +2784,15 @@ void AION_IDS_SPEEDGOAT_step1(void)    /* Sample time: [0.02s, 0.0s] */
 
   /* RateTransition generated from: '<S1>/AION_auto_mode_request' */
   rtw_slrealtime_mutex_lock
-    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport15_d0_SEMAPHORE);
+    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport16_d0_SEMAPHORE);
   wrBufIdx = static_cast<int8_T>
-    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport15_LstBufWR + 1);
+    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport16_LstBufWR + 1);
   if (wrBufIdx == 3) {
     wrBufIdx = 0;
   }
 
   if (wrBufIdx ==
-      AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport15_RDBuf) {
+      AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport16_RDBuf) {
     wrBufIdx = static_cast<int8_T>(wrBufIdx + 1);
     if (wrBufIdx == 3) {
       wrBufIdx = 0;
@@ -2749,25 +2800,25 @@ void AION_IDS_SPEEDGOAT_step1(void)    /* Sample time: [0.02s, 0.0s] */
   }
 
   rtw_slrealtime_mutex_unlock
-    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport15_d0_SEMAPHORE);
+    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport16_d0_SEMAPHORE);
   switch (wrBufIdx) {
    case 0:
-    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport15_Buf0 =
+    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport16_Buf0 =
       AION_IDS_SPEEDGOAT_B.DataTypeConversion12;
     break;
 
    case 1:
-    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport15_Buf1 =
+    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport16_Buf1 =
       AION_IDS_SPEEDGOAT_B.DataTypeConversion12;
     break;
 
    case 2:
-    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport15_Buf2 =
+    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport16_Buf2 =
       AION_IDS_SPEEDGOAT_B.DataTypeConversion12;
     break;
   }
 
-  AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport15_LstBufWR =
+  AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport16_LstBufWR =
     wrBufIdx;
 
   /* DataTypeConversion: '<S5>/Data Type Conversion15' incorporates:
@@ -2791,15 +2842,15 @@ void AION_IDS_SPEEDGOAT_step1(void)    /* Sample time: [0.02s, 0.0s] */
 
   /* RateTransition generated from: '<S1>/AION_auto_mode_request' */
   rtw_slrealtime_mutex_lock
-    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport16_d0_SEMAPHORE);
+    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport17_d0_SEMAPHORE);
   wrBufIdx = static_cast<int8_T>
-    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport16_LstBufWR + 1);
+    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport17_LstBufWR + 1);
   if (wrBufIdx == 3) {
     wrBufIdx = 0;
   }
 
   if (wrBufIdx ==
-      AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport16_RDBuf) {
+      AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport17_RDBuf) {
     wrBufIdx = static_cast<int8_T>(wrBufIdx + 1);
     if (wrBufIdx == 3) {
       wrBufIdx = 0;
@@ -2807,25 +2858,25 @@ void AION_IDS_SPEEDGOAT_step1(void)    /* Sample time: [0.02s, 0.0s] */
   }
 
   rtw_slrealtime_mutex_unlock
-    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport16_d0_SEMAPHORE);
+    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport17_d0_SEMAPHORE);
   switch (wrBufIdx) {
    case 0:
-    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport16_Buf0 =
+    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport17_Buf0 =
       AION_IDS_SPEEDGOAT_B.DataTypeConversion16;
     break;
 
    case 1:
-    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport16_Buf1 =
+    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport17_Buf1 =
       AION_IDS_SPEEDGOAT_B.DataTypeConversion16;
     break;
 
    case 2:
-    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport16_Buf2 =
+    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport17_Buf2 =
       AION_IDS_SPEEDGOAT_B.DataTypeConversion16;
     break;
   }
 
-  AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport16_LstBufWR =
+  AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport17_LstBufWR =
     wrBufIdx;
 
   /* DataTypeConversion: '<S5>/Data Type Conversion13' incorporates:
@@ -2849,15 +2900,15 @@ void AION_IDS_SPEEDGOAT_step1(void)    /* Sample time: [0.02s, 0.0s] */
 
   /* RateTransition generated from: '<S1>/AION_auto_mode_request' */
   rtw_slrealtime_mutex_lock
-    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport17_d0_SEMAPHORE);
+    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport18_d0_SEMAPHORE);
   wrBufIdx = static_cast<int8_T>
-    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport17_LstBufWR + 1);
+    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport18_LstBufWR + 1);
   if (wrBufIdx == 3) {
     wrBufIdx = 0;
   }
 
   if (wrBufIdx ==
-      AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport17_RDBuf) {
+      AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport18_RDBuf) {
     wrBufIdx = static_cast<int8_T>(wrBufIdx + 1);
     if (wrBufIdx == 3) {
       wrBufIdx = 0;
@@ -2865,25 +2916,25 @@ void AION_IDS_SPEEDGOAT_step1(void)    /* Sample time: [0.02s, 0.0s] */
   }
 
   rtw_slrealtime_mutex_unlock
-    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport17_d0_SEMAPHORE);
+    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport18_d0_SEMAPHORE);
   switch (wrBufIdx) {
    case 0:
-    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport17_Buf0 =
+    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport18_Buf0 =
       AION_IDS_SPEEDGOAT_B.DataTypeConversion14;
     break;
 
    case 1:
-    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport17_Buf1 =
+    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport18_Buf1 =
       AION_IDS_SPEEDGOAT_B.DataTypeConversion14;
     break;
 
    case 2:
-    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport17_Buf2 =
+    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport18_Buf2 =
       AION_IDS_SPEEDGOAT_B.DataTypeConversion14;
     break;
   }
 
-  AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport17_LstBufWR =
+  AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport18_LstBufWR =
     wrBufIdx;
 
   /* RateTransition generated from: '<S1>/AION_auto_mode_request' incorporates:
@@ -2927,26 +2978,9 @@ void AION_IDS_SPEEDGOAT_step1(void)    /* Sample time: [0.02s, 0.0s] */
   AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport2_LstBufWR =
     wrBufIdx;
 
-  /* DataTypeConversion: '<S5>/Data Type Conversion10' incorporates:
-   *  Constant: '<S5>/LngCtrlReq_test'
+  /* RateTransition generated from: '<S1>/AION_auto_mode_request' incorporates:
+   *  Constant: '<S5>/SteerWhlTorqReq_test'
    */
-  tmp = std::floor(rtP_LngCtrlReq_test);
-  if (rtIsNaN(tmp) || rtIsInf(tmp)) {
-    tmp = 0.0;
-  } else {
-    tmp = std::fmod(tmp, 256.0);
-  }
-
-  /* DataTypeConversion: '<S5>/Data Type Conversion10' */
-  AION_IDS_SPEEDGOAT_B.DataTypeConversion10 = static_cast<uint8_T>(tmp < 0.0 ?
-    static_cast<int32_T>(static_cast<uint8_T>(-static_cast<int8_T>(static_cast<
-    uint8_T>(-tmp)))) : static_cast<int32_T>(static_cast<uint8_T>(tmp)));
-
-  /* DataTypeConversion: '<S5>/Data Type Conversion9' */
-  AION_IDS_SPEEDGOAT_B.DataTypeConversion9 = static_cast<Control_request>
-    (AION_IDS_SPEEDGOAT_B.DataTypeConversion10);
-
-  /* RateTransition generated from: '<S1>/AION_auto_mode_request' */
   rtw_slrealtime_mutex_lock
     (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport3_d0_SEMAPHORE);
   wrBufIdx = static_cast<int8_T>
@@ -2968,21 +3002,79 @@ void AION_IDS_SPEEDGOAT_step1(void)    /* Sample time: [0.02s, 0.0s] */
   switch (wrBufIdx) {
    case 0:
     AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport3_Buf0 =
-      AION_IDS_SPEEDGOAT_B.DataTypeConversion9;
+      rtP_SteerWhlTorqReq_test;
     break;
 
    case 1:
     AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport3_Buf1 =
-      AION_IDS_SPEEDGOAT_B.DataTypeConversion9;
+      rtP_SteerWhlTorqReq_test;
     break;
 
    case 2:
     AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport3_Buf2 =
-      AION_IDS_SPEEDGOAT_B.DataTypeConversion9;
+      rtP_SteerWhlTorqReq_test;
     break;
   }
 
   AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport3_LstBufWR =
+    wrBufIdx;
+
+  /* DataTypeConversion: '<S5>/Data Type Conversion10' incorporates:
+   *  Constant: '<S5>/LngCtrlReq_test'
+   */
+  tmp = std::floor(rtP_LngCtrlReq_test);
+  if (rtIsNaN(tmp) || rtIsInf(tmp)) {
+    tmp = 0.0;
+  } else {
+    tmp = std::fmod(tmp, 256.0);
+  }
+
+  /* DataTypeConversion: '<S5>/Data Type Conversion10' */
+  AION_IDS_SPEEDGOAT_B.DataTypeConversion10 = static_cast<uint8_T>(tmp < 0.0 ?
+    static_cast<int32_T>(static_cast<uint8_T>(-static_cast<int8_T>(static_cast<
+    uint8_T>(-tmp)))) : static_cast<int32_T>(static_cast<uint8_T>(tmp)));
+
+  /* DataTypeConversion: '<S5>/Data Type Conversion9' */
+  AION_IDS_SPEEDGOAT_B.DataTypeConversion9 = static_cast<Control_request>
+    (AION_IDS_SPEEDGOAT_B.DataTypeConversion10);
+
+  /* RateTransition generated from: '<S1>/AION_auto_mode_request' */
+  rtw_slrealtime_mutex_lock
+    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport4_d0_SEMAPHORE);
+  wrBufIdx = static_cast<int8_T>
+    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport4_LstBufWR + 1);
+  if (wrBufIdx == 3) {
+    wrBufIdx = 0;
+  }
+
+  if (wrBufIdx ==
+      AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport4_RDBuf) {
+    wrBufIdx = static_cast<int8_T>(wrBufIdx + 1);
+    if (wrBufIdx == 3) {
+      wrBufIdx = 0;
+    }
+  }
+
+  rtw_slrealtime_mutex_unlock
+    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport4_d0_SEMAPHORE);
+  switch (wrBufIdx) {
+   case 0:
+    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport4_Buf0 =
+      AION_IDS_SPEEDGOAT_B.DataTypeConversion9;
+    break;
+
+   case 1:
+    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport4_Buf1 =
+      AION_IDS_SPEEDGOAT_B.DataTypeConversion9;
+    break;
+
+   case 2:
+    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport4_Buf2 =
+      AION_IDS_SPEEDGOAT_B.DataTypeConversion9;
+    break;
+  }
+
+  AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport4_LstBufWR =
     wrBufIdx;
 
   /* DataTypeConversion: '<S5>/Data Type Conversion3' incorporates:
@@ -3007,15 +3099,15 @@ void AION_IDS_SPEEDGOAT_step1(void)    /* Sample time: [0.02s, 0.0s] */
 
   /* RateTransition generated from: '<S1>/AION_auto_mode_request' */
   rtw_slrealtime_mutex_lock
-    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport6_d0_SEMAPHORE);
+    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport7_d0_SEMAPHORE);
   wrBufIdx = static_cast<int8_T>
-    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport6_LstBufWR + 1);
+    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport7_LstBufWR + 1);
   if (wrBufIdx == 3) {
     wrBufIdx = 0;
   }
 
   if (wrBufIdx ==
-      AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport6_RDBuf) {
+      AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport7_RDBuf) {
     wrBufIdx = static_cast<int8_T>(wrBufIdx + 1);
     if (wrBufIdx == 3) {
       wrBufIdx = 0;
@@ -3023,25 +3115,25 @@ void AION_IDS_SPEEDGOAT_step1(void)    /* Sample time: [0.02s, 0.0s] */
   }
 
   rtw_slrealtime_mutex_unlock
-    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport6_d0_SEMAPHORE);
+    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport7_d0_SEMAPHORE);
   switch (wrBufIdx) {
    case 0:
-    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport6_Buf0 =
+    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport7_Buf0 =
       AION_IDS_SPEEDGOAT_B.DataTypeConversion2;
     break;
 
    case 1:
-    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport6_Buf1 =
+    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport7_Buf1 =
       AION_IDS_SPEEDGOAT_B.DataTypeConversion2;
     break;
 
    case 2:
-    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport6_Buf2 =
+    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport7_Buf2 =
       AION_IDS_SPEEDGOAT_B.DataTypeConversion2;
     break;
   }
 
-  AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport6_LstBufWR =
+  AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport7_LstBufWR =
     wrBufIdx;
 
   /* DataTypeConversion: '<S5>/Data Type Conversion1' incorporates:
@@ -3066,15 +3158,15 @@ void AION_IDS_SPEEDGOAT_step1(void)    /* Sample time: [0.02s, 0.0s] */
 
   /* RateTransition generated from: '<S1>/AION_auto_mode_request' */
   rtw_slrealtime_mutex_lock
-    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport7_d0_SEMAPHORE);
+    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport8_d0_SEMAPHORE);
   wrBufIdx = static_cast<int8_T>
-    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport7_LstBufWR + 1);
+    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport8_LstBufWR + 1);
   if (wrBufIdx == 3) {
     wrBufIdx = 0;
   }
 
   if (wrBufIdx ==
-      AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport7_RDBuf) {
+      AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport8_RDBuf) {
     wrBufIdx = static_cast<int8_T>(wrBufIdx + 1);
     if (wrBufIdx == 3) {
       wrBufIdx = 0;
@@ -3082,25 +3174,25 @@ void AION_IDS_SPEEDGOAT_step1(void)    /* Sample time: [0.02s, 0.0s] */
   }
 
   rtw_slrealtime_mutex_unlock
-    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport7_d0_SEMAPHORE);
+    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport8_d0_SEMAPHORE);
   switch (wrBufIdx) {
    case 0:
-    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport7_Buf0 =
+    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport8_Buf0 =
       AION_IDS_SPEEDGOAT_B.DataTypeConversion4;
     break;
 
    case 1:
-    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport7_Buf1 =
+    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport8_Buf1 =
       AION_IDS_SPEEDGOAT_B.DataTypeConversion4;
     break;
 
    case 2:
-    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport7_Buf2 =
+    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport8_Buf2 =
       AION_IDS_SPEEDGOAT_B.DataTypeConversion4;
     break;
   }
 
-  AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport7_LstBufWR =
+  AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport8_LstBufWR =
     wrBufIdx;
 
   /* RateTransition generated from: '<S1>/AION_auto_mode_request' */
@@ -4440,6 +4532,33 @@ void AION_IDS_SPEEDGOAT_step3(void)    /* Sample time: [0.2s, 0.0s] */
 
   /* RateTransition generated from: '<S1>/AION_auto_mode_request' */
   rtw_slrealtime_mutex_lock
+    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport4_d0_SEMAPHORE);
+  AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport4_RDBuf =
+    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport4_LstBufWR;
+  rtw_slrealtime_mutex_unlock
+    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport4_d0_SEMAPHORE);
+  switch (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport4_RDBuf) {
+   case 0:
+    /* RateTransition generated from: '<S1>/AION_auto_mode_request' */
+    AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport4 =
+      AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport4_Buf0;
+    break;
+
+   case 1:
+    /* RateTransition generated from: '<S1>/AION_auto_mode_request' */
+    AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport4 =
+      AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport4_Buf1;
+    break;
+
+   case 2:
+    /* RateTransition generated from: '<S1>/AION_auto_mode_request' */
+    AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport4 =
+      AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport4_Buf2;
+    break;
+  }
+
+  /* RateTransition generated from: '<S1>/AION_auto_mode_request' */
+  rtw_slrealtime_mutex_lock
     (AION_IDS_SPEEDGOAT_DW.AutoTrqWhlReq_test_d0_SEMAPHORE);
   AION_IDS_SPEEDGOAT_DW.AutoTrqWhlReq_test_RDBuf =
     AION_IDS_SPEEDGOAT_DW.AutoTrqWhlReq_test_LstBufWR;
@@ -4492,33 +4611,6 @@ void AION_IDS_SPEEDGOAT_step3(void)    /* Sample time: [0.2s, 0.0s] */
 
   /* RateTransition generated from: '<S1>/AION_auto_mode_request' */
   rtw_slrealtime_mutex_lock
-    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport6_d0_SEMAPHORE);
-  AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport6_RDBuf =
-    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport6_LstBufWR;
-  rtw_slrealtime_mutex_unlock
-    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport6_d0_SEMAPHORE);
-  switch (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport6_RDBuf) {
-   case 0:
-    /* RateTransition generated from: '<S1>/AION_auto_mode_request' */
-    AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport6 =
-      AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport6_Buf0;
-    break;
-
-   case 1:
-    /* RateTransition generated from: '<S1>/AION_auto_mode_request' */
-    AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport6 =
-      AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport6_Buf1;
-    break;
-
-   case 2:
-    /* RateTransition generated from: '<S1>/AION_auto_mode_request' */
-    AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport6 =
-      AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport6_Buf2;
-    break;
-  }
-
-  /* RateTransition generated from: '<S1>/AION_auto_mode_request' */
-  rtw_slrealtime_mutex_lock
     (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport7_d0_SEMAPHORE);
   AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport7_RDBuf =
     AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport7_LstBufWR;
@@ -4541,6 +4633,33 @@ void AION_IDS_SPEEDGOAT_step3(void)    /* Sample time: [0.2s, 0.0s] */
     /* RateTransition generated from: '<S1>/AION_auto_mode_request' */
     AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport7 =
       AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport7_Buf2;
+    break;
+  }
+
+  /* RateTransition generated from: '<S1>/AION_auto_mode_request' */
+  rtw_slrealtime_mutex_lock
+    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport8_d0_SEMAPHORE);
+  AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport8_RDBuf =
+    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport8_LstBufWR;
+  rtw_slrealtime_mutex_unlock
+    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport8_d0_SEMAPHORE);
+  switch (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport8_RDBuf) {
+   case 0:
+    /* RateTransition generated from: '<S1>/AION_auto_mode_request' */
+    AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport8 =
+      AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport8_Buf0;
+    break;
+
+   case 1:
+    /* RateTransition generated from: '<S1>/AION_auto_mode_request' */
+    AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport8 =
+      AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport8_Buf1;
+    break;
+
+   case 2:
+    /* RateTransition generated from: '<S1>/AION_auto_mode_request' */
+    AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport8 =
+      AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport8_Buf2;
     break;
   }
 
@@ -4696,33 +4815,6 @@ void AION_IDS_SPEEDGOAT_step3(void)    /* Sample time: [0.2s, 0.0s] */
 
   /* RateTransition generated from: '<S1>/AION_auto_mode_request' */
   rtw_slrealtime_mutex_lock
-    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport14_d0_SEMAPHORE);
-  AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport14_RDBuf =
-    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport14_LstBufWR;
-  rtw_slrealtime_mutex_unlock
-    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport14_d0_SEMAPHORE);
-  switch (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport14_RDBuf) {
-   case 0:
-    /* RateTransition generated from: '<S1>/AION_auto_mode_request' */
-    AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport14 =
-      AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport14_Buf0;
-    break;
-
-   case 1:
-    /* RateTransition generated from: '<S1>/AION_auto_mode_request' */
-    AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport14 =
-      AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport14_Buf1;
-    break;
-
-   case 2:
-    /* RateTransition generated from: '<S1>/AION_auto_mode_request' */
-    AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport14 =
-      AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport14_Buf2;
-    break;
-  }
-
-  /* RateTransition generated from: '<S1>/AION_auto_mode_request' */
-  rtw_slrealtime_mutex_lock
     (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport15_d0_SEMAPHORE);
   AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport15_RDBuf =
     AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport15_LstBufWR;
@@ -4799,6 +4891,33 @@ void AION_IDS_SPEEDGOAT_step3(void)    /* Sample time: [0.2s, 0.0s] */
     /* RateTransition generated from: '<S1>/AION_auto_mode_request' */
     AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport17 =
       AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport17_Buf2;
+    break;
+  }
+
+  /* RateTransition generated from: '<S1>/AION_auto_mode_request' */
+  rtw_slrealtime_mutex_lock
+    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport18_d0_SEMAPHORE);
+  AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport18_RDBuf =
+    AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport18_LstBufWR;
+  rtw_slrealtime_mutex_unlock
+    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport18_d0_SEMAPHORE);
+  switch (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport18_RDBuf) {
+   case 0:
+    /* RateTransition generated from: '<S1>/AION_auto_mode_request' */
+    AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport18 =
+      AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport18_Buf0;
+    break;
+
+   case 1:
+    /* RateTransition generated from: '<S1>/AION_auto_mode_request' */
+    AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport18 =
+      AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport18_Buf1;
+    break;
+
+   case 2:
+    /* RateTransition generated from: '<S1>/AION_auto_mode_request' */
+    AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport18 =
+      AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport18_Buf2;
     break;
   }
 
@@ -5543,20 +5662,21 @@ void AION_IDS_SPEEDGOAT_step3(void)    /* Sample time: [0.2s, 0.0s] */
     (&AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport1,
      &AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport2,
      &AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport3,
+     &AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport4,
      &AION_IDS_SPEEDGOAT_B.AutoTrqWhlReq_test_p,
      &AION_IDS_SPEEDGOAT_B.BrakeReq_test_e,
-     &AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport6,
      &AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport7,
+     &AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport8,
      &AION_IDS_SPEEDGOAT_B.set_Checksum1_g,
      &AION_IDS_SPEEDGOAT_B.set_MsgCounter1_o,
      &AION_IDS_SPEEDGOAT_B.set_Checksum2_m,
      &AION_IDS_SPEEDGOAT_B.set_MsgCounter2_o,
      &AION_IDS_SPEEDGOAT_B.set_Checksum3_l,
      &AION_IDS_SPEEDGOAT_B.set_MsgCounter3_i,
-     &AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport14,
      &AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport15,
      &AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport16,
      &AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport17,
+     &AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport18,
      &AION_IDS_SPEEDGOAT_B.get_ABSActiveSt_d,
      &AION_IDS_SPEEDGOAT_B.get_VehSpd_hz, &AION_IDS_SPEEDGOAT_B.get_VehSpdVD_l,
      &AION_IDS_SPEEDGOAT_B.get_YawRate_p,
@@ -5594,55 +5714,57 @@ void AION_IDS_SPEEDGOAT_step3(void)    /* Sample time: [0.2s, 0.0s] */
      &AION_IDS_SPEEDGOAT_B.get_RightTurnLampSt_o,
      &AION_IDS_SPEEDGOAT_B.set_LatCtrlReq_n,
      &AION_IDS_SPEEDGOAT_B.set_SteerAngReq_k,
-     &AION_IDS_SPEEDGOAT_B.set_LngCtrlReq_p,
-     &AION_IDS_SPEEDGOAT_B.set_AutoTrqWhlReq_g,
-     &AION_IDS_SPEEDGOAT_B.set_BrakeReq_e,
-     &AION_IDS_SPEEDGOAT_B.set_GearLvlReq_o,
-     &AION_IDS_SPEEDGOAT_B.set_GearLvlReqVD_a,
-     &AION_IDS_SPEEDGOAT_B.set_Checksum1_b,
-     &AION_IDS_SPEEDGOAT_B.set_MsgCounter1_i,
-     &AION_IDS_SPEEDGOAT_B.set_Checksum2_j,
-     &AION_IDS_SPEEDGOAT_B.set_MsgCounter2_f,
-     &AION_IDS_SPEEDGOAT_B.set_Checksum3_o,
-     &AION_IDS_SPEEDGOAT_B.set_MsgCounter3_b,
-     &AION_IDS_SPEEDGOAT_B.set_BeamReq_i,
-     &AION_IDS_SPEEDGOAT_B.set_BodyCtrlReq_b,
-     &AION_IDS_SPEEDGOAT_B.set_HornRingReq_m,
-     &AION_IDS_SPEEDGOAT_B.set_TurnLightReq_j,
-     &AION_IDS_SPEEDGOAT_B.get_ABSActiveSt_i, &AION_IDS_SPEEDGOAT_B.get_VehSpd_d,
-     &AION_IDS_SPEEDGOAT_B.get_VehSpdVD_f, &AION_IDS_SPEEDGOAT_B.get_YawRate_a,
-     &AION_IDS_SPEEDGOAT_B.get_ActVehLaltrlAccel_a,
-     &AION_IDS_SPEEDGOAT_B.get_ActVehLongAccel_h,
-     &AION_IDS_SPEEDGOAT_B.get_ActVehWheelTorq_g,
-     &AION_IDS_SPEEDGOAT_B.get_GearLeverIntv_l,
-     &AION_IDS_SPEEDGOAT_B.get_VehDrvMod_b, &AION_IDS_SPEEDGOAT_B.get_VehRdySt_a,
-     &AION_IDS_SPEEDGOAT_B.get_VehRng_d, &AION_IDS_SPEEDGOAT_B.get_CrntGearLvl_e,
-     &AION_IDS_SPEEDGOAT_B.get_CrntGearLvlVD_n,
-     &AION_IDS_SPEEDGOAT_B.get_GasPedalActPst_l,
-     &AION_IDS_SPEEDGOAT_B.get_AccElecECFail_ga,
-     &AION_IDS_SPEEDGOAT_B.get_VehWheelTorqMax_k,
-     &AION_IDS_SPEEDGOAT_B.get_BrkPedalSt_i,
-     &AION_IDS_SPEEDGOAT_B.get_LatAutoCheckReport_g,
-     &AION_IDS_SPEEDGOAT_B.get_LatCtrlMode_o,
-     &AION_IDS_SPEEDGOAT_B.get_LatQuitReport_c,
-     &AION_IDS_SPEEDGOAT_B.get_LngAutoCheckIReport_l,
-     &AION_IDS_SPEEDGOAT_B.get_LngCtrlMode_l,
-     &AION_IDS_SPEEDGOAT_B.get_LngQuitReport_j,
-     &AION_IDS_SPEEDGOAT_B.get_StrngWhlIntv_o, &AION_IDS_SPEEDGOAT_B.get_SysSt_c,
-     &AION_IDS_SPEEDGOAT_B.get_DriverSeatBeltSt_o,
-     &AION_IDS_SPEEDGOAT_B.get_PsngrSeatBeltSt_d,
-     &AION_IDS_SPEEDGOAT_B.get_SteeringAngle_l,
-     &AION_IDS_SPEEDGOAT_B.get_SteeringAngleSpd_iz,
-     &AION_IDS_SPEEDGOAT_B.get_SteeringAngleSpdVD_o,
-     &AION_IDS_SPEEDGOAT_B.get_SteeringAngleVD_n,
-     &AION_IDS_SPEEDGOAT_B.get_StrngWhlTorq_d,
-     &AION_IDS_SPEEDGOAT_B.get_CtrlAvailable_j,
-     &AION_IDS_SPEEDGOAT_B.get_HazardLampSt_o,
-     &AION_IDS_SPEEDGOAT_B.get_HighBeamSt_f, &AION_IDS_SPEEDGOAT_B.get_HornSt_n,
+     &AION_IDS_SPEEDGOAT_B.set_SteerWhlTorqReq_b,
+     &AION_IDS_SPEEDGOAT_B.set_LngCtrlReq_i,
+     &AION_IDS_SPEEDGOAT_B.set_AutoTrqWhlReq_e,
+     &AION_IDS_SPEEDGOAT_B.set_BrakeReq_k,
+     &AION_IDS_SPEEDGOAT_B.set_GearLvlReq_j,
+     &AION_IDS_SPEEDGOAT_B.set_GearLvlReqVD_b,
+     &AION_IDS_SPEEDGOAT_B.set_Checksum1_l,
+     &AION_IDS_SPEEDGOAT_B.set_MsgCounter1_j,
+     &AION_IDS_SPEEDGOAT_B.set_Checksum2_a,
+     &AION_IDS_SPEEDGOAT_B.set_MsgCounter2_d,
+     &AION_IDS_SPEEDGOAT_B.set_Checksum3_e,
+     &AION_IDS_SPEEDGOAT_B.set_MsgCounter3_p,
+     &AION_IDS_SPEEDGOAT_B.set_BeamReq_l,
+     &AION_IDS_SPEEDGOAT_B.set_BodyCtrlReq_l,
+     &AION_IDS_SPEEDGOAT_B.set_HornRingReq_g,
+     &AION_IDS_SPEEDGOAT_B.set_TurnLightReq_n,
+     &AION_IDS_SPEEDGOAT_B.get_ABSActiveSt_o, &AION_IDS_SPEEDGOAT_B.get_VehSpd_n,
+     &AION_IDS_SPEEDGOAT_B.get_VehSpdVD_i, &AION_IDS_SPEEDGOAT_B.get_YawRate_f,
+     &AION_IDS_SPEEDGOAT_B.get_ActVehLaltrlAccel_j,
+     &AION_IDS_SPEEDGOAT_B.get_ActVehLongAccel_n,
+     &AION_IDS_SPEEDGOAT_B.get_ActVehWheelTorq_a,
+     &AION_IDS_SPEEDGOAT_B.get_GearLeverIntv_b,
+     &AION_IDS_SPEEDGOAT_B.get_VehDrvMod_jx,
+     &AION_IDS_SPEEDGOAT_B.get_VehRdySt_e, &AION_IDS_SPEEDGOAT_B.get_VehRng_p,
+     &AION_IDS_SPEEDGOAT_B.get_CrntGearLvl_h,
+     &AION_IDS_SPEEDGOAT_B.get_CrntGearLvlVD_o,
+     &AION_IDS_SPEEDGOAT_B.get_GasPedalActPst_k,
+     &AION_IDS_SPEEDGOAT_B.get_AccElecECFail_a,
+     &AION_IDS_SPEEDGOAT_B.get_VehWheelTorqMax_d,
+     &AION_IDS_SPEEDGOAT_B.get_BrkPedalSt_dt,
+     &AION_IDS_SPEEDGOAT_B.get_LatAutoCheckReport_k,
+     &AION_IDS_SPEEDGOAT_B.get_LatCtrlMode_i,
+     &AION_IDS_SPEEDGOAT_B.get_LatQuitReport_e,
+     &AION_IDS_SPEEDGOAT_B.get_LngAutoCheckIReport_j,
+     &AION_IDS_SPEEDGOAT_B.get_LngCtrlMode_m,
+     &AION_IDS_SPEEDGOAT_B.get_LngQuitReport_o,
+     &AION_IDS_SPEEDGOAT_B.get_StrngWhlIntv_d, &AION_IDS_SPEEDGOAT_B.get_SysSt_l,
+     &AION_IDS_SPEEDGOAT_B.get_DriverSeatBeltSt_n,
+     &AION_IDS_SPEEDGOAT_B.get_PsngrSeatBeltSt_g,
+     &AION_IDS_SPEEDGOAT_B.get_SteeringAngle_o,
+     &AION_IDS_SPEEDGOAT_B.get_SteeringAngleSpd_h,
+     &AION_IDS_SPEEDGOAT_B.get_SteeringAngleSpdVD_i,
+     &AION_IDS_SPEEDGOAT_B.get_SteeringAngleVD_c,
+     &AION_IDS_SPEEDGOAT_B.get_StrngWhlTorq_n,
+     &AION_IDS_SPEEDGOAT_B.get_CtrlAvailable_o,
+     &AION_IDS_SPEEDGOAT_B.get_HazardLampSt_b,
+     &AION_IDS_SPEEDGOAT_B.get_HighBeamSt_j, &AION_IDS_SPEEDGOAT_B.get_HornSt_ou,
      &AION_IDS_SPEEDGOAT_B.get_KeySt_o,
-     &AION_IDS_SPEEDGOAT_B.get_LeftTurnLampSt_k,
-     &AION_IDS_SPEEDGOAT_B.get_LowBeamSt_g,
-     &AION_IDS_SPEEDGOAT_B.get_RightTurnLampSt_c,
+     &AION_IDS_SPEEDGOAT_B.get_LeftTurnLampSt_a,
+     &AION_IDS_SPEEDGOAT_B.get_LowBeamSt_m,
+     &AION_IDS_SPEEDGOAT_B.get_RightTurnLampSt_b,
      &(AION_IDS_SPEEDGOAT_DW.AION_auto_mode_request_InstanceData.rtb));
 
   /* BusCreator generated from: '<S1>/To Virtual Bus' */
@@ -5650,134 +5772,136 @@ void AION_IDS_SPEEDGOAT_step3(void)    /* Sample time: [0.2s, 0.0s] */
     = AION_IDS_SPEEDGOAT_B.set_LatCtrlReq_n;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.set_lateral_control_info.set_SteerAngReq
     = AION_IDS_SPEEDGOAT_B.set_SteerAngReq_k;
+  AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.set_lateral_control_info.set_SteerWhlTorqReq
+    = AION_IDS_SPEEDGOAT_B.set_SteerWhlTorqReq_b;
 
   /* BusCreator generated from: '<S1>/To Virtual Bus' */
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.set_longitudinal_control_info.set_LngCtrlReq
-    = AION_IDS_SPEEDGOAT_B.set_LngCtrlReq_p;
+    = AION_IDS_SPEEDGOAT_B.set_LngCtrlReq_i;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.set_longitudinal_control_info.set_AutoTrqWhlReq
-    = AION_IDS_SPEEDGOAT_B.set_AutoTrqWhlReq_g;
+    = AION_IDS_SPEEDGOAT_B.set_AutoTrqWhlReq_e;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.set_longitudinal_control_info.set_BrakeReq
-    = AION_IDS_SPEEDGOAT_B.set_BrakeReq_e;
+    = AION_IDS_SPEEDGOAT_B.set_BrakeReq_k;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.set_longitudinal_control_info.set_GearLvlReq
-    = AION_IDS_SPEEDGOAT_B.set_GearLvlReq_o;
+    = AION_IDS_SPEEDGOAT_B.set_GearLvlReq_j;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.set_longitudinal_control_info.set_GearLvlReqVD
-    = AION_IDS_SPEEDGOAT_B.set_GearLvlReqVD_a;
+    = AION_IDS_SPEEDGOAT_B.set_GearLvlReqVD_b;
 
   /* BusCreator generated from: '<S1>/To Virtual Bus' */
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.set_ADCU_info.set_Checksum1 =
-    AION_IDS_SPEEDGOAT_B.set_Checksum1_b;
+    AION_IDS_SPEEDGOAT_B.set_Checksum1_l;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.set_ADCU_info.set_MsgCounter1 =
-    AION_IDS_SPEEDGOAT_B.set_MsgCounter1_i;
+    AION_IDS_SPEEDGOAT_B.set_MsgCounter1_j;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.set_ADCU_info.set_Checksum2 =
-    AION_IDS_SPEEDGOAT_B.set_Checksum2_j;
+    AION_IDS_SPEEDGOAT_B.set_Checksum2_a;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.set_ADCU_info.set_MsgCounter2 =
-    AION_IDS_SPEEDGOAT_B.set_MsgCounter2_f;
+    AION_IDS_SPEEDGOAT_B.set_MsgCounter2_d;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.set_ADCU_info.set_Checksum3 =
-    AION_IDS_SPEEDGOAT_B.set_Checksum3_o;
+    AION_IDS_SPEEDGOAT_B.set_Checksum3_e;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.set_ADCU_info.set_MsgCounter3 =
-    AION_IDS_SPEEDGOAT_B.set_MsgCounter3_b;
+    AION_IDS_SPEEDGOAT_B.set_MsgCounter3_p;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.set_ADCU_info.set_BeamReq =
-    AION_IDS_SPEEDGOAT_B.set_BeamReq_i;
+    AION_IDS_SPEEDGOAT_B.set_BeamReq_l;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.set_ADCU_info.set_BodyCtrlReq =
-    AION_IDS_SPEEDGOAT_B.set_BodyCtrlReq_b;
+    AION_IDS_SPEEDGOAT_B.set_BodyCtrlReq_l;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.set_ADCU_info.set_HornRingReq =
-    AION_IDS_SPEEDGOAT_B.set_HornRingReq_m;
+    AION_IDS_SPEEDGOAT_B.set_HornRingReq_g;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.set_ADCU_info.set_TurnLightReq =
-    AION_IDS_SPEEDGOAT_B.set_TurnLightReq_j;
+    AION_IDS_SPEEDGOAT_B.set_TurnLightReq_n;
 
   /* BusCreator generated from: '<S1>/To Virtual Bus' */
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_BCS_info.get_ABSActiveSt =
-    AION_IDS_SPEEDGOAT_B.get_ABSActiveSt_i;
+    AION_IDS_SPEEDGOAT_B.get_ABSActiveSt_o;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_BCS_info.get_VehSpd =
-    AION_IDS_SPEEDGOAT_B.get_VehSpd_d;
+    AION_IDS_SPEEDGOAT_B.get_VehSpd_n;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_BCS_info.get_VehSpdVD =
-    AION_IDS_SPEEDGOAT_B.get_VehSpdVD_f;
+    AION_IDS_SPEEDGOAT_B.get_VehSpdVD_i;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_BCS_info.get_YawRate =
-    AION_IDS_SPEEDGOAT_B.get_YawRate_a;
+    AION_IDS_SPEEDGOAT_B.get_YawRate_f;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_BCS_info.get_ActVehLaltrlAccel
-    = AION_IDS_SPEEDGOAT_B.get_ActVehLaltrlAccel_a;
+    = AION_IDS_SPEEDGOAT_B.get_ActVehLaltrlAccel_j;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_BCS_info.get_ActVehLongAccel
-    = AION_IDS_SPEEDGOAT_B.get_ActVehLongAccel_h;
+    = AION_IDS_SPEEDGOAT_B.get_ActVehLongAccel_n;
 
   /* BusCreator generated from: '<S1>/To Virtual Bus' */
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_VCU_info.get_ActVehWheelTorq
-    = AION_IDS_SPEEDGOAT_B.get_ActVehWheelTorq_g;
+    = AION_IDS_SPEEDGOAT_B.get_ActVehWheelTorq_a;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_VCU_info.get_GearLeverIntv =
-    AION_IDS_SPEEDGOAT_B.get_GearLeverIntv_l;
+    AION_IDS_SPEEDGOAT_B.get_GearLeverIntv_b;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_VCU_info.get_VehDrvMod =
-    AION_IDS_SPEEDGOAT_B.get_VehDrvMod_b;
+    AION_IDS_SPEEDGOAT_B.get_VehDrvMod_jx;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_VCU_info.get_VehRdySt =
-    AION_IDS_SPEEDGOAT_B.get_VehRdySt_a;
+    AION_IDS_SPEEDGOAT_B.get_VehRdySt_e;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_VCU_info.get_VehRng =
-    AION_IDS_SPEEDGOAT_B.get_VehRng_d;
+    AION_IDS_SPEEDGOAT_B.get_VehRng_p;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_VCU_info.get_CrntGearLvl =
-    AION_IDS_SPEEDGOAT_B.get_CrntGearLvl_e;
+    AION_IDS_SPEEDGOAT_B.get_CrntGearLvl_h;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_VCU_info.get_CrntGearLvlVD =
-    AION_IDS_SPEEDGOAT_B.get_CrntGearLvlVD_n;
+    AION_IDS_SPEEDGOAT_B.get_CrntGearLvlVD_o;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_VCU_info.get_GasPedalActPst =
-    AION_IDS_SPEEDGOAT_B.get_GasPedalActPst_l;
+    AION_IDS_SPEEDGOAT_B.get_GasPedalActPst_k;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_VCU_info.get_AccElecECFail =
-    AION_IDS_SPEEDGOAT_B.get_AccElecECFail_ga;
+    AION_IDS_SPEEDGOAT_B.get_AccElecECFail_a;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_VCU_info.get_VehWheelTorqMax
-    = AION_IDS_SPEEDGOAT_B.get_VehWheelTorqMax_k;
+    = AION_IDS_SPEEDGOAT_B.get_VehWheelTorqMax_d;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_VCU_info.get_BrkPedalSt =
-    AION_IDS_SPEEDGOAT_B.get_BrkPedalSt_i;
+    AION_IDS_SPEEDGOAT_B.get_BrkPedalSt_dt;
 
   /* BusCreator generated from: '<S1>/To Virtual Bus' */
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_SCU_info.get_LatAutoCheckReport
-    = AION_IDS_SPEEDGOAT_B.get_LatAutoCheckReport_g;
+    = AION_IDS_SPEEDGOAT_B.get_LatAutoCheckReport_k;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_SCU_info.get_LatCtrlMode =
-    AION_IDS_SPEEDGOAT_B.get_LatCtrlMode_o;
+    AION_IDS_SPEEDGOAT_B.get_LatCtrlMode_i;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_SCU_info.get_LatQuitReport =
-    AION_IDS_SPEEDGOAT_B.get_LatQuitReport_c;
+    AION_IDS_SPEEDGOAT_B.get_LatQuitReport_e;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_SCU_info.get_LngAutoCheckIReport
-    = AION_IDS_SPEEDGOAT_B.get_LngAutoCheckIReport_l;
+    = AION_IDS_SPEEDGOAT_B.get_LngAutoCheckIReport_j;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_SCU_info.get_LngCtrlMode =
-    AION_IDS_SPEEDGOAT_B.get_LngCtrlMode_l;
+    AION_IDS_SPEEDGOAT_B.get_LngCtrlMode_m;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_SCU_info.get_LngQuitReport =
-    AION_IDS_SPEEDGOAT_B.get_LngQuitReport_j;
+    AION_IDS_SPEEDGOAT_B.get_LngQuitReport_o;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_SCU_info.get_StrngWhlIntv =
-    AION_IDS_SPEEDGOAT_B.get_StrngWhlIntv_o;
+    AION_IDS_SPEEDGOAT_B.get_StrngWhlIntv_d;
 
   /* BusCreator generated from: '<S1>/To Virtual Bus' */
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_EPB_info.get_SysSt =
-    AION_IDS_SPEEDGOAT_B.get_SysSt_c;
+    AION_IDS_SPEEDGOAT_B.get_SysSt_l;
 
   /* BusCreator generated from: '<S1>/To Virtual Bus' */
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_SRS_info.get_DriverSeatBeltSt
-    = AION_IDS_SPEEDGOAT_B.get_DriverSeatBeltSt_o;
+    = AION_IDS_SPEEDGOAT_B.get_DriverSeatBeltSt_n;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_SRS_info.get_PsngrSeatBeltSt
-    = AION_IDS_SPEEDGOAT_B.get_PsngrSeatBeltSt_d;
+    = AION_IDS_SPEEDGOAT_B.get_PsngrSeatBeltSt_g;
 
   /* BusCreator generated from: '<S1>/To Virtual Bus' */
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_EPS_info.get_SteeringAngle =
-    AION_IDS_SPEEDGOAT_B.get_SteeringAngle_l;
+    AION_IDS_SPEEDGOAT_B.get_SteeringAngle_o;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_EPS_info.get_SteeringAngleSpd
-    = AION_IDS_SPEEDGOAT_B.get_SteeringAngleSpd_iz;
+    = AION_IDS_SPEEDGOAT_B.get_SteeringAngleSpd_h;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_EPS_info.get_SteeringAngleSpdVD
-    = AION_IDS_SPEEDGOAT_B.get_SteeringAngleSpdVD_o;
+    = AION_IDS_SPEEDGOAT_B.get_SteeringAngleSpdVD_i;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_EPS_info.get_SteeringAngleVD
-    = AION_IDS_SPEEDGOAT_B.get_SteeringAngleVD_n;
+    = AION_IDS_SPEEDGOAT_B.get_SteeringAngleVD_c;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_EPS_info.get_StrngWhlTorq =
-    AION_IDS_SPEEDGOAT_B.get_StrngWhlTorq_d;
+    AION_IDS_SPEEDGOAT_B.get_StrngWhlTorq_n;
 
   /* BusCreator generated from: '<S1>/To Virtual Bus' */
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_BCM_info.get_CtrlAvailable =
-    AION_IDS_SPEEDGOAT_B.get_CtrlAvailable_j;
+    AION_IDS_SPEEDGOAT_B.get_CtrlAvailable_o;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_BCM_info.get_HazardLampSt =
-    AION_IDS_SPEEDGOAT_B.get_HazardLampSt_o;
+    AION_IDS_SPEEDGOAT_B.get_HazardLampSt_b;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_BCM_info.get_HighBeamSt =
-    AION_IDS_SPEEDGOAT_B.get_HighBeamSt_f;
+    AION_IDS_SPEEDGOAT_B.get_HighBeamSt_j;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_BCM_info.get_HornSt =
-    AION_IDS_SPEEDGOAT_B.get_HornSt_n;
+    AION_IDS_SPEEDGOAT_B.get_HornSt_ou;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_BCM_info.get_KeySt =
     AION_IDS_SPEEDGOAT_B.get_KeySt_o;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_BCM_info.get_LeftTurnLampSt =
-    AION_IDS_SPEEDGOAT_B.get_LeftTurnLampSt_k;
+    AION_IDS_SPEEDGOAT_B.get_LeftTurnLampSt_a;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_BCM_info.get_LowBeamSt =
-    AION_IDS_SPEEDGOAT_B.get_LowBeamSt_g;
+    AION_IDS_SPEEDGOAT_B.get_LowBeamSt_m;
   AION_IDS_SPEEDGOAT_B.ToVirtualBus_BusCreator1.get_BCM_info.get_RightTurnLampSt
-    = AION_IDS_SPEEDGOAT_B.get_RightTurnLampSt_c;
+    = AION_IDS_SPEEDGOAT_B.get_RightTurnLampSt_b;
 
   /* RateTransition generated from: '<S1>/Unit Delay' */
   rtw_slrealtime_mutex_lock
@@ -5922,6 +6046,7 @@ void AION_IDS_SPEEDGOAT_initialize(void)
     AION_IDS_SPEEDGOAT_B.SCU2ADCU_CAN_read_o2 = CAN_DATATYPE_GROUND;
     AION_IDS_SPEEDGOAT_B.SCU2ADCU_SampleTimes = 0.0;
     AION_IDS_SPEEDGOAT_B.set_SteerAngReq = 0.0;
+    AION_IDS_SPEEDGOAT_B.set_SteerWhlTorqReq = 0.0;
     AION_IDS_SPEEDGOAT_B.set_AutoTrqWhlReq = 0.0;
     AION_IDS_SPEEDGOAT_B.set_BrakeReq = 0.0;
     AION_IDS_SPEEDGOAT_B.get_VehSpd = 0.0;
@@ -5938,6 +6063,7 @@ void AION_IDS_SPEEDGOAT_initialize(void)
     AION_IDS_SPEEDGOAT_B.ADCU_LngCtrlReq = 0.0;
     AION_IDS_SPEEDGOAT_B.ADCU_LatCtrlReq = 0.0;
     AION_IDS_SPEEDGOAT_B.ADCU_SteerAngReq = 0.0;
+    AION_IDS_SPEEDGOAT_B.ADCU_SteerWhlTorqReq = 0.0;
     AION_IDS_SPEEDGOAT_B.ADCU_BeamReq = 0.0;
     AION_IDS_SPEEDGOAT_B.ADCU_BodyCtrlReq = 0.0;
     AION_IDS_SPEEDGOAT_B.ADCU_HornRingReq = 0.0;
@@ -5948,6 +6074,7 @@ void AION_IDS_SPEEDGOAT_initialize(void)
     AION_IDS_SPEEDGOAT_B.BrakeReq_test = 0.0;
     AION_IDS_SPEEDGOAT_B.LatCtrlReq_test = 0.0;
     AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport2 = 0.0;
+    AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport3 = 0.0;
     AION_IDS_SPEEDGOAT_B.AutoTrqWhlReq_test_p = 0.0;
     AION_IDS_SPEEDGOAT_B.BrakeReq_test_e = 0.0;
     AION_IDS_SPEEDGOAT_B.get_VehSpd_hz = 0.0;
@@ -5958,15 +6085,16 @@ void AION_IDS_SPEEDGOAT_initialize(void)
     AION_IDS_SPEEDGOAT_B.get_SteeringAngle_i = 0.0;
     AION_IDS_SPEEDGOAT_B.get_StrngWhlTorq_a = 0.0;
     AION_IDS_SPEEDGOAT_B.set_SteerAngReq_k = 0.0;
-    AION_IDS_SPEEDGOAT_B.set_AutoTrqWhlReq_g = 0.0;
-    AION_IDS_SPEEDGOAT_B.set_BrakeReq_e = 0.0;
-    AION_IDS_SPEEDGOAT_B.get_VehSpd_d = 0.0;
-    AION_IDS_SPEEDGOAT_B.get_YawRate_a = 0.0;
-    AION_IDS_SPEEDGOAT_B.get_ActVehLaltrlAccel_a = 0.0;
-    AION_IDS_SPEEDGOAT_B.get_ActVehLongAccel_h = 0.0;
-    AION_IDS_SPEEDGOAT_B.get_GasPedalActPst_l = 0.0;
-    AION_IDS_SPEEDGOAT_B.get_SteeringAngle_l = 0.0;
-    AION_IDS_SPEEDGOAT_B.get_StrngWhlTorq_d = 0.0;
+    AION_IDS_SPEEDGOAT_B.set_SteerWhlTorqReq_b = 0.0;
+    AION_IDS_SPEEDGOAT_B.set_AutoTrqWhlReq_e = 0.0;
+    AION_IDS_SPEEDGOAT_B.set_BrakeReq_k = 0.0;
+    AION_IDS_SPEEDGOAT_B.get_VehSpd_n = 0.0;
+    AION_IDS_SPEEDGOAT_B.get_YawRate_f = 0.0;
+    AION_IDS_SPEEDGOAT_B.get_ActVehLaltrlAccel_j = 0.0;
+    AION_IDS_SPEEDGOAT_B.get_ActVehLongAccel_n = 0.0;
+    AION_IDS_SPEEDGOAT_B.get_GasPedalActPst_k = 0.0;
+    AION_IDS_SPEEDGOAT_B.get_SteeringAngle_o = 0.0;
+    AION_IDS_SPEEDGOAT_B.get_StrngWhlTorq_n = 0.0;
     AION_IDS_SPEEDGOAT_B.SCU2ADCU_Brake_Status_CAN_unpack_o1 = 0.0;
     AION_IDS_SPEEDGOAT_B.SCU2ADCU_Brake_Status_CAN_unpack_o2 = 0.0;
     AION_IDS_SPEEDGOAT_B.SCU2ADCU_Brake_Status_CAN_unpack_o3 = 0.0;
@@ -6009,56 +6137,56 @@ void AION_IDS_SPEEDGOAT_initialize(void)
     AION_IDS_SPEEDGOAT_B.SCU2ADCU_Status1_CAN_unpack1_o8 = 0.0;
     AION_IDS_SPEEDGOAT_B.set_GearLvlReqVD = Invalid;
     AION_IDS_SPEEDGOAT_B.DataTypeConversion4 = Invalid;
-    AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport7 = Invalid;
-    AION_IDS_SPEEDGOAT_B.set_GearLvlReqVD_a = Invalid;
+    AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport8 = Invalid;
+    AION_IDS_SPEEDGOAT_B.set_GearLvlReqVD_b = Invalid;
     AION_IDS_SPEEDGOAT_B.get_VehRdySt = NotReady;
     AION_IDS_SPEEDGOAT_B.get_VehRdySt_g = NotReady;
     AION_IDS_SPEEDGOAT_B.get_VehRdySt_l = NotReady;
-    AION_IDS_SPEEDGOAT_B.get_VehRdySt_a = NotReady;
+    AION_IDS_SPEEDGOAT_B.get_VehRdySt_e = NotReady;
     AION_IDS_SPEEDGOAT_B.set_TurnLightReq = NoLightRequest;
     AION_IDS_SPEEDGOAT_B.DataTypeConversion14 = NoLightRequest;
-    AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport17 = NoLightRequest;
-    AION_IDS_SPEEDGOAT_B.set_TurnLightReq_j = NoLightRequest;
+    AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport18 = NoLightRequest;
+    AION_IDS_SPEEDGOAT_B.set_TurnLightReq_n = NoLightRequest;
     AION_IDS_SPEEDGOAT_B.get_CrntGearLvl = InvalidGearStatus;
     AION_IDS_SPEEDGOAT_B.get_CrntGearLvl_f = InvalidGearStatus;
     AION_IDS_SPEEDGOAT_B.get_CrntGearLvl_j = InvalidGearStatus;
-    AION_IDS_SPEEDGOAT_B.get_CrntGearLvl_e = InvalidGearStatus;
+    AION_IDS_SPEEDGOAT_B.get_CrntGearLvl_h = InvalidGearStatus;
     AION_IDS_SPEEDGOAT_B.set_GearLvlReq = NoRequest;
     AION_IDS_SPEEDGOAT_B.DataTypeConversion2 = NoRequest;
-    AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport6 = NoRequest;
-    AION_IDS_SPEEDGOAT_B.set_GearLvlReq_o = NoRequest;
+    AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport7 = NoRequest;
+    AION_IDS_SPEEDGOAT_B.set_GearLvlReq_j = NoRequest;
     AION_IDS_SPEEDGOAT_B.set_BodyCtrlReq = Disable;
     AION_IDS_SPEEDGOAT_B.DataTypeConversion12 = Disable;
-    AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport15 = Disable;
-    AION_IDS_SPEEDGOAT_B.set_BodyCtrlReq_b = Disable;
+    AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport16 = Disable;
+    AION_IDS_SPEEDGOAT_B.set_BodyCtrlReq_l = Disable;
     AION_IDS_SPEEDGOAT_B.get_VehDrvMod = InvalidDriveStatus;
     AION_IDS_SPEEDGOAT_B.get_VehDrvMod_j = InvalidDriveStatus;
     AION_IDS_SPEEDGOAT_B.get_VehDrvMod_a = InvalidDriveStatus;
-    AION_IDS_SPEEDGOAT_B.get_VehDrvMod_b = InvalidDriveStatus;
+    AION_IDS_SPEEDGOAT_B.get_VehDrvMod_jx = InvalidDriveStatus;
     AION_IDS_SPEEDGOAT_B.get_LatCtrlMode = ManualStatus;
     AION_IDS_SPEEDGOAT_B.get_LngCtrlMode = ManualStatus;
     AION_IDS_SPEEDGOAT_B.get_LatCtrlMode_h = ManualStatus;
     AION_IDS_SPEEDGOAT_B.get_LngCtrlMode_f = ManualStatus;
     AION_IDS_SPEEDGOAT_B.get_LatCtrlMode_hx = ManualStatus;
     AION_IDS_SPEEDGOAT_B.get_LngCtrlMode_a = ManualStatus;
-    AION_IDS_SPEEDGOAT_B.get_LatCtrlMode_o = ManualStatus;
-    AION_IDS_SPEEDGOAT_B.get_LngCtrlMode_l = ManualStatus;
+    AION_IDS_SPEEDGOAT_B.get_LatCtrlMode_i = ManualStatus;
+    AION_IDS_SPEEDGOAT_B.get_LngCtrlMode_m = ManualStatus;
     AION_IDS_SPEEDGOAT_B.set_LatCtrlReq = Manual;
     AION_IDS_SPEEDGOAT_B.set_LngCtrlReq = Manual;
     AION_IDS_SPEEDGOAT_B.DataTypeConversion7 = Manual;
     AION_IDS_SPEEDGOAT_B.DataTypeConversion9 = Manual;
     AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport1 = Manual;
-    AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport3 = Manual;
+    AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport4 = Manual;
     AION_IDS_SPEEDGOAT_B.set_LatCtrlReq_n = Manual;
-    AION_IDS_SPEEDGOAT_B.set_LngCtrlReq_p = Manual;
+    AION_IDS_SPEEDGOAT_B.set_LngCtrlReq_i = Manual;
     AION_IDS_SPEEDGOAT_B.set_BeamReq = NoBeamRequest;
     AION_IDS_SPEEDGOAT_B.DataTypeConversion18 = NoBeamRequest;
-    AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport14 = NoBeamRequest;
-    AION_IDS_SPEEDGOAT_B.set_BeamReq_i = NoBeamRequest;
+    AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport15 = NoBeamRequest;
+    AION_IDS_SPEEDGOAT_B.set_BeamReq_l = NoBeamRequest;
     AION_IDS_SPEEDGOAT_B.get_CtrlAvailable = NotAvailable;
     AION_IDS_SPEEDGOAT_B.get_CtrlAvailable_a = NotAvailable;
     AION_IDS_SPEEDGOAT_B.get_CtrlAvailable_h = NotAvailable;
-    AION_IDS_SPEEDGOAT_B.get_CtrlAvailable_j = NotAvailable;
+    AION_IDS_SPEEDGOAT_B.get_CtrlAvailable_o = NotAvailable;
     AION_IDS_SPEEDGOAT_B.get_HazardLampSt = NotActiveStatus;
     AION_IDS_SPEEDGOAT_B.get_HighBeamSt = NotActiveStatus;
     AION_IDS_SPEEDGOAT_B.get_HornSt = NotActiveStatus;
@@ -6077,17 +6205,17 @@ void AION_IDS_SPEEDGOAT_initialize(void)
     AION_IDS_SPEEDGOAT_B.get_LeftTurnLampSt_p = NotActiveStatus;
     AION_IDS_SPEEDGOAT_B.get_LowBeamSt_c = NotActiveStatus;
     AION_IDS_SPEEDGOAT_B.get_RightTurnLampSt_o = NotActiveStatus;
-    AION_IDS_SPEEDGOAT_B.get_HazardLampSt_o = NotActiveStatus;
-    AION_IDS_SPEEDGOAT_B.get_HighBeamSt_f = NotActiveStatus;
-    AION_IDS_SPEEDGOAT_B.get_HornSt_n = NotActiveStatus;
-    AION_IDS_SPEEDGOAT_B.get_LeftTurnLampSt_k = NotActiveStatus;
-    AION_IDS_SPEEDGOAT_B.get_LowBeamSt_g = NotActiveStatus;
-    AION_IDS_SPEEDGOAT_B.get_RightTurnLampSt_c = NotActiveStatus;
+    AION_IDS_SPEEDGOAT_B.get_HazardLampSt_b = NotActiveStatus;
+    AION_IDS_SPEEDGOAT_B.get_HighBeamSt_j = NotActiveStatus;
+    AION_IDS_SPEEDGOAT_B.get_HornSt_ou = NotActiveStatus;
+    AION_IDS_SPEEDGOAT_B.get_LeftTurnLampSt_a = NotActiveStatus;
+    AION_IDS_SPEEDGOAT_B.get_LowBeamSt_m = NotActiveStatus;
+    AION_IDS_SPEEDGOAT_B.get_RightTurnLampSt_b = NotActiveStatus;
     AION_IDS_SPEEDGOAT_B.set_HornRingReq = NotActiveRequest;
     AION_IDS_SPEEDGOAT_B.DataTypeConversion16 = NotActiveRequest;
-    AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport16 =
+    AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport17 =
       NotActiveRequest;
-    AION_IDS_SPEEDGOAT_B.set_HornRingReq_m = NotActiveRequest;
+    AION_IDS_SPEEDGOAT_B.set_HornRingReq_g = NotActiveRequest;
   }
 
   /* states (dwork) */
@@ -6102,6 +6230,9 @@ void AION_IDS_SPEEDGOAT_initialize(void)
   AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport2_Buf0 = 0.0;
   AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport2_Buf1 = 0.0;
   AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport2_Buf2 = 0.0;
+  AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport3_Buf0 = 0.0;
+  AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport3_Buf1 = 0.0;
+  AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport3_Buf2 = 0.0;
   AION_IDS_SPEEDGOAT_DW.get_ActVehLaltrlAccel_Buf0 = 0.0;
   AION_IDS_SPEEDGOAT_DW.get_ActVehLaltrlAccel_Buf1 = 0.0;
   AION_IDS_SPEEDGOAT_DW.get_ActVehLaltrlAccel_Buf2 = 0.0;
@@ -7105,14 +7236,6 @@ void AION_IDS_SPEEDGOAT_initialize(void)
     (&AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport1_d0_SEMAPHORE);
 
   /* Start for RateTransition generated from: '<S1>/AION_auto_mode_request' */
-  AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport14 =
-    AION_IDS_SPEEDGOAT_cal->TmpRTBAtAION_auto_mode_requestInport14_InitialCondition;
-
-  /* Start for RateTransition generated from: '<S1>/AION_auto_mode_request' */
-  rtw_slrealtime_mutex_init
-    (&AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport14_d0_SEMAPHORE);
-
-  /* Start for RateTransition generated from: '<S1>/AION_auto_mode_request' */
   AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport15 =
     AION_IDS_SPEEDGOAT_cal->TmpRTBAtAION_auto_mode_requestInport15_InitialCondition;
 
@@ -7137,6 +7260,14 @@ void AION_IDS_SPEEDGOAT_initialize(void)
     (&AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport17_d0_SEMAPHORE);
 
   /* Start for RateTransition generated from: '<S1>/AION_auto_mode_request' */
+  AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport18 =
+    AION_IDS_SPEEDGOAT_cal->TmpRTBAtAION_auto_mode_requestInport18_InitialCondition;
+
+  /* Start for RateTransition generated from: '<S1>/AION_auto_mode_request' */
+  rtw_slrealtime_mutex_init
+    (&AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport18_d0_SEMAPHORE);
+
+  /* Start for RateTransition generated from: '<S1>/AION_auto_mode_request' */
   AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport2 =
     AION_IDS_SPEEDGOAT_cal->TmpRTBAtAION_auto_mode_requestInport2_InitialCondition;
 
@@ -7153,12 +7284,12 @@ void AION_IDS_SPEEDGOAT_initialize(void)
     (&AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport3_d0_SEMAPHORE);
 
   /* Start for RateTransition generated from: '<S1>/AION_auto_mode_request' */
-  AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport6 =
-    AION_IDS_SPEEDGOAT_cal->TmpRTBAtAION_auto_mode_requestInport6_InitialCondition;
+  AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport4 =
+    AION_IDS_SPEEDGOAT_cal->TmpRTBAtAION_auto_mode_requestInport4_InitialCondition;
 
   /* Start for RateTransition generated from: '<S1>/AION_auto_mode_request' */
   rtw_slrealtime_mutex_init
-    (&AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport6_d0_SEMAPHORE);
+    (&AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport4_d0_SEMAPHORE);
 
   /* Start for RateTransition generated from: '<S1>/AION_auto_mode_request' */
   AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport7 =
@@ -7167,6 +7298,14 @@ void AION_IDS_SPEEDGOAT_initialize(void)
   /* Start for RateTransition generated from: '<S1>/AION_auto_mode_request' */
   rtw_slrealtime_mutex_init
     (&AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport7_d0_SEMAPHORE);
+
+  /* Start for RateTransition generated from: '<S1>/AION_auto_mode_request' */
+  AION_IDS_SPEEDGOAT_B.TmpRTBAtAION_auto_mode_requestInport8 =
+    AION_IDS_SPEEDGOAT_cal->TmpRTBAtAION_auto_mode_requestInport8_InitialCondition;
+
+  /* Start for RateTransition generated from: '<S1>/AION_auto_mode_request' */
+  rtw_slrealtime_mutex_init
+    (&AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport8_d0_SEMAPHORE);
 
   /* Start for RateTransition generated from: '<S1>/AION_auto_mode_request' */
   AION_IDS_SPEEDGOAT_B.get_ActVehLaltrlAccel_d =
@@ -7450,10 +7589,6 @@ void AION_IDS_SPEEDGOAT_initialize(void)
     AION_IDS_SPEEDGOAT_cal->TmpRTBAtAION_auto_mode_requestInport1_InitialCondition;
 
   /* InitializeConditions for RateTransition generated from: '<S1>/AION_auto_mode_request' */
-  AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport14_Buf0 =
-    AION_IDS_SPEEDGOAT_cal->TmpRTBAtAION_auto_mode_requestInport14_InitialCondition;
-
-  /* InitializeConditions for RateTransition generated from: '<S1>/AION_auto_mode_request' */
   AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport15_Buf0 =
     AION_IDS_SPEEDGOAT_cal->TmpRTBAtAION_auto_mode_requestInport15_InitialCondition;
 
@@ -7466,6 +7601,10 @@ void AION_IDS_SPEEDGOAT_initialize(void)
     AION_IDS_SPEEDGOAT_cal->TmpRTBAtAION_auto_mode_requestInport17_InitialCondition;
 
   /* InitializeConditions for RateTransition generated from: '<S1>/AION_auto_mode_request' */
+  AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport18_Buf0 =
+    AION_IDS_SPEEDGOAT_cal->TmpRTBAtAION_auto_mode_requestInport18_InitialCondition;
+
+  /* InitializeConditions for RateTransition generated from: '<S1>/AION_auto_mode_request' */
   AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport2_Buf0 =
     AION_IDS_SPEEDGOAT_cal->TmpRTBAtAION_auto_mode_requestInport2_InitialCondition;
 
@@ -7474,12 +7613,16 @@ void AION_IDS_SPEEDGOAT_initialize(void)
     AION_IDS_SPEEDGOAT_cal->TmpRTBAtAION_auto_mode_requestInport3_InitialCondition;
 
   /* InitializeConditions for RateTransition generated from: '<S1>/AION_auto_mode_request' */
-  AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport6_Buf0 =
-    AION_IDS_SPEEDGOAT_cal->TmpRTBAtAION_auto_mode_requestInport6_InitialCondition;
+  AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport4_Buf0 =
+    AION_IDS_SPEEDGOAT_cal->TmpRTBAtAION_auto_mode_requestInport4_InitialCondition;
 
   /* InitializeConditions for RateTransition generated from: '<S1>/AION_auto_mode_request' */
   AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport7_Buf0 =
     AION_IDS_SPEEDGOAT_cal->TmpRTBAtAION_auto_mode_requestInport7_InitialCondition;
+
+  /* InitializeConditions for RateTransition generated from: '<S1>/AION_auto_mode_request' */
+  AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport8_Buf0 =
+    AION_IDS_SPEEDGOAT_cal->TmpRTBAtAION_auto_mode_requestInport8_InitialCondition;
 
   /* InitializeConditions for RateTransition generated from: '<S1>/AION_auto_mode_request' */
   AION_IDS_SPEEDGOAT_DW.get_ActVehLaltrlAccel_Buf0 =
@@ -7669,10 +7812,6 @@ void AION_IDS_SPEEDGOAT_terminate(void)
 
   /* Terminate for RateTransition generated from: '<S1>/AION_auto_mode_request' */
   rtw_slrealtime_mutex_destroy
-    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport14_d0_SEMAPHORE);
-
-  /* Terminate for RateTransition generated from: '<S1>/AION_auto_mode_request' */
-  rtw_slrealtime_mutex_destroy
     (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport15_d0_SEMAPHORE);
 
   /* Terminate for RateTransition generated from: '<S1>/AION_auto_mode_request' */
@@ -7685,6 +7824,10 @@ void AION_IDS_SPEEDGOAT_terminate(void)
 
   /* Terminate for RateTransition generated from: '<S1>/AION_auto_mode_request' */
   rtw_slrealtime_mutex_destroy
+    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport18_d0_SEMAPHORE);
+
+  /* Terminate for RateTransition generated from: '<S1>/AION_auto_mode_request' */
+  rtw_slrealtime_mutex_destroy
     (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport2_d0_SEMAPHORE);
 
   /* Terminate for RateTransition generated from: '<S1>/AION_auto_mode_request' */
@@ -7693,11 +7836,15 @@ void AION_IDS_SPEEDGOAT_terminate(void)
 
   /* Terminate for RateTransition generated from: '<S1>/AION_auto_mode_request' */
   rtw_slrealtime_mutex_destroy
-    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport6_d0_SEMAPHORE);
+    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport4_d0_SEMAPHORE);
 
   /* Terminate for RateTransition generated from: '<S1>/AION_auto_mode_request' */
   rtw_slrealtime_mutex_destroy
     (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport7_d0_SEMAPHORE);
+
+  /* Terminate for RateTransition generated from: '<S1>/AION_auto_mode_request' */
+  rtw_slrealtime_mutex_destroy
+    (AION_IDS_SPEEDGOAT_DW.TmpRTBAtAION_auto_mode_requestInport8_d0_SEMAPHORE);
 
   /* Terminate for RateTransition generated from: '<S1>/AION_auto_mode_request' */
   rtw_slrealtime_mutex_destroy

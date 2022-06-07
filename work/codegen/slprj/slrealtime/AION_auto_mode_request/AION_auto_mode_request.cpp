@@ -2,9 +2,9 @@
  * Code generation for system model 'AION_auto_mode_request'
  *
  * Model                      : AION_auto_mode_request
- * Model version              : 1.98
+ * Model version              : 1.99
  * Simulink Coder version : 9.5 (R2021a) 14-Nov-2020
- * C++ source code generated on : Mon Jun  6 13:08:50 2022
+ * C++ source code generated on : Tue Jun  7 16:27:21 2022
  *
  * Note that the functions contained in this file are part of a Simulink
  * model, and are not self-contained algorithms.
@@ -16,7 +16,8 @@
 /* Output and update for referenced model: 'AION_auto_mode_request' */
 void AION_auto_mode_request(const Control_request
   *rtu_InBus_set_lateral_control_info_set_LatCtrlReq, const real_T
-  *rtu_InBus_set_lateral_control_info_set_SteerAngReq, const Control_request
+  *rtu_InBus_set_lateral_control_info_set_SteerAngReq, const real_T
+  *rtu_InBus_set_lateral_control_info_set_SteerWhlTorqReq, const Control_request
   *rtu_InBus_set_longitudinal_control_info_set_LngCtrlReq, const real_T
   *rtu_InBus_set_longitudinal_control_info_set_AutoTrqWhlReq, const real_T
   *rtu_InBus_set_longitudinal_control_info_set_BrakeReq, const Gear_request
@@ -73,7 +74,8 @@ void AION_auto_mode_request(const Control_request
   *rtu_InBus_get_BCM_info_get_LowBeamSt, const Active_status
   *rtu_InBus_get_BCM_info_get_RightTurnLampSt, Control_request
   *rty_OutBus_set_lateral_control_info_set_LatCtrlReq, real_T
-  *rty_OutBus_set_lateral_control_info_set_SteerAngReq, Control_request
+  *rty_OutBus_set_lateral_control_info_set_SteerAngReq, real_T
+  *rty_OutBus_set_lateral_control_info_set_SteerWhlTorqReq, Control_request
   *rty_OutBus_set_longitudinal_control_info_set_LngCtrlReq, real_T
   *rty_OutBus_set_longitudinal_control_info_set_AutoTrqWhlReq, real_T
   *rty_OutBus_set_longitudinal_control_info_set_BrakeReq, Gear_request
@@ -204,6 +206,10 @@ void AION_auto_mode_request(const Control_request
     localB->longitudinal_control_req;
 
   /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
+  *rty_OutBus_set_ADCU_info_set_MsgCounter1 =
+    *rtu_InBus_set_ADCU_info_set_MsgCounter1;
+
+  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
   *rty_OutBus_set_ADCU_info_set_Checksum2 =
     *rtu_InBus_set_ADCU_info_set_Checksum2;
 
@@ -239,11 +245,11 @@ void AION_auto_mode_request(const Control_request
     *rtu_InBus_get_BCS_info_get_ABSActiveSt;
 
   /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
-  *rty_OutBus_get_BCS_info_get_VehSpd = *rtu_InBus_get_BCS_info_get_VehSpd;
-
-  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
   *rty_OutBus_set_lateral_control_info_set_SteerAngReq =
     *rtu_InBus_set_lateral_control_info_set_SteerAngReq;
+
+  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
+  *rty_OutBus_get_BCS_info_get_VehSpd = *rtu_InBus_get_BCS_info_get_VehSpd;
 
   /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
   *rty_OutBus_get_BCS_info_get_VehSpdVD = *rtu_InBus_get_BCS_info_get_VehSpdVD;
@@ -275,6 +281,10 @@ void AION_auto_mode_request(const Control_request
 
   /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
   *rty_OutBus_get_VCU_info_get_VehRng = *rtu_InBus_get_VCU_info_get_VehRng;
+
+  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
+  *rty_OutBus_set_lateral_control_info_set_SteerWhlTorqReq =
+    *rtu_InBus_set_lateral_control_info_set_SteerWhlTorqReq;
 
   /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
   *rty_OutBus_get_VCU_info_get_CrntGearLvl =
@@ -321,10 +331,6 @@ void AION_auto_mode_request(const Control_request
     *rtu_InBus_get_SCU_info_get_LngCtrlMode;
 
   /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
-  *rty_OutBus_set_longitudinal_control_info_set_AutoTrqWhlReq =
-    *rtu_InBus_set_longitudinal_control_info_set_AutoTrqWhlReq;
-
-  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
   *rty_OutBus_get_SCU_info_get_LngQuitReport =
     *rtu_InBus_get_SCU_info_get_LngQuitReport;
 
@@ -360,12 +366,12 @@ void AION_auto_mode_request(const Control_request
     *rtu_InBus_get_EPS_info_get_SteeringAngleVD;
 
   /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
-  *rty_OutBus_get_EPS_info_get_StrngWhlTorq =
-    *rtu_InBus_get_EPS_info_get_StrngWhlTorq;
+  *rty_OutBus_set_longitudinal_control_info_set_AutoTrqWhlReq =
+    *rtu_InBus_set_longitudinal_control_info_set_AutoTrqWhlReq;
 
   /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
-  *rty_OutBus_set_longitudinal_control_info_set_BrakeReq =
-    *rtu_InBus_set_longitudinal_control_info_set_BrakeReq;
+  *rty_OutBus_get_EPS_info_get_StrngWhlTorq =
+    *rtu_InBus_get_EPS_info_get_StrngWhlTorq;
 
   /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
   *rty_OutBus_get_BCM_info_get_CtrlAvailable =
@@ -397,6 +403,10 @@ void AION_auto_mode_request(const Control_request
     *rtu_InBus_get_BCM_info_get_RightTurnLampSt;
 
   /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
+  *rty_OutBus_set_longitudinal_control_info_set_BrakeReq =
+    *rtu_InBus_set_longitudinal_control_info_set_BrakeReq;
+
+  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
   *rty_OutBus_set_longitudinal_control_info_set_GearLvlReq =
     *rtu_InBus_set_longitudinal_control_info_set_GearLvlReq;
 
@@ -407,10 +417,6 @@ void AION_auto_mode_request(const Control_request
   /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
   *rty_OutBus_set_ADCU_info_set_Checksum1 =
     *rtu_InBus_set_ADCU_info_set_Checksum1;
-
-  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
-  *rty_OutBus_set_ADCU_info_set_MsgCounter1 =
-    *rtu_InBus_set_ADCU_info_set_MsgCounter1;
 }
 
 /* Model initialize function */

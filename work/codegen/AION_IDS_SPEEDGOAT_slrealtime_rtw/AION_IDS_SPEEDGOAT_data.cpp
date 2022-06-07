@@ -3,9 +3,9 @@
  *
  * Code generation for model "AION_IDS_SPEEDGOAT".
  *
- * Model version              : 4.265
+ * Model version              : 4.271
  * Simulink Coder version : 9.5 (R2021a) 14-Nov-2020
- * C++ source code generated on : Mon Jun  6 14:59:08 2022
+ * C++ source code generated on : Tue Jun  7 16:28:53 2022
  *
  * Target selection: slrealtime.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -50,6 +50,9 @@ real_T rtP_SCU_ADCU_CYCLE_TIME = 0.02; /* Variable: SCU_ADCU_CYCLE_TIME
                                         */
 real_T rtP_SteerAngReq_test = 60.0;    /* Variable: SteerAngReq_test
                                         * Referenced by: '<S5>/SteerAngReq_test'
+                                        */
+real_T rtP_SteerWhlTorqReq_test = 0.0; /* Variable: SteerWhlTorqReq_test
+                                        * Referenced by: '<S5>/SteerWhlTorqReq_test'
                                         */
 real_T rtP_TurnLightReq_test = 0.0;    /* Variable: TurnLightReq_test
                                         * Referenced by: '<S5>/TurnLightReq_test'

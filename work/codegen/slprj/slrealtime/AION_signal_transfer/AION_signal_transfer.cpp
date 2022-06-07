@@ -2,9 +2,9 @@
  * Code generation for system model 'AION_signal_transfer'
  *
  * Model                      : AION_signal_transfer
- * Model version              : 4.85
+ * Model version              : 4.87
  * Simulink Coder version : 9.5 (R2021a) 14-Nov-2020
- * C++ source code generated on : Mon Jun  6 13:09:21 2022
+ * C++ source code generated on : Tue Jun  7 16:28:00 2022
  *
  * Note that the functions contained in this file are part of a Simulink
  * model, and are not self-contained algorithms.
@@ -38,6 +38,8 @@ void AION_signal_transfer(const real_T
   Control_request
   *rtu_ADCU_InternalOutputPort_set_lateral_control_info_set_LatCtrlReq, const
   real_T *rtu_ADCU_InternalOutputPort_set_lateral_control_info_set_SteerAngReq,
+  const real_T
+  *rtu_ADCU_InternalOutputPort_set_lateral_control_info_set_SteerWhlTorqReq,
   const Control_request
   *rtu_ADCU_InternalOutputPort_set_longitudinal_control_info_set_LngCtrlReq,
   const real_T
@@ -55,7 +57,8 @@ void AION_signal_transfer(const real_T
   const Light_request
   *rtu_ADCU_InternalOutputPort_set_ADCU_info_set_TurnLightReq, Control_request
   *rty_ADCU_InternalInputPort_set_lateral_control_info_set_LatCtrlReq, real_T
-  *rty_ADCU_InternalInputPort_set_lateral_control_info_set_SteerAngReq,
+  *rty_ADCU_InternalInputPort_set_lateral_control_info_set_SteerAngReq, real_T
+  *rty_ADCU_InternalInputPort_set_lateral_control_info_set_SteerWhlTorqReq,
   Control_request
   *rty_ADCU_InternalInputPort_set_longitudinal_control_info_set_LngCtrlReq,
   real_T
@@ -122,6 +125,8 @@ void AION_signal_transfer(const real_T
   real_T *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_1_ADCU_LngCtrlReq,
   real_T *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_2_ADCU_LatCtrlReq,
   real_T *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_2_ADCU_SteerAngReq,
+  real_T
+  *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_2_ADCU_SteerWhlTorqReq,
   real_T *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_3_ADCU_BeamReq,
   real_T *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_3_ADCU_BodyCtrlReq,
   real_T *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_3_ADCU_HornRingReq,
@@ -150,6 +155,9 @@ void AION_signal_transfer(const real_T
 
   /* SignalConversion generated from: '<Root>/ADCU_InternalInputPort_Outport_1' */
   *rty_ADCU_InternalInputPort_set_lateral_control_info_set_SteerAngReq = 0.0;
+
+  /* SignalConversion generated from: '<Root>/ADCU_InternalInputPort_Outport_1' */
+  *rty_ADCU_InternalInputPort_set_lateral_control_info_set_SteerWhlTorqReq = 0.0;
 
   /* SignalConversion generated from: '<Root>/ADCU_InternalInputPort_Outport_1' */
   *rty_ADCU_InternalInputPort_set_longitudinal_control_info_set_LngCtrlReq =
@@ -564,6 +572,10 @@ void AION_signal_transfer(const real_T
   /* DataTypeConversion: '<Root>/Data Type Conversion5' */
   *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_1_ADCU_AutoTrqWhlReq =
     *rtu_ADCU_InternalOutputPort_set_longitudinal_control_info_set_AutoTrqWhlReq;
+
+  /* DataTypeConversion: '<Root>/Data Type Conversion6' */
+  *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_2_ADCU_SteerWhlTorqReq =
+    *rtu_ADCU_InternalOutputPort_set_lateral_control_info_set_SteerWhlTorqReq;
 
   /* DataTypeConversion: '<Root>/Data Type Conversion7' */
   *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_1_ADCU_BrakeReq =

@@ -353,6 +353,9 @@ struct AION_IDS_SPEEDGOAT_cal_type {
   real_T TmpRTBAtAION_auto_mode_requestInport2_InitialCondition;/* Expression: 0
                                                                  * Referenced by: synthesized block
                                                                  */
+  real_T TmpRTBAtAION_auto_mode_requestInport3_InitialCondition;/* Expression: 0
+                                                                 * Referenced by: synthesized block
+                                                                 */
   real_T get_ActVehLaltrlAccel_InitialCondition;/* Expression: 0
                                                  * Referenced by: synthesized block
                                                  */
@@ -424,8 +427,8 @@ struct AION_IDS_SPEEDGOAT_cal_type {
   real_T ADCU2SCU_Steer_Command_CAN_write_P7;/* Expression: isFDMod
                                               * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
                                               */
-  Active_request TmpRTBAtAION_auto_mode_requestInport16_InitialCondition;
-  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport16_InitialCondition
+  Active_request TmpRTBAtAION_auto_mode_requestInport17_InitialCondition;
+  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport17_InitialCondition
    * Referenced by: synthesized block
    */
   Active_status get_HazardLampSt_InitialCondition;
@@ -456,16 +459,16 @@ struct AION_IDS_SPEEDGOAT_cal_type {
                        /* Computed Parameter: get_CtrlAvailable_InitialCondition
                         * Referenced by: synthesized block
                         */
-  Beam_request TmpRTBAtAION_auto_mode_requestInport14_InitialCondition;
-  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport14_InitialCondition
+  Beam_request TmpRTBAtAION_auto_mode_requestInport15_InitialCondition;
+  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport15_InitialCondition
    * Referenced by: synthesized block
    */
   Control_request TmpRTBAtAION_auto_mode_requestInport1_InitialCondition;
   /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport1_InitialCondition
    * Referenced by: synthesized block
    */
-  Control_request TmpRTBAtAION_auto_mode_requestInport3_InitialCondition;
-  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport3_InitialCondition
+  Control_request TmpRTBAtAION_auto_mode_requestInport4_InitialCondition;
+  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport4_InitialCondition
    * Referenced by: synthesized block
    */
   Control_status get_LatCtrlMode_InitialCondition;
@@ -480,28 +483,28 @@ struct AION_IDS_SPEEDGOAT_cal_type {
                            /* Computed Parameter: get_VehDrvMod_InitialCondition
                             * Referenced by: synthesized block
                             */
-  Enable_request TmpRTBAtAION_auto_mode_requestInport15_InitialCondition;
-  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport15_InitialCondition
+  Enable_request TmpRTBAtAION_auto_mode_requestInport16_InitialCondition;
+  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport16_InitialCondition
    * Referenced by: synthesized block
    */
-  Gear_request TmpRTBAtAION_auto_mode_requestInport6_InitialCondition;
-  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport6_InitialCondition
+  Gear_request TmpRTBAtAION_auto_mode_requestInport7_InitialCondition;
+  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport7_InitialCondition
    * Referenced by: synthesized block
    */
   Gear_status get_CrntGearLvl_InitialCondition;
                          /* Computed Parameter: get_CrntGearLvl_InitialCondition
                           * Referenced by: synthesized block
                           */
-  Light_request TmpRTBAtAION_auto_mode_requestInport17_InitialCondition;
-  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport17_InitialCondition
+  Light_request TmpRTBAtAION_auto_mode_requestInport18_InitialCondition;
+  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport18_InitialCondition
    * Referenced by: synthesized block
    */
   Ready_status get_VehRdySt_InitialCondition;
                             /* Computed Parameter: get_VehRdySt_InitialCondition
                              * Referenced by: synthesized block
                              */
-  Validation_status TmpRTBAtAION_auto_mode_requestInport7_InitialCondition;
-  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport7_InitialCondition
+  Validation_status TmpRTBAtAION_auto_mode_requestInport8_InitialCondition;
+  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport8_InitialCondition
    * Referenced by: synthesized block
    */
   uint32_T get_ActVehWheelTorq_InitialCondition;

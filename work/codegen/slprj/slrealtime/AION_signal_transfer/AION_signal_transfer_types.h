@@ -3,9 +3,9 @@
  *
  * Code generation for model "AION_signal_transfer".
  *
- * Model version              : 4.85
+ * Model version              : 4.87
  * Simulink Coder version : 9.5 (R2021a) 14-Nov-2020
- * C++ source code generated on : Mon Jun  6 13:09:21 2022
+ * C++ source code generated on : Tue Jun  7 16:28:00 2022
  *
  * Target selection: slrealtime.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -237,6 +237,7 @@ struct AION_Lateral_Control_Info
 {
   Control_request set_LatCtrlReq;
   real_T set_SteerAngReq;
+  real_T set_SteerWhlTorqReq;
 };
 
 #endif
@@ -556,6 +557,7 @@ struct ADCU2SCU_ADCU_2
 {
   real_T ADCU_LatCtrlReq;
   real_T ADCU_SteerAngReq;
+  real_T ADCU_SteerWhlTorqReq;
 };
 
 #endif

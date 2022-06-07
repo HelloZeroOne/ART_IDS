@@ -8,7 +8,8 @@ AION_IDS_SPEEDGOAT_cal_type AION_IDS_SPEEDGOAT_cal_impl = {
   {
     {
       Manual,                          /* set_LatCtrlReq */
-      0.0                              /* set_SteerAngReq */
+      0.0,                             /* set_SteerAngReq */
+      0.0                              /* set_SteerWhlTorqReq */
     },                                 /* set_lateral_control_info */
 
     {
@@ -100,7 +101,8 @@ AION_IDS_SPEEDGOAT_cal_type AION_IDS_SPEEDGOAT_cal_impl = {
   {
     {
       Manual,                          /* set_LatCtrlReq */
-      0.0                              /* set_SteerAngReq */
+      0.0,                             /* set_SteerAngReq */
+      0.0                              /* set_SteerWhlTorqReq */
     },                                 /* set_lateral_control_info */
 
     {
@@ -751,6 +753,11 @@ AION_IDS_SPEEDGOAT_cal_type AION_IDS_SPEEDGOAT_cal_impl = {
    */
   0.0,
 
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
   /* Computed Parameter: ADCU2SCU_Steer_Command_CAN_write_P1_Size
    * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
    */
@@ -821,7 +828,7 @@ AION_IDS_SPEEDGOAT_cal_type AION_IDS_SPEEDGOAT_cal_impl = {
    */
   0.0,
 
-  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport16_InitialCondition
+  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport17_InitialCondition
    * Referenced by: synthesized block
    */
   NotActiveRequest,
@@ -861,7 +868,7 @@ AION_IDS_SPEEDGOAT_cal_type AION_IDS_SPEEDGOAT_cal_impl = {
    */
   NotAvailable,
 
-  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport14_InitialCondition
+  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport15_InitialCondition
    * Referenced by: synthesized block
    */
   NoBeamRequest,
@@ -871,7 +878,7 @@ AION_IDS_SPEEDGOAT_cal_type AION_IDS_SPEEDGOAT_cal_impl = {
    */
   Manual,
 
-  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport3_InitialCondition
+  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport4_InitialCondition
    * Referenced by: synthesized block
    */
   Manual,
@@ -891,12 +898,12 @@ AION_IDS_SPEEDGOAT_cal_type AION_IDS_SPEEDGOAT_cal_impl = {
    */
   InvalidDriveStatus,
 
-  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport15_InitialCondition
+  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport16_InitialCondition
    * Referenced by: synthesized block
    */
   Disable,
 
-  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport6_InitialCondition
+  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport7_InitialCondition
    * Referenced by: synthesized block
    */
   NoRequest,
@@ -906,7 +913,7 @@ AION_IDS_SPEEDGOAT_cal_type AION_IDS_SPEEDGOAT_cal_impl = {
    */
   InvalidGearStatus,
 
-  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport17_InitialCondition
+  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport18_InitialCondition
    * Referenced by: synthesized block
    */
   NoLightRequest,
@@ -916,7 +923,7 @@ AION_IDS_SPEEDGOAT_cal_type AION_IDS_SPEEDGOAT_cal_impl = {
    */
   NotReady,
 
-  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport7_InitialCondition
+  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport8_InitialCondition
    * Referenced by: synthesized block
    */
   Invalid,

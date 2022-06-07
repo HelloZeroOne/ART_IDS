@@ -3,9 +3,9 @@
  *
  * Code generation for model "AION_IDS_SPEEDGOAT".
  *
- * Model version              : 4.265
+ * Model version              : 4.271
  * Simulink Coder version : 9.5 (R2021a) 14-Nov-2020
- * C++ source code generated on : Mon Jun  6 14:59:08 2022
+ * C++ source code generated on : Tue Jun  7 16:28:53 2022
  *
  * Target selection: slrealtime.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -19,195 +19,6 @@
 #include "rtwtypes.h"
 
 /* Model Code Variants */
-#ifndef DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_1_
-#define DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_1_
-
-struct SCU2ADCU_SCU_1
-{
-  real_T BCS_ABSActiveSt;
-  real_T BCS_VehSpd;
-  real_T BCS_VehSpdVD;
-};
-
-#endif
-
-#ifndef DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_10_
-#define DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_10_
-
-struct SCU2ADCU_SCU_10
-{
-  real_T EPS_SteeringAngle;
-  real_T EPS_SteeringAngleSpd;
-  real_T EPS_SteeringAngleSpdVD;
-  real_T EPS_SteeringAngleVD;
-  real_T EPS_StrngWhlTorq;
-};
-
-#endif
-
-#ifndef DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_11_
-#define DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_11_
-
-struct SCU2ADCU_SCU_11
-{
-  real_T BCM_CtrlAvailable;
-  real_T BCM_HazardLampSt;
-  real_T BCM_HighBeamSt;
-  real_T BCM_HornSt;
-  real_T BCM_KeySt;
-  real_T BCM_LeftTurnLampSt;
-  real_T BCM_LowBeamSt;
-  real_T BCM_RightTurnLampSt;
-};
-
-#endif
-
-#ifndef DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_12_
-#define DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_12_
-
-struct SCU2ADCU_SCU_12
-{
-  real_T SRS_DriverSeatBeltSt;
-  real_T SRS_PsngrSeatBeltSt;
-};
-
-#endif
-
-#ifndef DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_13_
-#define DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_13_
-
-struct SCU2ADCU_SCU_13
-{
-  real_T SCU_LatAutoCheckReport;
-  real_T SCU_LatCtrlMode;
-  real_T SCU_LatQuitReport;
-  real_T SCU_LngAutoChecklReport;
-  real_T SCU_LngCtrlMode;
-  real_T SCU_LngQuitReport;
-  real_T SCU_StrngWhlIntv;
-  real_T VCU_GearLeverIntv;
-};
-
-#endif
-
-#ifndef DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_14_
-#define DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_14_
-
-struct SCU2ADCU_SCU_14
-{
-  real_T VCU_VehDrvMod;
-  real_T VCU_VehRdySt;
-  real_T VCU_VehRng;
-};
-
-#endif
-
-#ifndef DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_15_
-#define DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_15_
-
-struct SCU2ADCU_SCU_15
-{
-  real_T VCU_CrntGearLvl;
-  real_T VCU_CrntGearLvlVD;
-};
-
-#endif
-
-#ifndef DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_16_
-#define DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_16_
-
-struct SCU2ADCU_SCU_16
-{
-  real_T VCU_ActVehWheelTorq;
-};
-
-#endif
-
-#ifndef DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_17_
-#define DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_17_
-
-struct SCU2ADCU_SCU_17
-{
-  real_T VCU_AccElecECFail;
-  real_T VCU_GasPedalActPst;
-  real_T VCU_VehWheelTorqMax;
-};
-
-#endif
-
-#ifndef DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_18_
-#define DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_18_
-
-struct SCU2ADCU_SCU_18
-{
-  real_T VCU_BrkPedalSt;
-};
-
-#endif
-
-#ifndef DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_3_
-#define DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_3_
-
-struct SCU2ADCU_SCU_3
-{
-  real_T BCS_YawRate;
-};
-
-#endif
-
-#ifndef DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_8_
-#define DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_8_
-
-struct SCU2ADCU_SCU_8
-{
-  real_T BCS_ActVehLaltrlAccel;
-  real_T BCS_ActVehLongAccel;
-};
-
-#endif
-
-#ifndef DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_9_
-#define DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_9_
-
-struct SCU2ADCU_SCU_9
-{
-  real_T EPB_SysSt;
-};
-
-#endif
-
-#ifndef DEFINED_TYPEDEF_FOR_SCU2ADCU_
-#define DEFINED_TYPEDEF_FOR_SCU2ADCU_
-
-struct SCU2ADCU
-{
-  SCU2ADCU_SCU_1 SCU_1;
-  SCU2ADCU_SCU_10 SCU_10;
-  SCU2ADCU_SCU_11 SCU_11;
-  SCU2ADCU_SCU_12 SCU_12;
-  SCU2ADCU_SCU_13 SCU_13;
-  SCU2ADCU_SCU_14 SCU_14;
-  SCU2ADCU_SCU_15 SCU_15;
-  SCU2ADCU_SCU_16 SCU_16;
-  SCU2ADCU_SCU_17 SCU_17;
-  SCU2ADCU_SCU_18 SCU_18;
-  SCU2ADCU_SCU_3 SCU_3;
-  SCU2ADCU_SCU_8 SCU_8;
-  SCU2ADCU_SCU_9 SCU_9;
-};
-
-#endif
-
-#ifndef DEFINED_TYPEDEF_FOR_InputCAN_
-#define DEFINED_TYPEDEF_FOR_InputCAN_
-
-struct InputCAN
-{
-  SCU2ADCU SCU2ADCU_bus;
-};
-
-#endif
-
 #ifndef DEFINED_TYPEDEF_FOR_Control_request_
 #define DEFINED_TYPEDEF_FOR_Control_request_
 
@@ -227,6 +38,7 @@ struct AION_Lateral_Control_Info
 {
   Control_request set_LatCtrlReq;
   real_T set_SteerAngReq;
+  real_T set_SteerWhlTorqReq;
 };
 
 #endif
@@ -525,6 +337,195 @@ struct AION_ApplicationBus
 
 #endif
 
+#ifndef DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_1_
+#define DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_1_
+
+struct SCU2ADCU_SCU_1
+{
+  real_T BCS_ABSActiveSt;
+  real_T BCS_VehSpd;
+  real_T BCS_VehSpdVD;
+};
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_10_
+#define DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_10_
+
+struct SCU2ADCU_SCU_10
+{
+  real_T EPS_SteeringAngle;
+  real_T EPS_SteeringAngleSpd;
+  real_T EPS_SteeringAngleSpdVD;
+  real_T EPS_SteeringAngleVD;
+  real_T EPS_StrngWhlTorq;
+};
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_11_
+#define DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_11_
+
+struct SCU2ADCU_SCU_11
+{
+  real_T BCM_CtrlAvailable;
+  real_T BCM_HazardLampSt;
+  real_T BCM_HighBeamSt;
+  real_T BCM_HornSt;
+  real_T BCM_KeySt;
+  real_T BCM_LeftTurnLampSt;
+  real_T BCM_LowBeamSt;
+  real_T BCM_RightTurnLampSt;
+};
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_12_
+#define DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_12_
+
+struct SCU2ADCU_SCU_12
+{
+  real_T SRS_DriverSeatBeltSt;
+  real_T SRS_PsngrSeatBeltSt;
+};
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_13_
+#define DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_13_
+
+struct SCU2ADCU_SCU_13
+{
+  real_T SCU_LatAutoCheckReport;
+  real_T SCU_LatCtrlMode;
+  real_T SCU_LatQuitReport;
+  real_T SCU_LngAutoChecklReport;
+  real_T SCU_LngCtrlMode;
+  real_T SCU_LngQuitReport;
+  real_T SCU_StrngWhlIntv;
+  real_T VCU_GearLeverIntv;
+};
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_14_
+#define DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_14_
+
+struct SCU2ADCU_SCU_14
+{
+  real_T VCU_VehDrvMod;
+  real_T VCU_VehRdySt;
+  real_T VCU_VehRng;
+};
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_15_
+#define DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_15_
+
+struct SCU2ADCU_SCU_15
+{
+  real_T VCU_CrntGearLvl;
+  real_T VCU_CrntGearLvlVD;
+};
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_16_
+#define DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_16_
+
+struct SCU2ADCU_SCU_16
+{
+  real_T VCU_ActVehWheelTorq;
+};
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_17_
+#define DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_17_
+
+struct SCU2ADCU_SCU_17
+{
+  real_T VCU_AccElecECFail;
+  real_T VCU_GasPedalActPst;
+  real_T VCU_VehWheelTorqMax;
+};
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_18_
+#define DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_18_
+
+struct SCU2ADCU_SCU_18
+{
+  real_T VCU_BrkPedalSt;
+};
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_3_
+#define DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_3_
+
+struct SCU2ADCU_SCU_3
+{
+  real_T BCS_YawRate;
+};
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_8_
+#define DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_8_
+
+struct SCU2ADCU_SCU_8
+{
+  real_T BCS_ActVehLaltrlAccel;
+  real_T BCS_ActVehLongAccel;
+};
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_9_
+#define DEFINED_TYPEDEF_FOR_SCU2ADCU_SCU_9_
+
+struct SCU2ADCU_SCU_9
+{
+  real_T EPB_SysSt;
+};
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_SCU2ADCU_
+#define DEFINED_TYPEDEF_FOR_SCU2ADCU_
+
+struct SCU2ADCU
+{
+  SCU2ADCU_SCU_1 SCU_1;
+  SCU2ADCU_SCU_10 SCU_10;
+  SCU2ADCU_SCU_11 SCU_11;
+  SCU2ADCU_SCU_12 SCU_12;
+  SCU2ADCU_SCU_13 SCU_13;
+  SCU2ADCU_SCU_14 SCU_14;
+  SCU2ADCU_SCU_15 SCU_15;
+  SCU2ADCU_SCU_16 SCU_16;
+  SCU2ADCU_SCU_17 SCU_17;
+  SCU2ADCU_SCU_18 SCU_18;
+  SCU2ADCU_SCU_3 SCU_3;
+  SCU2ADCU_SCU_8 SCU_8;
+  SCU2ADCU_SCU_9 SCU_9;
+};
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_InputCAN_
+#define DEFINED_TYPEDEF_FOR_InputCAN_
+
+struct InputCAN
+{
+  SCU2ADCU SCU2ADCU_bus;
+};
+
+#endif
+
 #ifndef DEFINED_TYPEDEF_FOR_ADCU_InputBus_
 #define DEFINED_TYPEDEF_FOR_ADCU_InputBus_
 
@@ -556,6 +557,7 @@ struct ADCU2SCU_ADCU_2
 {
   real_T ADCU_LatCtrlReq;
   real_T ADCU_SteerAngReq;
+  real_T ADCU_SteerWhlTorqReq;
 };
 
 #endif

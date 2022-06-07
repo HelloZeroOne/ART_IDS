@@ -64,7 +64,8 @@ extern void AION_auto_mode_request_initialize(const char_T **rt_errorStatus,
   B_AION_auto_mode_request_c_T *localB, DW_AION_auto_mode_request_f_T *localDW);
 extern void AION_auto_mode_request(const Control_request
   *rtu_InBus_set_lateral_control_info_set_LatCtrlReq, const real_T
-  *rtu_InBus_set_lateral_control_info_set_SteerAngReq, const Control_request
+  *rtu_InBus_set_lateral_control_info_set_SteerAngReq, const real_T
+  *rtu_InBus_set_lateral_control_info_set_SteerWhlTorqReq, const Control_request
   *rtu_InBus_set_longitudinal_control_info_set_LngCtrlReq, const real_T
   *rtu_InBus_set_longitudinal_control_info_set_AutoTrqWhlReq, const real_T
   *rtu_InBus_set_longitudinal_control_info_set_BrakeReq, const Gear_request
@@ -121,7 +122,8 @@ extern void AION_auto_mode_request(const Control_request
   *rtu_InBus_get_BCM_info_get_LowBeamSt, const Active_status
   *rtu_InBus_get_BCM_info_get_RightTurnLampSt, Control_request
   *rty_OutBus_set_lateral_control_info_set_LatCtrlReq, real_T
-  *rty_OutBus_set_lateral_control_info_set_SteerAngReq, Control_request
+  *rty_OutBus_set_lateral_control_info_set_SteerAngReq, real_T
+  *rty_OutBus_set_lateral_control_info_set_SteerWhlTorqReq, Control_request
   *rty_OutBus_set_longitudinal_control_info_set_LngCtrlReq, real_T
   *rty_OutBus_set_longitudinal_control_info_set_AutoTrqWhlReq, real_T
   *rty_OutBus_set_longitudinal_control_info_set_BrakeReq, Gear_request

@@ -90,6 +90,8 @@ extern void AION_signal_transfer(const real_T
   Control_request
   *rtu_ADCU_InternalOutputPort_set_lateral_control_info_set_LatCtrlReq, const
   real_T *rtu_ADCU_InternalOutputPort_set_lateral_control_info_set_SteerAngReq,
+  const real_T
+  *rtu_ADCU_InternalOutputPort_set_lateral_control_info_set_SteerWhlTorqReq,
   const Control_request
   *rtu_ADCU_InternalOutputPort_set_longitudinal_control_info_set_LngCtrlReq,
   const real_T
@@ -107,7 +109,8 @@ extern void AION_signal_transfer(const real_T
   const Light_request
   *rtu_ADCU_InternalOutputPort_set_ADCU_info_set_TurnLightReq, Control_request
   *rty_ADCU_InternalInputPort_set_lateral_control_info_set_LatCtrlReq, real_T
-  *rty_ADCU_InternalInputPort_set_lateral_control_info_set_SteerAngReq,
+  *rty_ADCU_InternalInputPort_set_lateral_control_info_set_SteerAngReq, real_T
+  *rty_ADCU_InternalInputPort_set_lateral_control_info_set_SteerWhlTorqReq,
   Control_request
   *rty_ADCU_InternalInputPort_set_longitudinal_control_info_set_LngCtrlReq,
   real_T
@@ -174,6 +177,8 @@ extern void AION_signal_transfer(const real_T
   real_T *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_1_ADCU_LngCtrlReq,
   real_T *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_2_ADCU_LatCtrlReq,
   real_T *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_2_ADCU_SteerAngReq,
+  real_T
+  *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_2_ADCU_SteerWhlTorqReq,
   real_T *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_3_ADCU_BeamReq,
   real_T *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_3_ADCU_BodyCtrlReq,
   real_T *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_3_ADCU_HornRingReq,
