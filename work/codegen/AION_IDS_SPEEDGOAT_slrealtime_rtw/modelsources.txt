@@ -1,2 +1,3 @@
   AION_IDS_SPEEDGOAT.cpp
+slfiforeadwrite.cpp
 

@@ -3,9 +3,9 @@
  *
  * Code generation for model "AION_IDS_SPEEDGOAT".
  *
- * Model version              : 4.271
+ * Model version              : 4.301
  * Simulink Coder version : 9.5 (R2021a) 14-Nov-2020
- * C++ source code generated on : Tue Jun  7 16:28:53 2022
+ * C++ source code generated on : Fri Jun 10 16:04:54 2022
  *
  * Target selection: slrealtime.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -30,8 +30,17 @@
 
 extern CAN_DATATYPE CAN_DATATYPE_GROUND;
 extern void* slrtRegisterSignalToLoggingService(uintptr_t sigAddr);
-extern "C" void sg_IO61X_read_s(SimStruct *rts);
+extern "C" {
+  const char *fifowrite(int32_T *fifo, void *iPtr, void **oPtrs,
+                        int *settings);
+}
+  extern "C" void sg_IO61X_read_s(SimStruct *rts);
+
 extern "C" void sg_IO612_setup_s(SimStruct *rts);
 extern "C" void sg_IO61X_write_s(SimStruct *rts);
+extern "C" void slserialread(SimStruct *rts);
+extern "C" void slserialwrite(SimStruct *rts);
+extern "C" void slserialsetupbase(SimStruct *rts);
+extern "C" void slfiforeadhdr(SimStruct *rts);
 
 #endif                            /* RTW_HEADER_AION_IDS_SPEEDGOAT_private_h_ */

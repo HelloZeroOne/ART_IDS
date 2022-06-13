@@ -2,7 +2,7 @@
 ## Makefile generated for component 'AION_auto_mode_request'. 
 ## 
 ## Makefile     : AION_auto_mode_request.mk
-## Generated on : Tue Jun 07 16:27:34 2022
+## Generated on : Fri Jun 10 15:54:28 2022
 ## Final product: ./AION_auto_mode_request_rtwlib.a
 ## Product type : static library
 ## 

@@ -92,7 +92,25 @@ AION_IDS_SPEEDGOAT_cal_type AION_IDS_SPEEDGOAT_cal_impl = {
       NotActiveStatus,                 /* get_LeftTurnLampSt */
       NotActiveStatus,                 /* get_LowBeamSt */
       NotActiveStatus                  /* get_RightTurnLampSt */
-    }                                  /* get_BCM_info */
+    },                                 /* get_BCM_info */
+
+    {
+      0.0,                             /* get_GPSWeek */
+      0.0,                             /* get_GPSTime */
+      0.0,                             /* get_Heading */
+      0.0,                             /* get_Pitch */
+      0.0,                             /* get_Roll */
+      Initialization,                  /* get_IMUWorkStatus */
+      0.0,                             /* get_AngleSpeedX */
+      0.0,                             /* get_AngleSpeedY */
+      0.0,                             /* get_AngleSpeedZ */
+      0.0,                             /* get_AccelerationX */
+      0.0,                             /* get_AccelerationY */
+      0.0,                             /* get_AccelerationZ */
+      0.0,                             /* get_Latitude */
+      0.0,                             /* get_Longitude */
+      0.0                              /* get_Altitude */
+    }                                  /* get_IMU_info */
   },
 
   /* Computed Parameter: TmpRTBAtUnitDelayInport1_InitialCondition
@@ -185,71 +203,149 @@ AION_IDS_SPEEDGOAT_cal_type AION_IDS_SPEEDGOAT_cal_impl = {
       NotActiveStatus,                 /* get_LeftTurnLampSt */
       NotActiveStatus,                 /* get_LowBeamSt */
       NotActiveStatus                  /* get_RightTurnLampSt */
-    }                                  /* get_BCM_info */
+    },                                 /* get_BCM_info */
+
+    {
+      0.0,                             /* get_GPSWeek */
+      0.0,                             /* get_GPSTime */
+      0.0,                             /* get_Heading */
+      0.0,                             /* get_Pitch */
+      0.0,                             /* get_Roll */
+      Initialization,                  /* get_IMUWorkStatus */
+      0.0,                             /* get_AngleSpeedX */
+      0.0,                             /* get_AngleSpeedY */
+      0.0,                             /* get_AngleSpeedZ */
+      0.0,                             /* get_AccelerationX */
+      0.0,                             /* get_AccelerationY */
+      0.0,                             /* get_AccelerationZ */
+      0.0,                             /* get_Latitude */
+      0.0,                             /* get_Longitude */
+      0.0                              /* get_Altitude */
+    }                                  /* get_IMU_info */
   },
 
   /* Computed Parameter: RT2_InitialCondition
-   * Referenced by: '<S13>/RT2'
+   * Referenced by: '<S19>/RT2'
    */
   { 0, 0, 0, 0, 0, 0.0, { 0, 0, 0, 0, 0, 0, 0, 0 } },
 
-  /* Computed Parameter: SCU2ADCU_CAN_read_P1_Size
-   * Referenced by: '<S10>/SCU2ADCU_CAN_read'
+  /* Computed Parameter: IMU2ADCU_CAN_read_P1_Size
+   * Referenced by: '<S11>/IMU2ADCU_CAN_read'
    */
   { 1.0, 1.0 },
 
   /* Expression: id
-   * Referenced by: '<S10>/SCU2ADCU_CAN_read'
+   * Referenced by: '<S11>/IMU2ADCU_CAN_read'
    */
   1.0,
 
-  /* Computed Parameter: SCU2ADCU_CAN_read_P2_Size
-   * Referenced by: '<S10>/SCU2ADCU_CAN_read'
+  /* Computed Parameter: IMU2ADCU_CAN_read_P2_Size
+   * Referenced by: '<S11>/IMU2ADCU_CAN_read'
    */
   { 1.0, 1.0 },
 
   /* Expression: sampleTime
-   * Referenced by: '<S10>/SCU2ADCU_CAN_read'
+   * Referenced by: '<S11>/IMU2ADCU_CAN_read'
    */
   -1.0,
 
-  /* Computed Parameter: SCU2ADCU_CAN_read_P3_Size
-   * Referenced by: '<S10>/SCU2ADCU_CAN_read'
+  /* Computed Parameter: IMU2ADCU_CAN_read_P3_Size
+   * Referenced by: '<S11>/IMU2ADCU_CAN_read'
    */
   { 1.0, 1.0 },
 
   /* Expression: messageType
-   * Referenced by: '<S10>/SCU2ADCU_CAN_read'
+   * Referenced by: '<S11>/IMU2ADCU_CAN_read'
    */
   1.0,
 
-  /* Computed Parameter: SCU2ADCU_CAN_read_P4_Size
-   * Referenced by: '<S10>/SCU2ADCU_CAN_read'
+  /* Computed Parameter: IMU2ADCU_CAN_read_P4_Size
+   * Referenced by: '<S11>/IMU2ADCU_CAN_read'
    */
   { 1.0, 5.0 },
 
-  /* Computed Parameter: SCU2ADCU_CAN_read_P4
-   * Referenced by: '<S10>/SCU2ADCU_CAN_read'
+  /* Computed Parameter: IMU2ADCU_CAN_read_P4
+   * Referenced by: '<S11>/IMU2ADCU_CAN_read'
    */
   { 73.0, 79.0, 54.0, 49.0, 50.0 },
 
-  /* Computed Parameter: SCU2ADCU_CAN_read_P5_Size
-   * Referenced by: '<S10>/SCU2ADCU_CAN_read'
+  /* Computed Parameter: IMU2ADCU_CAN_read_P5_Size
+   * Referenced by: '<S11>/IMU2ADCU_CAN_read'
    */
   { 1.0, 1.0 },
 
   /* Expression: ptIdx
-   * Referenced by: '<S10>/SCU2ADCU_CAN_read'
+   * Referenced by: '<S11>/IMU2ADCU_CAN_read'
    */
-  0.0,
+  1.0,
 
-  /* Computed Parameter: SCU2ADCU_CAN_read_P6_Size
-   * Referenced by: '<S10>/SCU2ADCU_CAN_read'
+  /* Computed Parameter: IMU2ADCU_CAN_read_P6_Size
+   * Referenced by: '<S11>/IMU2ADCU_CAN_read'
    */
   { 1.0, 1.0 },
 
   /* Expression: isFDMod
-   * Referenced by: '<S10>/SCU2ADCU_CAN_read'
+   * Referenced by: '<S11>/IMU2ADCU_CAN_read'
+   */
+  0.0,
+
+  /* Computed Parameter: SCU2ADCU_CAN_read_P1_Size
+   * Referenced by: '<S12>/SCU2ADCU_CAN_read'
+   */
+  { 1.0, 1.0 },
+
+  /* Expression: id
+   * Referenced by: '<S12>/SCU2ADCU_CAN_read'
+   */
+  1.0,
+
+  /* Computed Parameter: SCU2ADCU_CAN_read_P2_Size
+   * Referenced by: '<S12>/SCU2ADCU_CAN_read'
+   */
+  { 1.0, 1.0 },
+
+  /* Expression: sampleTime
+   * Referenced by: '<S12>/SCU2ADCU_CAN_read'
+   */
+  -1.0,
+
+  /* Computed Parameter: SCU2ADCU_CAN_read_P3_Size
+   * Referenced by: '<S12>/SCU2ADCU_CAN_read'
+   */
+  { 1.0, 1.0 },
+
+  /* Expression: messageType
+   * Referenced by: '<S12>/SCU2ADCU_CAN_read'
+   */
+  1.0,
+
+  /* Computed Parameter: SCU2ADCU_CAN_read_P4_Size
+   * Referenced by: '<S12>/SCU2ADCU_CAN_read'
+   */
+  { 1.0, 5.0 },
+
+  /* Computed Parameter: SCU2ADCU_CAN_read_P4
+   * Referenced by: '<S12>/SCU2ADCU_CAN_read'
+   */
+  { 73.0, 79.0, 54.0, 49.0, 50.0 },
+
+  /* Computed Parameter: SCU2ADCU_CAN_read_P5_Size
+   * Referenced by: '<S12>/SCU2ADCU_CAN_read'
+   */
+  { 1.0, 1.0 },
+
+  /* Expression: ptIdx
+   * Referenced by: '<S12>/SCU2ADCU_CAN_read'
+   */
+  0.0,
+
+  /* Computed Parameter: SCU2ADCU_CAN_read_P6_Size
+   * Referenced by: '<S12>/SCU2ADCU_CAN_read'
+   */
+  { 1.0, 1.0 },
+
+  /* Expression: isFDMod
+   * Referenced by: '<S12>/SCU2ADCU_CAN_read'
    */
   0.0,
 
@@ -564,142 +660,552 @@ AION_IDS_SPEEDGOAT_cal_type AION_IDS_SPEEDGOAT_cal_impl = {
   0.0,
 
   /* Computed Parameter: ADCU2SCU_Brake_Command_CAN_write_P1_Size
-   * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Brake_Command_CAN_write'
    */
   { 1.0, 1.0 },
 
   /* Expression: id
-   * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Brake_Command_CAN_write'
    */
   1.0,
 
   /* Computed Parameter: ADCU2SCU_Brake_Command_CAN_write_P2_Size
-   * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Brake_Command_CAN_write'
    */
   { 1.0, 1.0 },
 
   /* Expression: sampleTime
-   * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Brake_Command_CAN_write'
    */
   0.02,
 
   /* Computed Parameter: ADCU2SCU_Brake_Command_CAN_write_P3_Size
-   * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Brake_Command_CAN_write'
    */
   { 1.0, 1.0 },
 
   /* Expression: messageType
-   * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Brake_Command_CAN_write'
    */
   1.0,
 
   /* Computed Parameter: ADCU2SCU_Brake_Command_CAN_write_P4_Size
-   * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Brake_Command_CAN_write'
    */
   { 1.0, 1.0 },
 
   /* Expression: enaStatusPort
-   * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Brake_Command_CAN_write'
    */
   0.0,
 
   /* Computed Parameter: ADCU2SCU_Brake_Command_CAN_write_P5_Size
-   * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Brake_Command_CAN_write'
    */
   { 1.0, 5.0 },
 
   /* Computed Parameter: ADCU2SCU_Brake_Command_CAN_write_P5
-   * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Brake_Command_CAN_write'
    */
   { 73.0, 79.0, 54.0, 49.0, 50.0 },
 
   /* Computed Parameter: ADCU2SCU_Brake_Command_CAN_write_P6_Size
-   * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Brake_Command_CAN_write'
    */
   { 1.0, 1.0 },
 
   /* Expression: ptIdx
-   * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Brake_Command_CAN_write'
    */
   0.0,
 
   /* Computed Parameter: ADCU2SCU_Brake_Command_CAN_write_P7_Size
-   * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Brake_Command_CAN_write'
    */
   { 1.0, 1.0 },
 
   /* Expression: isFDMod
-   * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Brake_Command_CAN_write'
    */
   0.0,
 
   /* Computed Parameter: ADCU2SCU_Gear_Command_CAN_write_P1_Size
-   * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Gear_Command_CAN_write'
    */
   { 1.0, 1.0 },
 
   /* Expression: id
-   * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Gear_Command_CAN_write'
    */
   1.0,
 
   /* Computed Parameter: ADCU2SCU_Gear_Command_CAN_write_P2_Size
-   * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Gear_Command_CAN_write'
    */
   { 1.0, 1.0 },
 
   /* Expression: sampleTime
-   * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Gear_Command_CAN_write'
    */
   0.02,
 
   /* Computed Parameter: ADCU2SCU_Gear_Command_CAN_write_P3_Size
-   * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Gear_Command_CAN_write'
    */
   { 1.0, 1.0 },
 
   /* Expression: messageType
-   * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Gear_Command_CAN_write'
    */
   1.0,
 
   /* Computed Parameter: ADCU2SCU_Gear_Command_CAN_write_P4_Size
-   * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Gear_Command_CAN_write'
    */
   { 1.0, 1.0 },
 
   /* Expression: enaStatusPort
-   * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Gear_Command_CAN_write'
    */
   0.0,
 
   /* Computed Parameter: ADCU2SCU_Gear_Command_CAN_write_P5_Size
-   * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Gear_Command_CAN_write'
    */
   { 1.0, 5.0 },
 
   /* Computed Parameter: ADCU2SCU_Gear_Command_CAN_write_P5
-   * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Gear_Command_CAN_write'
    */
   { 73.0, 79.0, 54.0, 49.0, 50.0 },
 
   /* Computed Parameter: ADCU2SCU_Gear_Command_CAN_write_P6_Size
-   * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Gear_Command_CAN_write'
    */
   { 1.0, 1.0 },
 
   /* Expression: ptIdx
-   * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Gear_Command_CAN_write'
    */
   0.0,
 
   /* Computed Parameter: ADCU2SCU_Gear_Command_CAN_write_P7_Size
-   * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Gear_Command_CAN_write'
    */
   { 1.0, 1.0 },
 
   /* Expression: isFDMod
-   * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Gear_Command_CAN_write'
+   */
+  0.0,
+
+  /* Computed Parameter: LegacySerialRead_P1_Size
+   * Referenced by: '<S16>/Legacy Serial Read'
+   */
+  { 1.0, 1.0 },
+
+  /* Expression: port
+   * Referenced by: '<S16>/Legacy Serial Read'
+   */
+  1.0,
+
+  /* Computed Parameter: LegacySerialRead_P2_Size
+   * Referenced by: '<S16>/Legacy Serial Read'
+   */
+  { 1.0, 1.0 },
+
+  /* Expression: count
+   * Referenced by: '<S16>/Legacy Serial Read'
+   */
+  51.0,
+
+  /* Computed Parameter: LegacySerialRead_P3_Size
+   * Referenced by: '<S16>/Legacy Serial Read'
+   */
+  { 1.0, 1.0 },
+
+  /* Expression: dtype
+   * Referenced by: '<S16>/Legacy Serial Read'
+   */
+  4.0,
+
+  /* Computed Parameter: LegacySerialRead_P4_Size
+   * Referenced by: '<S16>/Legacy Serial Read'
+   */
+  { 1.0, 1.0 },
+
+  /* Expression: sampletime
+   * Referenced by: '<S16>/Legacy Serial Read'
+   */
+  0.02,
+
+  /* Computed Parameter: LegacySerialWrite_P1_Size
+   * Referenced by: '<S16>/Legacy Serial Write'
+   */
+  { 1.0, 1.0 },
+
+  /* Expression: port
+   * Referenced by: '<S16>/Legacy Serial Write'
+   */
+  1.0,
+
+  /* Computed Parameter: LegacySerialWrite_P2_Size
+   * Referenced by: '<S16>/Legacy Serial Write'
+   */
+  { 1.0, 1.0 },
+
+  /* Expression: dtype
+   * Referenced by: '<S16>/Legacy Serial Write'
+   */
+  6.0,
+
+  /* Computed Parameter: LegacySerialWrite_P3_Size
+   * Referenced by: '<S16>/Legacy Serial Write'
+   */
+  { 1.0, 1.0 },
+
+  /* Expression: sampletime
+   * Referenced by: '<S16>/Legacy Serial Write'
+   */
+  -1.0,
+
+  /* Computed Parameter: Setup_P1_Size
+   * Referenced by: '<S16>/Setup'
+   */
+  { 1.0, 1.0 },
+
+  /* Expression: port
+   * Referenced by: '<S16>/Setup'
+   */
+  1.0,
+
+  /* Computed Parameter: Setup_P2_Size
+   * Referenced by: '<S16>/Setup'
+   */
+  { 1.0, 1.0 },
+
+  /* Expression: baud
+   * Referenced by: '<S16>/Setup'
+   */
+  1.0,
+
+  /* Computed Parameter: Setup_P3_Size
+   * Referenced by: '<S16>/Setup'
+   */
+  { 1.0, 1.0 },
+
+  /* Expression: width
+   * Referenced by: '<S16>/Setup'
+   */
+  4.0,
+
+  /* Computed Parameter: Setup_P4_Size
+   * Referenced by: '<S16>/Setup'
+   */
+  { 1.0, 1.0 },
+
+  /* Expression: nstop
+   * Referenced by: '<S16>/Setup'
+   */
+  1.0,
+
+  /* Computed Parameter: Setup_P5_Size
+   * Referenced by: '<S16>/Setup'
+   */
+  { 1.0, 1.0 },
+
+  /* Expression: parity
+   * Referenced by: '<S16>/Setup'
+   */
+  1.0,
+
+  /* Computed Parameter: Setup_P6_Size
+   * Referenced by: '<S16>/Setup'
+   */
+  { 1.0, 1.0 },
+
+  /* Expression: ctsmode
+   * Referenced by: '<S16>/Setup'
+   */
+  0.0,
+
+  /* Computed Parameter: FIFOASCIIread_P1_Size
+   * Referenced by: '<S15>/FIFO ASCII read'
+   */
+  { 1.0, 1.0 },
+
+  /* Expression: maxsize
+   * Referenced by: '<S15>/FIFO ASCII read'
+   */
+  1024.0,
+
+  /* Computed Parameter: FIFOASCIIread_P2_Size
+   * Referenced by: '<S15>/FIFO ASCII read'
+   */
+  { 1.0, 1.0 },
+
+  /* Expression: outputtype
+   * Referenced by: '<S15>/FIFO ASCII read'
+   */
+  6.0,
+
+  /* Computed Parameter: FIFOASCIIread_P3_Size
+   * Referenced by: '<S15>/FIFO ASCII read'
+   */
+  { 1.0, 1.0 },
+
+  /* Expression: sampletime
+   * Referenced by: '<S15>/FIFO ASCII read'
+   */
+  -1.0,
+
+  /* Computed Parameter: FIFOASCIIread_P4_Size
+   * Referenced by: '<S15>/FIFO ASCII read'
+   */
+  { 1.0, 6.0 },
+
+  /* Computed Parameter: FIFOASCIIread_P4
+   * Referenced by: '<S15>/FIFO ASCII read'
+   */
+  { 36.0, 71.0, 80.0, 67.0, 72.0, 67.0 },
+
+  /* Computed Parameter: FIFOASCIIread_P5_Size
+   * Referenced by: '<S15>/FIFO ASCII read'
+   */
+  { 1.0, 1.0 },
+
+  /* Expression: hlengths
+   * Referenced by: '<S15>/FIFO ASCII read'
+   */
+  6.0,
+
+  /* Computed Parameter: FIFOASCIIread_P6_Size
+   * Referenced by: '<S15>/FIFO ASCII read'
+   */
+  { 1.0, 2.0 },
+
+  /* Computed Parameter: FIFOASCIIread_P6
+   * Referenced by: '<S15>/FIFO ASCII read'
+   */
+  { 13.0, 10.0 },
+
+  /* Computed Parameter: FIFOASCIIread_P7_Size
+   * Referenced by: '<S15>/FIFO ASCII read'
+   */
+  { 1.0, 1.0 },
+
+  /* Expression: hold
+   * Referenced by: '<S15>/FIFO ASCII read'
+   */
+  1.0,
+
+  /* Computed Parameter: FIFOASCIIread_P8_Size
+   * Referenced by: '<S15>/FIFO ASCII read'
+   */
+  { 1.0, 1.0 },
+
+  /* Expression: enable
+   * Referenced by: '<S15>/FIFO ASCII read'
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: '<S15>/S_GPSTime'
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: '<S15>/S_GPSWeek'
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: '<S15>/S_IMUWorkStatus'
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: '<S15>/S_Pitch'
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: '<S15>/S_Roll'
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: '<S15>/count'
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
    */
   0.0,
 
@@ -759,74 +1265,119 @@ AION_IDS_SPEEDGOAT_cal_type AION_IDS_SPEEDGOAT_cal_impl = {
   0.0,
 
   /* Computed Parameter: ADCU2SCU_Steer_Command_CAN_write_P1_Size
-   * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Steer_Command_CAN_write'
    */
   { 1.0, 1.0 },
 
   /* Expression: id
-   * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Steer_Command_CAN_write'
    */
   1.0,
 
   /* Computed Parameter: ADCU2SCU_Steer_Command_CAN_write_P2_Size
-   * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Steer_Command_CAN_write'
    */
   { 1.0, 1.0 },
 
   /* Expression: sampleTime
-   * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Steer_Command_CAN_write'
    */
   0.05,
 
   /* Computed Parameter: ADCU2SCU_Steer_Command_CAN_write_P3_Size
-   * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Steer_Command_CAN_write'
    */
   { 1.0, 1.0 },
 
   /* Expression: messageType
-   * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Steer_Command_CAN_write'
    */
   1.0,
 
   /* Computed Parameter: ADCU2SCU_Steer_Command_CAN_write_P4_Size
-   * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Steer_Command_CAN_write'
    */
   { 1.0, 1.0 },
 
   /* Expression: enaStatusPort
-   * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Steer_Command_CAN_write'
    */
   0.0,
 
   /* Computed Parameter: ADCU2SCU_Steer_Command_CAN_write_P5_Size
-   * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Steer_Command_CAN_write'
    */
   { 1.0, 5.0 },
 
   /* Computed Parameter: ADCU2SCU_Steer_Command_CAN_write_P5
-   * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Steer_Command_CAN_write'
    */
   { 73.0, 79.0, 54.0, 49.0, 50.0 },
 
   /* Computed Parameter: ADCU2SCU_Steer_Command_CAN_write_P6_Size
-   * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Steer_Command_CAN_write'
    */
   { 1.0, 1.0 },
 
   /* Expression: ptIdx
-   * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Steer_Command_CAN_write'
    */
   0.0,
 
   /* Computed Parameter: ADCU2SCU_Steer_Command_CAN_write_P7_Size
-   * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Steer_Command_CAN_write'
    */
   { 1.0, 1.0 },
 
   /* Expression: isFDMod
-   * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
+   * Referenced by: '<S19>/ADCU2SCU_Steer_Command_CAN_write'
    */
   0.0,
+
+  /* Expression: 1
+   * Referenced by: '<S17>/Constant6'
+   */
+  1.0,
+
+  /* Expression: 0
+   * Referenced by: '<S17>/Constant11'
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: '<S17>/Constant5'
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: '<S17>/Constant'
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: '<S17>/Constant7'
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: '<S17>/Constant8'
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: '<S17>/Constant9'
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: '<S17>/Constant10'
+   */
+  0.0,
+
+  /* Expression: 23
+   * Referenced by: '<S17>/Constant1'
+   */
+  23.0,
 
   /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport17_InitialCondition
    * Referenced by: synthesized block
@@ -912,6 +1463,11 @@ AION_IDS_SPEEDGOAT_cal_type AION_IDS_SPEEDGOAT_cal_impl = {
    * Referenced by: synthesized block
    */
   InvalidGearStatus,
+
+  /* Computed Parameter: get_IMUWorkStatus_InitialCondition
+   * Referenced by: synthesized block
+   */
+  Initialization,
 
   /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport18_InitialCondition
    * Referenced by: synthesized block

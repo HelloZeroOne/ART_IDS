@@ -3,9 +3,9 @@
  *
  * Code generation for model "AION_signal_transfer".
  *
- * Model version              : 4.82
+ * Model version              : 4.98
  * Simulink Coder version : 9.5 (R2021a) 14-Nov-2020
- * C++ source code generated on : Fri Jun  3 16:42:51 2022
+ * C++ source code generated on : Fri Jun 10 16:00:04 2022
  *
  * Target selection: slrealtime.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -37,12 +37,6 @@ void AION_signal_transfer_step(void)
 {
   real_T tmp;
 
-  /* SignalConversion generated from: '<Root>/ADCU_InternalInputPort_Outport_1' incorporates:
-   *  Inport: '<Root>/ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_1_BCS_VehSpd'
-   */
-  AION_signal_transfer_B.get_VehSpd =
-    AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_1_BCS_VehSpd;
-
   /* DataTypeConversion: '<Root>/Data Type Conversion1' incorporates:
    *  Inport: '<Root>/ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_11_BCM_CtrlAvailable'
    */
@@ -59,6 +53,12 @@ void AION_signal_transfer_step(void)
     static_cast<int32_T>(static_cast<uint8_T>(-static_cast<int8_T>
     (static_cast<uint8_T>(-tmp)))) : static_cast<int32_T>(static_cast<uint8_T>
     (tmp)));
+
+  /* DataTypeConversion: '<Root>/Data Type Conversion12' incorporates:
+   *  Inport: '<Root>/ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_1_BCS_VehSpd'
+   */
+  AION_signal_transfer_B.DataTypeConversion12 =
+    AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_1_BCS_VehSpd;
 
   /* DataTypeConversion: '<Root>/Data Type Conversion13' incorporates:
    *  Inport: '<Root>/ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_13_SCU_LngCtrlMode'
@@ -105,6 +105,53 @@ void AION_signal_transfer_step(void)
   /* DataTypeConversion: '<Root>/Data Type Conversion20' */
   AION_signal_transfer_B.DataTypeConversion20 = static_cast<Available_status>
     (AION_signal_transfer_B.DataTypeConversion1);
+
+  /* DataTypeConversion: '<Root>/Data Type Conversion23' incorporates:
+   *  Inport: '<Root>/ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_GPSTime'
+   */
+  AION_signal_transfer_B.DataTypeConversion23 =
+    AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_GPSTime;
+
+  /* DataTypeConversion: '<Root>/Data Type Conversion24' incorporates:
+   *  Inport: '<Root>/ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Heading'
+   */
+  AION_signal_transfer_B.DataTypeConversion24 =
+    AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Heading;
+
+  /* DataTypeConversion: '<Root>/Data Type Conversion30' incorporates:
+   *  Inport: '<Root>/ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Pitch'
+   */
+  AION_signal_transfer_B.DataTypeConversion30 =
+    AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Pitch;
+
+  /* DataTypeConversion: '<Root>/Data Type Conversion31' incorporates:
+   *  Inport: '<Root>/ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Roll'
+   */
+  AION_signal_transfer_B.DataTypeConversion31 =
+    AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Roll;
+
+  /* DataTypeConversion: '<Root>/Data Type Conversion32' incorporates:
+   *  Inport: '<Root>/ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_IMUWorkStatus'
+   */
+  tmp = std::floor
+    (AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_IMUWorkStatus);
+  if (rtIsNaN(tmp) || rtIsInf(tmp)) {
+    tmp = 0.0;
+  } else {
+    tmp = std::fmod(tmp, 256.0);
+  }
+
+  /* DataTypeConversion: '<Root>/Data Type Conversion32' */
+  AION_signal_transfer_B.DataTypeConversion32 = static_cast<uint8_T>(tmp < 0.0 ?
+    static_cast<int32_T>(static_cast<uint8_T>(-static_cast<int8_T>
+    (static_cast<uint8_T>(-tmp)))) : static_cast<int32_T>(static_cast<uint8_T>
+    (tmp)));
+
+  /* DataTypeConversion: '<Root>/Data Type Conversion33' incorporates:
+   *  Inport: '<Root>/ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_AngleSpeedX'
+   */
+  AION_signal_transfer_B.DataTypeConversion33 =
+    AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_AngleSpeedX;
 
   /* DataTypeConversion: '<Root>/Data Type Conversion35' incorporates:
    *  Inport: '<Root>/ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_15_VCU_CrntGearLvl'
@@ -295,6 +342,58 @@ void AION_signal_transfer_step(void)
   AION_signal_transfer_B.DataTypeConversion50 = static_cast<Drive_status>
     (AION_signal_transfer_B.DataTypeConversion51);
 
+  /* DataTypeConversion: '<Root>/Data Type Conversion52' incorporates:
+   *  Inport: '<Root>/ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_AngleSpeedY'
+   */
+  AION_signal_transfer_B.DataTypeConversion52 =
+    AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_AngleSpeedY;
+
+  /* DataTypeConversion: '<Root>/Data Type Conversion53' incorporates:
+   *  Inport: '<Root>/ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_AngleSpeedZ'
+   */
+  AION_signal_transfer_B.DataTypeConversion53 =
+    AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_AngleSpeedZ;
+
+  /* DataTypeConversion: '<Root>/Data Type Conversion54' incorporates:
+   *  Inport: '<Root>/ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_AccelerationX'
+   */
+  AION_signal_transfer_B.DataTypeConversion54 =
+    AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_AccelerationX;
+
+  /* DataTypeConversion: '<Root>/Data Type Conversion55' incorporates:
+   *  Inport: '<Root>/ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_AccelerationY'
+   */
+  AION_signal_transfer_B.DataTypeConversion55 =
+    AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_AccelerationY;
+
+  /* DataTypeConversion: '<Root>/Data Type Conversion56' incorporates:
+   *  Inport: '<Root>/ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_AccelerationZ'
+   */
+  AION_signal_transfer_B.DataTypeConversion56 =
+    AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_AccelerationZ;
+
+  /* DataTypeConversion: '<Root>/Data Type Conversion57' incorporates:
+   *  Inport: '<Root>/ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Latitude'
+   */
+  AION_signal_transfer_B.DataTypeConversion57 =
+    AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Latitude;
+
+  /* DataTypeConversion: '<Root>/Data Type Conversion58' incorporates:
+   *  Inport: '<Root>/ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Longitude'
+   */
+  AION_signal_transfer_B.DataTypeConversion58 =
+    AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Longitude;
+
+  /* DataTypeConversion: '<Root>/Data Type Conversion59' incorporates:
+   *  Inport: '<Root>/ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Altitude'
+   */
+  AION_signal_transfer_B.DataTypeConversion59 =
+    AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Altitude;
+
+  /* DataTypeConversion: '<Root>/Data Type Conversion60' */
+  AION_signal_transfer_B.DataTypeConversion60 = static_cast<IMU_Status>
+    (AION_signal_transfer_B.DataTypeConversion32);
+
   /* DataTypeConversion: '<Root>/Data Type Conversion8' incorporates:
    *  Inport: '<Root>/ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_10_EPS_SteeringAngle'
    */
@@ -387,6 +486,12 @@ void AION_signal_transfer_step(void)
   AION_signal_transfer_B.DataTypeConversion5 =
     AION_signal_transfer_U.ADCU_InternalOutputPort_set_longitudinal_control_info_set_AutoTrqWhlReq;
 
+  /* DataTypeConversion: '<Root>/Data Type Conversion6' incorporates:
+   *  Inport: '<Root>/ADCU_InternalOutputPort_set_lateral_control_info_set_SteerWhlTorqReq'
+   */
+  AION_signal_transfer_B.DataTypeConversion6 =
+    AION_signal_transfer_U.ADCU_InternalOutputPort_set_lateral_control_info_set_SteerWhlTorqReq;
+
   /* DataTypeConversion: '<Root>/Data Type Conversion7' incorporates:
    *  Inport: '<Root>/ADCU_InternalOutputPort_set_longitudinal_control_info_set_BrakeReq'
    */
@@ -403,6 +508,10 @@ void AION_signal_transfer_step(void)
 
   /* Outport: '<Root>/ADCU_InternalInputPort_set_lateral_control_info_set_SteerAngReq' */
   AION_signal_transfer_Y.ADCU_InternalInputPort_set_lateral_control_info_set_SteerAngReq
+    = 0.0;
+
+  /* Outport: '<Root>/ADCU_InternalInputPort_set_lateral_control_info_set_SteerWhlTorqReq' */
+  AION_signal_transfer_Y.ADCU_InternalInputPort_set_lateral_control_info_set_SteerWhlTorqReq
     = 0.0;
 
   /* Outport: '<Root>/ADCU_InternalInputPort_set_longitudinal_control_info_set_LngCtrlReq' */
@@ -468,7 +577,7 @@ void AION_signal_transfer_step(void)
 
   /* Outport: '<Root>/ADCU_InternalInputPort_get_BCS_info_get_VehSpd' */
   AION_signal_transfer_Y.ADCU_InternalInputPort_get_BCS_info_get_VehSpd =
-    AION_signal_transfer_B.get_VehSpd;
+    AION_signal_transfer_B.DataTypeConversion12;
 
   /* Outport: '<Root>/ADCU_InternalInputPort_get_BCS_info_get_VehSpdVD' */
   AION_signal_transfer_Y.ADCU_InternalInputPort_get_BCS_info_get_VehSpdVD = 0U;
@@ -616,6 +725,65 @@ void AION_signal_transfer_step(void)
   AION_signal_transfer_Y.ADCU_InternalInputPort_get_BCM_info_get_RightTurnLampSt
     = AION_signal_transfer_B.DataTypeConversion47;
 
+  /* Outport: '<Root>/ADCU_InternalInputPort_get_IMU_info_get_GPSWeek' */
+  AION_signal_transfer_Y.ADCU_InternalInputPort_get_IMU_info_get_GPSWeek = 0.0;
+
+  /* Outport: '<Root>/ADCU_InternalInputPort_get_IMU_info_get_GPSTime' */
+  AION_signal_transfer_Y.ADCU_InternalInputPort_get_IMU_info_get_GPSTime =
+    AION_signal_transfer_B.DataTypeConversion23;
+
+  /* Outport: '<Root>/ADCU_InternalInputPort_get_IMU_info_get_Heading' */
+  AION_signal_transfer_Y.ADCU_InternalInputPort_get_IMU_info_get_Heading =
+    AION_signal_transfer_B.DataTypeConversion24;
+
+  /* Outport: '<Root>/ADCU_InternalInputPort_get_IMU_info_get_Pitch' */
+  AION_signal_transfer_Y.ADCU_InternalInputPort_get_IMU_info_get_Pitch =
+    AION_signal_transfer_B.DataTypeConversion30;
+
+  /* Outport: '<Root>/ADCU_InternalInputPort_get_IMU_info_get_Roll' */
+  AION_signal_transfer_Y.ADCU_InternalInputPort_get_IMU_info_get_Roll =
+    AION_signal_transfer_B.DataTypeConversion31;
+
+  /* Outport: '<Root>/ADCU_InternalInputPort_get_IMU_info_get_IMUWorkStatus' */
+  AION_signal_transfer_Y.ADCU_InternalInputPort_get_IMU_info_get_IMUWorkStatus =
+    AION_signal_transfer_B.DataTypeConversion60;
+
+  /* Outport: '<Root>/ADCU_InternalInputPort_get_IMU_info_get_AngleSpeedX' */
+  AION_signal_transfer_Y.ADCU_InternalInputPort_get_IMU_info_get_AngleSpeedX =
+    AION_signal_transfer_B.DataTypeConversion33;
+
+  /* Outport: '<Root>/ADCU_InternalInputPort_get_IMU_info_get_AngleSpeedY' */
+  AION_signal_transfer_Y.ADCU_InternalInputPort_get_IMU_info_get_AngleSpeedY =
+    AION_signal_transfer_B.DataTypeConversion52;
+
+  /* Outport: '<Root>/ADCU_InternalInputPort_get_IMU_info_get_AngleSpeedZ' */
+  AION_signal_transfer_Y.ADCU_InternalInputPort_get_IMU_info_get_AngleSpeedZ =
+    AION_signal_transfer_B.DataTypeConversion53;
+
+  /* Outport: '<Root>/ADCU_InternalInputPort_get_IMU_info_get_AccelerationX' */
+  AION_signal_transfer_Y.ADCU_InternalInputPort_get_IMU_info_get_AccelerationX =
+    AION_signal_transfer_B.DataTypeConversion54;
+
+  /* Outport: '<Root>/ADCU_InternalInputPort_get_IMU_info_get_AccelerationY' */
+  AION_signal_transfer_Y.ADCU_InternalInputPort_get_IMU_info_get_AccelerationY =
+    AION_signal_transfer_B.DataTypeConversion55;
+
+  /* Outport: '<Root>/ADCU_InternalInputPort_get_IMU_info_get_AccelerationZ' */
+  AION_signal_transfer_Y.ADCU_InternalInputPort_get_IMU_info_get_AccelerationZ =
+    AION_signal_transfer_B.DataTypeConversion56;
+
+  /* Outport: '<Root>/ADCU_InternalInputPort_get_IMU_info_get_Latitude' */
+  AION_signal_transfer_Y.ADCU_InternalInputPort_get_IMU_info_get_Latitude =
+    AION_signal_transfer_B.DataTypeConversion57;
+
+  /* Outport: '<Root>/ADCU_InternalInputPort_get_IMU_info_get_Longitude' */
+  AION_signal_transfer_Y.ADCU_InternalInputPort_get_IMU_info_get_Longitude =
+    AION_signal_transfer_B.DataTypeConversion58;
+
+  /* Outport: '<Root>/ADCU_InternalInputPort_get_IMU_info_get_Altitude' */
+  AION_signal_transfer_Y.ADCU_InternalInputPort_get_IMU_info_get_Altitude =
+    AION_signal_transfer_B.DataTypeConversion59;
+
   /* Outport: '<Root>/ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_1_ADCU_AutoTrqWhlReq' */
   AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_1_ADCU_AutoTrqWhlReq
     = AION_signal_transfer_B.DataTypeConversion5;
@@ -643,6 +811,10 @@ void AION_signal_transfer_step(void)
   /* Outport: '<Root>/ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_2_ADCU_SteerAngReq' */
   AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_2_ADCU_SteerAngReq
     = AION_signal_transfer_B.DataTypeConversion16;
+
+  /* Outport: '<Root>/ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_2_ADCU_SteerWhlTorqReq' */
+  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_2_ADCU_SteerWhlTorqReq
+    = AION_signal_transfer_B.DataTypeConversion6;
 
   /* Outport: '<Root>/ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_3_ADCU_BeamReq' */
   AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_3_ADCU_BeamReq
@@ -695,7 +867,20 @@ void AION_signal_transfer_initialize(void)
 
   {
     AION_signal_transfer_B.DataTypeConversion4 = (0UL);
-    AION_signal_transfer_B.get_VehSpd = 0.0;
+    AION_signal_transfer_B.DataTypeConversion12 = 0.0;
+    AION_signal_transfer_B.DataTypeConversion23 = 0.0;
+    AION_signal_transfer_B.DataTypeConversion24 = 0.0;
+    AION_signal_transfer_B.DataTypeConversion30 = 0.0;
+    AION_signal_transfer_B.DataTypeConversion31 = 0.0;
+    AION_signal_transfer_B.DataTypeConversion33 = 0.0;
+    AION_signal_transfer_B.DataTypeConversion52 = 0.0;
+    AION_signal_transfer_B.DataTypeConversion53 = 0.0;
+    AION_signal_transfer_B.DataTypeConversion54 = 0.0;
+    AION_signal_transfer_B.DataTypeConversion55 = 0.0;
+    AION_signal_transfer_B.DataTypeConversion56 = 0.0;
+    AION_signal_transfer_B.DataTypeConversion57 = 0.0;
+    AION_signal_transfer_B.DataTypeConversion58 = 0.0;
+    AION_signal_transfer_B.DataTypeConversion59 = 0.0;
     AION_signal_transfer_B.DataTypeConversion8 = 0.0;
     AION_signal_transfer_B.DataTypeConversion10 = 0.0;
     AION_signal_transfer_B.DataTypeConversion14 = 0.0;
@@ -706,9 +891,11 @@ void AION_signal_transfer_initialize(void)
     AION_signal_transfer_B.DataTypeConversion22 = 0.0;
     AION_signal_transfer_B.DataTypeConversion25 = 0.0;
     AION_signal_transfer_B.DataTypeConversion5 = 0.0;
+    AION_signal_transfer_B.DataTypeConversion6 = 0.0;
     AION_signal_transfer_B.DataTypeConversion7 = 0.0;
     AION_signal_transfer_B.DataTypeConversion9 = 0.0;
     AION_signal_transfer_B.DataTypeConversion49 = NotReady;
+    AION_signal_transfer_B.DataTypeConversion60 = Initialization;
     AION_signal_transfer_B.DataTypeConversion34 = InvalidGearStatus;
     AION_signal_transfer_B.DataTypeConversion50 = InvalidDriveStatus;
     AION_signal_transfer_B.DataTypeConversion17 = ManualStatus;
@@ -805,9 +992,63 @@ void AION_signal_transfer_initialize(void)
     = 0.0;
   AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_9_EPB_SysSt
     = 0.0;
+  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_GPSWeek = 0.0;
+  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_GPSTime = 0.0;
+  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Heading = 0.0;
+  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Pitch = 0.0;
+  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Roll = 0.0;
+  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_IMUWorkStatus =
+    0.0;
+  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_AngleSpeedX =
+    0.0;
+  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_AngleSpeedY =
+    0.0;
+  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_AngleSpeedZ =
+    0.0;
+  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_AccelerationX =
+    0.0;
+  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_AccelerationY =
+    0.0;
+  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_AccelerationZ =
+    0.0;
+  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Latitude = 0.0;
+  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Longitude =
+    0.0;
+  AION_signal_transfer_U.ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Altitude = 0.0;
+  AION_signal_transfer_U.ADCU_InputPort_InputSerial_bus_IMUSerial_bus_GPSWeek =
+    0.0;
+  AION_signal_transfer_U.ADCU_InputPort_InputSerial_bus_IMUSerial_bus_GPSTime =
+    0.0;
+  AION_signal_transfer_U.ADCU_InputPort_InputSerial_bus_IMUSerial_bus_Heading =
+    0.0;
+  AION_signal_transfer_U.ADCU_InputPort_InputSerial_bus_IMUSerial_bus_Pitch =
+    0.0;
+  AION_signal_transfer_U.ADCU_InputPort_InputSerial_bus_IMUSerial_bus_Roll = 0.0;
+  AION_signal_transfer_U.ADCU_InputPort_InputSerial_bus_IMUSerial_bus_IMUWorkStatus
+    = 0.0;
+  AION_signal_transfer_U.ADCU_InputPort_InputSerial_bus_IMUSerial_bus_AngleSpeedX
+    = 0.0;
+  AION_signal_transfer_U.ADCU_InputPort_InputSerial_bus_IMUSerial_bus_AngleSpeedY
+    = 0.0;
+  AION_signal_transfer_U.ADCU_InputPort_InputSerial_bus_IMUSerial_bus_AngleSpeedZ
+    = 0.0;
+  AION_signal_transfer_U.ADCU_InputPort_InputSerial_bus_IMUSerial_bus_AccelerationX
+    = 0.0;
+  AION_signal_transfer_U.ADCU_InputPort_InputSerial_bus_IMUSerial_bus_AccelerationY
+    = 0.0;
+  AION_signal_transfer_U.ADCU_InputPort_InputSerial_bus_IMUSerial_bus_AccelerationZ
+    = 0.0;
+  AION_signal_transfer_U.ADCU_InputPort_InputSerial_bus_IMUSerial_bus_Latitude =
+    0.0;
+  AION_signal_transfer_U.ADCU_InputPort_InputSerial_bus_IMUSerial_bus_Longitude =
+    0.0;
+  AION_signal_transfer_U.ADCU_InputPort_InputSerial_bus_IMUSerial_bus_Altitude =
+    0.0;
   AION_signal_transfer_U.ADCU_InternalOutputPort_set_lateral_control_info_set_LatCtrlReq
     = Manual;
   AION_signal_transfer_U.ADCU_InternalOutputPort_set_lateral_control_info_set_SteerAngReq
+    = 0.0;
+  AION_signal_transfer_U.ADCU_InternalOutputPort_set_lateral_control_info_set_SteerWhlTorqReq
     = 0.0;
   AION_signal_transfer_U.ADCU_InternalOutputPort_set_longitudinal_control_info_set_LngCtrlReq
     = Manual;
@@ -863,6 +1104,29 @@ void AION_signal_transfer_initialize(void)
     NotActiveStatus;
   AION_signal_transfer_U.ADCU_InternalOutputPort_get_BCM_info_get_RightTurnLampSt
     = NotActiveStatus;
+  AION_signal_transfer_U.ADCU_InternalOutputPort_get_IMU_info_get_GPSWeek = 0.0;
+  AION_signal_transfer_U.ADCU_InternalOutputPort_get_IMU_info_get_GPSTime = 0.0;
+  AION_signal_transfer_U.ADCU_InternalOutputPort_get_IMU_info_get_Heading = 0.0;
+  AION_signal_transfer_U.ADCU_InternalOutputPort_get_IMU_info_get_Pitch = 0.0;
+  AION_signal_transfer_U.ADCU_InternalOutputPort_get_IMU_info_get_Roll = 0.0;
+  AION_signal_transfer_U.ADCU_InternalOutputPort_get_IMU_info_get_IMUWorkStatus =
+    Initialization;
+  AION_signal_transfer_U.ADCU_InternalOutputPort_get_IMU_info_get_AngleSpeedX =
+    0.0;
+  AION_signal_transfer_U.ADCU_InternalOutputPort_get_IMU_info_get_AngleSpeedY =
+    0.0;
+  AION_signal_transfer_U.ADCU_InternalOutputPort_get_IMU_info_get_AngleSpeedZ =
+    0.0;
+  AION_signal_transfer_U.ADCU_InternalOutputPort_get_IMU_info_get_AccelerationX =
+    0.0;
+  AION_signal_transfer_U.ADCU_InternalOutputPort_get_IMU_info_get_AccelerationY =
+    0.0;
+  AION_signal_transfer_U.ADCU_InternalOutputPort_get_IMU_info_get_AccelerationZ =
+    0.0;
+  AION_signal_transfer_U.ADCU_InternalOutputPort_get_IMU_info_get_Latitude = 0.0;
+  AION_signal_transfer_U.ADCU_InternalOutputPort_get_IMU_info_get_Longitude =
+    0.0;
+  AION_signal_transfer_U.ADCU_InternalOutputPort_get_IMU_info_get_Altitude = 0.0;
 
   /* external outputs */
   (void) std::memset(static_cast<void *>(&AION_signal_transfer_Y), 0,
@@ -870,6 +1134,8 @@ void AION_signal_transfer_initialize(void)
   AION_signal_transfer_Y.ADCU_InternalInputPort_set_lateral_control_info_set_LatCtrlReq
     = Manual;
   AION_signal_transfer_Y.ADCU_InternalInputPort_set_lateral_control_info_set_SteerAngReq
+    = 0.0;
+  AION_signal_transfer_Y.ADCU_InternalInputPort_set_lateral_control_info_set_SteerWhlTorqReq
     = 0.0;
   AION_signal_transfer_Y.ADCU_InternalInputPort_set_longitudinal_control_info_set_LngCtrlReq
     = Manual;
@@ -925,6 +1191,28 @@ void AION_signal_transfer_initialize(void)
     NotActiveStatus;
   AION_signal_transfer_Y.ADCU_InternalInputPort_get_BCM_info_get_RightTurnLampSt
     = NotActiveStatus;
+  AION_signal_transfer_Y.ADCU_InternalInputPort_get_IMU_info_get_GPSWeek = 0.0;
+  AION_signal_transfer_Y.ADCU_InternalInputPort_get_IMU_info_get_GPSTime = 0.0;
+  AION_signal_transfer_Y.ADCU_InternalInputPort_get_IMU_info_get_Heading = 0.0;
+  AION_signal_transfer_Y.ADCU_InternalInputPort_get_IMU_info_get_Pitch = 0.0;
+  AION_signal_transfer_Y.ADCU_InternalInputPort_get_IMU_info_get_Roll = 0.0;
+  AION_signal_transfer_Y.ADCU_InternalInputPort_get_IMU_info_get_IMUWorkStatus =
+    Initialization;
+  AION_signal_transfer_Y.ADCU_InternalInputPort_get_IMU_info_get_AngleSpeedX =
+    0.0;
+  AION_signal_transfer_Y.ADCU_InternalInputPort_get_IMU_info_get_AngleSpeedY =
+    0.0;
+  AION_signal_transfer_Y.ADCU_InternalInputPort_get_IMU_info_get_AngleSpeedZ =
+    0.0;
+  AION_signal_transfer_Y.ADCU_InternalInputPort_get_IMU_info_get_AccelerationX =
+    0.0;
+  AION_signal_transfer_Y.ADCU_InternalInputPort_get_IMU_info_get_AccelerationY =
+    0.0;
+  AION_signal_transfer_Y.ADCU_InternalInputPort_get_IMU_info_get_AccelerationZ =
+    0.0;
+  AION_signal_transfer_Y.ADCU_InternalInputPort_get_IMU_info_get_Latitude = 0.0;
+  AION_signal_transfer_Y.ADCU_InternalInputPort_get_IMU_info_get_Longitude = 0.0;
+  AION_signal_transfer_Y.ADCU_InternalInputPort_get_IMU_info_get_Altitude = 0.0;
   AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_1_ADCU_AutoTrqWhlReq
     = 0.0;
   AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_1_ADCU_BrakeReq
@@ -938,6 +1226,8 @@ void AION_signal_transfer_initialize(void)
   AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_2_ADCU_LatCtrlReq
     = 0.0;
   AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_2_ADCU_SteerAngReq
+    = 0.0;
+  AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_2_ADCU_SteerWhlTorqReq
     = 0.0;
   AION_signal_transfer_Y.ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_3_ADCU_BeamReq
     = 0.0;

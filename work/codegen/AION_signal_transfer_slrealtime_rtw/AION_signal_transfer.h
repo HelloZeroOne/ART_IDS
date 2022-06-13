@@ -3,9 +3,9 @@
  *
  * Code generation for model "AION_signal_transfer".
  *
- * Model version              : 4.82
+ * Model version              : 4.98
  * Simulink Coder version : 9.5 (R2021a) 14-Nov-2020
- * C++ source code generated on : Fri Jun  3 16:42:51 2022
+ * C++ source code generated on : Fri Jun 10 16:00:04 2022
  *
  * Target selection: slrealtime.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -58,8 +58,20 @@
 /* Block signals (default storage) */
 struct B_AION_signal_transfer_T {
   uint64_T DataTypeConversion4;        /* '<Root>/Data Type Conversion4' */
-  real_T get_VehSpd;
-  /* '<Root>/BusConversion_InsertedFor_ADCU_InternalInputPort_Outport_1_at_inport_0' */
+  real_T DataTypeConversion12;         /* '<Root>/Data Type Conversion12' */
+  real_T DataTypeConversion23;         /* '<Root>/Data Type Conversion23' */
+  real_T DataTypeConversion24;         /* '<Root>/Data Type Conversion24' */
+  real_T DataTypeConversion30;         /* '<Root>/Data Type Conversion30' */
+  real_T DataTypeConversion31;         /* '<Root>/Data Type Conversion31' */
+  real_T DataTypeConversion33;         /* '<Root>/Data Type Conversion33' */
+  real_T DataTypeConversion52;         /* '<Root>/Data Type Conversion52' */
+  real_T DataTypeConversion53;         /* '<Root>/Data Type Conversion53' */
+  real_T DataTypeConversion54;         /* '<Root>/Data Type Conversion54' */
+  real_T DataTypeConversion55;         /* '<Root>/Data Type Conversion55' */
+  real_T DataTypeConversion56;         /* '<Root>/Data Type Conversion56' */
+  real_T DataTypeConversion57;         /* '<Root>/Data Type Conversion57' */
+  real_T DataTypeConversion58;         /* '<Root>/Data Type Conversion58' */
+  real_T DataTypeConversion59;         /* '<Root>/Data Type Conversion59' */
   real_T DataTypeConversion8;          /* '<Root>/Data Type Conversion8' */
   real_T DataTypeConversion10;         /* '<Root>/Data Type Conversion10' */
   real_T DataTypeConversion14;         /* '<Root>/Data Type Conversion14' */
@@ -70,9 +82,11 @@ struct B_AION_signal_transfer_T {
   real_T DataTypeConversion22;         /* '<Root>/Data Type Conversion22' */
   real_T DataTypeConversion25;         /* '<Root>/Data Type Conversion25' */
   real_T DataTypeConversion5;          /* '<Root>/Data Type Conversion5' */
+  real_T DataTypeConversion6;          /* '<Root>/Data Type Conversion6' */
   real_T DataTypeConversion7;          /* '<Root>/Data Type Conversion7' */
   real_T DataTypeConversion9;          /* '<Root>/Data Type Conversion9' */
   Ready_status DataTypeConversion49;   /* '<Root>/Data Type Conversion49' */
+  IMU_Status DataTypeConversion60;     /* '<Root>/Data Type Conversion60' */
   Gear_status DataTypeConversion34;    /* '<Root>/Data Type Conversion34' */
   Drive_status DataTypeConversion50;   /* '<Root>/Data Type Conversion50' */
   Control_status DataTypeConversion17; /* '<Root>/Data Type Conversion17' */
@@ -87,6 +101,7 @@ struct B_AION_signal_transfer_T {
   uint8_T DataTypeConversion1;         /* '<Root>/Data Type Conversion1' */
   uint8_T DataTypeConversion13;        /* '<Root>/Data Type Conversion13' */
   uint8_T DataTypeConversion2;         /* '<Root>/Data Type Conversion2' */
+  uint8_T DataTypeConversion32;        /* '<Root>/Data Type Conversion32' */
   uint8_T DataTypeConversion35;        /* '<Root>/Data Type Conversion35' */
   uint8_T DataTypeConversion36;        /* '<Root>/Data Type Conversion36' */
   uint8_T DataTypeConversion38;        /* '<Root>/Data Type Conversion38' */
@@ -146,9 +161,41 @@ struct ExtU_AION_signal_transfer_T {
   real_T ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_8_BCS_ActVehLaltrlAccel;/* '<Root>/B_-1_-1' */
   real_T ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_8_BCS_ActVehLongAccel;/* '<Root>/B_-1_-1' */
   real_T ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_9_EPB_SysSt;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_GPSWeek;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_GPSTime;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Heading;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Pitch;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Roll;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_IMUWorkStatus;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_AngleSpeedX;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_AngleSpeedY;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_AngleSpeedZ;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_AccelerationX;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_AccelerationY;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_AccelerationZ;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Latitude;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Longitude;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Altitude;/* '<Root>/B_-1_-1' */
+  uint32_T ADCU_InputPort_InputSerial_bus_IMUWeek;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InputPort_InputSerial_bus_IMUSerial_bus_GPSWeek;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InputPort_InputSerial_bus_IMUSerial_bus_GPSTime;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InputPort_InputSerial_bus_IMUSerial_bus_Heading;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InputPort_InputSerial_bus_IMUSerial_bus_Pitch;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InputPort_InputSerial_bus_IMUSerial_bus_Roll;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InputPort_InputSerial_bus_IMUSerial_bus_IMUWorkStatus;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InputPort_InputSerial_bus_IMUSerial_bus_AngleSpeedX;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InputPort_InputSerial_bus_IMUSerial_bus_AngleSpeedY;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InputPort_InputSerial_bus_IMUSerial_bus_AngleSpeedZ;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InputPort_InputSerial_bus_IMUSerial_bus_AccelerationX;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InputPort_InputSerial_bus_IMUSerial_bus_AccelerationY;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InputPort_InputSerial_bus_IMUSerial_bus_AccelerationZ;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InputPort_InputSerial_bus_IMUSerial_bus_Latitude;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InputPort_InputSerial_bus_IMUSerial_bus_Longitude;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InputPort_InputSerial_bus_IMUSerial_bus_Altitude;/* '<Root>/B_-1_-1' */
   Control_request
     ADCU_InternalOutputPort_set_lateral_control_info_set_LatCtrlReq;/* '<Root>/B_-1_-1' */
   real_T ADCU_InternalOutputPort_set_lateral_control_info_set_SteerAngReq;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InternalOutputPort_set_lateral_control_info_set_SteerWhlTorqReq;/* '<Root>/B_-1_-1' */
   Control_request
     ADCU_InternalOutputPort_set_longitudinal_control_info_set_LngCtrlReq;/* '<Root>/B_-1_-1' */
   real_T ADCU_InternalOutputPort_set_longitudinal_control_info_set_AutoTrqWhlReq;/* '<Root>/B_-1_-1' */
@@ -207,6 +254,21 @@ struct ExtU_AION_signal_transfer_T {
   Active_status ADCU_InternalOutputPort_get_BCM_info_get_LeftTurnLampSt;/* '<Root>/B_-1_-1' */
   Active_status ADCU_InternalOutputPort_get_BCM_info_get_LowBeamSt;/* '<Root>/B_-1_-1' */
   Active_status ADCU_InternalOutputPort_get_BCM_info_get_RightTurnLampSt;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InternalOutputPort_get_IMU_info_get_GPSWeek;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InternalOutputPort_get_IMU_info_get_GPSTime;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InternalOutputPort_get_IMU_info_get_Heading;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InternalOutputPort_get_IMU_info_get_Pitch;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InternalOutputPort_get_IMU_info_get_Roll;/* '<Root>/B_-1_-1' */
+  IMU_Status ADCU_InternalOutputPort_get_IMU_info_get_IMUWorkStatus;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InternalOutputPort_get_IMU_info_get_AngleSpeedX;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InternalOutputPort_get_IMU_info_get_AngleSpeedY;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InternalOutputPort_get_IMU_info_get_AngleSpeedZ;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InternalOutputPort_get_IMU_info_get_AccelerationX;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InternalOutputPort_get_IMU_info_get_AccelerationY;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InternalOutputPort_get_IMU_info_get_AccelerationZ;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InternalOutputPort_get_IMU_info_get_Latitude;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InternalOutputPort_get_IMU_info_get_Longitude;/* '<Root>/B_-1_-1' */
+  real_T ADCU_InternalOutputPort_get_IMU_info_get_Altitude;/* '<Root>/B_-1_-1' */
 };
 
 /* External outputs (root outports fed by signals with default storage) */
@@ -215,6 +277,8 @@ struct ExtY_AION_signal_transfer_T {
   /* '<Root>/ADCU_InternalInputPort_set_lateral_control_info_set_LatCtrlReq' */
   real_T ADCU_InternalInputPort_set_lateral_control_info_set_SteerAngReq;
   /* '<Root>/ADCU_InternalInputPort_set_lateral_control_info_set_SteerAngReq' */
+  real_T ADCU_InternalInputPort_set_lateral_control_info_set_SteerWhlTorqReq;
+  /* '<Root>/ADCU_InternalInputPort_set_lateral_control_info_set_SteerWhlTorqReq' */
   Control_request
     ADCU_InternalInputPort_set_longitudinal_control_info_set_LngCtrlReq;
   /* '<Root>/ADCU_InternalInputPort_set_longitudinal_control_info_set_LngCtrlReq' */
@@ -328,6 +392,36 @@ struct ExtY_AION_signal_transfer_T {
                 /* '<Root>/ADCU_InternalInputPort_get_BCM_info_get_LowBeamSt' */
   Active_status ADCU_InternalInputPort_get_BCM_info_get_RightTurnLampSt;
           /* '<Root>/ADCU_InternalInputPort_get_BCM_info_get_RightTurnLampSt' */
+  real_T ADCU_InternalInputPort_get_IMU_info_get_GPSWeek;
+                  /* '<Root>/ADCU_InternalInputPort_get_IMU_info_get_GPSWeek' */
+  real_T ADCU_InternalInputPort_get_IMU_info_get_GPSTime;
+                  /* '<Root>/ADCU_InternalInputPort_get_IMU_info_get_GPSTime' */
+  real_T ADCU_InternalInputPort_get_IMU_info_get_Heading;
+                  /* '<Root>/ADCU_InternalInputPort_get_IMU_info_get_Heading' */
+  real_T ADCU_InternalInputPort_get_IMU_info_get_Pitch;
+                    /* '<Root>/ADCU_InternalInputPort_get_IMU_info_get_Pitch' */
+  real_T ADCU_InternalInputPort_get_IMU_info_get_Roll;
+                     /* '<Root>/ADCU_InternalInputPort_get_IMU_info_get_Roll' */
+  IMU_Status ADCU_InternalInputPort_get_IMU_info_get_IMUWorkStatus;
+            /* '<Root>/ADCU_InternalInputPort_get_IMU_info_get_IMUWorkStatus' */
+  real_T ADCU_InternalInputPort_get_IMU_info_get_AngleSpeedX;
+              /* '<Root>/ADCU_InternalInputPort_get_IMU_info_get_AngleSpeedX' */
+  real_T ADCU_InternalInputPort_get_IMU_info_get_AngleSpeedY;
+              /* '<Root>/ADCU_InternalInputPort_get_IMU_info_get_AngleSpeedY' */
+  real_T ADCU_InternalInputPort_get_IMU_info_get_AngleSpeedZ;
+              /* '<Root>/ADCU_InternalInputPort_get_IMU_info_get_AngleSpeedZ' */
+  real_T ADCU_InternalInputPort_get_IMU_info_get_AccelerationX;
+            /* '<Root>/ADCU_InternalInputPort_get_IMU_info_get_AccelerationX' */
+  real_T ADCU_InternalInputPort_get_IMU_info_get_AccelerationY;
+            /* '<Root>/ADCU_InternalInputPort_get_IMU_info_get_AccelerationY' */
+  real_T ADCU_InternalInputPort_get_IMU_info_get_AccelerationZ;
+            /* '<Root>/ADCU_InternalInputPort_get_IMU_info_get_AccelerationZ' */
+  real_T ADCU_InternalInputPort_get_IMU_info_get_Latitude;
+                 /* '<Root>/ADCU_InternalInputPort_get_IMU_info_get_Latitude' */
+  real_T ADCU_InternalInputPort_get_IMU_info_get_Longitude;
+                /* '<Root>/ADCU_InternalInputPort_get_IMU_info_get_Longitude' */
+  real_T ADCU_InternalInputPort_get_IMU_info_get_Altitude;
+                 /* '<Root>/ADCU_InternalInputPort_get_IMU_info_get_Altitude' */
   real_T ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_1_ADCU_AutoTrqWhlReq;
   /* '<Root>/ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_1_ADCU_AutoTrqWhlReq' */
   real_T ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_1_ADCU_BrakeReq;
@@ -342,6 +436,8 @@ struct ExtY_AION_signal_transfer_T {
   /* '<Root>/ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_2_ADCU_LatCtrlReq' */
   real_T ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_2_ADCU_SteerAngReq;
   /* '<Root>/ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_2_ADCU_SteerAngReq' */
+  real_T ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_2_ADCU_SteerWhlTorqReq;
+  /* '<Root>/ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_2_ADCU_SteerWhlTorqReq' */
   real_T ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_3_ADCU_BeamReq;
     /* '<Root>/ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_3_ADCU_BeamReq' */
   real_T ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_3_ADCU_BodyCtrlReq;

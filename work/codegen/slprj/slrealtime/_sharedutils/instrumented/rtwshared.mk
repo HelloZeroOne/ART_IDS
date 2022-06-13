@@ -2,7 +2,7 @@
 ## Makefile generated for component 'rtwshared'. 
 ## 
 ## Makefile     : rtwshared.mk
-## Generated on : Mon May 16 09:25:19 2022
+## Generated on : Fri Jun 10 16:05:08 2022
 ## Final product: ./rtwshared.a
 ## Product type : static library
 ## 
@@ -22,7 +22,7 @@ MAKEFILE                  = rtwshared.mk
 MATLAB_ROOT               = D:/R2021a
 MATLAB_BIN                = D:/R2021a/bin
 MATLAB_ARCH_BIN           = $(MATLAB_BIN)/win64
-START_DIR                 = D:/GitHub/ART-IDS-Team/ART_IDS/work/codegen
+START_DIR                 = E:/GitHub/HelloZeroOne/ART_IDS/work/codegen
 SOLVER                    = 
 SOLVER_OBJ                = 
 CLASSIC_INTERFACE         = 0
@@ -130,7 +130,7 @@ BUILD_TYPE = "Model Reference Library"
 ## INCLUDE PATHS
 ###########################################################################
 
-INCLUDES_BUILDINFO = -I$(START_DIR) -I$(START_DIR)/slprj/slrealtime/_sharedutils -I$(MATLAB_ROOT)/extern/include -I$(MATLAB_ROOT)/simulink/include -I$(MATLAB_ROOT)/rtw/c/src -I$(MATLAB_ROOT)/rtw/c/src/ext_mode/common -IC:/PROGRA~3/SPEEDG~1/SPEEDG~1/R2021a/920~1.1/SG_BLO~1/common/libsg -IC:/PROGRA~3/SPEEDG~1/SPEEDG~1/R2021a/920~1.1 -IC:/PROGRA~3/SPEEDG~1/SPEEDG~1/R2021a/920~1.1/SG_BLO~1/can/include -I$(MATLAB_ROOT)/toolbox/shared/can/src/scanutil -IC:/PROGRA~3/SPEEDG~1/SPEEDG~1/R2021a/920~1.1_2/SG_BLO~1/common/libsg -IC:/PROGRA~3/SPEEDG~1/SPEEDG~1/R2021a/920~1.1_2 -IC:/PROGRA~3/SPEEDG~1/SPEEDG~1/R2021a/920~1.1_2/SG_BLO~1/can/include
+INCLUDES_BUILDINFO = -I$(START_DIR) -I$(START_DIR)/slprj/slrealtime/_sharedutils -I$(MATLAB_ROOT)/extern/include -I$(MATLAB_ROOT)/simulink/include -I$(MATLAB_ROOT)/rtw/c/src -I$(MATLAB_ROOT)/rtw/c/src/ext_mode/common -IC:/PROGRA~3/SPEEDG~1/SPEEDG~1/R2021a/920~1.1/SG_BLO~1/common/libsg -IC:/PROGRA~3/SPEEDG~1/SPEEDG~1/R2021a/920~1.1 -IC:/PROGRA~3/SPEEDG~1/SPEEDG~1/R2021a/920~1.1/SG_BLO~1/can/include -I$(MATLAB_ROOT)/toolbox/shared/can/src/scanutil -IC:/PROGRA~3/SPEEDG~1/SPEEDG~1/R2021a/920~1.1_2/SG_BLO~1/common/libsg -IC:/PROGRA~3/SPEEDG~1/SPEEDG~1/R2021a/920~1.1_2 -IC:/PROGRA~3/SPEEDG~1/SPEEDG~1/R2021a/920~1.1_2/SG_BLO~1/can/include -I$(MATLAB_ROOT)/toolbox/slrealtime/simulink/blocks/dist/include -I$(MATLAB_ROOT)/toolbox/slrealtime/target/kernel/dist/include
 
 INCLUDES = $(INCLUDES_BUILDINFO)
 
@@ -138,11 +138,12 @@ INCLUDES = $(INCLUDES_BUILDINFO)
 ## DEFINES
 ###########################################################################
 
+DEFINES_ = -DSIMULINK_REAL_TIME
 DEFINES_BUILD_ARGS = -DINTEGER_CODE=0 -DEXT_MODE=1
 DEFINES_CUSTOM = 
 DEFINES_STANDARD = -DNRT -DUSE_RTMODEL
 
-DEFINES = $(DEFINES_BUILD_ARGS) $(DEFINES_CUSTOM) $(DEFINES_STANDARD)
+DEFINES = $(DEFINES_) $(DEFINES_BUILD_ARGS) $(DEFINES_CUSTOM) $(DEFINES_STANDARD)
 
 ###########################################################################
 ## SOURCE FILES

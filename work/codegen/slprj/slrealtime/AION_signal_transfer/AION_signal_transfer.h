@@ -26,6 +26,7 @@ struct B_AION_signal_transfer_c_T {
   uint8_T DataTypeConversion1;         /* '<Root>/Data Type Conversion1' */
   uint8_T DataTypeConversion13;        /* '<Root>/Data Type Conversion13' */
   uint8_T DataTypeConversion2;         /* '<Root>/Data Type Conversion2' */
+  uint8_T DataTypeConversion32;        /* '<Root>/Data Type Conversion32' */
   uint8_T DataTypeConversion35;        /* '<Root>/Data Type Conversion35' */
   uint8_T DataTypeConversion36;        /* '<Root>/Data Type Conversion36' */
   uint8_T DataTypeConversion38;        /* '<Root>/Data Type Conversion38' */
@@ -87,8 +88,21 @@ extern void AION_signal_transfer(const real_T
   real_T *rtu_ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_14_VCU_VehRdySt,
   const real_T
   *rtu_ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_15_VCU_CrntGearLvl, const
-  Control_request
-  *rtu_ADCU_InternalOutputPort_set_lateral_control_info_set_LatCtrlReq, const
+  real_T *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_GPSTime, const real_T
+  *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Heading, const real_T
+  *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Pitch, const real_T
+  *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Roll, const real_T
+  *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_IMUWorkStatus, const real_T
+  *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_AngleSpeedX, const real_T
+  *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_AngleSpeedY, const real_T
+  *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_AngleSpeedZ, const real_T
+  *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_AccelerationX, const real_T
+  *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_AccelerationY, const real_T
+  *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_AccelerationZ, const real_T
+  *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Latitude, const real_T
+  *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Longitude, const real_T
+  *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Altitude, const Control_request *
+  rtu_ADCU_InternalOutputPort_set_lateral_control_info_set_LatCtrlReq, const
   real_T *rtu_ADCU_InternalOutputPort_set_lateral_control_info_set_SteerAngReq,
   const real_T
   *rtu_ADCU_InternalOutputPort_set_lateral_control_info_set_SteerWhlTorqReq,
@@ -170,6 +184,21 @@ extern void AION_signal_transfer(const real_T
   *rty_ADCU_InternalInputPort_get_BCM_info_get_LeftTurnLampSt, Active_status
   *rty_ADCU_InternalInputPort_get_BCM_info_get_LowBeamSt, Active_status
   *rty_ADCU_InternalInputPort_get_BCM_info_get_RightTurnLampSt, real_T
+  *rty_ADCU_InternalInputPort_get_IMU_info_get_GPSWeek, real_T
+  *rty_ADCU_InternalInputPort_get_IMU_info_get_GPSTime, real_T
+  *rty_ADCU_InternalInputPort_get_IMU_info_get_Heading, real_T
+  *rty_ADCU_InternalInputPort_get_IMU_info_get_Pitch, real_T
+  *rty_ADCU_InternalInputPort_get_IMU_info_get_Roll, IMU_Status
+  *rty_ADCU_InternalInputPort_get_IMU_info_get_IMUWorkStatus, real_T
+  *rty_ADCU_InternalInputPort_get_IMU_info_get_AngleSpeedX, real_T
+  *rty_ADCU_InternalInputPort_get_IMU_info_get_AngleSpeedY, real_T
+  *rty_ADCU_InternalInputPort_get_IMU_info_get_AngleSpeedZ, real_T
+  *rty_ADCU_InternalInputPort_get_IMU_info_get_AccelerationX, real_T
+  *rty_ADCU_InternalInputPort_get_IMU_info_get_AccelerationY, real_T
+  *rty_ADCU_InternalInputPort_get_IMU_info_get_AccelerationZ, real_T
+  *rty_ADCU_InternalInputPort_get_IMU_info_get_Latitude, real_T
+  *rty_ADCU_InternalInputPort_get_IMU_info_get_Longitude, real_T
+  *rty_ADCU_InternalInputPort_get_IMU_info_get_Altitude, real_T
   *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_1_ADCU_AutoTrqWhlReq,
   real_T *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_1_ADCU_BrakeReq,
   real_T *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_1_ADCU_GearLvlReq,

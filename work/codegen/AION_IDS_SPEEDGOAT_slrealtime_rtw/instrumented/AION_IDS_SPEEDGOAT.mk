@@ -2,7 +2,7 @@
 ## Makefile generated for component 'AION_IDS_SPEEDGOAT'. 
 ## 
 ## Makefile     : AION_IDS_SPEEDGOAT.mk
-## Generated on : Tue Jun 07 16:29:07 2022
+## Generated on : Fri Jun 10 16:05:26 2022
 ## Final product: $(START_DIR)/AION_IDS_SPEEDGOAT_slrealtime_rtw/AION_IDS_SPEEDGOAT
 ## Product type : executable
 ## 
@@ -30,6 +30,8 @@ MODEL_HAS_DYNAMICALLY_LOADED_SFCNS = 0
 RELATIVE_PATH_TO_ANCHOR   = ../..
 C_STANDARD_OPTS           = 
 CPP_STANDARD_OPTS         = 
+LIBLIBECATINTERFACE_SLRT_X64_OBJS = 
+LIBLIBECMASTER_SLRT_X64_OBJS = 
 
 ###########################################################################
 ## TOOLCHAIN SPECIFICATIONS
@@ -148,7 +150,7 @@ DEFINES = $(DEFINES_) $(DEFINES_BUILD_ARGS) $(DEFINES_CUSTOM) $(DEFINES_OPTS) $(
 ## SOURCE FILES
 ###########################################################################
 
-SRCS = $(MATLAB_ROOT)/rtw/c/src/rt_matrx.c $(MATLAB_ROOT)/rtw/c/src/rt_printf.c $(START_DIR)/AION_IDS_SPEEDGOAT_slrealtime_rtw/slrealtime_datatype_ground.c $(START_DIR)/AION_IDS_SPEEDGOAT_slrealtime_rtw/AION_IDS_SPEEDGOAT.cpp $(START_DIR)/AION_IDS_SPEEDGOAT_slrealtime_rtw/AION_IDS_SPEEDGOAT_cal.cpp $(START_DIR)/AION_IDS_SPEEDGOAT_slrealtime_rtw/AION_IDS_SPEEDGOAT_data.cpp $(START_DIR)/AION_IDS_SPEEDGOAT_slrealtime_rtw/can_datatype_ground.cpp $(START_DIR)/AION_IDS_SPEEDGOAT_slrealtime_rtw/AION_IDS_SPEEDGOAT_calintf.cpp $(START_DIR)/AION_IDS_SPEEDGOAT_slrealtime_rtw/main.cpp C:/ProgramData/Speedgoat/speedgoatlib/R2021a/9.2.0.1_2/sg_blocks/can/sg_IO612_setup_s.cpp C:/ProgramData/Speedgoat/speedgoatlib/R2021a/9.2.0.1_2/sg_blocks/can/sg_IO61X_read_s.cpp C:/ProgramData/Speedgoat/speedgoatlib/R2021a/9.2.0.1_2/sg_blocks/can/sg_IO61X_write_s.cpp host_timer_x86.c slrealtime_code_profiling_utility_functions.cpp
+SRCS = $(MATLAB_ROOT)/rtw/c/src/rt_matrx.c $(MATLAB_ROOT)/rtw/c/src/rt_printf.c $(START_DIR)/AION_IDS_SPEEDGOAT_slrealtime_rtw/slrealtime_datatype_ground.c $(START_DIR)/AION_IDS_SPEEDGOAT_slrealtime_rtw/AION_IDS_SPEEDGOAT.cpp $(START_DIR)/AION_IDS_SPEEDGOAT_slrealtime_rtw/AION_IDS_SPEEDGOAT_cal.cpp $(START_DIR)/AION_IDS_SPEEDGOAT_slrealtime_rtw/AION_IDS_SPEEDGOAT_data.cpp $(START_DIR)/AION_IDS_SPEEDGOAT_slrealtime_rtw/can_datatype_ground.cpp $(MATLAB_ROOT)/toolbox/slrealtime/simulink/blocks/slfiforeadwrite.cpp $(START_DIR)/AION_IDS_SPEEDGOAT_slrealtime_rtw/AION_IDS_SPEEDGOAT_calintf.cpp $(START_DIR)/AION_IDS_SPEEDGOAT_slrealtime_rtw/main.cpp C:/ProgramData/Speedgoat/speedgoatlib/R2021a/9.2.0.1_2/sg_blocks/can/sg_IO612_setup_s.cpp C:/ProgramData/Speedgoat/speedgoatlib/R2021a/9.2.0.1_2/sg_blocks/can/sg_IO61X_read_s.cpp C:/ProgramData/Speedgoat/speedgoatlib/R2021a/9.2.0.1_2/sg_blocks/can/sg_IO61X_write_s.cpp $(MATLAB_ROOT)/toolbox/slrealtime/simulink/blocks/slfiforeadhdr.c $(MATLAB_ROOT)/toolbox/slrealtime/simulink/blocks/slserialread.cpp $(MATLAB_ROOT)/toolbox/slrealtime/simulink/blocks/slserialsetupbase.cpp $(MATLAB_ROOT)/toolbox/slrealtime/simulink/blocks/slserialwrite.cpp $(MATLAB_ROOT)/toolbox/slrealtime/simulink/blocks/legacyserial.cpp $(MATLAB_ROOT)/toolbox/coder/profile/src/host_timer_x86.c $(START_DIR)/AION_IDS_SPEEDGOAT_slrealtime_rtw/slrealtime_code_profiling_utility_functions.cpp
 
 ALL_SRCS = $(SRCS)
 
@@ -156,7 +158,7 @@ ALL_SRCS = $(SRCS)
 ## OBJECTS
 ###########################################################################
 
-OBJS = rt_matrx.o rt_printf.o slrealtime_datatype_ground.o AION_IDS_SPEEDGOAT.o AION_IDS_SPEEDGOAT_cal.o AION_IDS_SPEEDGOAT_data.o can_datatype_ground.o AION_IDS_SPEEDGOAT_calintf.o main.o sg_IO612_setup_s.o sg_IO61X_read_s.o sg_IO61X_write_s.o host_timer_x86.o slrealtime_code_profiling_utility_functions.o
+OBJS = rt_matrx.o rt_printf.o slrealtime_datatype_ground.o AION_IDS_SPEEDGOAT.o AION_IDS_SPEEDGOAT_cal.o AION_IDS_SPEEDGOAT_data.o can_datatype_ground.o slfiforeadwrite.o AION_IDS_SPEEDGOAT_calintf.o main.o sg_IO612_setup_s.o sg_IO61X_read_s.o sg_IO61X_write_s.o slfiforeadhdr.o slserialread.o slserialsetupbase.o slserialwrite.o legacyserial.o host_timer_x86.o slrealtime_code_profiling_utility_functions.o
 
 ALL_OBJS = $(OBJS)
 
@@ -172,7 +174,7 @@ PREBUILT_OBJS =
 
 MODELREF_LIBS = ../../slprj/slrealtime/AION_auto_mode_request/instrumented/AION_auto_mode_request_rtwlib.a ../../slprj/slrealtime/AION_signal_transfer/instrumented/AION_signal_transfer_rtwlib.a
 
-LIBS = C:/ProgramData/Speedgoat/speedgoatlib/R2021a/9.2.0.1_2/sg_blocks/can/include/IO61X_Library_qnx710_x86_64.a $(START_DIR)/slprj/slrealtime/_sharedutils/instrumented/rtwshared.a
+LIBS = $(MATLAB_ROOT)/toolbox/slrealtime/simulink/blocks/dist/lib/libecatinterface_slrt_x64.a $(MATLAB_ROOT)/toolbox/slrealtime/simulink/blocks/dist/lib/libEcMaster_slrt_x64.a C:/ProgramData/Speedgoat/speedgoatlib/R2021a/9.2.0.1_2/sg_blocks/can/include/IO61X_Library_qnx710_x86_64.a $(START_DIR)/slprj/slrealtime/_sharedutils/instrumented/rtwshared.a
 
 ###########################################################################
 ## SYSTEM LIBRARIES
@@ -311,6 +313,14 @@ $(PRODUCT) : $(OBJS) $(PREBUILT_OBJS) $(MODELREF_LIBS) $(LIBS)
 	$(CPP) $(CPPFLAGS) -o $@ $<
 
 
+%.o : $(MATLAB_ROOT)/toolbox/slrealtime/simulink/blocks/%.c
+	$(CC) $(CFLAGS) -o $@ $<
+
+
+%.o : $(MATLAB_ROOT)/toolbox/slrealtime/simulink/blocks/%.cpp
+	$(CPP) $(CPPFLAGS) -o $@ $<
+
+
 %.o : $(START_DIR)/%.c
 	$(CC) $(CFLAGS) -o $@ $<
 
@@ -387,6 +397,10 @@ can_datatype_ground.o : $(START_DIR)/AION_IDS_SPEEDGOAT_slrealtime_rtw/can_datat
 	$(CPP) $(CPPFLAGS) -o $@ $<
 
 
+slfiforeadwrite.o : $(MATLAB_ROOT)/toolbox/slrealtime/simulink/blocks/slfiforeadwrite.cpp
+	$(CPP) $(CPPFLAGS) -o $@ $<
+
+
 AION_IDS_SPEEDGOAT_calintf.o : $(START_DIR)/AION_IDS_SPEEDGOAT_slrealtime_rtw/AION_IDS_SPEEDGOAT_calintf.cpp
 	$(CPP) $(CPPFLAGS) -o $@ $<
 
@@ -405,6 +419,48 @@ sg_IO61X_read_s.o : C:/ProgramData/Speedgoat/speedgoatlib/R2021a/9.2.0.1_2/sg_bl
 
 sg_IO61X_write_s.o : C:/ProgramData/Speedgoat/speedgoatlib/R2021a/9.2.0.1_2/sg_blocks/can/sg_IO61X_write_s.cpp
 	$(CPP) $(CPPFLAGS) -o $@ $<
+
+
+slfiforeadhdr.o : $(MATLAB_ROOT)/toolbox/slrealtime/simulink/blocks/slfiforeadhdr.c
+	$(CC) $(CFLAGS) -o $@ $<
+
+
+slserialread.o : $(MATLAB_ROOT)/toolbox/slrealtime/simulink/blocks/slserialread.cpp
+	$(CPP) $(CPPFLAGS) -o $@ $<
+
+
+slserialsetupbase.o : $(MATLAB_ROOT)/toolbox/slrealtime/simulink/blocks/slserialsetupbase.cpp
+	$(CPP) $(CPPFLAGS) -o $@ $<
+
+
+slserialwrite.o : $(MATLAB_ROOT)/toolbox/slrealtime/simulink/blocks/slserialwrite.cpp
+	$(CPP) $(CPPFLAGS) -o $@ $<
+
+
+legacyserial.o : $(MATLAB_ROOT)/toolbox/slrealtime/simulink/blocks/legacyserial.cpp
+	$(CPP) $(CPPFLAGS) -o $@ $<
+
+
+host_timer_x86.o : $(MATLAB_ROOT)/toolbox/coder/profile/src/host_timer_x86.c
+	$(CC) $(CFLAGS) -o $@ $<
+
+
+slrealtime_code_profiling_utility_functions.o : $(START_DIR)/AION_IDS_SPEEDGOAT_slrealtime_rtw/slrealtime_code_profiling_utility_functions.cpp
+	$(CPP) $(CPPFLAGS) -o $@ $<
+
+
+#------------------------
+# BUILDABLE LIBRARIES
+#------------------------
+
+$(MATLAB_ROOT)/toolbox/slrealtime/simulink/blocks/dist/lib/libecatinterface_slrt_x64.a : $(LIBLIBECATINTERFACE_SLRT_X64_OBJS)
+	@echo "### Creating static library $@ ..."
+	$(AR) $(ARFLAGS)  $@ $(LIBLIBECATINTERFACE_SLRT_X64_OBJS)
+
+
+$(MATLAB_ROOT)/toolbox/slrealtime/simulink/blocks/dist/lib/libEcMaster_slrt_x64.a : $(LIBLIBECMASTER_SLRT_X64_OBJS)
+	@echo "### Creating static library $@ ..."
+	$(AR) $(ARFLAGS)  $@ $(LIBLIBECMASTER_SLRT_X64_OBJS)
 
 
 ###########################################################################

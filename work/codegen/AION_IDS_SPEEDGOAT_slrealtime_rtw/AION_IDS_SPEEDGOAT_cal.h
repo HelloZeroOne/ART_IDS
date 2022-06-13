@@ -14,49 +14,91 @@ struct AION_IDS_SPEEDGOAT_cal_type {
                  * Referenced by: synthesized block
                  */
   CAN_DATATYPE RT2_InitialCondition; /* Computed Parameter: RT2_InitialCondition
-                                      * Referenced by: '<S13>/RT2'
+                                      * Referenced by: '<S19>/RT2'
                                       */
+  real_T IMU2ADCU_CAN_read_P1_Size[2];
+                                /* Computed Parameter: IMU2ADCU_CAN_read_P1_Size
+                                 * Referenced by: '<S11>/IMU2ADCU_CAN_read'
+                                 */
+  real_T IMU2ADCU_CAN_read_P1;         /* Expression: id
+                                        * Referenced by: '<S11>/IMU2ADCU_CAN_read'
+                                        */
+  real_T IMU2ADCU_CAN_read_P2_Size[2];
+                                /* Computed Parameter: IMU2ADCU_CAN_read_P2_Size
+                                 * Referenced by: '<S11>/IMU2ADCU_CAN_read'
+                                 */
+  real_T IMU2ADCU_CAN_read_P2;         /* Expression: sampleTime
+                                        * Referenced by: '<S11>/IMU2ADCU_CAN_read'
+                                        */
+  real_T IMU2ADCU_CAN_read_P3_Size[2];
+                                /* Computed Parameter: IMU2ADCU_CAN_read_P3_Size
+                                 * Referenced by: '<S11>/IMU2ADCU_CAN_read'
+                                 */
+  real_T IMU2ADCU_CAN_read_P3;         /* Expression: messageType
+                                        * Referenced by: '<S11>/IMU2ADCU_CAN_read'
+                                        */
+  real_T IMU2ADCU_CAN_read_P4_Size[2];
+                                /* Computed Parameter: IMU2ADCU_CAN_read_P4_Size
+                                 * Referenced by: '<S11>/IMU2ADCU_CAN_read'
+                                 */
+  real_T IMU2ADCU_CAN_read_P4[5];    /* Computed Parameter: IMU2ADCU_CAN_read_P4
+                                      * Referenced by: '<S11>/IMU2ADCU_CAN_read'
+                                      */
+  real_T IMU2ADCU_CAN_read_P5_Size[2];
+                                /* Computed Parameter: IMU2ADCU_CAN_read_P5_Size
+                                 * Referenced by: '<S11>/IMU2ADCU_CAN_read'
+                                 */
+  real_T IMU2ADCU_CAN_read_P5;         /* Expression: ptIdx
+                                        * Referenced by: '<S11>/IMU2ADCU_CAN_read'
+                                        */
+  real_T IMU2ADCU_CAN_read_P6_Size[2];
+                                /* Computed Parameter: IMU2ADCU_CAN_read_P6_Size
+                                 * Referenced by: '<S11>/IMU2ADCU_CAN_read'
+                                 */
+  real_T IMU2ADCU_CAN_read_P6;         /* Expression: isFDMod
+                                        * Referenced by: '<S11>/IMU2ADCU_CAN_read'
+                                        */
   real_T SCU2ADCU_CAN_read_P1_Size[2];
                                 /* Computed Parameter: SCU2ADCU_CAN_read_P1_Size
-                                 * Referenced by: '<S10>/SCU2ADCU_CAN_read'
+                                 * Referenced by: '<S12>/SCU2ADCU_CAN_read'
                                  */
   real_T SCU2ADCU_CAN_read_P1;         /* Expression: id
-                                        * Referenced by: '<S10>/SCU2ADCU_CAN_read'
+                                        * Referenced by: '<S12>/SCU2ADCU_CAN_read'
                                         */
   real_T SCU2ADCU_CAN_read_P2_Size[2];
                                 /* Computed Parameter: SCU2ADCU_CAN_read_P2_Size
-                                 * Referenced by: '<S10>/SCU2ADCU_CAN_read'
+                                 * Referenced by: '<S12>/SCU2ADCU_CAN_read'
                                  */
   real_T SCU2ADCU_CAN_read_P2;         /* Expression: sampleTime
-                                        * Referenced by: '<S10>/SCU2ADCU_CAN_read'
+                                        * Referenced by: '<S12>/SCU2ADCU_CAN_read'
                                         */
   real_T SCU2ADCU_CAN_read_P3_Size[2];
                                 /* Computed Parameter: SCU2ADCU_CAN_read_P3_Size
-                                 * Referenced by: '<S10>/SCU2ADCU_CAN_read'
+                                 * Referenced by: '<S12>/SCU2ADCU_CAN_read'
                                  */
   real_T SCU2ADCU_CAN_read_P3;         /* Expression: messageType
-                                        * Referenced by: '<S10>/SCU2ADCU_CAN_read'
+                                        * Referenced by: '<S12>/SCU2ADCU_CAN_read'
                                         */
   real_T SCU2ADCU_CAN_read_P4_Size[2];
                                 /* Computed Parameter: SCU2ADCU_CAN_read_P4_Size
-                                 * Referenced by: '<S10>/SCU2ADCU_CAN_read'
+                                 * Referenced by: '<S12>/SCU2ADCU_CAN_read'
                                  */
   real_T SCU2ADCU_CAN_read_P4[5];    /* Computed Parameter: SCU2ADCU_CAN_read_P4
-                                      * Referenced by: '<S10>/SCU2ADCU_CAN_read'
+                                      * Referenced by: '<S12>/SCU2ADCU_CAN_read'
                                       */
   real_T SCU2ADCU_CAN_read_P5_Size[2];
                                 /* Computed Parameter: SCU2ADCU_CAN_read_P5_Size
-                                 * Referenced by: '<S10>/SCU2ADCU_CAN_read'
+                                 * Referenced by: '<S12>/SCU2ADCU_CAN_read'
                                  */
   real_T SCU2ADCU_CAN_read_P5;         /* Expression: ptIdx
-                                        * Referenced by: '<S10>/SCU2ADCU_CAN_read'
+                                        * Referenced by: '<S12>/SCU2ADCU_CAN_read'
                                         */
   real_T SCU2ADCU_CAN_read_P6_Size[2];
                                 /* Computed Parameter: SCU2ADCU_CAN_read_P6_Size
-                                 * Referenced by: '<S10>/SCU2ADCU_CAN_read'
+                                 * Referenced by: '<S12>/SCU2ADCU_CAN_read'
                                  */
   real_T SCU2ADCU_CAN_read_P6;         /* Expression: isFDMod
-                                        * Referenced by: '<S10>/SCU2ADCU_CAN_read'
+                                        * Referenced by: '<S12>/SCU2ADCU_CAN_read'
                                         */
   real_T CANSetup_P1_Size[2];          /* Computed Parameter: CANSetup_P1_Size
                                         * Referenced by: '<S2>/CAN Setup'
@@ -246,104 +288,315 @@ struct AION_IDS_SPEEDGOAT_cal_type {
                                         */
   real_T ADCU2SCU_Brake_Command_CAN_write_P1_Size[2];
                  /* Computed Parameter: ADCU2SCU_Brake_Command_CAN_write_P1_Size
-                  * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
+                  * Referenced by: '<S19>/ADCU2SCU_Brake_Command_CAN_write'
                   */
   real_T ADCU2SCU_Brake_Command_CAN_write_P1;/* Expression: id
-                                              * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
+                                              * Referenced by: '<S19>/ADCU2SCU_Brake_Command_CAN_write'
                                               */
   real_T ADCU2SCU_Brake_Command_CAN_write_P2_Size[2];
                  /* Computed Parameter: ADCU2SCU_Brake_Command_CAN_write_P2_Size
-                  * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
+                  * Referenced by: '<S19>/ADCU2SCU_Brake_Command_CAN_write'
                   */
   real_T ADCU2SCU_Brake_Command_CAN_write_P2;/* Expression: sampleTime
-                                              * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
+                                              * Referenced by: '<S19>/ADCU2SCU_Brake_Command_CAN_write'
                                               */
   real_T ADCU2SCU_Brake_Command_CAN_write_P3_Size[2];
                  /* Computed Parameter: ADCU2SCU_Brake_Command_CAN_write_P3_Size
-                  * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
+                  * Referenced by: '<S19>/ADCU2SCU_Brake_Command_CAN_write'
                   */
   real_T ADCU2SCU_Brake_Command_CAN_write_P3;/* Expression: messageType
-                                              * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
+                                              * Referenced by: '<S19>/ADCU2SCU_Brake_Command_CAN_write'
                                               */
   real_T ADCU2SCU_Brake_Command_CAN_write_P4_Size[2];
                  /* Computed Parameter: ADCU2SCU_Brake_Command_CAN_write_P4_Size
-                  * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
+                  * Referenced by: '<S19>/ADCU2SCU_Brake_Command_CAN_write'
                   */
   real_T ADCU2SCU_Brake_Command_CAN_write_P4;/* Expression: enaStatusPort
-                                              * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
+                                              * Referenced by: '<S19>/ADCU2SCU_Brake_Command_CAN_write'
                                               */
   real_T ADCU2SCU_Brake_Command_CAN_write_P5_Size[2];
                  /* Computed Parameter: ADCU2SCU_Brake_Command_CAN_write_P5_Size
-                  * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
+                  * Referenced by: '<S19>/ADCU2SCU_Brake_Command_CAN_write'
                   */
   real_T ADCU2SCU_Brake_Command_CAN_write_P5[5];
                       /* Computed Parameter: ADCU2SCU_Brake_Command_CAN_write_P5
-                       * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
+                       * Referenced by: '<S19>/ADCU2SCU_Brake_Command_CAN_write'
                        */
   real_T ADCU2SCU_Brake_Command_CAN_write_P6_Size[2];
                  /* Computed Parameter: ADCU2SCU_Brake_Command_CAN_write_P6_Size
-                  * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
+                  * Referenced by: '<S19>/ADCU2SCU_Brake_Command_CAN_write'
                   */
   real_T ADCU2SCU_Brake_Command_CAN_write_P6;/* Expression: ptIdx
-                                              * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
+                                              * Referenced by: '<S19>/ADCU2SCU_Brake_Command_CAN_write'
                                               */
   real_T ADCU2SCU_Brake_Command_CAN_write_P7_Size[2];
                  /* Computed Parameter: ADCU2SCU_Brake_Command_CAN_write_P7_Size
-                  * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
+                  * Referenced by: '<S19>/ADCU2SCU_Brake_Command_CAN_write'
                   */
   real_T ADCU2SCU_Brake_Command_CAN_write_P7;/* Expression: isFDMod
-                                              * Referenced by: '<S13>/ADCU2SCU_Brake_Command_CAN_write'
+                                              * Referenced by: '<S19>/ADCU2SCU_Brake_Command_CAN_write'
                                               */
   real_T ADCU2SCU_Gear_Command_CAN_write_P1_Size[2];
                   /* Computed Parameter: ADCU2SCU_Gear_Command_CAN_write_P1_Size
-                   * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
+                   * Referenced by: '<S19>/ADCU2SCU_Gear_Command_CAN_write'
                    */
   real_T ADCU2SCU_Gear_Command_CAN_write_P1;/* Expression: id
-                                             * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
+                                             * Referenced by: '<S19>/ADCU2SCU_Gear_Command_CAN_write'
                                              */
   real_T ADCU2SCU_Gear_Command_CAN_write_P2_Size[2];
                   /* Computed Parameter: ADCU2SCU_Gear_Command_CAN_write_P2_Size
-                   * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
+                   * Referenced by: '<S19>/ADCU2SCU_Gear_Command_CAN_write'
                    */
   real_T ADCU2SCU_Gear_Command_CAN_write_P2;/* Expression: sampleTime
-                                             * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
+                                             * Referenced by: '<S19>/ADCU2SCU_Gear_Command_CAN_write'
                                              */
   real_T ADCU2SCU_Gear_Command_CAN_write_P3_Size[2];
                   /* Computed Parameter: ADCU2SCU_Gear_Command_CAN_write_P3_Size
-                   * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
+                   * Referenced by: '<S19>/ADCU2SCU_Gear_Command_CAN_write'
                    */
   real_T ADCU2SCU_Gear_Command_CAN_write_P3;/* Expression: messageType
-                                             * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
+                                             * Referenced by: '<S19>/ADCU2SCU_Gear_Command_CAN_write'
                                              */
   real_T ADCU2SCU_Gear_Command_CAN_write_P4_Size[2];
                   /* Computed Parameter: ADCU2SCU_Gear_Command_CAN_write_P4_Size
-                   * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
+                   * Referenced by: '<S19>/ADCU2SCU_Gear_Command_CAN_write'
                    */
   real_T ADCU2SCU_Gear_Command_CAN_write_P4;/* Expression: enaStatusPort
-                                             * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
+                                             * Referenced by: '<S19>/ADCU2SCU_Gear_Command_CAN_write'
                                              */
   real_T ADCU2SCU_Gear_Command_CAN_write_P5_Size[2];
                   /* Computed Parameter: ADCU2SCU_Gear_Command_CAN_write_P5_Size
-                   * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
+                   * Referenced by: '<S19>/ADCU2SCU_Gear_Command_CAN_write'
                    */
   real_T ADCU2SCU_Gear_Command_CAN_write_P5[5];
                        /* Computed Parameter: ADCU2SCU_Gear_Command_CAN_write_P5
-                        * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
+                        * Referenced by: '<S19>/ADCU2SCU_Gear_Command_CAN_write'
                         */
   real_T ADCU2SCU_Gear_Command_CAN_write_P6_Size[2];
                   /* Computed Parameter: ADCU2SCU_Gear_Command_CAN_write_P6_Size
-                   * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
+                   * Referenced by: '<S19>/ADCU2SCU_Gear_Command_CAN_write'
                    */
   real_T ADCU2SCU_Gear_Command_CAN_write_P6;/* Expression: ptIdx
-                                             * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
+                                             * Referenced by: '<S19>/ADCU2SCU_Gear_Command_CAN_write'
                                              */
   real_T ADCU2SCU_Gear_Command_CAN_write_P7_Size[2];
                   /* Computed Parameter: ADCU2SCU_Gear_Command_CAN_write_P7_Size
-                   * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
+                   * Referenced by: '<S19>/ADCU2SCU_Gear_Command_CAN_write'
                    */
   real_T ADCU2SCU_Gear_Command_CAN_write_P7;/* Expression: isFDMod
-                                             * Referenced by: '<S13>/ADCU2SCU_Gear_Command_CAN_write'
+                                             * Referenced by: '<S19>/ADCU2SCU_Gear_Command_CAN_write'
                                              */
+  real_T LegacySerialRead_P1_Size[2];
+                                 /* Computed Parameter: LegacySerialRead_P1_Size
+                                  * Referenced by: '<S16>/Legacy Serial Read'
+                                  */
+  real_T LegacySerialRead_P1;          /* Expression: port
+                                        * Referenced by: '<S16>/Legacy Serial Read'
+                                        */
+  real_T LegacySerialRead_P2_Size[2];
+                                 /* Computed Parameter: LegacySerialRead_P2_Size
+                                  * Referenced by: '<S16>/Legacy Serial Read'
+                                  */
+  real_T LegacySerialRead_P2;          /* Expression: count
+                                        * Referenced by: '<S16>/Legacy Serial Read'
+                                        */
+  real_T LegacySerialRead_P3_Size[2];
+                                 /* Computed Parameter: LegacySerialRead_P3_Size
+                                  * Referenced by: '<S16>/Legacy Serial Read'
+                                  */
+  real_T LegacySerialRead_P3;          /* Expression: dtype
+                                        * Referenced by: '<S16>/Legacy Serial Read'
+                                        */
+  real_T LegacySerialRead_P4_Size[2];
+                                 /* Computed Parameter: LegacySerialRead_P4_Size
+                                  * Referenced by: '<S16>/Legacy Serial Read'
+                                  */
+  real_T LegacySerialRead_P4;          /* Expression: sampletime
+                                        * Referenced by: '<S16>/Legacy Serial Read'
+                                        */
+  real_T LegacySerialWrite_P1_Size[2];
+                                /* Computed Parameter: LegacySerialWrite_P1_Size
+                                 * Referenced by: '<S16>/Legacy Serial Write'
+                                 */
+  real_T LegacySerialWrite_P1;         /* Expression: port
+                                        * Referenced by: '<S16>/Legacy Serial Write'
+                                        */
+  real_T LegacySerialWrite_P2_Size[2];
+                                /* Computed Parameter: LegacySerialWrite_P2_Size
+                                 * Referenced by: '<S16>/Legacy Serial Write'
+                                 */
+  real_T LegacySerialWrite_P2;         /* Expression: dtype
+                                        * Referenced by: '<S16>/Legacy Serial Write'
+                                        */
+  real_T LegacySerialWrite_P3_Size[2];
+                                /* Computed Parameter: LegacySerialWrite_P3_Size
+                                 * Referenced by: '<S16>/Legacy Serial Write'
+                                 */
+  real_T LegacySerialWrite_P3;         /* Expression: sampletime
+                                        * Referenced by: '<S16>/Legacy Serial Write'
+                                        */
+  real_T Setup_P1_Size[2];             /* Computed Parameter: Setup_P1_Size
+                                        * Referenced by: '<S16>/Setup'
+                                        */
+  real_T Setup_P1;                     /* Expression: port
+                                        * Referenced by: '<S16>/Setup'
+                                        */
+  real_T Setup_P2_Size[2];             /* Computed Parameter: Setup_P2_Size
+                                        * Referenced by: '<S16>/Setup'
+                                        */
+  real_T Setup_P2;                     /* Expression: baud
+                                        * Referenced by: '<S16>/Setup'
+                                        */
+  real_T Setup_P3_Size[2];             /* Computed Parameter: Setup_P3_Size
+                                        * Referenced by: '<S16>/Setup'
+                                        */
+  real_T Setup_P3;                     /* Expression: width
+                                        * Referenced by: '<S16>/Setup'
+                                        */
+  real_T Setup_P4_Size[2];             /* Computed Parameter: Setup_P4_Size
+                                        * Referenced by: '<S16>/Setup'
+                                        */
+  real_T Setup_P4;                     /* Expression: nstop
+                                        * Referenced by: '<S16>/Setup'
+                                        */
+  real_T Setup_P5_Size[2];             /* Computed Parameter: Setup_P5_Size
+                                        * Referenced by: '<S16>/Setup'
+                                        */
+  real_T Setup_P5;                     /* Expression: parity
+                                        * Referenced by: '<S16>/Setup'
+                                        */
+  real_T Setup_P6_Size[2];             /* Computed Parameter: Setup_P6_Size
+                                        * Referenced by: '<S16>/Setup'
+                                        */
+  real_T Setup_P6;                     /* Expression: ctsmode
+                                        * Referenced by: '<S16>/Setup'
+                                        */
+  real_T FIFOASCIIread_P1_Size[2];  /* Computed Parameter: FIFOASCIIread_P1_Size
+                                     * Referenced by: '<S15>/FIFO ASCII read'
+                                     */
+  real_T FIFOASCIIread_P1;             /* Expression: maxsize
+                                        * Referenced by: '<S15>/FIFO ASCII read'
+                                        */
+  real_T FIFOASCIIread_P2_Size[2];  /* Computed Parameter: FIFOASCIIread_P2_Size
+                                     * Referenced by: '<S15>/FIFO ASCII read'
+                                     */
+  real_T FIFOASCIIread_P2;             /* Expression: outputtype
+                                        * Referenced by: '<S15>/FIFO ASCII read'
+                                        */
+  real_T FIFOASCIIread_P3_Size[2];  /* Computed Parameter: FIFOASCIIread_P3_Size
+                                     * Referenced by: '<S15>/FIFO ASCII read'
+                                     */
+  real_T FIFOASCIIread_P3;             /* Expression: sampletime
+                                        * Referenced by: '<S15>/FIFO ASCII read'
+                                        */
+  real_T FIFOASCIIread_P4_Size[2];  /* Computed Parameter: FIFOASCIIread_P4_Size
+                                     * Referenced by: '<S15>/FIFO ASCII read'
+                                     */
+  real_T FIFOASCIIread_P4[6];          /* Computed Parameter: FIFOASCIIread_P4
+                                        * Referenced by: '<S15>/FIFO ASCII read'
+                                        */
+  real_T FIFOASCIIread_P5_Size[2];  /* Computed Parameter: FIFOASCIIread_P5_Size
+                                     * Referenced by: '<S15>/FIFO ASCII read'
+                                     */
+  real_T FIFOASCIIread_P5;             /* Expression: hlengths
+                                        * Referenced by: '<S15>/FIFO ASCII read'
+                                        */
+  real_T FIFOASCIIread_P6_Size[2];  /* Computed Parameter: FIFOASCIIread_P6_Size
+                                     * Referenced by: '<S15>/FIFO ASCII read'
+                                     */
+  real_T FIFOASCIIread_P6[2];          /* Computed Parameter: FIFOASCIIread_P6
+                                        * Referenced by: '<S15>/FIFO ASCII read'
+                                        */
+  real_T FIFOASCIIread_P7_Size[2];  /* Computed Parameter: FIFOASCIIread_P7_Size
+                                     * Referenced by: '<S15>/FIFO ASCII read'
+                                     */
+  real_T FIFOASCIIread_P7;             /* Expression: hold
+                                        * Referenced by: '<S15>/FIFO ASCII read'
+                                        */
+  real_T FIFOASCIIread_P8_Size[2];  /* Computed Parameter: FIFOASCIIread_P8_Size
+                                     * Referenced by: '<S15>/FIFO ASCII read'
+                                     */
+  real_T FIFOASCIIread_P8;             /* Expression: enable
+                                        * Referenced by: '<S15>/FIFO ASCII read'
+                                        */
+  real_T TmpRTBAtSwitch1Inport1_InitialCondition;/* Expression: 0
+                                                  * Referenced by: synthesized block
+                                                  */
+  real_T TmpRTBAtSwitch2Inport1_InitialCondition;/* Expression: 0
+                                                  * Referenced by: synthesized block
+                                                  */
+  real_T TmpRTBAtSwitch3Inport1_InitialCondition;/* Expression: 0
+                                                  * Referenced by: synthesized block
+                                                  */
+  real_T TmpRTBAtSwitch4Inport1_InitialCondition;/* Expression: 0
+                                                  * Referenced by: synthesized block
+                                                  */
+  real_T TmpRTBAtSwitch5Inport1_InitialCondition;/* Expression: 0
+                                                  * Referenced by: synthesized block
+                                                  */
+  real_T TmpRTBAtSwitch6Inport1_InitialCondition;/* Expression: 0
+                                                  * Referenced by: synthesized block
+                                                  */
+  real_T TmpRTBAtSwitch7Inport1_InitialCondition;/* Expression: 0
+                                                  * Referenced by: synthesized block
+                                                  */
+  real_T TmpRTBAtSwitch8Inport1_InitialCondition;/* Expression: 0
+                                                  * Referenced by: synthesized block
+                                                  */
+  real_T TmpRTBAtSwitch9Inport1_InitialCondition;/* Expression: 0
+                                                  * Referenced by: synthesized block
+                                                  */
+  real_T TmpRTBAtSwitchInport1_InitialCondition;/* Expression: 0
+                                                 * Referenced by: synthesized block
+                                                 */
+  real_T S_GPSTime_InitialCondition;   /* Expression: 0
+                                        * Referenced by: '<S15>/S_GPSTime'
+                                        */
+  real_T S_GPSWeek_InitialCondition;   /* Expression: 0
+                                        * Referenced by: '<S15>/S_GPSWeek'
+                                        */
+  real_T S_IMUWorkStatus_InitialCondition;/* Expression: 0
+                                           * Referenced by: '<S15>/S_IMUWorkStatus'
+                                           */
+  real_T S_Pitch_InitialCondition;     /* Expression: 0
+                                        * Referenced by: '<S15>/S_Pitch'
+                                        */
+  real_T S_Roll_InitialCondition;      /* Expression: 0
+                                        * Referenced by: '<S15>/S_Roll'
+                                        */
+  real_T count_InitialCondition;       /* Expression: 0
+                                        * Referenced by: '<S15>/count'
+                                        */
+  real_T S_AccelerationX_InitialCondition;/* Expression: 0
+                                           * Referenced by: synthesized block
+                                           */
+  real_T S_AccelerationY_InitialCondition;/* Expression: 0
+                                           * Referenced by: synthesized block
+                                           */
+  real_T S_AccelerationZ_InitialCondition;/* Expression: 0
+                                           * Referenced by: synthesized block
+                                           */
+  real_T S_Altitude_InitialCondition;  /* Expression: 0
+                                        * Referenced by: synthesized block
+                                        */
+  real_T S_AngleSpeedX_InitialCondition;/* Expression: 0
+                                         * Referenced by: synthesized block
+                                         */
+  real_T S_AngleSpeedY_InitialCondition;/* Expression: 0
+                                         * Referenced by: synthesized block
+                                         */
+  real_T S_AngleSpeedZ_InitialCondition;/* Expression: 0
+                                         * Referenced by: synthesized block
+                                         */
+  real_T S_Heading_InitialCondition;   /* Expression: 0
+                                        * Referenced by: synthesized block
+                                        */
+  real_T S_Latitude_InitialCondition;  /* Expression: 0
+                                        * Referenced by: synthesized block
+                                        */
+  real_T S_Longitude_InitialCondition; /* Expression: 0
+                                        * Referenced by: synthesized block
+                                        */
   real_T AutoTrqWhlReq_test_InitialCondition;/* Expression: 0
                                               * Referenced by: synthesized block
                                               */
@@ -356,15 +609,57 @@ struct AION_IDS_SPEEDGOAT_cal_type {
   real_T TmpRTBAtAION_auto_mode_requestInport3_InitialCondition;/* Expression: 0
                                                                  * Referenced by: synthesized block
                                                                  */
+  real_T get_AccelerationX_InitialCondition;/* Expression: 0
+                                             * Referenced by: synthesized block
+                                             */
+  real_T get_AccelerationY_InitialCondition;/* Expression: 0
+                                             * Referenced by: synthesized block
+                                             */
+  real_T get_AccelerationZ_InitialCondition;/* Expression: 0
+                                             * Referenced by: synthesized block
+                                             */
   real_T get_ActVehLaltrlAccel_InitialCondition;/* Expression: 0
                                                  * Referenced by: synthesized block
                                                  */
   real_T get_ActVehLongAccel_InitialCondition;/* Expression: 0
                                                * Referenced by: synthesized block
                                                */
+  real_T get_Altitude_InitialCondition;/* Expression: 0
+                                        * Referenced by: synthesized block
+                                        */
+  real_T get_AngleSpeedX_InitialCondition;/* Expression: 0
+                                           * Referenced by: synthesized block
+                                           */
+  real_T get_AngleSpeedY_InitialCondition;/* Expression: 0
+                                           * Referenced by: synthesized block
+                                           */
+  real_T get_AngleSpeedZ_InitialCondition;/* Expression: 0
+                                           * Referenced by: synthesized block
+                                           */
+  real_T get_GPSTime_InitialCondition; /* Expression: 0
+                                        * Referenced by: synthesized block
+                                        */
+  real_T get_GPSWeek_InitialCondition; /* Expression: 0
+                                        * Referenced by: synthesized block
+                                        */
   real_T get_GasPedalActPst_InitialCondition;/* Expression: 0
                                               * Referenced by: synthesized block
                                               */
+  real_T get_Heading_InitialCondition; /* Expression: 0
+                                        * Referenced by: synthesized block
+                                        */
+  real_T get_Latitude_InitialCondition;/* Expression: 0
+                                        * Referenced by: synthesized block
+                                        */
+  real_T get_Longitude_InitialCondition;/* Expression: 0
+                                         * Referenced by: synthesized block
+                                         */
+  real_T get_Pitch_InitialCondition;   /* Expression: 0
+                                        * Referenced by: synthesized block
+                                        */
+  real_T get_Roll_InitialCondition;    /* Expression: 0
+                                        * Referenced by: synthesized block
+                                        */
   real_T get_SteeringAngle_InitialCondition;/* Expression: 0
                                              * Referenced by: synthesized block
                                              */
@@ -379,54 +674,81 @@ struct AION_IDS_SPEEDGOAT_cal_type {
                                         */
   real_T ADCU2SCU_Steer_Command_CAN_write_P1_Size[2];
                  /* Computed Parameter: ADCU2SCU_Steer_Command_CAN_write_P1_Size
-                  * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
+                  * Referenced by: '<S19>/ADCU2SCU_Steer_Command_CAN_write'
                   */
   real_T ADCU2SCU_Steer_Command_CAN_write_P1;/* Expression: id
-                                              * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
+                                              * Referenced by: '<S19>/ADCU2SCU_Steer_Command_CAN_write'
                                               */
   real_T ADCU2SCU_Steer_Command_CAN_write_P2_Size[2];
                  /* Computed Parameter: ADCU2SCU_Steer_Command_CAN_write_P2_Size
-                  * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
+                  * Referenced by: '<S19>/ADCU2SCU_Steer_Command_CAN_write'
                   */
   real_T ADCU2SCU_Steer_Command_CAN_write_P2;/* Expression: sampleTime
-                                              * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
+                                              * Referenced by: '<S19>/ADCU2SCU_Steer_Command_CAN_write'
                                               */
   real_T ADCU2SCU_Steer_Command_CAN_write_P3_Size[2];
                  /* Computed Parameter: ADCU2SCU_Steer_Command_CAN_write_P3_Size
-                  * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
+                  * Referenced by: '<S19>/ADCU2SCU_Steer_Command_CAN_write'
                   */
   real_T ADCU2SCU_Steer_Command_CAN_write_P3;/* Expression: messageType
-                                              * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
+                                              * Referenced by: '<S19>/ADCU2SCU_Steer_Command_CAN_write'
                                               */
   real_T ADCU2SCU_Steer_Command_CAN_write_P4_Size[2];
                  /* Computed Parameter: ADCU2SCU_Steer_Command_CAN_write_P4_Size
-                  * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
+                  * Referenced by: '<S19>/ADCU2SCU_Steer_Command_CAN_write'
                   */
   real_T ADCU2SCU_Steer_Command_CAN_write_P4;/* Expression: enaStatusPort
-                                              * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
+                                              * Referenced by: '<S19>/ADCU2SCU_Steer_Command_CAN_write'
                                               */
   real_T ADCU2SCU_Steer_Command_CAN_write_P5_Size[2];
                  /* Computed Parameter: ADCU2SCU_Steer_Command_CAN_write_P5_Size
-                  * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
+                  * Referenced by: '<S19>/ADCU2SCU_Steer_Command_CAN_write'
                   */
   real_T ADCU2SCU_Steer_Command_CAN_write_P5[5];
                       /* Computed Parameter: ADCU2SCU_Steer_Command_CAN_write_P5
-                       * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
+                       * Referenced by: '<S19>/ADCU2SCU_Steer_Command_CAN_write'
                        */
   real_T ADCU2SCU_Steer_Command_CAN_write_P6_Size[2];
                  /* Computed Parameter: ADCU2SCU_Steer_Command_CAN_write_P6_Size
-                  * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
+                  * Referenced by: '<S19>/ADCU2SCU_Steer_Command_CAN_write'
                   */
   real_T ADCU2SCU_Steer_Command_CAN_write_P6;/* Expression: ptIdx
-                                              * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
+                                              * Referenced by: '<S19>/ADCU2SCU_Steer_Command_CAN_write'
                                               */
   real_T ADCU2SCU_Steer_Command_CAN_write_P7_Size[2];
                  /* Computed Parameter: ADCU2SCU_Steer_Command_CAN_write_P7_Size
-                  * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
+                  * Referenced by: '<S19>/ADCU2SCU_Steer_Command_CAN_write'
                   */
   real_T ADCU2SCU_Steer_Command_CAN_write_P7;/* Expression: isFDMod
-                                              * Referenced by: '<S13>/ADCU2SCU_Steer_Command_CAN_write'
+                                              * Referenced by: '<S19>/ADCU2SCU_Steer_Command_CAN_write'
                                               */
+  real_T Constant6_Value;              /* Expression: 1
+                                        * Referenced by: '<S17>/Constant6'
+                                        */
+  real_T Constant11_Value;             /* Expression: 0
+                                        * Referenced by: '<S17>/Constant11'
+                                        */
+  real_T Constant5_Value;              /* Expression: 0
+                                        * Referenced by: '<S17>/Constant5'
+                                        */
+  real_T Constant_Value;               /* Expression: 0
+                                        * Referenced by: '<S17>/Constant'
+                                        */
+  real_T Constant7_Value;              /* Expression: 0
+                                        * Referenced by: '<S17>/Constant7'
+                                        */
+  real_T Constant8_Value;              /* Expression: 0
+                                        * Referenced by: '<S17>/Constant8'
+                                        */
+  real_T Constant9_Value;              /* Expression: 0
+                                        * Referenced by: '<S17>/Constant9'
+                                        */
+  real_T Constant10_Value;             /* Expression: 0
+                                        * Referenced by: '<S17>/Constant10'
+                                        */
+  real_T Constant1_Value;              /* Expression: 23
+                                        * Referenced by: '<S17>/Constant1'
+                                        */
   Active_request TmpRTBAtAION_auto_mode_requestInport17_InitialCondition;
   /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport17_InitialCondition
    * Referenced by: synthesized block
@@ -495,6 +817,10 @@ struct AION_IDS_SPEEDGOAT_cal_type {
                          /* Computed Parameter: get_CrntGearLvl_InitialCondition
                           * Referenced by: synthesized block
                           */
+  IMU_Status get_IMUWorkStatus_InitialCondition;
+                       /* Computed Parameter: get_IMUWorkStatus_InitialCondition
+                        * Referenced by: synthesized block
+                        */
   Light_request TmpRTBAtAION_auto_mode_requestInport18_InitialCondition;
   /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport18_InitialCondition
    * Referenced by: synthesized block

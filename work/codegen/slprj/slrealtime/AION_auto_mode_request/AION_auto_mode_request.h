@@ -120,7 +120,22 @@ extern void AION_auto_mode_request(const Control_request
   *rtu_InBus_get_BCM_info_get_KeySt, const Active_status
   *rtu_InBus_get_BCM_info_get_LeftTurnLampSt, const Active_status
   *rtu_InBus_get_BCM_info_get_LowBeamSt, const Active_status
-  *rtu_InBus_get_BCM_info_get_RightTurnLampSt, Control_request
+  *rtu_InBus_get_BCM_info_get_RightTurnLampSt, const real_T
+  *rtu_InBus_get_IMU_info_get_GPSWeek, const real_T
+  *rtu_InBus_get_IMU_info_get_GPSTime, const real_T
+  *rtu_InBus_get_IMU_info_get_Heading, const real_T
+  *rtu_InBus_get_IMU_info_get_Pitch, const real_T
+  *rtu_InBus_get_IMU_info_get_Roll, const IMU_Status
+  *rtu_InBus_get_IMU_info_get_IMUWorkStatus, const real_T
+  *rtu_InBus_get_IMU_info_get_AngleSpeedX, const real_T
+  *rtu_InBus_get_IMU_info_get_AngleSpeedY, const real_T
+  *rtu_InBus_get_IMU_info_get_AngleSpeedZ, const real_T
+  *rtu_InBus_get_IMU_info_get_AccelerationX, const real_T
+  *rtu_InBus_get_IMU_info_get_AccelerationY, const real_T
+  *rtu_InBus_get_IMU_info_get_AccelerationZ, const real_T
+  *rtu_InBus_get_IMU_info_get_Latitude, const real_T
+  *rtu_InBus_get_IMU_info_get_Longitude, const real_T
+  *rtu_InBus_get_IMU_info_get_Altitude, Control_request
   *rty_OutBus_set_lateral_control_info_set_LatCtrlReq, real_T
   *rty_OutBus_set_lateral_control_info_set_SteerAngReq, real_T
   *rty_OutBus_set_lateral_control_info_set_SteerWhlTorqReq, Control_request
@@ -178,8 +193,21 @@ extern void AION_auto_mode_request(const Control_request
   *rty_OutBus_get_BCM_info_get_KeySt, Active_status
   *rty_OutBus_get_BCM_info_get_LeftTurnLampSt, Active_status
   *rty_OutBus_get_BCM_info_get_LowBeamSt, Active_status
-  *rty_OutBus_get_BCM_info_get_RightTurnLampSt, B_AION_auto_mode_request_c_T
-  *localB);
+  *rty_OutBus_get_BCM_info_get_RightTurnLampSt, real_T
+  *rty_OutBus_get_IMU_info_get_GPSWeek, real_T
+  *rty_OutBus_get_IMU_info_get_GPSTime, real_T
+  *rty_OutBus_get_IMU_info_get_Heading, real_T
+  *rty_OutBus_get_IMU_info_get_Pitch, real_T *rty_OutBus_get_IMU_info_get_Roll,
+  IMU_Status *rty_OutBus_get_IMU_info_get_IMUWorkStatus, real_T
+  *rty_OutBus_get_IMU_info_get_AngleSpeedX, real_T
+  *rty_OutBus_get_IMU_info_get_AngleSpeedY, real_T
+  *rty_OutBus_get_IMU_info_get_AngleSpeedZ, real_T
+  *rty_OutBus_get_IMU_info_get_AccelerationX, real_T
+  *rty_OutBus_get_IMU_info_get_AccelerationY, real_T
+  *rty_OutBus_get_IMU_info_get_AccelerationZ, real_T
+  *rty_OutBus_get_IMU_info_get_Latitude, real_T
+  *rty_OutBus_get_IMU_info_get_Longitude, real_T
+  *rty_OutBus_get_IMU_info_get_Altitude, B_AION_auto_mode_request_c_T *localB);
 
 /*-
  * The generated code includes comments that allow you to trace directly

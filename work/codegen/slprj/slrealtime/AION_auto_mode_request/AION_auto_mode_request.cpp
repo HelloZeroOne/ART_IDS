@@ -2,9 +2,9 @@
  * Code generation for system model 'AION_auto_mode_request'
  *
  * Model                      : AION_auto_mode_request
- * Model version              : 1.99
+ * Model version              : 1.101
  * Simulink Coder version : 9.5 (R2021a) 14-Nov-2020
- * C++ source code generated on : Tue Jun  7 16:27:21 2022
+ * C++ source code generated on : Fri Jun 10 15:54:19 2022
  *
  * Note that the functions contained in this file are part of a Simulink
  * model, and are not self-contained algorithms.
@@ -72,7 +72,22 @@ void AION_auto_mode_request(const Control_request
   *rtu_InBus_get_BCM_info_get_KeySt, const Active_status
   *rtu_InBus_get_BCM_info_get_LeftTurnLampSt, const Active_status
   *rtu_InBus_get_BCM_info_get_LowBeamSt, const Active_status
-  *rtu_InBus_get_BCM_info_get_RightTurnLampSt, Control_request
+  *rtu_InBus_get_BCM_info_get_RightTurnLampSt, const real_T
+  *rtu_InBus_get_IMU_info_get_GPSWeek, const real_T
+  *rtu_InBus_get_IMU_info_get_GPSTime, const real_T
+  *rtu_InBus_get_IMU_info_get_Heading, const real_T
+  *rtu_InBus_get_IMU_info_get_Pitch, const real_T
+  *rtu_InBus_get_IMU_info_get_Roll, const IMU_Status
+  *rtu_InBus_get_IMU_info_get_IMUWorkStatus, const real_T
+  *rtu_InBus_get_IMU_info_get_AngleSpeedX, const real_T
+  *rtu_InBus_get_IMU_info_get_AngleSpeedY, const real_T
+  *rtu_InBus_get_IMU_info_get_AngleSpeedZ, const real_T
+  *rtu_InBus_get_IMU_info_get_AccelerationX, const real_T
+  *rtu_InBus_get_IMU_info_get_AccelerationY, const real_T
+  *rtu_InBus_get_IMU_info_get_AccelerationZ, const real_T
+  *rtu_InBus_get_IMU_info_get_Latitude, const real_T
+  *rtu_InBus_get_IMU_info_get_Longitude, const real_T
+  *rtu_InBus_get_IMU_info_get_Altitude, Control_request
   *rty_OutBus_set_lateral_control_info_set_LatCtrlReq, real_T
   *rty_OutBus_set_lateral_control_info_set_SteerAngReq, real_T
   *rty_OutBus_set_lateral_control_info_set_SteerWhlTorqReq, Control_request
@@ -130,8 +145,21 @@ void AION_auto_mode_request(const Control_request
   *rty_OutBus_get_BCM_info_get_KeySt, Active_status
   *rty_OutBus_get_BCM_info_get_LeftTurnLampSt, Active_status
   *rty_OutBus_get_BCM_info_get_LowBeamSt, Active_status
-  *rty_OutBus_get_BCM_info_get_RightTurnLampSt, B_AION_auto_mode_request_c_T
-  *localB)
+  *rty_OutBus_get_BCM_info_get_RightTurnLampSt, real_T
+  *rty_OutBus_get_IMU_info_get_GPSWeek, real_T
+  *rty_OutBus_get_IMU_info_get_GPSTime, real_T
+  *rty_OutBus_get_IMU_info_get_Heading, real_T
+  *rty_OutBus_get_IMU_info_get_Pitch, real_T *rty_OutBus_get_IMU_info_get_Roll,
+  IMU_Status *rty_OutBus_get_IMU_info_get_IMUWorkStatus, real_T
+  *rty_OutBus_get_IMU_info_get_AngleSpeedX, real_T
+  *rty_OutBus_get_IMU_info_get_AngleSpeedY, real_T
+  *rty_OutBus_get_IMU_info_get_AngleSpeedZ, real_T
+  *rty_OutBus_get_IMU_info_get_AccelerationX, real_T
+  *rty_OutBus_get_IMU_info_get_AccelerationY, real_T
+  *rty_OutBus_get_IMU_info_get_AccelerationZ, real_T
+  *rty_OutBus_get_IMU_info_get_Latitude, real_T
+  *rty_OutBus_get_IMU_info_get_Longitude, real_T
+  *rty_OutBus_get_IMU_info_get_Altitude, B_AION_auto_mode_request_c_T *localB)
 {
   /* MATLAB Function: '<Root>/Lateral_control_status_judge' */
   /* MATLAB Function 'Lateral_control_status_judge': '<S1>:1' */
@@ -403,12 +431,64 @@ void AION_auto_mode_request(const Control_request
     *rtu_InBus_get_BCM_info_get_RightTurnLampSt;
 
   /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
+  *rty_OutBus_get_IMU_info_get_GPSWeek = *rtu_InBus_get_IMU_info_get_GPSWeek;
+
+  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
   *rty_OutBus_set_longitudinal_control_info_set_BrakeReq =
     *rtu_InBus_set_longitudinal_control_info_set_BrakeReq;
 
   /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
+  *rty_OutBus_get_IMU_info_get_GPSTime = *rtu_InBus_get_IMU_info_get_GPSTime;
+
+  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
+  *rty_OutBus_get_IMU_info_get_Heading = *rtu_InBus_get_IMU_info_get_Heading;
+
+  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
+  *rty_OutBus_get_IMU_info_get_Pitch = *rtu_InBus_get_IMU_info_get_Pitch;
+
+  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
+  *rty_OutBus_get_IMU_info_get_Roll = *rtu_InBus_get_IMU_info_get_Roll;
+
+  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
+  *rty_OutBus_get_IMU_info_get_IMUWorkStatus =
+    *rtu_InBus_get_IMU_info_get_IMUWorkStatus;
+
+  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
+  *rty_OutBus_get_IMU_info_get_AngleSpeedX =
+    *rtu_InBus_get_IMU_info_get_AngleSpeedX;
+
+  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
+  *rty_OutBus_get_IMU_info_get_AngleSpeedY =
+    *rtu_InBus_get_IMU_info_get_AngleSpeedY;
+
+  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
+  *rty_OutBus_get_IMU_info_get_AngleSpeedZ =
+    *rtu_InBus_get_IMU_info_get_AngleSpeedZ;
+
+  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
+  *rty_OutBus_get_IMU_info_get_AccelerationX =
+    *rtu_InBus_get_IMU_info_get_AccelerationX;
+
+  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
+  *rty_OutBus_get_IMU_info_get_AccelerationY =
+    *rtu_InBus_get_IMU_info_get_AccelerationY;
+
+  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
   *rty_OutBus_set_longitudinal_control_info_set_GearLvlReq =
     *rtu_InBus_set_longitudinal_control_info_set_GearLvlReq;
+
+  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
+  *rty_OutBus_get_IMU_info_get_AccelerationZ =
+    *rtu_InBus_get_IMU_info_get_AccelerationZ;
+
+  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
+  *rty_OutBus_get_IMU_info_get_Latitude = *rtu_InBus_get_IMU_info_get_Latitude;
+
+  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
+  *rty_OutBus_get_IMU_info_get_Longitude = *rtu_InBus_get_IMU_info_get_Longitude;
+
+  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
+  *rty_OutBus_get_IMU_info_get_Altitude = *rtu_InBus_get_IMU_info_get_Altitude;
 
   /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
   *rty_OutBus_set_longitudinal_control_info_set_GearLvlReqVD =

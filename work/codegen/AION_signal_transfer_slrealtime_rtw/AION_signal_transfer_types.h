@@ -3,9 +3,9 @@
  *
  * Code generation for model "AION_signal_transfer".
  *
- * Model version              : 4.82
+ * Model version              : 4.98
  * Simulink Coder version : 9.5 (R2021a) 14-Nov-2020
- * C++ source code generated on : Fri Jun  3 16:42:51 2022
+ * C++ source code generated on : Fri Jun 10 16:00:04 2022
  *
  * Target selection: slrealtime.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -198,12 +198,48 @@ struct SCU2ADCU
 
 #endif
 
+#ifndef DEFINED_TYPEDEF_FOR_IMU2ADCU_
+#define DEFINED_TYPEDEF_FOR_IMU2ADCU_
+
+struct IMU2ADCU
+{
+  real_T GPSWeek;
+  real_T GPSTime;
+  real_T Heading;
+  real_T Pitch;
+  real_T Roll;
+  real_T IMUWorkStatus;
+  real_T AngleSpeedX;
+  real_T AngleSpeedY;
+  real_T AngleSpeedZ;
+  real_T AccelerationX;
+  real_T AccelerationY;
+  real_T AccelerationZ;
+  real_T Latitude;
+  real_T Longitude;
+  real_T Altitude;
+};
+
+#endif
+
 #ifndef DEFINED_TYPEDEF_FOR_InputCAN_
 #define DEFINED_TYPEDEF_FOR_InputCAN_
 
 struct InputCAN
 {
   SCU2ADCU SCU2ADCU_bus;
+  IMU2ADCU IMU2ADCU_bus;
+};
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_InputSerial_
+#define DEFINED_TYPEDEF_FOR_InputSerial_
+
+struct InputSerial
+{
+  uint32_T IMUWeek;
+  IMU2ADCU IMUSerial_bus;
 };
 
 #endif
@@ -214,6 +250,7 @@ struct InputCAN
 struct ADCU_InputBus
 {
   InputCAN InputCAN_bus;
+  InputSerial InputSerial_bus;
 };
 
 #endif
@@ -237,6 +274,7 @@ struct AION_Lateral_Control_Info
 {
   Control_request set_LatCtrlReq;
   real_T set_SteerAngReq;
+  real_T set_SteerWhlTorqReq;
 };
 
 #endif
@@ -516,6 +554,45 @@ struct BCM_Info
 
 #endif
 
+#ifndef DEFINED_TYPEDEF_FOR_IMU_Status_
+#define DEFINED_TYPEDEF_FOR_IMU_Status_
+
+typedef enum {
+  Initialization = 0,                  /* Default value */
+  Single_Point_Location = 3,
+  Single_Point_Orientation = 4,
+  RTK_INT_Location = 69,
+  RTK_INT_Orientation = 75,
+  RTK_FLOAT_Location = 85,
+  RTK_FLOAT_Orientation = 91
+} IMU_Status;
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_IMU_Info_
+#define DEFINED_TYPEDEF_FOR_IMU_Info_
+
+struct IMU_Info
+{
+  real_T get_GPSWeek;
+  real_T get_GPSTime;
+  real_T get_Heading;
+  real_T get_Pitch;
+  real_T get_Roll;
+  IMU_Status get_IMUWorkStatus;
+  real_T get_AngleSpeedX;
+  real_T get_AngleSpeedY;
+  real_T get_AngleSpeedZ;
+  real_T get_AccelerationX;
+  real_T get_AccelerationY;
+  real_T get_AccelerationZ;
+  real_T get_Latitude;
+  real_T get_Longitude;
+  real_T get_Altitude;
+};
+
+#endif
+
 #ifndef DEFINED_TYPEDEF_FOR_AION_ApplicationBus_
 #define DEFINED_TYPEDEF_FOR_AION_ApplicationBus_
 
@@ -531,6 +608,7 @@ struct AION_ApplicationBus
   SRS_Info get_SRS_info;
   EPS_Info get_EPS_info;
   BCM_Info get_BCM_info;
+  IMU_Info get_IMU_info;
 };
 
 #endif
@@ -556,6 +634,7 @@ struct ADCU2SCU_ADCU_2
 {
   real_T ADCU_LatCtrlReq;
   real_T ADCU_SteerAngReq;
+  real_T ADCU_SteerWhlTorqReq;
 };
 
 #endif

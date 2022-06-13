@@ -2,7 +2,7 @@
 ## Makefile generated for component 'AION_signal_transfer'. 
 ## 
 ## Makefile     : AION_signal_transfer.mk
-## Generated on : Tue Jun 07 16:28:09 2022
+## Generated on : Fri Jun 10 16:03:49 2022
 ## Final product: ./AION_signal_transfer_rtwlib.a
 ## Product type : static library
 ## 
