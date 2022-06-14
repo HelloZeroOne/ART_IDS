@@ -2,9 +2,9 @@
  * Code generation for system model 'AION_signal_transfer'
  *
  * Model                      : AION_signal_transfer
- * Model version              : 4.98
+ * Model version              : 4.104
  * Simulink Coder version : 9.5 (R2021a) 14-Nov-2020
- * C++ source code generated on : Fri Jun 10 16:03:41 2022
+ * C++ source code generated on : Tue Jun 14 10:26:18 2022
  *
  * Note that the functions contained in this file are part of a Simulink
  * model, and are not self-contained algorithms.
@@ -35,7 +35,8 @@ void AION_signal_transfer(const real_T
   real_T *rtu_ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_14_VCU_VehRdySt,
   const real_T
   *rtu_ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_15_VCU_CrntGearLvl, const
-  real_T *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_GPSTime, const real_T
+  real_T *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_GPSWeek, const real_T
+  *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_GPSTime, const real_T
   *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Heading, const real_T
   *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Pitch, const real_T
   *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Roll, const real_T
@@ -177,9 +178,6 @@ void AION_signal_transfer(const real_T
 
   /* SignalConversion generated from: '<Root>/ADCU_InternalInputPort_Outport_1' */
   *rty_ADCU_InternalInputPort_get_BCM_info_get_KeySt = 0U;
-
-  /* SignalConversion generated from: '<Root>/ADCU_InternalInputPort_Outport_1' */
-  *rty_ADCU_InternalInputPort_get_IMU_info_get_GPSWeek = 0.0;
 
   /* SignalConversion generated from: '<Root>/ADCU_InternalInputPort_Outport_1' */
   *rty_ADCU_InternalInputPort_set_lateral_control_info_set_LatCtrlReq = Manual;
@@ -602,6 +600,10 @@ void AION_signal_transfer(const real_T
   /* DataTypeConversion: '<Root>/Data Type Conversion60' */
   *rty_ADCU_InternalInputPort_get_IMU_info_get_IMUWorkStatus =
     static_cast<IMU_Status>(localB->DataTypeConversion32);
+
+  /* DataTypeConversion: '<Root>/Data Type Conversion61' */
+  *rty_ADCU_InternalInputPort_get_IMU_info_get_GPSWeek =
+    *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_GPSWeek;
 
   /* DataTypeConversion: '<Root>/Data Type Conversion8' */
   *rty_ADCU_InternalInputPort_get_EPS_info_get_SteeringAngle =

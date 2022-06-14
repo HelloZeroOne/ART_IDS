@@ -88,7 +88,8 @@ extern void AION_signal_transfer(const real_T
   real_T *rtu_ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_14_VCU_VehRdySt,
   const real_T
   *rtu_ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_15_VCU_CrntGearLvl, const
-  real_T *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_GPSTime, const real_T
+  real_T *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_GPSWeek, const real_T
+  *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_GPSTime, const real_T
   *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Heading, const real_T
   *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Pitch, const real_T
   *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Roll, const real_T

@@ -1,0 +1,279 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: SPK ADCU
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ ADCU_TurnLightReq : 0|2@0+ (1,0) [0|3] "-" Vector__XXX
+
+BO_ 512 ADCU_Broadcast: 8 ADCU
+ SG_ VolumeCode : 31|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ STX : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ Parameter : 39|8@0+ (1,0) [0|255] "-" Vector__XXX
+ SG_ FunctionCode : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ ETX : 63|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ CHK : 55|8@0+ (1,0) [0|255] "-" Vector__XXX
+ SG_ SoundSourceCode : 23|8@0+ (1,0) [0|255] "-"  SPK
+
+BO_ 515 ADCU_Alive: 8 ADCU
+ SG_ STX : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ FunctionCode : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ ETX : 63|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ CHK : 55|8@0+ (1,0) [0|255] "-" Vector__XXX
+
+BO_ 513 ADCU_IdSet: 8 ADCU
+ SG_ STX : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ Parameter : 39|8@0+ (1,0) [0|255] "-" Vector__XXX
+ SG_ IDType : 31|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ ID : 23|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ FunctionCode : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ CHK : 55|8@0+ (1,0) [0|255] "-" Vector__XXX
+ SG_ ETX : 63|8@0+ (1,0) [0|255] ""  SPK
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 3221225472 ADCU_TurnLightReq "转向灯、双闪灯控制请求指令";
+CM_ SG_ 512 VolumeCode "自动驾驶模式下的制动加速度控制指令，单位m/s^2，只在纵向处于自动控制模式时有效";
+CM_ SG_ 512 STX "Message checksum";
+CM_ SG_ 512 Parameter "Message checksum";
+CM_ SG_ 512 FunctionCode "Message counter of ADCU_1";
+CM_ SG_ 512 ETX "自动驾驶模式下的扭矩请求，单位Nm，只在纵向处于自动控制模式时有效";
+CM_ SG_ 512 CHK "Message counter of ADCU_3";
+CM_ SG_ 512 SoundSourceCode "近光灯、远光灯控制请求";
+CM_ SG_ 515 STX "Message checksum";
+CM_ SG_ 515 FunctionCode "Message counter of ADCU_1";
+CM_ SG_ 515 ETX "自动驾驶模式下的扭矩请求，单位Nm，只在纵向处于自动控制模式时有效";
+CM_ SG_ 515 CHK "Message counter of ADCU_3";
+CM_ SG_ 513 STX "Message checksum";
+CM_ SG_ 513 Parameter "Message checksum";
+CM_ SG_ 513 IDType "Message counter of ADCU_2";
+CM_ SG_ 513 ID "Message checksum";
+CM_ SG_ 513 FunctionCode "Message counter of ADCU_1";
+CM_ SG_ 513 CHK "Message counter of ADCU_3";
+CM_ SG_ 513 ETX "自动驾驶模式下的扭矩请求，单位Nm，只在纵向处于自动控制模式时有效";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ SG_  "Remark" STRING ;
+BA_DEF_ SG_  "EventCommandSignal" ENUM  "No","Yes";
+BA_DEF_ SG_  "GatewayedSignals" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigTimeoutValue" INT 0 0;
+BA_DEF_ SG_  "GenSigStartValue" INT 0 0;
+BA_DEF_ SG_  "GenSigInvalidValue" INT 0 0;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "DiagMessage" ENUM  "No","Yes";
+BA_DEF_ BO_  "NmMessage" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Trigger","Passive";
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Periodic","Event","IfActive","POE","PA";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "Remark" "*";
+BA_DEF_DEF_  "EventCommandSignal" "No";
+BA_DEF_DEF_  "GatewayedSignals" "No";
+BA_DEF_DEF_  "GenSigTimeoutValue" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigInvalidValue" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "DiagMessage" "No";
+BA_DEF_DEF_  "NmMessage" "No";
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenSigSendType" "Trigger";
+BA_DEF_DEF_  "GenMsgSendType" "Periodic";
+BA_ "BusType" "CAN";
+BA_ "GenMsgCycleTime" BO_ 512 50;
+BA_ "GenMsgCycleTimeFast" BO_ 512 0;
+BA_ "GenMsgSendType" BO_ 512 0;
+BA_ "GenMsgCycleTime" BO_ 515 20;
+BA_ "GenMsgCycleTimeFast" BO_ 515 0;
+BA_ "GenMsgSendType" BO_ 515 0;
+BA_ "GenMsgCycleTime" BO_ 513 20;
+BA_ "GenMsgCycleTimeFast" BO_ 513 0;
+BA_ "GenMsgSendType" BO_ 513 0;
+BA_ "GenSigStartValue" SG_ 3221225472 ADCU_TurnLightReq 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 ADCU_TurnLightReq 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 ADCU_TurnLightReq 0;
+BA_ "GenSigSendType" SG_ 3221225472 ADCU_TurnLightReq 1;
+BA_ "GatewayedSignals" SG_ 3221225472 ADCU_TurnLightReq 0;
+BA_ "EventCommandSignal" SG_ 3221225472 ADCU_TurnLightReq 0;
+BA_ "Remark" SG_ 3221225472 ADCU_TurnLightReq "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 ADCU_TurnLightReq 0;
+BA_ "GenSigStartValue" SG_ 512 VolumeCode 0;
+BA_ "GenSigInvalidValue" SG_ 512 VolumeCode 0;
+BA_ "GenSigInactiveValue" SG_ 512 VolumeCode 0;
+BA_ "GenSigSendType" SG_ 512 VolumeCode 1;
+BA_ "GatewayedSignals" SG_ 512 VolumeCode 0;
+BA_ "EventCommandSignal" SG_ 512 VolumeCode 0;
+BA_ "Remark" SG_ 512 VolumeCode "";
+BA_ "GenSigTimeoutValue" SG_ 512 VolumeCode 0;
+BA_ "GenSigStartValue" SG_ 512 STX 0;
+BA_ "GenSigInvalidValue" SG_ 512 STX 0;
+BA_ "GenSigInactiveValue" SG_ 512 STX 0;
+BA_ "GenSigSendType" SG_ 512 STX 1;
+BA_ "GatewayedSignals" SG_ 512 STX 0;
+BA_ "EventCommandSignal" SG_ 512 STX 0;
+BA_ "Remark" SG_ 512 STX "";
+BA_ "GenSigTimeoutValue" SG_ 512 STX 0;
+BA_ "GenSigStartValue" SG_ 512 Parameter 0;
+BA_ "GenSigInvalidValue" SG_ 512 Parameter 0;
+BA_ "GenSigInactiveValue" SG_ 512 Parameter 0;
+BA_ "GenSigSendType" SG_ 512 Parameter 1;
+BA_ "GatewayedSignals" SG_ 512 Parameter 0;
+BA_ "EventCommandSignal" SG_ 512 Parameter 0;
+BA_ "Remark" SG_ 512 Parameter "";
+BA_ "GenSigTimeoutValue" SG_ 512 Parameter 0;
+BA_ "GenSigStartValue" SG_ 512 FunctionCode 0;
+BA_ "GenSigInvalidValue" SG_ 512 FunctionCode 0;
+BA_ "GenSigInactiveValue" SG_ 512 FunctionCode 0;
+BA_ "GenSigSendType" SG_ 512 FunctionCode 1;
+BA_ "GatewayedSignals" SG_ 512 FunctionCode 0;
+BA_ "EventCommandSignal" SG_ 512 FunctionCode 0;
+BA_ "Remark" SG_ 512 FunctionCode "";
+BA_ "GenSigTimeoutValue" SG_ 512 FunctionCode 0;
+BA_ "GenSigStartValue" SG_ 512 ETX 0;
+BA_ "GenSigInvalidValue" SG_ 512 ETX 0;
+BA_ "GenSigInactiveValue" SG_ 512 ETX 0;
+BA_ "GenSigSendType" SG_ 512 ETX 1;
+BA_ "GatewayedSignals" SG_ 512 ETX 0;
+BA_ "EventCommandSignal" SG_ 512 ETX 0;
+BA_ "Remark" SG_ 512 ETX "";
+BA_ "GenSigTimeoutValue" SG_ 512 ETX 0;
+BA_ "GenSigStartValue" SG_ 512 CHK 0;
+BA_ "GenSigInvalidValue" SG_ 512 CHK 0;
+BA_ "GenSigInactiveValue" SG_ 512 CHK 0;
+BA_ "GenSigSendType" SG_ 512 CHK 1;
+BA_ "GatewayedSignals" SG_ 512 CHK 0;
+BA_ "EventCommandSignal" SG_ 512 CHK 0;
+BA_ "Remark" SG_ 512 CHK "";
+BA_ "GenSigTimeoutValue" SG_ 512 CHK 0;
+BA_ "GenSigStartValue" SG_ 512 SoundSourceCode 0;
+BA_ "GenSigInvalidValue" SG_ 512 SoundSourceCode 0;
+BA_ "GenSigInactiveValue" SG_ 512 SoundSourceCode 0;
+BA_ "GenSigSendType" SG_ 512 SoundSourceCode 1;
+BA_ "GatewayedSignals" SG_ 512 SoundSourceCode 0;
+BA_ "EventCommandSignal" SG_ 512 SoundSourceCode 0;
+BA_ "Remark" SG_ 512 SoundSourceCode "";
+BA_ "GenSigTimeoutValue" SG_ 512 SoundSourceCode 0;
+BA_ "GenSigStartValue" SG_ 515 STX 0;
+BA_ "GenSigInvalidValue" SG_ 515 STX 0;
+BA_ "GenSigInactiveValue" SG_ 515 STX 0;
+BA_ "GenSigSendType" SG_ 515 STX 1;
+BA_ "GatewayedSignals" SG_ 515 STX 0;
+BA_ "EventCommandSignal" SG_ 515 STX 0;
+BA_ "Remark" SG_ 515 STX "";
+BA_ "GenSigTimeoutValue" SG_ 515 STX 0;
+BA_ "GenSigStartValue" SG_ 515 FunctionCode 0;
+BA_ "GenSigInvalidValue" SG_ 515 FunctionCode 0;
+BA_ "GenSigInactiveValue" SG_ 515 FunctionCode 0;
+BA_ "GenSigSendType" SG_ 515 FunctionCode 1;
+BA_ "GatewayedSignals" SG_ 515 FunctionCode 0;
+BA_ "EventCommandSignal" SG_ 515 FunctionCode 0;
+BA_ "Remark" SG_ 515 FunctionCode "";
+BA_ "GenSigTimeoutValue" SG_ 515 FunctionCode 0;
+BA_ "GenSigStartValue" SG_ 515 ETX 0;
+BA_ "GenSigInvalidValue" SG_ 515 ETX 0;
+BA_ "GenSigInactiveValue" SG_ 515 ETX 0;
+BA_ "GenSigSendType" SG_ 515 ETX 1;
+BA_ "GatewayedSignals" SG_ 515 ETX 0;
+BA_ "EventCommandSignal" SG_ 515 ETX 0;
+BA_ "Remark" SG_ 515 ETX "";
+BA_ "GenSigTimeoutValue" SG_ 515 ETX 0;
+BA_ "GenSigStartValue" SG_ 515 CHK 0;
+BA_ "GenSigInvalidValue" SG_ 515 CHK 0;
+BA_ "GenSigInactiveValue" SG_ 515 CHK 0;
+BA_ "GenSigSendType" SG_ 515 CHK 1;
+BA_ "GatewayedSignals" SG_ 515 CHK 0;
+BA_ "EventCommandSignal" SG_ 515 CHK 0;
+BA_ "Remark" SG_ 515 CHK "";
+BA_ "GenSigTimeoutValue" SG_ 515 CHK 0;
+BA_ "GenSigStartValue" SG_ 513 STX 0;
+BA_ "GenSigInvalidValue" SG_ 513 STX 0;
+BA_ "GenSigInactiveValue" SG_ 513 STX 0;
+BA_ "GenSigSendType" SG_ 513 STX 1;
+BA_ "GatewayedSignals" SG_ 513 STX 0;
+BA_ "EventCommandSignal" SG_ 513 STX 0;
+BA_ "Remark" SG_ 513 STX "";
+BA_ "GenSigTimeoutValue" SG_ 513 STX 0;
+BA_ "GenSigStartValue" SG_ 513 Parameter 0;
+BA_ "GenSigInvalidValue" SG_ 513 Parameter 0;
+BA_ "GenSigInactiveValue" SG_ 513 Parameter 0;
+BA_ "GenSigSendType" SG_ 513 Parameter 1;
+BA_ "GatewayedSignals" SG_ 513 Parameter 0;
+BA_ "EventCommandSignal" SG_ 513 Parameter 0;
+BA_ "Remark" SG_ 513 Parameter "";
+BA_ "GenSigTimeoutValue" SG_ 513 Parameter 0;
+BA_ "GenSigStartValue" SG_ 513 IDType 0;
+BA_ "GenSigInvalidValue" SG_ 513 IDType 0;
+BA_ "GenSigInactiveValue" SG_ 513 IDType 0;
+BA_ "GenSigSendType" SG_ 513 IDType 1;
+BA_ "GatewayedSignals" SG_ 513 IDType 0;
+BA_ "EventCommandSignal" SG_ 513 IDType 0;
+BA_ "Remark" SG_ 513 IDType "";
+BA_ "GenSigTimeoutValue" SG_ 513 IDType 0;
+BA_ "GenSigStartValue" SG_ 513 ID 0;
+BA_ "GenSigInvalidValue" SG_ 513 ID 0;
+BA_ "GenSigInactiveValue" SG_ 513 ID 0;
+BA_ "GenSigSendType" SG_ 513 ID 1;
+BA_ "GatewayedSignals" SG_ 513 ID 0;
+BA_ "EventCommandSignal" SG_ 513 ID 0;
+BA_ "Remark" SG_ 513 ID "";
+BA_ "GenSigTimeoutValue" SG_ 513 ID 0;
+BA_ "GenSigStartValue" SG_ 513 FunctionCode 0;
+BA_ "GenSigInvalidValue" SG_ 513 FunctionCode 0;
+BA_ "GenSigInactiveValue" SG_ 513 FunctionCode 0;
+BA_ "GenSigSendType" SG_ 513 FunctionCode 1;
+BA_ "GatewayedSignals" SG_ 513 FunctionCode 0;
+BA_ "EventCommandSignal" SG_ 513 FunctionCode 0;
+BA_ "Remark" SG_ 513 FunctionCode "";
+BA_ "GenSigTimeoutValue" SG_ 513 FunctionCode 0;
+BA_ "GenSigStartValue" SG_ 513 CHK 0;
+BA_ "GenSigInvalidValue" SG_ 513 CHK 0;
+BA_ "GenSigInactiveValue" SG_ 513 CHK 0;
+BA_ "GenSigSendType" SG_ 513 CHK 1;
+BA_ "GatewayedSignals" SG_ 513 CHK 0;
+BA_ "EventCommandSignal" SG_ 513 CHK 0;
+BA_ "Remark" SG_ 513 CHK "";
+BA_ "GenSigTimeoutValue" SG_ 513 CHK 0;
+BA_ "GenSigStartValue" SG_ 513 ETX 0;
+BA_ "GenSigInvalidValue" SG_ 513 ETX 0;
+BA_ "GenSigInactiveValue" SG_ 513 ETX 0;
+BA_ "GenSigSendType" SG_ 513 ETX 1;
+BA_ "GatewayedSignals" SG_ 513 ETX 0;
+BA_ "EventCommandSignal" SG_ 513 ETX 0;
+BA_ "Remark" SG_ 513 ETX "";
+BA_ "GenSigTimeoutValue" SG_ 513 ETX 0;
+VAL_ 3221225472 ADCU_TurnLightReq 3 "Emergency light" 2 "Turn right light" 1 "Turn left light" 0 "No request" ;
+

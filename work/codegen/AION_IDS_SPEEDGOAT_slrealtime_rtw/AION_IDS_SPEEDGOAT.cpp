@@ -3,9 +3,9 @@
  *
  * Code generation for model "AION_IDS_SPEEDGOAT".
  *
- * Model version              : 4.301
+ * Model version              : 4.303
  * Simulink Coder version : 9.5 (R2021a) 14-Nov-2020
- * C++ source code generated on : Fri Jun 10 16:04:54 2022
+ * C++ source code generated on : Tue Jun 14 10:27:28 2022
  *
  * Target selection: slrealtime.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -2537,6 +2537,7 @@ void AION_IDS_SPEEDGOAT_step1(void)    /* Sample time: [0.02s, 0.0s] */
                        &AION_IDS_SPEEDGOAT_B.SCU2ADCU_Brake_Status_CAN_unpack11_o1,
                        &AION_IDS_SPEEDGOAT_B.SCU2ADCU_Brake_Status_CAN_unpack11_o2,
                        &AION_IDS_SPEEDGOAT_B.SCU2ADCU_Brake_Status_CAN_unpack12_o1,
+                       ((const real_T*) &AION_IDS_SPEEDGOAT_RGND),
                        &AION_IDS_SPEEDGOAT_B.GPSTime,
                        &AION_IDS_SPEEDGOAT_B.Heading,
                        &AION_IDS_SPEEDGOAT_B.Pitch, &AION_IDS_SPEEDGOAT_B.Roll,
