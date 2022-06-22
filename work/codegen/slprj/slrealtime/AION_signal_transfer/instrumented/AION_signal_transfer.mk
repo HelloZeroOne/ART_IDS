@@ -2,7 +2,7 @@
 ## Makefile generated for component 'AION_signal_transfer'. 
 ## 
 ## Makefile     : AION_signal_transfer.mk
-## Generated on : Tue Jun 14 10:26:35 2022
+## Generated on : Mon Jun 20 15:44:39 2022
 ## Final product: ./AION_signal_transfer_rtwlib.a
 ## Product type : static library
 ## 
@@ -19,8 +19,8 @@
 
 PRODUCT_NAME              = AION_signal_transfer
 MAKEFILE                  = AION_signal_transfer.mk
-MATLAB_ROOT               = D:/R2021a
-MATLAB_BIN                = D:/R2021a/bin
+MATLAB_ROOT               = D:/MATLAB
+MATLAB_BIN                = D:/MATLAB/bin
 MATLAB_ARCH_BIN           = $(MATLAB_BIN)/win64
 START_DIR                 = E:/GitHub/HelloZeroOne/ART_IDS/work/codegen
 SOLVER                    = 

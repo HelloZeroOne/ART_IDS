@@ -3,9 +3,9 @@
  *
  * Code generation for model "AION_IDS_SPEEDGOAT".
  *
- * Model version              : 4.303
+ * Model version              : 4.330
  * Simulink Coder version : 9.5 (R2021a) 14-Nov-2020
- * C++ source code generated on : Tue Jun 14 10:27:28 2022
+ * C++ source code generated on : Tue Jun 21 16:06:30 2022
  *
  * Target selection: slrealtime.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -146,6 +146,22 @@ struct ADCU_Info
 
 #endif
 
+#ifndef DEFINED_TYPEDEF_FOR_SPK_Info_
+#define DEFINED_TYPEDEF_FOR_SPK_Info_
+
+struct SPK_Info
+{
+  real_T set_Stx;
+  real_T set_FunctionCode;
+  real_T set_SoundSourceCode;
+  real_T set_VolumeCode;
+  real_T set_Parameter;
+  real_T set_Chk;
+  real_T set_Etx;
+};
+
+#endif
+
 #ifndef DEFINED_TYPEDEF_FOR_BCS_Info_
 #define DEFINED_TYPEDEF_FOR_BCS_Info_
 
@@ -214,6 +230,7 @@ struct VCU_Info
   uint8_T get_AccElecECFail;
   uint32_T get_VehWheelTorqMax;
   uint8_T get_BrkPedalSt;
+  uint32_T get_ACCButtInfo;
 };
 
 #endif
@@ -365,6 +382,7 @@ struct AION_ApplicationBus
   AION_Lateral_Control_Info set_lateral_control_info;
   AION_Longitudinal_Control_Info set_longitudinal_control_info;
   ADCU_Info set_ADCU_info;
+  SPK_Info set_SPK_info;
   BCS_Info get_BCS_info;
   VCU_Info get_VCU_info;
   SCU_Info get_SCU_info;
@@ -489,6 +507,7 @@ struct SCU2ADCU_SCU_17
   real_T VCU_AccElecECFail;
   real_T VCU_GasPedalActPst;
   real_T VCU_VehWheelTorqMax;
+  real_T VCU_ACCButtInfo;
 };
 
 #endif
@@ -596,7 +615,6 @@ struct InputCAN
 
 struct InputSerial
 {
-  uint32_T IMUWeek;
   IMU2ADCU IMUSerial_bus;
 };
 
@@ -664,12 +682,29 @@ struct ADCU2SCU
 
 #endif
 
+#ifndef DEFINED_TYPEDEF_FOR_ADCU2SPK_
+#define DEFINED_TYPEDEF_FOR_ADCU2SPK_
+
+struct ADCU2SPK
+{
+  real_T ADCU_Stx;
+  real_T ADCU_FunctionCode;
+  real_T ADCU_SoundSourceCode;
+  real_T ADCU_VolumeCode;
+  real_T ADCU_Parameter;
+  real_T ADCU_Chk;
+  real_T ADCU_Etx;
+};
+
+#endif
+
 #ifndef DEFINED_TYPEDEF_FOR_OutputCAN_
 #define DEFINED_TYPEDEF_FOR_OutputCAN_
 
 struct OutputCAN
 {
   ADCU2SCU ADCU2SCU_bus;
+  ADCU2SPK ADCU2SPK_bus;
 };
 
 #endif

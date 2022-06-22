@@ -34,6 +34,16 @@ AION_IDS_SPEEDGOAT_cal_type AION_IDS_SPEEDGOAT_cal_impl = {
     },                                 /* set_ADCU_info */
 
     {
+      0.0,                             /* set_Stx */
+      0.0,                             /* set_FunctionCode */
+      0.0,                             /* set_SoundSourceCode */
+      0.0,                             /* set_VolumeCode */
+      0.0,                             /* set_Parameter */
+      0.0,                             /* set_Chk */
+      0.0                              /* set_Etx */
+    },                                 /* set_SPK_info */
+
+    {
       0U,                              /* get_ABSActiveSt */
       0.0,                             /* get_VehSpd */
       0U,                              /* get_VehSpdVD */
@@ -53,7 +63,8 @@ AION_IDS_SPEEDGOAT_cal_type AION_IDS_SPEEDGOAT_cal_impl = {
       0.0,                             /* get_GasPedalActPst */
       0U,                              /* get_AccElecECFail */
       0U,                              /* get_VehWheelTorqMax */
-      0U                               /* get_BrkPedalSt */
+      0U,                              /* get_BrkPedalSt */
+      0U                               /* get_ACCButtInfo */
     },                                 /* get_VCU_info */
 
     {
@@ -145,6 +156,16 @@ AION_IDS_SPEEDGOAT_cal_type AION_IDS_SPEEDGOAT_cal_impl = {
     },                                 /* set_ADCU_info */
 
     {
+      0.0,                             /* set_Stx */
+      0.0,                             /* set_FunctionCode */
+      0.0,                             /* set_SoundSourceCode */
+      0.0,                             /* set_VolumeCode */
+      0.0,                             /* set_Parameter */
+      0.0,                             /* set_Chk */
+      0.0                              /* set_Etx */
+    },                                 /* set_SPK_info */
+
+    {
       0U,                              /* get_ABSActiveSt */
       0.0,                             /* get_VehSpd */
       0U,                              /* get_VehSpdVD */
@@ -164,7 +185,8 @@ AION_IDS_SPEEDGOAT_cal_type AION_IDS_SPEEDGOAT_cal_impl = {
       0.0,                             /* get_GasPedalActPst */
       0U,                              /* get_AccElecECFail */
       0U,                              /* get_VehWheelTorqMax */
-      0U                               /* get_BrkPedalSt */
+      0U,                              /* get_BrkPedalSt */
+      0U                               /* get_ACCButtInfo */
     },                                 /* get_VCU_info */
 
     {
@@ -226,6 +248,11 @@ AION_IDS_SPEEDGOAT_cal_type AION_IDS_SPEEDGOAT_cal_impl = {
 
   /* Computed Parameter: RT2_InitialCondition
    * Referenced by: '<S19>/RT2'
+   */
+  { 0, 0, 0, 0, 0, 0.0, { 0, 0, 0, 0, 0, 0, 0, 0 } },
+
+  /* Computed Parameter: RT_InitialCondition
+   * Referenced by: '<S20>/RT'
    */
   { 0, 0, 0, 0, 0, 0.0, { 0, 0, 0, 0, 0, 0, 0, 0 } },
 
@@ -407,7 +434,7 @@ AION_IDS_SPEEDGOAT_cal_type AION_IDS_SPEEDGOAT_cal_impl = {
   /* Expression: port3
    * Referenced by: '<S2>/CAN Setup'
    */
-  1.0,
+  2.0,
 
   /* Computed Parameter: CANSetup_P7_Size
    * Referenced by: '<S2>/CAN Setup'
@@ -1149,10 +1176,15 @@ AION_IDS_SPEEDGOAT_cal_type AION_IDS_SPEEDGOAT_cal_impl = {
    */
   0.0,
 
-  /* Expression: 0
-   * Referenced by: synthesized block
+  /* Expression: [76 77 78 79 72]
+   * Referenced by: '<S5>/SPK_Chk'
    */
-  0.0,
+  { 76.0, 77.0, 78.0, 79.0, 72.0 },
+
+  /* Expression: [0:4]
+   * Referenced by: '<S5>/SPK_Chk'
+   */
+  { 0.0, 1.0, 2.0, 3.0, 4.0 },
 
   /* Expression: 0
    * Referenced by: synthesized block
@@ -1258,6 +1290,71 @@ AION_IDS_SPEEDGOAT_cal_type AION_IDS_SPEEDGOAT_cal_impl = {
    * Referenced by: synthesized block
    */
   0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 2
+   * Referenced by: '<S5>/Constant9'
+   */
+  2.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 81
+   * Referenced by: '<S5>/Constant6'
+   */
+  81.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: '<S5>/Constant8'
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 1
+   * Referenced by: '<S5>/Constant5'
+   */
+  1.0,
+
+  /* Expression: 0
+   * Referenced by: synthesized block
+   */
+  0.0,
+
+  /* Expression: 28
+   * Referenced by: '<S5>/Constant7'
+   */
+  28.0,
 
   /* Expression: 0
    * Referenced by: synthesized block
@@ -1379,6 +1476,76 @@ AION_IDS_SPEEDGOAT_cal_type AION_IDS_SPEEDGOAT_cal_impl = {
    */
   23.0,
 
+  /* Computed Parameter: ADCU2SPK_Brake_Command_CAN_write_P1_Size
+   * Referenced by: '<S20>/ADCU2SPK_Brake_Command_CAN_write'
+   */
+  { 1.0, 1.0 },
+
+  /* Expression: id
+   * Referenced by: '<S20>/ADCU2SPK_Brake_Command_CAN_write'
+   */
+  1.0,
+
+  /* Computed Parameter: ADCU2SPK_Brake_Command_CAN_write_P2_Size
+   * Referenced by: '<S20>/ADCU2SPK_Brake_Command_CAN_write'
+   */
+  { 1.0, 1.0 },
+
+  /* Expression: sampleTime
+   * Referenced by: '<S20>/ADCU2SPK_Brake_Command_CAN_write'
+   */
+  0.2,
+
+  /* Computed Parameter: ADCU2SPK_Brake_Command_CAN_write_P3_Size
+   * Referenced by: '<S20>/ADCU2SPK_Brake_Command_CAN_write'
+   */
+  { 1.0, 1.0 },
+
+  /* Expression: messageType
+   * Referenced by: '<S20>/ADCU2SPK_Brake_Command_CAN_write'
+   */
+  1.0,
+
+  /* Computed Parameter: ADCU2SPK_Brake_Command_CAN_write_P4_Size
+   * Referenced by: '<S20>/ADCU2SPK_Brake_Command_CAN_write'
+   */
+  { 1.0, 1.0 },
+
+  /* Expression: enaStatusPort
+   * Referenced by: '<S20>/ADCU2SPK_Brake_Command_CAN_write'
+   */
+  0.0,
+
+  /* Computed Parameter: ADCU2SPK_Brake_Command_CAN_write_P5_Size
+   * Referenced by: '<S20>/ADCU2SPK_Brake_Command_CAN_write'
+   */
+  { 1.0, 5.0 },
+
+  /* Computed Parameter: ADCU2SPK_Brake_Command_CAN_write_P5
+   * Referenced by: '<S20>/ADCU2SPK_Brake_Command_CAN_write'
+   */
+  { 73.0, 79.0, 54.0, 49.0, 50.0 },
+
+  /* Computed Parameter: ADCU2SPK_Brake_Command_CAN_write_P6_Size
+   * Referenced by: '<S20>/ADCU2SPK_Brake_Command_CAN_write'
+   */
+  { 1.0, 1.0 },
+
+  /* Expression: ptIdx
+   * Referenced by: '<S20>/ADCU2SPK_Brake_Command_CAN_write'
+   */
+  2.0,
+
+  /* Computed Parameter: ADCU2SPK_Brake_Command_CAN_write_P7_Size
+   * Referenced by: '<S20>/ADCU2SPK_Brake_Command_CAN_write'
+   */
+  { 1.0, 1.0 },
+
+  /* Expression: isFDMod
+   * Referenced by: '<S20>/ADCU2SPK_Brake_Command_CAN_write'
+   */
+  0.0,
+
   /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport17_InitialCondition
    * Referenced by: synthesized block
    */
@@ -1423,16 +1590,6 @@ AION_IDS_SPEEDGOAT_cal_type AION_IDS_SPEEDGOAT_cal_impl = {
    * Referenced by: synthesized block
    */
   NoBeamRequest,
-
-  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport1_InitialCondition
-   * Referenced by: synthesized block
-   */
-  Manual,
-
-  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport4_InitialCondition
-   * Referenced by: synthesized block
-   */
-  Manual,
 
   /* Computed Parameter: get_LatCtrlMode_InitialCondition
    * Referenced by: synthesized block
@@ -1483,6 +1640,11 @@ AION_IDS_SPEEDGOAT_cal_type AION_IDS_SPEEDGOAT_cal_impl = {
    * Referenced by: synthesized block
    */
   Invalid,
+
+  /* Computed Parameter: get_ACCButtInfo_InitialCondition
+   * Referenced by: synthesized block
+   */
+  0U,
 
   /* Computed Parameter: get_ActVehWheelTorq_InitialCondition
    * Referenced by: synthesized block

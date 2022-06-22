@@ -2,7 +2,7 @@
 ## Makefile generated for component 'AION_auto_mode_request'. 
 ## 
 ## Makefile     : AION_auto_mode_request.mk
-## Generated on : Fri Jun 10 15:54:28 2022
+## Generated on : Tue Jun 21 15:24:48 2022
 ## Final product: ./AION_auto_mode_request_rtwlib.a
 ## Product type : static library
 ## 
@@ -19,8 +19,8 @@
 
 PRODUCT_NAME              = AION_auto_mode_request
 MAKEFILE                  = AION_auto_mode_request.mk
-MATLAB_ROOT               = D:/R2021a
-MATLAB_BIN                = D:/R2021a/bin
+MATLAB_ROOT               = D:/MATLAB
+MATLAB_BIN                = D:/MATLAB/bin
 MATLAB_ARCH_BIN           = $(MATLAB_BIN)/win64
 START_DIR                 = E:/GitHub/HelloZeroOne/ART_IDS/work/codegen
 SOLVER                    = 

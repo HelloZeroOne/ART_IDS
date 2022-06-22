@@ -3,9 +3,9 @@
  *
  * Code generation for model "AION_auto_mode_request".
  *
- * Model version              : 1.101
+ * Model version              : 1.109
  * Simulink Coder version : 9.5 (R2021a) 14-Nov-2020
- * C++ source code generated on : Fri Jun 10 15:54:19 2022
+ * C++ source code generated on : Tue Jun 21 15:24:41 2022
  *
  * Target selection: slrealtime.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -52,6 +52,7 @@
 #define rtmSetStopRequestedPtr(rtm, val) ((rtm)->Timing.stopRequestedFlag = (val))
 #endif
 
+extern P_AION_auto_mode_request_T AION_auto_mode_request_P;
 extern void* slrtRegisterSignalToLoggingService(uintptr_t sigAddr);
 
 #endif                        /* RTW_HEADER_AION_auto_mode_request_private_h_ */

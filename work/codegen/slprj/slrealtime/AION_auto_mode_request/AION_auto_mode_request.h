@@ -6,6 +6,7 @@
 
 #ifndef RTW_HEADER_AION_auto_mode_request_h_
 #define RTW_HEADER_AION_auto_mode_request_h_
+#include <cmath>
 #include <cstring>
 #include <logsrv.h>
 #include "rtwtypes.h"
@@ -18,24 +19,48 @@
 
 /* Shared type includes */
 #include "multiword_types.h"
+#include "rt_nonfinite.h"
+#include "rtGetInf.h"
 
 /* Block signals for model 'AION_auto_mode_request' */
 struct B_AION_auto_mode_request_c_T {
-  Control_request longitudinal_control_req;
-                                /* '<Root>/Longitudinal_control_status_judge' */
-  Control_request lateral_control_req;
-                                     /* '<Root>/Lateral_control_status_judge' */
+  real_T QlightChannel;                /* '<Root>/Data Type Conversion4' */
+  real_T SPK_Chk;                      /* '<Root>/SPK_Chk' */
+  real_T LngCtrlReq;                   /* '<Root>/Chart2' */
+  real_T LatCtrlReq;                   /* '<Root>/Chart' */
+  uint32_T BitwiseAND;                 /* '<Root>/Bitwise AND' */
+  uint8_T DataTypeConversion2;         /* '<Root>/Data Type Conversion2' */
+  uint8_T DataTypeConversion10;        /* '<Root>/Data Type Conversion10' */
+  uint8_T QlightChannel_f;             /* '<Root>/Chart' */
 };
 
 /* Block states (default storage) for model 'AION_auto_mode_request' */
 struct DW_AION_auto_mode_request_f_T {
   struct {
     void *AQHandles;
-  } TAQSigLogging_InsertedFor_Lateral_control_status_judge_at_outport_0_PWORK;/* synthesized block */
+  } TAQSigLogging_InsertedFor_DataTypeConversion4_at_outport_0_PWORK;/* synthesized block */
 
   struct {
     void *AQHandles;
-  } TAQSigLogging_InsertedFor_Longitudinal_control_status_judge_at_outport_0_PWORK;/* synthesized block */
+  } TAQSigLogging_InsertedFor_SPK_Chk_at_outport_0_PWORK;/* synthesized block */
+
+  uint32_T is_c2_AION_auto_mode_request;/* '<Root>/Chart2' */
+  uint32_T is_c3_AION_auto_mode_request;/* '<Root>/Chart' */
+  uint8_T is_active_c2_AION_auto_mode_request;/* '<Root>/Chart2' */
+  uint8_T is_active_c3_AION_auto_mode_request;/* '<Root>/Chart' */
+};
+
+/* Parameters (default storage) */
+struct P_AION_auto_mode_request_T_ {
+  uint32_T BitwiseAND_BitMask;         /* Mask Parameter: BitwiseAND_BitMask
+                                        * Referenced by: '<Root>/Bitwise AND'
+                                        */
+  real_T SPK_Chk_tableData[5];         /* Expression: [76 77 78 79 72]
+                                        * Referenced by: '<Root>/SPK_Chk'
+                                        */
+  real_T SPK_Chk_bp01Data[5];          /* Expression: [0:4]
+                                        * Referenced by: '<Root>/SPK_Chk'
+                                        */
 };
 
 /* Real-time Model Data Structure */
@@ -62,11 +87,13 @@ struct MdlrefDW_AION_auto_mode_request_T {
 extern void AION_auto_mode_request_initialize(const char_T **rt_errorStatus,
   RT_MODEL_AION_auto_mode_request_T *const AION_auto_mode_request_M,
   B_AION_auto_mode_request_c_T *localB, DW_AION_auto_mode_request_f_T *localDW);
-extern void AION_auto_mode_request(const Control_request
-  *rtu_InBus_set_lateral_control_info_set_LatCtrlReq, const real_T
+extern void AION_auto_mode_request_Init(B_AION_auto_mode_request_c_T *localB,
+  DW_AION_auto_mode_request_f_T *localDW);
+extern void AION_auto_mode_request_Reset(B_AION_auto_mode_request_c_T *localB,
+  DW_AION_auto_mode_request_f_T *localDW);
+extern void AION_auto_mode_request(const real_T
   *rtu_InBus_set_lateral_control_info_set_SteerAngReq, const real_T
-  *rtu_InBus_set_lateral_control_info_set_SteerWhlTorqReq, const Control_request
-  *rtu_InBus_set_longitudinal_control_info_set_LngCtrlReq, const real_T
+  *rtu_InBus_set_lateral_control_info_set_SteerWhlTorqReq, const real_T
   *rtu_InBus_set_longitudinal_control_info_set_AutoTrqWhlReq, const real_T
   *rtu_InBus_set_longitudinal_control_info_set_BrakeReq, const Gear_request
   *rtu_InBus_set_longitudinal_control_info_set_GearLvlReq, const
@@ -80,7 +107,12 @@ extern void AION_auto_mode_request(const Control_request
   *rtu_InBus_set_ADCU_info_set_BeamReq, const Enable_request
   *rtu_InBus_set_ADCU_info_set_BodyCtrlReq, const Active_request
   *rtu_InBus_set_ADCU_info_set_HornRingReq, const Light_request
-  *rtu_InBus_set_ADCU_info_set_TurnLightReq, const uint8_T
+  *rtu_InBus_set_ADCU_info_set_TurnLightReq, const real_T
+  *rtu_InBus_set_SPK_info_set_Stx, const real_T
+  *rtu_InBus_set_SPK_info_set_FunctionCode, const real_T
+  *rtu_InBus_set_SPK_info_set_VolumeCode, const real_T
+  *rtu_InBus_set_SPK_info_set_Parameter, const real_T
+  *rtu_InBus_set_SPK_info_set_Etx, const uint8_T
   *rtu_InBus_get_BCS_info_get_ABSActiveSt, const real_T
   *rtu_InBus_get_BCS_info_get_VehSpd, const uint8_T
   *rtu_InBus_get_BCS_info_get_VehSpdVD, const real_T
@@ -98,6 +130,7 @@ extern void AION_auto_mode_request(const Control_request
   *rtu_InBus_get_VCU_info_get_AccElecECFail, const uint32_T
   *rtu_InBus_get_VCU_info_get_VehWheelTorqMax, const uint8_T
   *rtu_InBus_get_VCU_info_get_BrkPedalSt, const uint32_T
+  *rtu_InBus_get_VCU_info_get_ACCButtInfo, const uint32_T
   *rtu_InBus_get_SCU_info_get_LatAutoCheckReport, const Control_status
   *rtu_InBus_get_SCU_info_get_LatCtrlMode, const uint32_T
   *rtu_InBus_get_SCU_info_get_LatQuitReport, const uint32_T
@@ -153,8 +186,14 @@ extern void AION_auto_mode_request(const Control_request
   *rty_OutBus_set_ADCU_info_set_BeamReq, Enable_request
   *rty_OutBus_set_ADCU_info_set_BodyCtrlReq, Active_request
   *rty_OutBus_set_ADCU_info_set_HornRingReq, Light_request
-  *rty_OutBus_set_ADCU_info_set_TurnLightReq, uint8_T
-  *rty_OutBus_get_BCS_info_get_ABSActiveSt, real_T
+  *rty_OutBus_set_ADCU_info_set_TurnLightReq, real_T
+  *rty_OutBus_set_SPK_info_set_Stx, real_T
+  *rty_OutBus_set_SPK_info_set_FunctionCode, real_T
+  *rty_OutBus_set_SPK_info_set_SoundSourceCode, real_T
+  *rty_OutBus_set_SPK_info_set_VolumeCode, real_T
+  *rty_OutBus_set_SPK_info_set_Parameter, real_T
+  *rty_OutBus_set_SPK_info_set_Chk, real_T *rty_OutBus_set_SPK_info_set_Etx,
+  uint8_T *rty_OutBus_get_BCS_info_get_ABSActiveSt, real_T
   *rty_OutBus_get_BCS_info_get_VehSpd, uint8_T
   *rty_OutBus_get_BCS_info_get_VehSpdVD, real_T
   *rty_OutBus_get_BCS_info_get_YawRate, real_T
@@ -171,6 +210,7 @@ extern void AION_auto_mode_request(const Control_request
   *rty_OutBus_get_VCU_info_get_AccElecECFail, uint32_T
   *rty_OutBus_get_VCU_info_get_VehWheelTorqMax, uint8_T
   *rty_OutBus_get_VCU_info_get_BrkPedalSt, uint32_T
+  *rty_OutBus_get_VCU_info_get_ACCButtInfo, uint32_T
   *rty_OutBus_get_SCU_info_get_LatAutoCheckReport, Control_status
   *rty_OutBus_get_SCU_info_get_LatCtrlMode, uint32_T
   *rty_OutBus_get_SCU_info_get_LatQuitReport, uint32_T
@@ -207,7 +247,8 @@ extern void AION_auto_mode_request(const Control_request
   *rty_OutBus_get_IMU_info_get_AccelerationZ, real_T
   *rty_OutBus_get_IMU_info_get_Latitude, real_T
   *rty_OutBus_get_IMU_info_get_Longitude, real_T
-  *rty_OutBus_get_IMU_info_get_Altitude, B_AION_auto_mode_request_c_T *localB);
+  *rty_OutBus_get_IMU_info_get_Altitude, B_AION_auto_mode_request_c_T *localB,
+  DW_AION_auto_mode_request_f_T *localDW);
 
 /*-
  * The generated code includes comments that allow you to trace directly
@@ -224,7 +265,7 @@ extern void AION_auto_mode_request(const Control_request
  * Here is the system hierarchy for this model
  *
  * '<Root>' : 'AION_auto_mode_request'
- * '<S1>'   : 'AION_auto_mode_request/Lateral_control_status_judge'
- * '<S2>'   : 'AION_auto_mode_request/Longitudinal_control_status_judge'
+ * '<S1>'   : 'AION_auto_mode_request/Chart'
+ * '<S2>'   : 'AION_auto_mode_request/Chart2'
  */
 #endif                                /* RTW_HEADER_AION_auto_mode_request_h_ */

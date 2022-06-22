@@ -2,9 +2,9 @@
  * Code generation for system model 'AION_signal_transfer'
  *
  * Model                      : AION_signal_transfer
- * Model version              : 4.104
+ * Model version              : 4.110
  * Simulink Coder version : 9.5 (R2021a) 14-Nov-2020
- * C++ source code generated on : Tue Jun 14 10:26:18 2022
+ * C++ source code generated on : Mon Jun 20 15:44:32 2022
  *
  * Note that the functions contained in this file are part of a Simulink
  * model, and are not self-contained algorithms.
@@ -35,8 +35,9 @@ void AION_signal_transfer(const real_T
   real_T *rtu_ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_14_VCU_VehRdySt,
   const real_T
   *rtu_ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_15_VCU_CrntGearLvl, const
-  real_T *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_GPSWeek, const real_T
-  *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_GPSTime, const real_T
+  real_T *rtu_ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_17_VCU_ACCButtInfo,
+  const real_T *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_GPSWeek, const
+  real_T *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_GPSTime, const real_T
   *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Heading, const real_T
   *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Pitch, const real_T
   *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Roll, const real_T
@@ -69,7 +70,14 @@ void AION_signal_transfer(const real_T
   *rtu_ADCU_InternalOutputPort_set_ADCU_info_set_BodyCtrlReq, const
   Active_request *rtu_ADCU_InternalOutputPort_set_ADCU_info_set_HornRingReq,
   const Light_request
-  *rtu_ADCU_InternalOutputPort_set_ADCU_info_set_TurnLightReq, Control_request
+  *rtu_ADCU_InternalOutputPort_set_ADCU_info_set_TurnLightReq, const real_T
+  *rtu_ADCU_InternalOutputPort_set_SPK_info_set_Stx, const real_T
+  *rtu_ADCU_InternalOutputPort_set_SPK_info_set_FunctionCode, const real_T
+  *rtu_ADCU_InternalOutputPort_set_SPK_info_set_SoundSourceCode, const real_T
+  *rtu_ADCU_InternalOutputPort_set_SPK_info_set_VolumeCode, const real_T
+  *rtu_ADCU_InternalOutputPort_set_SPK_info_set_Parameter, const real_T
+  *rtu_ADCU_InternalOutputPort_set_SPK_info_set_Chk, const real_T
+  *rtu_ADCU_InternalOutputPort_set_SPK_info_set_Etx, Control_request
   *rty_ADCU_InternalInputPort_set_lateral_control_info_set_LatCtrlReq, real_T
   *rty_ADCU_InternalInputPort_set_lateral_control_info_set_SteerAngReq, real_T
   *rty_ADCU_InternalInputPort_set_lateral_control_info_set_SteerWhlTorqReq,
@@ -91,7 +99,14 @@ void AION_signal_transfer(const real_T
   *rty_ADCU_InternalInputPort_set_ADCU_info_set_BeamReq, Enable_request
   *rty_ADCU_InternalInputPort_set_ADCU_info_set_BodyCtrlReq, Active_request
   *rty_ADCU_InternalInputPort_set_ADCU_info_set_HornRingReq, Light_request
-  *rty_ADCU_InternalInputPort_set_ADCU_info_set_TurnLightReq, uint8_T
+  *rty_ADCU_InternalInputPort_set_ADCU_info_set_TurnLightReq, real_T
+  *rty_ADCU_InternalInputPort_set_SPK_info_set_Stx, real_T
+  *rty_ADCU_InternalInputPort_set_SPK_info_set_FunctionCode, real_T
+  *rty_ADCU_InternalInputPort_set_SPK_info_set_SoundSourceCode, real_T
+  *rty_ADCU_InternalInputPort_set_SPK_info_set_VolumeCode, real_T
+  *rty_ADCU_InternalInputPort_set_SPK_info_set_Parameter, real_T
+  *rty_ADCU_InternalInputPort_set_SPK_info_set_Chk, real_T
+  *rty_ADCU_InternalInputPort_set_SPK_info_set_Etx, uint8_T
   *rty_ADCU_InternalInputPort_get_BCS_info_get_ABSActiveSt, real_T
   *rty_ADCU_InternalInputPort_get_BCS_info_get_VehSpd, uint8_T
   *rty_ADCU_InternalInputPort_get_BCS_info_get_VehSpdVD, real_T
@@ -109,6 +124,7 @@ void AION_signal_transfer(const real_T
   *rty_ADCU_InternalInputPort_get_VCU_info_get_AccElecECFail, uint32_T
   *rty_ADCU_InternalInputPort_get_VCU_info_get_VehWheelTorqMax, uint8_T
   *rty_ADCU_InternalInputPort_get_VCU_info_get_BrkPedalSt, uint32_T
+  *rty_ADCU_InternalInputPort_get_VCU_info_get_ACCButtInfo, uint32_T
   *rty_ADCU_InternalInputPort_get_SCU_info_get_LatAutoCheckReport,
   Control_status *rty_ADCU_InternalInputPort_get_SCU_info_get_LatCtrlMode,
   uint32_T *rty_ADCU_InternalInputPort_get_SCU_info_get_LatQuitReport, uint32_T *
@@ -160,9 +176,22 @@ void AION_signal_transfer(const real_T
   real_T *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_3_ADCU_BodyCtrlReq,
   real_T *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_3_ADCU_HornRingReq,
   real_T *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_3_ADCU_TurnLightReq,
+  real_T *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SPK_bus_ADCU_Stx, real_T
+  *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SPK_bus_ADCU_FunctionCode, real_T
+  *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SPK_bus_ADCU_SoundSourceCode, real_T
+  *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SPK_bus_ADCU_VolumeCode, real_T
+  *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SPK_bus_ADCU_Parameter, real_T
+  *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SPK_bus_ADCU_Chk, real_T
+  *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SPK_bus_ADCU_Etx,
   B_AION_signal_transfer_c_T *localB)
 {
   real_T tmp;
+
+  /* SignalConversion generated from: '<Root>/ADCU_InternalInputPort_Outport_1' */
+  *rty_ADCU_InternalInputPort_get_SRS_info_get_DriverSeatBeltSt = 0U;
+
+  /* SignalConversion generated from: '<Root>/ADCU_InternalInputPort_Outport_1' */
+  *rty_ADCU_InternalInputPort_get_SRS_info_get_PsngrSeatBeltSt = 0U;
 
   /* SignalConversion generated from: '<Root>/ADCU_InternalInputPort_Outport_1' */
   *rty_ADCU_InternalInputPort_get_EPS_info_get_SteeringAngleSpd = 0U;
@@ -238,6 +267,27 @@ void AION_signal_transfer(const real_T
   *rty_ADCU_InternalInputPort_set_ADCU_info_set_HornRingReq = NotActiveRequest;
 
   /* SignalConversion generated from: '<Root>/ADCU_InternalInputPort_Outport_1' */
+  *rty_ADCU_InternalInputPort_set_SPK_info_set_Stx = 0.0;
+
+  /* SignalConversion generated from: '<Root>/ADCU_InternalInputPort_Outport_1' */
+  *rty_ADCU_InternalInputPort_set_SPK_info_set_FunctionCode = 0.0;
+
+  /* SignalConversion generated from: '<Root>/ADCU_InternalInputPort_Outport_1' */
+  *rty_ADCU_InternalInputPort_set_SPK_info_set_SoundSourceCode = 0.0;
+
+  /* SignalConversion generated from: '<Root>/ADCU_InternalInputPort_Outport_1' */
+  *rty_ADCU_InternalInputPort_set_SPK_info_set_VolumeCode = 0.0;
+
+  /* SignalConversion generated from: '<Root>/ADCU_InternalInputPort_Outport_1' */
+  *rty_ADCU_InternalInputPort_set_SPK_info_set_Parameter = 0.0;
+
+  /* SignalConversion generated from: '<Root>/ADCU_InternalInputPort_Outport_1' */
+  *rty_ADCU_InternalInputPort_set_SPK_info_set_Chk = 0.0;
+
+  /* SignalConversion generated from: '<Root>/ADCU_InternalInputPort_Outport_1' */
+  *rty_ADCU_InternalInputPort_set_SPK_info_set_Etx = 0.0;
+
+  /* SignalConversion generated from: '<Root>/ADCU_InternalInputPort_Outport_1' */
   *rty_ADCU_InternalInputPort_get_BCS_info_get_ABSActiveSt = 0U;
 
   /* SignalConversion generated from: '<Root>/ADCU_InternalInputPort_Outport_1' */
@@ -293,12 +343,6 @@ void AION_signal_transfer(const real_T
 
   /* SignalConversion generated from: '<Root>/ADCU_InternalInputPort_Outport_1' */
   *rty_ADCU_InternalInputPort_get_EPB_info_get_SysSt = 0U;
-
-  /* SignalConversion generated from: '<Root>/ADCU_InternalInputPort_Outport_1' */
-  *rty_ADCU_InternalInputPort_get_SRS_info_get_DriverSeatBeltSt = 0U;
-
-  /* SignalConversion generated from: '<Root>/ADCU_InternalInputPort_Outport_1' */
-  *rty_ADCU_InternalInputPort_get_SRS_info_get_PsngrSeatBeltSt = 0U;
 
   /* DataTypeConversion: '<Root>/Data Type Conversion1' */
   tmp = std::floor
@@ -605,6 +649,21 @@ void AION_signal_transfer(const real_T
   *rty_ADCU_InternalInputPort_get_IMU_info_get_GPSWeek =
     *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_GPSWeek;
 
+  /* DataTypeConversion: '<Root>/Data Type Conversion70' */
+  tmp = std::floor
+    (*rtu_ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_17_VCU_ACCButtInfo);
+  if (rtIsNaN(tmp) || rtIsInf(tmp)) {
+    tmp = 0.0;
+  } else {
+    tmp = std::fmod(tmp, 4.294967296E+9);
+  }
+
+  *rty_ADCU_InternalInputPort_get_VCU_info_get_ACCButtInfo = tmp < 0.0 ?
+    static_cast<uint32_T>(-static_cast<int32_T>(static_cast<uint32_T>(-tmp))) :
+    static_cast<uint32_T>(tmp);
+
+  /* End of DataTypeConversion: '<Root>/Data Type Conversion70' */
+
   /* DataTypeConversion: '<Root>/Data Type Conversion8' */
   *rty_ADCU_InternalInputPort_get_EPS_info_get_SteeringAngle =
     *rtu_ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_10_EPS_SteeringAngle;
@@ -679,6 +738,34 @@ void AION_signal_transfer(const real_T
   /* DataTypeConversion: '<Root>/Data Type Conversion6' */
   *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_2_ADCU_SteerWhlTorqReq =
     *rtu_ADCU_InternalOutputPort_set_lateral_control_info_set_SteerWhlTorqReq;
+
+  /* DataTypeConversion: '<Root>/Data Type Conversion62' */
+  *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SPK_bus_ADCU_Chk =
+    *rtu_ADCU_InternalOutputPort_set_SPK_info_set_Chk;
+
+  /* DataTypeConversion: '<Root>/Data Type Conversion63' */
+  *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SPK_bus_ADCU_Etx =
+    *rtu_ADCU_InternalOutputPort_set_SPK_info_set_Etx;
+
+  /* DataTypeConversion: '<Root>/Data Type Conversion64' */
+  *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SPK_bus_ADCU_FunctionCode =
+    *rtu_ADCU_InternalOutputPort_set_SPK_info_set_FunctionCode;
+
+  /* DataTypeConversion: '<Root>/Data Type Conversion65' */
+  *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SPK_bus_ADCU_Parameter =
+    *rtu_ADCU_InternalOutputPort_set_SPK_info_set_Parameter;
+
+  /* DataTypeConversion: '<Root>/Data Type Conversion66' */
+  *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SPK_bus_ADCU_SoundSourceCode =
+    *rtu_ADCU_InternalOutputPort_set_SPK_info_set_SoundSourceCode;
+
+  /* DataTypeConversion: '<Root>/Data Type Conversion67' */
+  *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SPK_bus_ADCU_Stx =
+    *rtu_ADCU_InternalOutputPort_set_SPK_info_set_Stx;
+
+  /* DataTypeConversion: '<Root>/Data Type Conversion69' */
+  *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SPK_bus_ADCU_VolumeCode =
+    *rtu_ADCU_InternalOutputPort_set_SPK_info_set_VolumeCode;
 
   /* DataTypeConversion: '<Root>/Data Type Conversion7' */
   *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_1_ADCU_BrakeReq =

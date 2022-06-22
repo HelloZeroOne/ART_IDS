@@ -7,11 +7,34 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
-    NumChartData   0 \
+    NumChartData   3 \
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
       IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "sfEvent"\
+      Description  "ActiveChartEvent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_active_c3_AION_IDS_SPEEDGOAT"\
+      Description  "StateIsActive"\
+      SFName       "is_active_c3_AION_IDS_SPEEDGOAT"\
+      Path         "is_active_c3_AION_IDS_SPEEDGOAT"\
+      SrcLocation  ""\
+      IsTestPoint  1\
+    }\
+    ChartData {\
+      Name         "is_c3_AION_IDS_SPEEDGOAT"\
+      Description  "StateActiveChild"\
+      SFName       "is_c3_AION_IDS_SPEEDGOAT"\
+      Path         "is_c3_AION_IDS_SPEEDGOAT"\
+      SrcLocation  ""\
+      IsTestPoint  1\
     }\
   }
   %return ChartDataElements

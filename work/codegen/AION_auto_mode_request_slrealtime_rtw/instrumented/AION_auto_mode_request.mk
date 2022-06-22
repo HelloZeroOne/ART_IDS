@@ -2,7 +2,7 @@
 ## Makefile generated for component 'AION_auto_mode_request'. 
 ## 
 ## Makefile     : AION_auto_mode_request.mk
-## Generated on : Sun May 22 17:48:01 2022
+## Generated on : Tue Jun 21 16:13:26 2022
 ## Final product: $(START_DIR)/AION_auto_mode_request_slrealtime_rtw/AION_auto_mode_request
 ## Product type : executable
 ## 
@@ -18,10 +18,10 @@
 
 PRODUCT_NAME              = AION_auto_mode_request
 MAKEFILE                  = AION_auto_mode_request.mk
-MATLAB_ROOT               = D:/R2021a
-MATLAB_BIN                = D:/R2021a/bin
+MATLAB_ROOT               = D:/MATLAB
+MATLAB_BIN                = D:/MATLAB/bin
 MATLAB_ARCH_BIN           = $(MATLAB_BIN)/win64
-START_DIR                 = D:/GitHub/ART-IDS-Team/ART_IDS/work/codegen
+START_DIR                 = E:/GitHub/HelloZeroOne/ART_IDS/work/codegen
 SOLVER                    = 
 SOLVER_OBJ                = 
 CLASSIC_INTERFACE         = 0
@@ -148,7 +148,7 @@ DEFINES = $(DEFINES_) $(DEFINES_BUILD_ARGS) $(DEFINES_CUSTOM) $(DEFINES_OPTS) $(
 ## SOURCE FILES
 ###########################################################################
 
-SRCS = $(START_DIR)/AION_auto_mode_request_slrealtime_rtw/slrealtime_datatype_ground.c $(START_DIR)/AION_auto_mode_request_slrealtime_rtw/AION_auto_mode_request.cpp $(START_DIR)/AION_auto_mode_request_slrealtime_rtw/rtGetInf.cpp $(START_DIR)/AION_auto_mode_request_slrealtime_rtw/rtGetNaN.cpp $(START_DIR)/AION_auto_mode_request_slrealtime_rtw/rt_nonfinite.cpp $(START_DIR)/AION_auto_mode_request_slrealtime_rtw/main.cpp host_timer_x86.c slrealtime_code_profiling_utility_functions.cpp
+SRCS = $(START_DIR)/AION_auto_mode_request_slrealtime_rtw/slrealtime_datatype_ground.c $(START_DIR)/AION_auto_mode_request_slrealtime_rtw/AION_auto_mode_request.cpp $(START_DIR)/AION_auto_mode_request_slrealtime_rtw/AION_auto_mode_request_data.cpp $(START_DIR)/AION_auto_mode_request_slrealtime_rtw/rtGetInf.cpp $(START_DIR)/AION_auto_mode_request_slrealtime_rtw/rtGetNaN.cpp $(START_DIR)/AION_auto_mode_request_slrealtime_rtw/rt_nonfinite.cpp $(START_DIR)/AION_auto_mode_request_slrealtime_rtw/main.cpp host_timer_x86.c slrealtime_code_profiling_utility_functions.cpp
 
 ALL_SRCS = $(SRCS)
 
@@ -156,7 +156,7 @@ ALL_SRCS = $(SRCS)
 ## OBJECTS
 ###########################################################################
 
-OBJS = slrealtime_datatype_ground.o AION_auto_mode_request.o rtGetInf.o rtGetNaN.o rt_nonfinite.o main.o host_timer_x86.o slrealtime_code_profiling_utility_functions.o
+OBJS = slrealtime_datatype_ground.o AION_auto_mode_request.o AION_auto_mode_request_data.o rtGetInf.o rtGetNaN.o rt_nonfinite.o main.o host_timer_x86.o slrealtime_code_profiling_utility_functions.o
 
 ALL_OBJS = $(OBJS)
 
@@ -306,6 +306,10 @@ slrealtime_datatype_ground.o : $(START_DIR)/AION_auto_mode_request_slrealtime_rt
 
 
 AION_auto_mode_request.o : $(START_DIR)/AION_auto_mode_request_slrealtime_rtw/AION_auto_mode_request.cpp
+	$(CPP) $(CPPFLAGS) -o $@ $<
+
+
+AION_auto_mode_request_data.o : $(START_DIR)/AION_auto_mode_request_slrealtime_rtw/AION_auto_mode_request_data.cpp
 	$(CPP) $(CPPFLAGS) -o $@ $<
 
 

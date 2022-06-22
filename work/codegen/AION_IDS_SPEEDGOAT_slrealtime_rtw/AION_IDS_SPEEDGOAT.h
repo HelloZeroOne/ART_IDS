@@ -3,9 +3,9 @@
  *
  * Code generation for model "AION_IDS_SPEEDGOAT".
  *
- * Model version              : 4.303
+ * Model version              : 4.330
  * Simulink Coder version : 9.5 (R2021a) 14-Nov-2020
- * C++ source code generated on : Tue Jun 14 10:27:28 2022
+ * C++ source code generated on : Tue Jun 21 16:06:30 2022
  *
  * Target selection: slrealtime.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -154,7 +154,10 @@ struct B_AION_IDS_SPEEDGOAT_T {
   CAN_DATATYPE RT1;                    /* '<S19>/RT1' */
   CAN_DATATYPE ADCU2SCU_Steer_Command_CAN_pack;
                                    /* '<S19>/ADCU2SCU_Steer_Command_CAN_pack' */
+  CAN_DATATYPE ADCU2SPK_Brake_Command_CAN_pack;
+                                   /* '<S20>/ADCU2SPK_Brake_Command_CAN_pack' */
   CAN_DATATYPE RT2;                    /* '<S19>/RT2' */
+  CAN_DATATYPE RT_n;                   /* '<S20>/RT' */
   CAN_DATATYPE SCU2ADCU_CAN_read_o2;   /* '<S12>/SCU2ADCU_CAN_read' */
   CAN_DATATYPE IMU2ADCU_CAN_read_o2;   /* '<S11>/IMU2ADCU_CAN_read' */
   serialfifoptr FIFOwrite;             /* '<S16>/FIFO write' */
@@ -164,6 +167,13 @@ struct B_AION_IDS_SPEEDGOAT_T {
   real_T set_SteerWhlTorqReq;          /* '<S2>/Signal_Transfer' */
   real_T set_AutoTrqWhlReq;            /* '<S2>/Signal_Transfer' */
   real_T set_BrakeReq;                 /* '<S2>/Signal_Transfer' */
+  real_T set_Stx;                      /* '<S2>/Signal_Transfer' */
+  real_T set_FunctionCode;             /* '<S2>/Signal_Transfer' */
+  real_T set_SoundSourceCode;          /* '<S2>/Signal_Transfer' */
+  real_T set_VolumeCode;               /* '<S2>/Signal_Transfer' */
+  real_T set_Parameter;                /* '<S2>/Signal_Transfer' */
+  real_T set_Chk;                      /* '<S2>/Signal_Transfer' */
+  real_T set_Etx;                      /* '<S2>/Signal_Transfer' */
   real_T get_VehSpd;                   /* '<S2>/Signal_Transfer' */
   real_T get_YawRate;                  /* '<S2>/Signal_Transfer' */
   real_T get_ActVehLaltrlAccel;        /* '<S2>/Signal_Transfer' */
@@ -197,6 +207,13 @@ struct B_AION_IDS_SPEEDGOAT_T {
   real_T ADCU_BodyCtrlReq;             /* '<S2>/Signal_Transfer' */
   real_T ADCU_HornRingReq;             /* '<S2>/Signal_Transfer' */
   real_T ADCU_TurnLightReq;            /* '<S2>/Signal_Transfer' */
+  real_T ADCU_Stx;                     /* '<S2>/Signal_Transfer' */
+  real_T ADCU_FunctionCode;            /* '<S2>/Signal_Transfer' */
+  real_T ADCU_SoundSourceCode;         /* '<S2>/Signal_Transfer' */
+  real_T ADCU_VolumeCode;              /* '<S2>/Signal_Transfer' */
+  real_T ADCU_Parameter;               /* '<S2>/Signal_Transfer' */
+  real_T ADCU_Chk;                     /* '<S2>/Signal_Transfer' */
+  real_T ADCU_Etx;                     /* '<S2>/Signal_Transfer' */
   real_T GPCHCDecode_o1;               /* '<S15>/GPCHC Decode ' */
   real_T GPCHCDecode_o2;               /* '<S15>/GPCHC Decode ' */
   real_T GPCHCDecode_o3;               /* '<S15>/GPCHC Decode ' */
@@ -247,9 +264,8 @@ struct B_AION_IDS_SPEEDGOAT_T {
   real_T get_AccelerationZ_p;          /* '<S6>/Signal Copy27' */
   real_T get_SteeringAngle_d;          /* '<S6>/Signal Copy3' */
   real_T get_VehSpd_h;                 /* '<S6>/Signal Copy6' */
-  real_T AutoTrqWhlReq_test;           /* '<S5>/AutoTrqWhlReq_test' */
-  real_T BrakeReq_test;                /* '<S5>/BrakeReq_test' */
-  real_T LatCtrlReq_test;              /* '<S5>/LatCtrlReq_test' */
+  real_T SPK_SoundSourceCode;          /* '<S5>/SPK_SoundSourceCode' */
+  real_T SPK_Chk;                      /* '<S5>/SPK_Chk' */
   real_T S_GPSWeek;                    /* '<S15>/S_GPSWeek' */
   real_T S_GPSTime;                    /* '<S15>/S_GPSTime' */
   real_T TmpRTBAtSwitch9Inport1;
@@ -278,8 +294,13 @@ struct B_AION_IDS_SPEEDGOAT_T {
   real_T count;                        /* '<S15>/count' */
   real_T TmpRTBAtAION_auto_mode_requestInport2;
   real_T TmpRTBAtAION_auto_mode_requestInport3;
-  real_T AutoTrqWhlReq_test_p;
-  real_T BrakeReq_test_e;
+  real_T AutoTrqWhlReq_test;
+  real_T BrakeReq_test;
+  real_T set_Stx_p;
+  real_T set_FunctionCode_d;
+  real_T set_VolumeCode_f;
+  real_T set_Parameter_l;
+  real_T set_Etx_g;
   real_T get_VehSpd_hz;
   real_T get_YawRate_p;
   real_T get_ActVehLaltrlAccel_d;
@@ -305,27 +326,36 @@ struct B_AION_IDS_SPEEDGOAT_T {
   real_T set_SteerWhlTorqReq_b;        /* '<S1>/AION_auto_mode_request' */
   real_T set_AutoTrqWhlReq_e;          /* '<S1>/AION_auto_mode_request' */
   real_T set_BrakeReq_k;               /* '<S1>/AION_auto_mode_request' */
-  real_T get_VehSpd_n;                 /* '<S1>/AION_auto_mode_request' */
-  real_T get_YawRate_f;                /* '<S1>/AION_auto_mode_request' */
-  real_T get_ActVehLaltrlAccel_j;      /* '<S1>/AION_auto_mode_request' */
-  real_T get_ActVehLongAccel_n;        /* '<S1>/AION_auto_mode_request' */
-  real_T get_GasPedalActPst_k;         /* '<S1>/AION_auto_mode_request' */
-  real_T get_SteeringAngle_o;          /* '<S1>/AION_auto_mode_request' */
-  real_T get_StrngWhlTorq_n;           /* '<S1>/AION_auto_mode_request' */
-  real_T get_GPSWeek_g;                /* '<S1>/AION_auto_mode_request' */
-  real_T get_GPSTime_d;                /* '<S1>/AION_auto_mode_request' */
-  real_T get_Heading_h;                /* '<S1>/AION_auto_mode_request' */
-  real_T get_Pitch_l;                  /* '<S1>/AION_auto_mode_request' */
+  real_T set_Stx_h;                    /* '<S1>/AION_auto_mode_request' */
+  real_T set_FunctionCode_g;           /* '<S1>/AION_auto_mode_request' */
+  real_T set_SoundSourceCode_j;        /* '<S1>/AION_auto_mode_request' */
+  real_T set_VolumeCode_e;             /* '<S1>/AION_auto_mode_request' */
+  real_T set_Parameter_n;              /* '<S1>/AION_auto_mode_request' */
+  real_T set_Chk_e;                    /* '<S1>/AION_auto_mode_request' */
+  real_T set_Etx_p;                    /* '<S1>/AION_auto_mode_request' */
+  real_T get_VehSpd_b;                 /* '<S1>/AION_auto_mode_request' */
+  real_T get_YawRate_e;                /* '<S1>/AION_auto_mode_request' */
+  real_T get_ActVehLaltrlAccel_o;      /* '<S1>/AION_auto_mode_request' */
+  real_T get_ActVehLongAccel_c;        /* '<S1>/AION_auto_mode_request' */
+  real_T get_GasPedalActPst_n;         /* '<S1>/AION_auto_mode_request' */
+  real_T get_SteeringAngle_dc;         /* '<S1>/AION_auto_mode_request' */
+  real_T get_StrngWhlTorq_k;           /* '<S1>/AION_auto_mode_request' */
+  real_T get_GPSWeek_b;                /* '<S1>/AION_auto_mode_request' */
+  real_T get_GPSTime_h;                /* '<S1>/AION_auto_mode_request' */
+  real_T get_Heading_l;                /* '<S1>/AION_auto_mode_request' */
+  real_T get_Pitch_b;                  /* '<S1>/AION_auto_mode_request' */
   real_T get_Roll_k;                   /* '<S1>/AION_auto_mode_request' */
-  real_T get_AngleSpeedX_m;            /* '<S1>/AION_auto_mode_request' */
-  real_T get_AngleSpeedY_k;            /* '<S1>/AION_auto_mode_request' */
-  real_T get_AngleSpeedZ_a;            /* '<S1>/AION_auto_mode_request' */
-  real_T get_AccelerationX_f;          /* '<S1>/AION_auto_mode_request' */
-  real_T get_AccelerationY_g;          /* '<S1>/AION_auto_mode_request' */
-  real_T get_AccelerationZ_o;          /* '<S1>/AION_auto_mode_request' */
-  real_T get_Latitude_b;               /* '<S1>/AION_auto_mode_request' */
-  real_T get_Longitude_h;              /* '<S1>/AION_auto_mode_request' */
-  real_T get_Altitude_n;               /* '<S1>/AION_auto_mode_request' */
+  real_T get_AngleSpeedX_pr;           /* '<S1>/AION_auto_mode_request' */
+  real_T get_AngleSpeedY_n;            /* '<S1>/AION_auto_mode_request' */
+  real_T get_AngleSpeedZ_d;            /* '<S1>/AION_auto_mode_request' */
+  real_T get_AccelerationX_d;          /* '<S1>/AION_auto_mode_request' */
+  real_T get_AccelerationY_m;          /* '<S1>/AION_auto_mode_request' */
+  real_T get_AccelerationZ_pe;         /* '<S1>/AION_auto_mode_request' */
+  real_T get_Latitude_d;               /* '<S1>/AION_auto_mode_request' */
+  real_T get_Longitude_m;              /* '<S1>/AION_auto_mode_request' */
+  real_T get_Altitude_b;               /* '<S1>/AION_auto_mode_request' */
+  real_T SPK_Chk_p;
+  real_T TmpRTBAtAION_auto_mode_requestInport21;
   real_T SCU2ADCU_Brake_Status_CAN_unpack_o1;
                                   /* '<S14>/SCU2ADCU_Brake_Status_CAN_unpack' */
   real_T SCU2ADCU_Brake_Status_CAN_unpack_o2;
@@ -367,6 +397,8 @@ struct B_AION_IDS_SPEEDGOAT_T {
   real_T SCU2ADCU_Brake_Status_CAN_unpack14_o2;
                                 /* '<S14>/SCU2ADCU_Brake_Status_CAN_unpack14' */
   real_T SCU2ADCU_Brake_Status_CAN_unpack14_o3;
+                                /* '<S14>/SCU2ADCU_Brake_Status_CAN_unpack14' */
+  real_T SCU2ADCU_Brake_Status_CAN_unpack14_o4;
                                 /* '<S14>/SCU2ADCU_Brake_Status_CAN_unpack14' */
   real_T SCU2ADCU_Brake_Status_CAN_unpack15;
                                 /* '<S14>/SCU2ADCU_Brake_Status_CAN_unpack15' */
@@ -429,6 +461,7 @@ struct B_AION_IDS_SPEEDGOAT_T {
   uint32_T get_ActVehWheelTorq;        /* '<S2>/Signal_Transfer' */
   uint32_T get_VehRng;                 /* '<S2>/Signal_Transfer' */
   uint32_T get_VehWheelTorqMax;        /* '<S2>/Signal_Transfer' */
+  uint32_T get_ACCButtInfo;            /* '<S2>/Signal_Transfer' */
   uint32_T get_LatAutoCheckReport;     /* '<S2>/Signal_Transfer' */
   uint32_T get_LatQuitReport;          /* '<S2>/Signal_Transfer' */
   uint32_T get_LngAutoCheckIReport;    /* '<S2>/Signal_Transfer' */
@@ -443,6 +476,7 @@ struct B_AION_IDS_SPEEDGOAT_T {
   uint32_T get_ActVehWheelTorq_h;
   uint32_T get_VehRng_j;
   uint32_T get_VehWheelTorqMax_j;
+  uint32_T get_ACCButtInfo_m;
   uint32_T get_LatAutoCheckReport_i;
   uint32_T get_LatQuitReport_k;
   uint32_T get_LngAutoCheckIReport_g;
@@ -454,14 +488,15 @@ struct B_AION_IDS_SPEEDGOAT_T {
   uint32_T set_MsgCounter2_d;          /* '<S1>/AION_auto_mode_request' */
   uint32_T set_Checksum3_e;            /* '<S1>/AION_auto_mode_request' */
   uint32_T set_MsgCounter3_p;          /* '<S1>/AION_auto_mode_request' */
-  uint32_T get_ActVehWheelTorq_a;      /* '<S1>/AION_auto_mode_request' */
-  uint32_T get_VehRng_p;               /* '<S1>/AION_auto_mode_request' */
-  uint32_T get_VehWheelTorqMax_d;      /* '<S1>/AION_auto_mode_request' */
-  uint32_T get_LatAutoCheckReport_k;   /* '<S1>/AION_auto_mode_request' */
-  uint32_T get_LatQuitReport_e;        /* '<S1>/AION_auto_mode_request' */
-  uint32_T get_LngAutoCheckIReport_j;  /* '<S1>/AION_auto_mode_request' */
-  uint32_T get_LngQuitReport_o;        /* '<S1>/AION_auto_mode_request' */
-  uint32_T get_SteeringAngleSpd_h;     /* '<S1>/AION_auto_mode_request' */
+  uint32_T get_ActVehWheelTorq_e;      /* '<S1>/AION_auto_mode_request' */
+  uint32_T get_VehRng_o;               /* '<S1>/AION_auto_mode_request' */
+  uint32_T get_VehWheelTorqMax_i;      /* '<S1>/AION_auto_mode_request' */
+  uint32_T get_ACCButtInfo_k;          /* '<S1>/AION_auto_mode_request' */
+  uint32_T get_LatAutoCheckReport_j;   /* '<S1>/AION_auto_mode_request' */
+  uint32_T get_LatQuitReport_f;        /* '<S1>/AION_auto_mode_request' */
+  uint32_T get_LngAutoCheckIReport_h;  /* '<S1>/AION_auto_mode_request' */
+  uint32_T get_LngQuitReport_k;        /* '<S1>/AION_auto_mode_request' */
+  uint32_T get_SteeringAngleSpd_l;     /* '<S1>/AION_auto_mode_request' */
   Validation_status set_GearLvlReqVD;  /* '<S2>/Signal_Transfer' */
   Validation_status DataTypeConversion4;/* '<S5>/Data Type Conversion4' */
   Validation_status TmpRTBAtAION_auto_mode_requestInport8;
@@ -469,18 +504,18 @@ struct B_AION_IDS_SPEEDGOAT_T {
   Ready_status get_VehRdySt;           /* '<S2>/Signal_Transfer' */
   Ready_status get_VehRdySt_g;         /* '<S6>/Signal Copy' */
   Ready_status get_VehRdySt_l;
-  Ready_status get_VehRdySt_e;         /* '<S1>/AION_auto_mode_request' */
+  Ready_status get_VehRdySt_ge;        /* '<S1>/AION_auto_mode_request' */
   Light_request set_TurnLightReq;      /* '<S2>/Signal_Transfer' */
   Light_request DataTypeConversion14;  /* '<S5>/Data Type Conversion14' */
   Light_request TmpRTBAtAION_auto_mode_requestInport18;
   Light_request set_TurnLightReq_n;    /* '<S1>/AION_auto_mode_request' */
   IMU_Status get_IMUWorkStatus;        /* '<S2>/Signal_Transfer' */
   IMU_Status get_IMUWorkStatus_f;
-  IMU_Status get_IMUWorkStatus_n;      /* '<S1>/AION_auto_mode_request' */
+  IMU_Status get_IMUWorkStatus_g;      /* '<S1>/AION_auto_mode_request' */
   Gear_status get_CrntGearLvl;         /* '<S2>/Signal_Transfer' */
   Gear_status get_CrntGearLvl_f;       /* '<S6>/Signal Copy5' */
   Gear_status get_CrntGearLvl_j;
-  Gear_status get_CrntGearLvl_h;       /* '<S1>/AION_auto_mode_request' */
+  Gear_status get_CrntGearLvl_jr;      /* '<S1>/AION_auto_mode_request' */
   Gear_request set_GearLvlReq;         /* '<S2>/Signal_Transfer' */
   Gear_request DataTypeConversion2;    /* '<S5>/Data Type Conversion2' */
   Gear_request TmpRTBAtAION_auto_mode_requestInport7;
@@ -492,21 +527,17 @@ struct B_AION_IDS_SPEEDGOAT_T {
   Drive_status get_VehDrvMod;          /* '<S2>/Signal_Transfer' */
   Drive_status get_VehDrvMod_j;        /* '<S6>/Signal Copy1' */
   Drive_status get_VehDrvMod_a;
-  Drive_status get_VehDrvMod_jx;       /* '<S1>/AION_auto_mode_request' */
+  Drive_status get_VehDrvMod_p;        /* '<S1>/AION_auto_mode_request' */
   Control_status get_LatCtrlMode;      /* '<S2>/Signal_Transfer' */
   Control_status get_LngCtrlMode;      /* '<S2>/Signal_Transfer' */
   Control_status get_LatCtrlMode_h;    /* '<S6>/Signal Copy2' */
   Control_status get_LngCtrlMode_f;    /* '<S6>/Signal Copy4' */
   Control_status get_LatCtrlMode_hx;
   Control_status get_LngCtrlMode_a;
-  Control_status get_LatCtrlMode_i;    /* '<S1>/AION_auto_mode_request' */
-  Control_status get_LngCtrlMode_m;    /* '<S1>/AION_auto_mode_request' */
+  Control_status get_LatCtrlMode_m;    /* '<S1>/AION_auto_mode_request' */
+  Control_status get_LngCtrlMode_e;    /* '<S1>/AION_auto_mode_request' */
   Control_request set_LatCtrlReq;      /* '<S2>/Signal_Transfer' */
   Control_request set_LngCtrlReq;      /* '<S2>/Signal_Transfer' */
-  Control_request DataTypeConversion7; /* '<S5>/Data Type Conversion7' */
-  Control_request DataTypeConversion9; /* '<S5>/Data Type Conversion9' */
-  Control_request TmpRTBAtAION_auto_mode_requestInport1;
-  Control_request TmpRTBAtAION_auto_mode_requestInport4;
   Control_request set_LatCtrlReq_n;    /* '<S1>/AION_auto_mode_request' */
   Control_request set_LngCtrlReq_i;    /* '<S1>/AION_auto_mode_request' */
   Beam_request set_BeamReq;            /* '<S2>/Signal_Transfer' */
@@ -516,7 +547,7 @@ struct B_AION_IDS_SPEEDGOAT_T {
   Available_status get_CtrlAvailable;  /* '<S2>/Signal_Transfer' */
   Available_status get_CtrlAvailable_a;/* '<S6>/Signal Copy7' */
   Available_status get_CtrlAvailable_h;
-  Available_status get_CtrlAvailable_o;/* '<S1>/AION_auto_mode_request' */
+  Available_status get_CtrlAvailable_m;/* '<S1>/AION_auto_mode_request' */
   Active_status get_HazardLampSt;      /* '<S2>/Signal_Transfer' */
   Active_status get_HighBeamSt;        /* '<S2>/Signal_Transfer' */
   Active_status get_HornSt;            /* '<S2>/Signal_Transfer' */
@@ -535,12 +566,12 @@ struct B_AION_IDS_SPEEDGOAT_T {
   Active_status get_LeftTurnLampSt_p;
   Active_status get_LowBeamSt_c;
   Active_status get_RightTurnLampSt_o;
-  Active_status get_HazardLampSt_b;    /* '<S1>/AION_auto_mode_request' */
-  Active_status get_HighBeamSt_j;      /* '<S1>/AION_auto_mode_request' */
-  Active_status get_HornSt_ou;         /* '<S1>/AION_auto_mode_request' */
-  Active_status get_LeftTurnLampSt_a;  /* '<S1>/AION_auto_mode_request' */
-  Active_status get_LowBeamSt_m;       /* '<S1>/AION_auto_mode_request' */
-  Active_status get_RightTurnLampSt_b; /* '<S1>/AION_auto_mode_request' */
+  Active_status get_HazardLampSt_d;    /* '<S1>/AION_auto_mode_request' */
+  Active_status get_HighBeamSt_p;      /* '<S1>/AION_auto_mode_request' */
+  Active_status get_HornSt_l;          /* '<S1>/AION_auto_mode_request' */
+  Active_status get_LeftTurnLampSt_k;  /* '<S1>/AION_auto_mode_request' */
+  Active_status get_LowBeamSt_cn;      /* '<S1>/AION_auto_mode_request' */
+  Active_status get_RightTurnLampSt_c; /* '<S1>/AION_auto_mode_request' */
   Active_request set_HornRingReq;      /* '<S2>/Signal_Transfer' */
   Active_request DataTypeConversion16; /* '<S5>/Data Type Conversion16' */
   Active_request TmpRTBAtAION_auto_mode_requestInport17;
@@ -560,12 +591,10 @@ struct B_AION_IDS_SPEEDGOAT_T {
   uint8_T get_SteeringAngleVD;         /* '<S2>/Signal_Transfer' */
   uint8_T get_KeySt;                   /* '<S2>/Signal_Transfer' */
   uint8_T FIFOASCIIread[1025];         /* '<S15>/FIFO ASCII read' */
-  uint8_T DataTypeConversion8;         /* '<S5>/Data Type Conversion8' */
   uint8_T DataTypeConversion17;        /* '<S5>/Data Type Conversion17' */
   uint8_T DataTypeConversion11;        /* '<S5>/Data Type Conversion11' */
   uint8_T DataTypeConversion15;        /* '<S5>/Data Type Conversion15' */
   uint8_T DataTypeConversion13;        /* '<S5>/Data Type Conversion13' */
-  uint8_T DataTypeConversion10;        /* '<S5>/Data Type Conversion10' */
   uint8_T DataTypeConversion3;         /* '<S5>/Data Type Conversion3' */
   uint8_T DataTypeConversion1;         /* '<S5>/Data Type Conversion1' */
   uint8_T get_ABSActiveSt_d;
@@ -581,19 +610,19 @@ struct B_AION_IDS_SPEEDGOAT_T {
   uint8_T get_SteeringAngleSpdVD_n;
   uint8_T get_SteeringAngleVD_m;
   uint8_T get_KeySt_d;
-  uint8_T get_ABSActiveSt_o;           /* '<S1>/AION_auto_mode_request' */
-  uint8_T get_VehSpdVD_i;              /* '<S1>/AION_auto_mode_request' */
-  uint8_T get_GearLeverIntv_b;         /* '<S1>/AION_auto_mode_request' */
-  uint8_T get_CrntGearLvlVD_o;         /* '<S1>/AION_auto_mode_request' */
-  uint8_T get_AccElecECFail_a;         /* '<S1>/AION_auto_mode_request' */
-  uint8_T get_BrkPedalSt_dt;           /* '<S1>/AION_auto_mode_request' */
-  uint8_T get_StrngWhlIntv_d;          /* '<S1>/AION_auto_mode_request' */
+  uint8_T get_ABSActiveSt_c;           /* '<S1>/AION_auto_mode_request' */
+  uint8_T get_VehSpdVD_k;              /* '<S1>/AION_auto_mode_request' */
+  uint8_T get_GearLeverIntv_p;         /* '<S1>/AION_auto_mode_request' */
+  uint8_T get_CrntGearLvlVD_l;         /* '<S1>/AION_auto_mode_request' */
+  uint8_T get_AccElecECFail_o;         /* '<S1>/AION_auto_mode_request' */
+  uint8_T get_BrkPedalSt_n;            /* '<S1>/AION_auto_mode_request' */
+  uint8_T get_StrngWhlIntv_k;          /* '<S1>/AION_auto_mode_request' */
   uint8_T get_SysSt_l;                 /* '<S1>/AION_auto_mode_request' */
-  uint8_T get_DriverSeatBeltSt_n;      /* '<S1>/AION_auto_mode_request' */
+  uint8_T get_DriverSeatBeltSt_d;      /* '<S1>/AION_auto_mode_request' */
   uint8_T get_PsngrSeatBeltSt_g;       /* '<S1>/AION_auto_mode_request' */
-  uint8_T get_SteeringAngleSpdVD_i;    /* '<S1>/AION_auto_mode_request' */
-  uint8_T get_SteeringAngleVD_c;       /* '<S1>/AION_auto_mode_request' */
-  uint8_T get_KeySt_o;                 /* '<S1>/AION_auto_mode_request' */
+  uint8_T get_SteeringAngleSpdVD_f;    /* '<S1>/AION_auto_mode_request' */
+  uint8_T get_SteeringAngleVD_a;       /* '<S1>/AION_auto_mode_request' */
+  uint8_T get_KeySt_l;                 /* '<S1>/AION_auto_mode_request' */
   boolean_T condition;                 /* '<S17>/Equal' */
   boolean_T SCU2ADCU_CAN_read_o1;      /* '<S12>/SCU2ADCU_CAN_read' */
   boolean_T IMU2ADCU_CAN_read_o1;      /* '<S11>/IMU2ADCU_CAN_read' */
@@ -606,6 +635,9 @@ struct DW_AION_IDS_SPEEDGOAT_T {
   CAN_DATATYPE RT2_Buf0;               /* '<S19>/RT2' */
   CAN_DATATYPE RT2_Buf1;               /* '<S19>/RT2' */
   CAN_DATATYPE RT2_Buf2;               /* '<S19>/RT2' */
+  CAN_DATATYPE RT_Buf0;                /* '<S20>/RT' */
+  CAN_DATATYPE RT_Buf1;                /* '<S20>/RT' */
+  CAN_DATATYPE RT_Buf2;                /* '<S20>/RT' */
   real_T TmpRTBAtSwitch1Inport1_Buf0;  /* synthesized block */
   real_T TmpRTBAtSwitch1Inport1_Buf1;  /* synthesized block */
   real_T TmpRTBAtSwitch1Inport1_Buf2;  /* synthesized block */
@@ -670,9 +702,15 @@ struct DW_AION_IDS_SPEEDGOAT_T {
   real_T BrakeReq_test_Buf0;           /* synthesized block */
   real_T BrakeReq_test_Buf1;           /* synthesized block */
   real_T BrakeReq_test_Buf2;           /* synthesized block */
+  real_T SPK_Chk_Buf0;                 /* synthesized block */
+  real_T SPK_Chk_Buf1;                 /* synthesized block */
+  real_T SPK_Chk_Buf2;                 /* synthesized block */
   real_T TmpRTBAtAION_auto_mode_requestInport2_Buf0;/* synthesized block */
   real_T TmpRTBAtAION_auto_mode_requestInport2_Buf1;/* synthesized block */
   real_T TmpRTBAtAION_auto_mode_requestInport2_Buf2;/* synthesized block */
+  real_T TmpRTBAtAION_auto_mode_requestInport21_Buf0;/* synthesized block */
+  real_T TmpRTBAtAION_auto_mode_requestInport21_Buf1;/* synthesized block */
+  real_T TmpRTBAtAION_auto_mode_requestInport21_Buf2;/* synthesized block */
   real_T TmpRTBAtAION_auto_mode_requestInport3_Buf0;/* synthesized block */
   real_T TmpRTBAtAION_auto_mode_requestInport3_Buf1;/* synthesized block */
   real_T TmpRTBAtAION_auto_mode_requestInport3_Buf2;/* synthesized block */
@@ -739,11 +777,27 @@ struct DW_AION_IDS_SPEEDGOAT_T {
   real_T get_YawRate_Buf0;             /* synthesized block */
   real_T get_YawRate_Buf1;             /* synthesized block */
   real_T get_YawRate_Buf2;             /* synthesized block */
+  real_T set_Etx_Buf0;                 /* synthesized block */
+  real_T set_Etx_Buf1;                 /* synthesized block */
+  real_T set_Etx_Buf2;                 /* synthesized block */
+  real_T set_FunctionCode_Buf0;        /* synthesized block */
+  real_T set_FunctionCode_Buf1;        /* synthesized block */
+  real_T set_FunctionCode_Buf2;        /* synthesized block */
+  real_T set_Parameter_Buf0;           /* synthesized block */
+  real_T set_Parameter_Buf1;           /* synthesized block */
+  real_T set_Parameter_Buf2;           /* synthesized block */
+  real_T set_Stx_Buf0;                 /* synthesized block */
+  real_T set_Stx_Buf1;                 /* synthesized block */
+  real_T set_Stx_Buf2;                 /* synthesized block */
+  real_T set_VolumeCode_Buf0;          /* synthesized block */
+  real_T set_VolumeCode_Buf1;          /* synthesized block */
+  real_T set_VolumeCode_Buf2;          /* synthesized block */
   void *ADCU2SCU_Brake_Command_CAN_write_PWORK;
                                   /* '<S19>/ADCU2SCU_Brake_Command_CAN_write' */
   void *ADCU2SCU_Gear_Command_CAN_write_PWORK;
                                    /* '<S19>/ADCU2SCU_Gear_Command_CAN_write' */
   void* RT2_d0_SEMAPHORE;              /* '<S19>/RT2' */
+  void* RT_d0_SEMAPHORE;               /* '<S20>/RT' */
   void *LegacySerialRead_PWORK;        /* '<S16>/Legacy Serial Read' */
   void *FIFOwrite_PWORK[4];            /* '<S16>/FIFO write' */
   void *LegacySerialWrite_PWORK;       /* '<S16>/Legacy Serial Write' */
@@ -889,16 +943,17 @@ struct DW_AION_IDS_SPEEDGOAT_T {
 
   void* AutoTrqWhlReq_test_d0_SEMAPHORE;/* synthesized block */
   void* BrakeReq_test_d0_SEMAPHORE;    /* synthesized block */
-  void* TmpRTBAtAION_auto_mode_requestInport1_d0_SEMAPHORE;/* synthesized block */
+  void* SPK_Chk_d0_SEMAPHORE;          /* synthesized block */
   void* TmpRTBAtAION_auto_mode_requestInport15_d0_SEMAPHORE;/* synthesized block */
   void* TmpRTBAtAION_auto_mode_requestInport16_d0_SEMAPHORE;/* synthesized block */
   void* TmpRTBAtAION_auto_mode_requestInport17_d0_SEMAPHORE;/* synthesized block */
   void* TmpRTBAtAION_auto_mode_requestInport18_d0_SEMAPHORE;/* synthesized block */
   void* TmpRTBAtAION_auto_mode_requestInport2_d0_SEMAPHORE;/* synthesized block */
+  void* TmpRTBAtAION_auto_mode_requestInport21_d0_SEMAPHORE;/* synthesized block */
   void* TmpRTBAtAION_auto_mode_requestInport3_d0_SEMAPHORE;/* synthesized block */
-  void* TmpRTBAtAION_auto_mode_requestInport4_d0_SEMAPHORE;/* synthesized block */
   void* TmpRTBAtAION_auto_mode_requestInport7_d0_SEMAPHORE;/* synthesized block */
   void* TmpRTBAtAION_auto_mode_requestInport8_d0_SEMAPHORE;/* synthesized block */
+  void* get_ACCButtInfo_d0_SEMAPHORE;  /* synthesized block */
   void* get_AccelerationX_d0_SEMAPHORE;/* synthesized block */
   void* get_AccelerationY_d0_SEMAPHORE;/* synthesized block */
   void* get_AccelerationZ_d0_SEMAPHORE;/* synthesized block */
@@ -944,20 +999,17 @@ struct DW_AION_IDS_SPEEDGOAT_T {
   void* set_Checksum1_d0_SEMAPHORE;    /* synthesized block */
   void* set_Checksum2_d0_SEMAPHORE;    /* synthesized block */
   void* set_Checksum3_d0_SEMAPHORE;    /* synthesized block */
+  void* set_Etx_d0_SEMAPHORE;          /* synthesized block */
+  void* set_FunctionCode_d0_SEMAPHORE; /* synthesized block */
   void* set_MsgCounter1_d0_SEMAPHORE;  /* synthesized block */
   void* set_MsgCounter2_d0_SEMAPHORE;  /* synthesized block */
   void* set_MsgCounter3_d0_SEMAPHORE;  /* synthesized block */
+  void* set_Parameter_d0_SEMAPHORE;    /* synthesized block */
+  void* set_Stx_d0_SEMAPHORE;          /* synthesized block */
+  void* set_VolumeCode_d0_SEMAPHORE;   /* synthesized block */
   struct {
     void *AQHandles;
-  } TAQSigLogging_InsertedFor_AutoTrqWhlReq_test_at_outport_0_PWORK;/* synthesized block */
-
-  struct {
-    void *AQHandles;
-  } TAQSigLogging_InsertedFor_BrakeReq_test_at_outport_0_PWORK;/* synthesized block */
-
-  struct {
-    void *AQHandles;
-  } TAQSigLogging_InsertedFor_LatCtrlReq_test_at_outport_0_PWORK;/* synthesized block */
+  } TAQSigLogging_InsertedFor_SPK_SoundSourceCode_at_outport_0_PWORK;/* synthesized block */
 
   void* TmpRTBAtUnitDelayInport1_d0_SEMAPHORE;/* synthesized block */
   void *ADCU2SCU_Steer_Command_CAN_write_PWORK;
@@ -1030,6 +1082,8 @@ struct DW_AION_IDS_SPEEDGOAT_T {
     void *AQHandles;
   } TAQSigLogging_InsertedFor_Equal_at_outport_0_PWORK;/* synthesized block */
 
+  void *ADCU2SPK_Brake_Command_CAN_write_PWORK;
+                                  /* '<S20>/ADCU2SPK_Brake_Command_CAN_write' */
   struct {
     void *AQHandles;
   } TAQSigLogging_InsertedFor_GNSS2ADCU_Brake_Status_CAN_unpack1_at_outport_0_PWORK;/* synthesized block */
@@ -1086,6 +1140,9 @@ struct DW_AION_IDS_SPEEDGOAT_T {
     void *AQHandles;
   } TAQSigLogging_InsertedFor_GNSS2ADCU_Brake_Status_CAN_unpack_at_outport_2_PWORK;/* synthesized block */
 
+  uint32_T get_ACCButtInfo_Buf0;       /* synthesized block */
+  uint32_T get_ACCButtInfo_Buf1;       /* synthesized block */
+  uint32_T get_ACCButtInfo_Buf2;       /* synthesized block */
   uint32_T get_ActVehWheelTorq_Buf0;   /* synthesized block */
   uint32_T get_ActVehWheelTorq_Buf1;   /* synthesized block */
   uint32_T get_ActVehWheelTorq_Buf2;   /* synthesized block */
@@ -1128,12 +1185,6 @@ struct DW_AION_IDS_SPEEDGOAT_T {
   uint32_T set_MsgCounter3_Buf0;       /* synthesized block */
   uint32_T set_MsgCounter3_Buf1;       /* synthesized block */
   uint32_T set_MsgCounter3_Buf2;       /* synthesized block */
-  Control_request TmpRTBAtAION_auto_mode_requestInport1_Buf0;/* synthesized block */
-  Control_request TmpRTBAtAION_auto_mode_requestInport1_Buf1;/* synthesized block */
-  Control_request TmpRTBAtAION_auto_mode_requestInport1_Buf2;/* synthesized block */
-  Control_request TmpRTBAtAION_auto_mode_requestInport4_Buf0;/* synthesized block */
-  Control_request TmpRTBAtAION_auto_mode_requestInport4_Buf1;/* synthesized block */
-  Control_request TmpRTBAtAION_auto_mode_requestInport4_Buf2;/* synthesized block */
   Gear_request TmpRTBAtAION_auto_mode_requestInport7_Buf0;/* synthesized block */
   Gear_request TmpRTBAtAION_auto_mode_requestInport7_Buf1;/* synthesized block */
   Gear_request TmpRTBAtAION_auto_mode_requestInport7_Buf2;/* synthesized block */
@@ -1202,6 +1253,8 @@ struct DW_AION_IDS_SPEEDGOAT_T {
                                    /* '<S19>/ADCU2SCU_Gear_Command_CAN_write' */
   int_T ADCU2SCU_Steer_Command_CAN_pack_ModeSignalID;
                                    /* '<S19>/ADCU2SCU_Steer_Command_CAN_pack' */
+  int_T ADCU2SPK_Brake_Command_CAN_pack_ModeSignalID;
+                                   /* '<S20>/ADCU2SPK_Brake_Command_CAN_pack' */
   int_T LegacySerialRead_IWORK[2];     /* '<S16>/Legacy Serial Read' */
   int_T FIFOwrite_IWORK[3];            /* '<S16>/FIFO write' */
   int_T LegacySerialWrite_IWORK;       /* '<S16>/Legacy Serial Write' */
@@ -1209,6 +1262,8 @@ struct DW_AION_IDS_SPEEDGOAT_T {
   int_T GPCHCDecode_IWORK[4];          /* '<S15>/GPCHC Decode ' */
   int_T ADCU2SCU_Steer_Command_CAN_write_IWORK;
                                   /* '<S19>/ADCU2SCU_Steer_Command_CAN_write' */
+  int_T ADCU2SPK_Brake_Command_CAN_write_IWORK;
+                                  /* '<S20>/ADCU2SPK_Brake_Command_CAN_write' */
   int_T SCU2ADCU_CAN_read_IWORK;       /* '<S12>/SCU2ADCU_CAN_read' */
   int_T SCU2ADCU_Brake_Status_CAN_unpack_ModeSignalID;
                                   /* '<S14>/SCU2ADCU_Brake_Status_CAN_unpack' */
@@ -1289,6 +1344,8 @@ struct DW_AION_IDS_SPEEDGOAT_T {
                                  /* '<S13>/GNSS2ADCU_Brake_Status_CAN_unpack' */
   int8_T RT2_LstBufWR;                 /* '<S19>/RT2' */
   int8_T RT2_RDBuf;                    /* '<S19>/RT2' */
+  int8_T RT_LstBufWR;                  /* '<S20>/RT' */
+  int8_T RT_RDBuf;                     /* '<S20>/RT' */
   int8_T TmpRTBAtSwitch1Inport1_LstBufWR;/* synthesized block */
   int8_T TmpRTBAtSwitch1Inport1_RDBuf; /* synthesized block */
   int8_T TmpRTBAtSwitch2Inport1_LstBufWR;/* synthesized block */
@@ -1345,8 +1402,8 @@ struct DW_AION_IDS_SPEEDGOAT_T {
   int8_T AutoTrqWhlReq_test_RDBuf;     /* synthesized block */
   int8_T BrakeReq_test_LstBufWR;       /* synthesized block */
   int8_T BrakeReq_test_RDBuf;          /* synthesized block */
-  int8_T TmpRTBAtAION_auto_mode_requestInport1_LstBufWR;/* synthesized block */
-  int8_T TmpRTBAtAION_auto_mode_requestInport1_RDBuf;/* synthesized block */
+  int8_T SPK_Chk_LstBufWR;             /* synthesized block */
+  int8_T SPK_Chk_RDBuf;                /* synthesized block */
   int8_T TmpRTBAtAION_auto_mode_requestInport15_LstBufWR;/* synthesized block */
   int8_T TmpRTBAtAION_auto_mode_requestInport15_RDBuf;/* synthesized block */
   int8_T TmpRTBAtAION_auto_mode_requestInport16_LstBufWR;/* synthesized block */
@@ -1357,14 +1414,16 @@ struct DW_AION_IDS_SPEEDGOAT_T {
   int8_T TmpRTBAtAION_auto_mode_requestInport18_RDBuf;/* synthesized block */
   int8_T TmpRTBAtAION_auto_mode_requestInport2_LstBufWR;/* synthesized block */
   int8_T TmpRTBAtAION_auto_mode_requestInport2_RDBuf;/* synthesized block */
+  int8_T TmpRTBAtAION_auto_mode_requestInport21_LstBufWR;/* synthesized block */
+  int8_T TmpRTBAtAION_auto_mode_requestInport21_RDBuf;/* synthesized block */
   int8_T TmpRTBAtAION_auto_mode_requestInport3_LstBufWR;/* synthesized block */
   int8_T TmpRTBAtAION_auto_mode_requestInport3_RDBuf;/* synthesized block */
-  int8_T TmpRTBAtAION_auto_mode_requestInport4_LstBufWR;/* synthesized block */
-  int8_T TmpRTBAtAION_auto_mode_requestInport4_RDBuf;/* synthesized block */
   int8_T TmpRTBAtAION_auto_mode_requestInport7_LstBufWR;/* synthesized block */
   int8_T TmpRTBAtAION_auto_mode_requestInport7_RDBuf;/* synthesized block */
   int8_T TmpRTBAtAION_auto_mode_requestInport8_LstBufWR;/* synthesized block */
   int8_T TmpRTBAtAION_auto_mode_requestInport8_RDBuf;/* synthesized block */
+  int8_T get_ACCButtInfo_LstBufWR;     /* synthesized block */
+  int8_T get_ACCButtInfo_RDBuf;        /* synthesized block */
   int8_T get_AccelerationX_LstBufWR;   /* synthesized block */
   int8_T get_AccelerationX_RDBuf;      /* synthesized block */
   int8_T get_AccelerationY_LstBufWR;   /* synthesized block */
@@ -1455,12 +1514,22 @@ struct DW_AION_IDS_SPEEDGOAT_T {
   int8_T set_Checksum2_RDBuf;          /* synthesized block */
   int8_T set_Checksum3_LstBufWR;       /* synthesized block */
   int8_T set_Checksum3_RDBuf;          /* synthesized block */
+  int8_T set_Etx_LstBufWR;             /* synthesized block */
+  int8_T set_Etx_RDBuf;                /* synthesized block */
+  int8_T set_FunctionCode_LstBufWR;    /* synthesized block */
+  int8_T set_FunctionCode_RDBuf;       /* synthesized block */
   int8_T set_MsgCounter1_LstBufWR;     /* synthesized block */
   int8_T set_MsgCounter1_RDBuf;        /* synthesized block */
   int8_T set_MsgCounter2_LstBufWR;     /* synthesized block */
   int8_T set_MsgCounter2_RDBuf;        /* synthesized block */
   int8_T set_MsgCounter3_LstBufWR;     /* synthesized block */
   int8_T set_MsgCounter3_RDBuf;        /* synthesized block */
+  int8_T set_Parameter_LstBufWR;       /* synthesized block */
+  int8_T set_Parameter_RDBuf;          /* synthesized block */
+  int8_T set_Stx_LstBufWR;             /* synthesized block */
+  int8_T set_Stx_RDBuf;                /* synthesized block */
+  int8_T set_VolumeCode_LstBufWR;      /* synthesized block */
+  int8_T set_VolumeCode_RDBuf;         /* synthesized block */
   int8_T TmpRTBAtUnitDelayInport1_LstBufWR;/* synthesized block */
   int8_T TmpRTBAtUnitDelayInport1_RDBuf;/* synthesized block */
   MdlrefDW_AION_signal_transfer_T Signal_Transfer_InstanceData;/* '<S2>/Signal_Transfer' */
@@ -1484,15 +1553,15 @@ struct tag_RTM_AION_IDS_SPEEDGOAT_T {
   struct {
     RTWSfcnInfo sfcnInfo;
     time_T *taskTimePtrs[4];
-    SimStruct childSFunctions[10];
-    SimStruct *childSFunctionPtrs[10];
-    struct _ssBlkInfo2 blkInfo2[10];
-    struct _ssSFcnModelMethods2 methods2[10];
-    struct _ssSFcnModelMethods3 methods3[10];
-    struct _ssSFcnModelMethods4 methods4[10];
-    struct _ssStatesInfo2 statesInfo2[10];
-    ssPeriodicStatesInfo periodicStatesInfo[10];
-    struct _ssPortInfo2 inputOutputPortInfo2[10];
+    SimStruct childSFunctions[11];
+    SimStruct *childSFunctionPtrs[11];
+    struct _ssBlkInfo2 blkInfo2[11];
+    struct _ssSFcnModelMethods2 methods2[11];
+    struct _ssSFcnModelMethods3 methods3[11];
+    struct _ssSFcnModelMethods4 methods4[11];
+    struct _ssStatesInfo2 statesInfo2[11];
+    ssPeriodicStatesInfo periodicStatesInfo[11];
+    struct _ssPortInfo2 inputOutputPortInfo2[11];
     struct {
       time_T sfcnPeriod[1];
       time_T sfcnOffset[1];
@@ -1619,6 +1688,19 @@ struct tag_RTM_AION_IDS_SPEEDGOAT_T {
       struct _ssDWorkRecord dWork[2];
       struct _ssDWorkAuxRecord dWorkAux[2];
     } Sfcn9;
+
+    struct {
+      time_T sfcnPeriod[1];
+      time_T sfcnOffset[1];
+      int_T sfcnTsMap[1];
+      struct _ssPortInputs inputPortInfo[1];
+      struct _ssInPortUnit inputPortUnits[1];
+      struct _ssInPortCoSimAttribute inputPortCoSimAttribute[1];
+      uint_T attribs[7];
+      mxArray *params[7];
+      struct _ssDWorkRecord dWork[2];
+      struct _ssDWorkAuxRecord dWorkAux[2];
+    } Sfcn10;
   } NonInlinedSFcns;
 
   boolean_T zCCacheNeedsReset;
@@ -1668,6 +1750,7 @@ struct tag_RTM_AION_IDS_SPEEDGOAT_T {
     time_T stepSize2;
     uint32_T clockTick3;
     uint32_T clockTickH3;
+    time_T stepSize3;
     struct {
       uint32_T TID[4];
       uint32_T cLimit[4];
@@ -1739,12 +1822,6 @@ extern real_T rtP_HornRingReq_test;    /* Variable: HornRingReq_test
 extern real_T rtP_IMU_ADCU_CYCLE_TIME; /* Variable: IMU_ADCU_CYCLE_TIME
                                         * Referenced by: '<S9>/IMU2ADCU_SampleTime'
                                         */
-extern real_T rtP_LatCtrlReq_test;     /* Variable: LatCtrlReq_test
-                                        * Referenced by: '<S5>/LatCtrlReq_test'
-                                        */
-extern real_T rtP_LngCtrlReq_test;     /* Variable: LngCtrlReq_test
-                                        * Referenced by: '<S5>/LngCtrlReq_test'
-                                        */
 extern real_T rtP_O_ALTITUDE;          /* Variable: O_ALTITUDE
                                         * Referenced by: '<S17>/Constant4'
                                         */
@@ -1756,6 +1833,9 @@ extern real_T rtP_O_LONGITUDE;         /* Variable: O_LONGITUDE
                                         */
 extern real_T rtP_SCU_ADCU_CYCLE_TIME; /* Variable: SCU_ADCU_CYCLE_TIME
                                         * Referenced by: '<S9>/SCU2ADCU_SampleTime(s)'
+                                        */
+extern real_T rtP_SPK_SoundSourceCode; /* Variable: SPK_SoundSourceCode
+                                        * Referenced by: '<S5>/SPK_SoundSourceCode'
                                         */
 extern real_T rtP_SteerAngReq_test;    /* Variable: SteerAngReq_test
                                         * Referenced by: '<S5>/SteerAngReq_test'
@@ -1836,5 +1916,6 @@ extern "C" {
  * '<S17>'  : 'AION_IDS_SPEEDGOAT/Communication_Layer/ADCU(IDS)_InputPort/InputSerial/GNSS2ADCU/GPCHC_Validation'
  * '<S18>'  : 'AION_IDS_SPEEDGOAT/Communication_Layer/ADCU(IDS)_OutputPort/OutputCAN'
  * '<S19>'  : 'AION_IDS_SPEEDGOAT/Communication_Layer/ADCU(IDS)_OutputPort/OutputCAN/CAN_pack_ADCU2SCU'
+ * '<S20>'  : 'AION_IDS_SPEEDGOAT/Communication_Layer/ADCU(IDS)_OutputPort/OutputCAN/CAN_pack_ADCU2SPK'
  */
 #endif                                 /* RTW_HEADER_AION_IDS_SPEEDGOAT_h_ */

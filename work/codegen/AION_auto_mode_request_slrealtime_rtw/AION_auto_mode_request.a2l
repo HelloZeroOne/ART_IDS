@@ -6,9 +6,9 @@
  *
  * Code generation for model "AION_auto_mode_request".
  *
- * Model version              : 1.80
+ * Model version              : 1.111
  * Simulink Coder version : 10.3 R2021a
- * C source code generated on : Sun May 22 17:48:12 2022
+ * C source code generated on : Tue Jun 21 16:13:30 2022
  *
  * Target selection: slrealtime.tlc
  * Embedded hardware selection: Intel->x86-64 (Linux 64)
@@ -795,2547 +795,1303 @@ ASAP2_VERSION  1 71
       ALIGNMENT_INT64 4
     /end MOD_COMMON
 
-  /begin MEASUREMENT  AION_auto_mode_request_B.ADCU_Checksum1 ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x002056D0
-  /end MEASUREMENT 
+  /begin CHARACTERISTIC  AION_auto_mode_request_P.BitwiseAND_BitMask ""  
+    VALUE 0x00204020 Scalar_ULONG 0 AION_auto_mode_request_CM_uint32 0 2147483646  
+  /end CHARACTERISTIC 
 
-  /begin MEASUREMENT  AION_auto_mode_request_B.ADCU_Checksum2 ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x002056E0
-  /end MEASUREMENT 
+  /begin CHARACTERISTIC  AION_auto_mode_request_P.SPK_Chk_tableData ""  
+    CURVE 0x00204028 FixLookup_FLOAT64_IEEE 0 AION_auto_mode_request_CM_double -1.7E+308 1.7E+308  
+    /begin AXIS_DESCR
+      FIX_AXIS AION_auto_mode_request_B.QlightChannel AION_auto_mode_request_CM_double 5 0.000000 4.000000  
+      FORMAT                          "%15.10"
+      FIX_AXIS_PAR_DIST               0 1 5
+    /end AXIS_DESCR
+  /end CHARACTERISTIC 
 
-  /begin MEASUREMENT  AION_auto_mode_request_B.ADCU_Checksum3 ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double__       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x002056F0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.ADCU_Msg1 ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x002056D8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.ADCU_Msg2 ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x002056E8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.ADCU_Msg3 ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double__       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x002056F8
+  /begin MEASUREMENT  AION_auto_mode_request_B.BitwiseAND ""  
+    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
+    ECU_ADDRESS                       0x00204630
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.DataTypeConversion1 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
-    ECU_ADDRESS                       0x002057B8
+    SLONG AION_auto_mode_request_CM_Control_request       0             0       0 3  
+    ECU_ADDRESS                       0x00204698
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_B.DataTypeConversion10 ""  
+    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
+    ECU_ADDRESS                       0x002046D2
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.DataTypeConversion2 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
-    ECU_ADDRESS                       0x002057BC
+    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
+    ECU_ADDRESS                       0x002046D1
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_B.DataTypeConversion3 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
-    ECU_ADDRESS                       0x002057C0
+  /begin MEASUREMENT  AION_auto_mode_request_B.DataTypeConversion9 ""  
+    SLONG AION_auto_mode_request_CM_Control_request       0             0       0 3  
+    ECU_ADDRESS                       0x0020469C
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_B.DataTypeConversion4 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
-    ECU_ADDRESS                       0x002057C4
+  /begin MEASUREMENT  AION_auto_mode_request_B.LatCtrlReq ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x00204628
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_B.DataTypeConversion5 ""  
-    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 2147483646  
-    ECU_ADDRESS                       0x002057C8
+  /begin MEASUREMENT  AION_auto_mode_request_B.LngCtrlReq ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x00204620
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_B.DataTypeConversion6 ""  
-    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 2147483646  
-    ECU_ADDRESS                       0x002057CC
+  /begin MEASUREMENT  AION_auto_mode_request_B.QlightChannel ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x00204520
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_B.body_control_req ""  
-    SLONG AION_auto_mode_request_CM_Enable_request__       0             0       0 1  
-    ECU_ADDRESS                       0x002057EC
+  /begin MEASUREMENT  AION_auto_mode_request_B.QlightChannel_f ""  
+    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
+    ECU_ADDRESS                       0x002046D3
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_B.SPK_Chk ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x00204528
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_ABSActiveSt ""  
     UBYTE AION_auto_mode_request_CM_uint8__       0             0       0 255  
-    ECU_ADDRESS                       0x00205837
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_ABSFaultSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8__       0             0       0 255  
-    ECU_ADDRESS                       0x00205838
+    ECU_ADDRESS                       0x002046C4
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_ACCButtInfo ""  
     ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
-    ECU_ADDRESS                       0x00205798
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_ACCMaxRecpDecel ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double_m_s2       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x002056B8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_ACCMaxRecpDecelVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x0020585F
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_AEBActive ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205843
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_AEBAvailable ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205844
+    ECU_ADDRESS                       0x00204654
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_AccElecECFail ""  
     UBYTE AION_auto_mode_request_CM_uint8__       0             0       0 255  
-    ECU_ADDRESS                       0x00205862
+    ECU_ADDRESS                       0x002046C8
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_ActRecpTorq ""  
-    ULONG AION_auto_mode_request_CM_uint32_Nm       0             0       0 2147483646  
-    ECU_ADDRESS                       0x00205790
+  /begin MEASUREMENT  AION_auto_mode_request_B.get_AccelerationX ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double_g       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x002045F0
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_ActRecpTorqSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x0020585C
+  /begin MEASUREMENT  AION_auto_mode_request_B.get_AccelerationY ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double_g       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x002045F8
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_B.get_AccelerationZ ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double_g       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x00204600
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_ActVehLaltrlAccel ""  
     FLOAT64_IEEE AION_auto_mode_request_CM_double_m_s_2       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x00205690
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_ActVehLaltrlAccelVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205858
+    ECU_ADDRESS                       0x00204578
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_ActVehLongAccel ""  
     FLOAT64_IEEE AION_auto_mode_request_CM_double_m_s_2       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x00205698
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_ActVehLongAccelVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205859
+    ECU_ADDRESS                       0x00204580
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_ActVehWheelTorq ""  
     ULONG AION_auto_mode_request_CM_uint32_Nm       0             0       0 2147483646  
-    ECU_ADDRESS                       0x00205794
+    ECU_ADDRESS                       0x00204648
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_B.get_Altitude ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double_m       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x00204618
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_B.get_AngleSpeedX ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double___s       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x002045D8
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_B.get_AngleSpeedY ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double___s       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x002045E0
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_B.get_AngleSpeedZ ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double___s       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x002045E8
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_BrkPedalSt ""  
     UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205864
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_BrkPedalStVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205865
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_CDDActive ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205845
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_CDDAvailable ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205846
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_CDDFail ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205847
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_Checksum1 ""  
-    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 2147483646  
-    ECU_ADDRESS                       0x002057A0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_Checksum10 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
-    ECU_ADDRESS                       0x002057A8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_Checksum11 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
-    ECU_ADDRESS                       0x002057B0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_Checksum12 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
-    ECU_ADDRESS                       0x00205700
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_Checksum13 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
-    ECU_ADDRESS                       0x00205708
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_Checksum16 ""  
-    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 2147483646  
-    ECU_ADDRESS                       0x00205720
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_Checksum17 ""  
-    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 2147483646  
-    ECU_ADDRESS                       0x00205728
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_Checksum18 ""  
-    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 2147483646  
-    ECU_ADDRESS                       0x00205730
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_Checksum2 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
-    ECU_ADDRESS                       0x00205738
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_Checksum3 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
-    ECU_ADDRESS                       0x00205740
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_Checksum4 ""  
-    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 2147483646  
-    ECU_ADDRESS                       0x00205748
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_Checksum5 ""  
-    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 2147483646  
-    ECU_ADDRESS                       0x00205750
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_Checksum6 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
-    ECU_ADDRESS                       0x00205758
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_Checksum7 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
-    ECU_ADDRESS                       0x00205760
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_Checksum8 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
-    ECU_ADDRESS                       0x00205768
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_Checksum9 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
-    ECU_ADDRESS                       0x00205770
+    ECU_ADDRESS                       0x002046C9
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_CrntGearLvl ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x0020585D
+    SLONG AION_auto_mode_request_CM_Gear_status       0             0       0 4  
+    ECU_ADDRESS                       0x00204680
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_CrntGearLvlVD ""  
     UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x0020585E
+    ECU_ADDRESS                       0x002046C7
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_CtrlAvailable ""  
     SLONG AION_auto_mode_request_CM_Available_status       0             0       0 1  
-    ECU_ADDRESS                       0x00205810
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_DriverDoorAjarSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205829
+    ECU_ADDRESS                       0x002046A4
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_DriverSeatBeltSt ""  
     UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205822
+    ECU_ADDRESS                       0x002046CC
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_EStopSwSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x0020581C
+  /begin MEASUREMENT  AION_auto_mode_request_B.get_GPSTime ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double_s       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x002045B8
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_EStopSwStVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x0020581D
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_FLWheelRotatedDirection ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x0020584C
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_FLWheelRotatedDirectionVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x0020584D
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_FLWheelSpd ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double_km_h       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x00205670
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_FLWheelSpdEdgesSum ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
-    ECU_ADDRESS                       0x0020577C
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_FLWheelSpdEdgesSumVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x0020583C
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_FLWheelSpdVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x0020584E
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_FRWheelRotatedDirection ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x0020584F
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_FRWheelRotatedDirectionVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205850
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_FRWheelSpd ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double_km_h       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x00205678
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_FRWheelSpdEdgesSum ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
-    ECU_ADDRESS                       0x00205780
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_FRWheelSpdEdgesSumVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x0020583D
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_FRWheelSpdVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205851
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_FailSt ""  
-    SLONG AION_auto_mode_request_CM_Error_status       0             0       0 1  
-    ECU_ADDRESS                       0x002057E8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_FrontFogLampSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x0020582A
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_FrontWiperSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x0020582B
+  /begin MEASUREMENT  AION_auto_mode_request_B.get_GPSWeek ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x002045B0
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_GasPedalActPst ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double__       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x002056C0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_GasPedalActPstVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205863
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_GasPedalVirtualPst ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double__       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x002056C8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_GasPedalVirtualPstVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205866
+    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x00204588
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_GearLeverIntv ""  
     UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x0020585A
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_HDCCtrlSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8__       0             0       0 255  
-    ECU_ADDRESS                       0x00205841
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_HDCErrSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8__       0             0       0 255  
-    ECU_ADDRESS                       0x00205842
+    ECU_ADDRESS                       0x002046C6
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_HazardLampSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x0020582C
+    SLONG AION_auto_mode_request_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x002046A8
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_B.get_Heading ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double__       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x002045C0
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_HighBeamSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x0020582D
+    SLONG AION_auto_mode_request_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x002046AC
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_HornSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x0020582E
+    SLONG AION_auto_mode_request_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x002046B0
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_B.get_IMUWorkStatus ""  
+    SLONG AION_auto_mode_request_CM_IMU_Status       0             0       0 91  
+    ECU_ADDRESS                       0x0020467C
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_KeySt ""  
     UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x0020582F
+    ECU_ADDRESS                       0x002046D0
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_LatAutoCheckReport ""  
     ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
-    ECU_ADDRESS                       0x00205710
+    ECU_ADDRESS                       0x00204658
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_LatCtrlMode ""  
     SLONG AION_auto_mode_request_CM_Control_status       0             0       0 3  
-    ECU_ADDRESS                       0x002057F0
+    ECU_ADDRESS                       0x00204690
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_LatQuitReport ""  
     ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
-    ECU_ADDRESS                       0x00205714
+    ECU_ADDRESS                       0x0020465C
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_LateralAssistBtnInfo ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205860
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_LateralAssistBtnInfoVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205861
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_LeftTurnLampFaultSt ""  
-    SLONG AION_auto_mode_request_CM_Fault_status       0             0       0 1  
-    ECU_ADDRESS                       0x002057E0
+  /begin MEASUREMENT  AION_auto_mode_request_B.get_Latitude ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double__       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x00204608
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_LeftTurnLampSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205830
+    SLONG AION_auto_mode_request_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x002046B4
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_LngAutoCheckIReport ""  
     ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
-    ECU_ADDRESS                       0x00205718
+    ECU_ADDRESS                       0x00204660
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_LngCtrlMode ""  
     SLONG AION_auto_mode_request_CM_Control_status       0             0       0 3  
-    ECU_ADDRESS                       0x002057F4
+    ECU_ADDRESS                       0x00204694
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_LngQuitReport ""  
     ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
-    ECU_ADDRESS                       0x0020571C
+    ECU_ADDRESS                       0x00204664
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_B.get_Longitude ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double__       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x00204610
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_LowBeamSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205831
+    SLONG AION_auto_mode_request_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x002046B8
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_MasterCylinderPr ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double_bar       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x00205660
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_MasterCylinderPrOffset ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double_bar       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x00205668
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_MasterCylinderPrOffsetVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8__       0             0       0 255  
-    ECU_ADDRESS                       0x00205848
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_MasterCylinderPrVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8__       0             0       0 255  
-    ECU_ADDRESS                       0x00205849
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_MsgCounter1 ""  
-    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 2147483646  
-    ECU_ADDRESS                       0x002057A4
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_MsgCounter10 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
-    ECU_ADDRESS                       0x002057AC
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_MsgCounter11 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
-    ECU_ADDRESS                       0x002057B4
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_MsgCounter12 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
-    ECU_ADDRESS                       0x00205704
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_MsgCounter13 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
-    ECU_ADDRESS                       0x0020570C
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_MsgCounter16 ""  
-    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 2147483646  
-    ECU_ADDRESS                       0x00205724
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_MsgCounter17 ""  
-    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 2147483646  
-    ECU_ADDRESS                       0x0020572C
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_MsgCounter18 ""  
-    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 2147483646  
-    ECU_ADDRESS                       0x00205734
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_MsgCounter2 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
-    ECU_ADDRESS                       0x0020573C
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_MsgCounter3 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
-    ECU_ADDRESS                       0x00205744
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_MsgCounter4 ""  
-    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 2147483646  
-    ECU_ADDRESS                       0x0020574C
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_MsgCounter5 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
-    ECU_ADDRESS                       0x00205754
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_MsgCounter6 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
-    ECU_ADDRESS                       0x0020575C
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_MsgCounter7 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
-    ECU_ADDRESS                       0x00205764
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_MsgCounter8 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
-    ECU_ADDRESS                       0x0020576C
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_MsgCounter9 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
-    ECU_ADDRESS                       0x00205774
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_NoBrakeForce ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x0020584A
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_PsngrDoorAjarSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205832
+  /begin MEASUREMENT  AION_auto_mode_request_B.get_Pitch ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double__       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x002045C8
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_PsngrSeatBeltSt ""  
     UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205823
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_RLDoorAjarSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205833
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_RLWheelRotatedDirection ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205852
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_RLWheelRotatedDirectionVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205853
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_RLWheelSpd ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double_km_h       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x00205680
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_RLWheelSpdEdgesSum ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
-    ECU_ADDRESS                       0x00205784
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_RLWheelSpdEdgesSumVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x0020583E
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_RLWheelSpdVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205854
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_RRDoorAjarSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205834
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_RRWheelRotatedDirection ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205855
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_RRWheelRotatedDirectionVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205856
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_RRWheelSpd ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double_km_h       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x00205688
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_RRWheelSpdEdgesSum ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
-    ECU_ADDRESS                       0x00205788
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_RRWheelSpdEdgesSumVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x0020583F
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_RRWheelSpdVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205857
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_RearFogLampSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205835
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_RightTurnLampFaultSt ""  
-    SLONG AION_auto_mode_request_CM_Fault_status       0             0       0 1  
-    ECU_ADDRESS                       0x002057E4
+    ECU_ADDRESS                       0x002046CD
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_RightTurnLampSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205836
+    SLONG AION_auto_mode_request_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x002046BC
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_B.get_Roll ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double__       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x002045D0
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_SteeringAngle ""  
     FLOAT64_IEEE AION_auto_mode_request_CM_double_deg       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x00205620
+    ECU_ADDRESS                       0x00204598
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_SteeringAngleSpd ""  
     ULONG AION_auto_mode_request_CM_uint32_deg_sec       0             0       0 2147483646  
-    ECU_ADDRESS                       0x00205778
+    ECU_ADDRESS                       0x00204668
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_SteeringAngleSpdVD ""  
     UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205824
+    ECU_ADDRESS                       0x002046CE
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_SteeringAngleVD ""  
     UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205825
+    ECU_ADDRESS                       0x002046CF
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_StrngWhlIntv ""  
     UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x0020581E
+    ECU_ADDRESS                       0x002046CA
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_StrngWhlTorq ""  
     FLOAT64_IEEE AION_auto_mode_request_CM_double_Nm       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x00205628
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_StrngWhlTorqVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205826
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_SwitchSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x0020581F
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_SwitchStVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205820
+    ECU_ADDRESS                       0x002045A0
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_SysSt ""  
     UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205821
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_ThermalSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205827
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_VDCActiveSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8__       0             0       0 255  
-    ECU_ADDRESS                       0x00205839
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_VDCFaultSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8__       0             0       0 255  
-    ECU_ADDRESS                       0x0020583A
+    ECU_ADDRESS                       0x002046CB
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_VehDrvMod ""  
-    UBYTE AION_auto_mode_request_CM_uint8__       0             0       0 255  
-    ECU_ADDRESS                       0x0020585B
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_VehLaltrlAccelOffset ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double_m_s_2       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x002056A8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_VehLongAccelOffset ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double_m_s_2       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x002056B0
+    SLONG AION_auto_mode_request_CM_Drive_status__       0             0       0 5  
+    ECU_ADDRESS                       0x0020468C
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_VehRdySt ""  
     SLONG AION_auto_mode_request_CM_Ready_status__       0             0       0 1  
-    ECU_ADDRESS                       0x002057D8
+    ECU_ADDRESS                       0x00204674
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_VehRng ""  
     ULONG AION_auto_mode_request_CM_uint32_km       0             0       0 2147483646  
-    ECU_ADDRESS                       0x0020578C
+    ECU_ADDRESS                       0x0020464C
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_VehSpd ""  
     FLOAT64_IEEE AION_auto_mode_request_CM_double_km_h       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x00205638
+    ECU_ADDRESS                       0x00204560
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_VehSpdVD ""  
     UBYTE AION_auto_mode_request_CM_uint8__       0             0       0 255  
-    ECU_ADDRESS                       0x0020583B
+    ECU_ADDRESS                       0x002046C5
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_VehWheelTorqMax ""  
     ULONG AION_auto_mode_request_CM_uint32_Nm       0             0       0 2147483646  
-    ECU_ADDRESS                       0x0020579C
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_VehicleStandStillSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x0020584B
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_WarnLamp ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205828
+    ECU_ADDRESS                       0x00204650
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.get_YawRate ""  
     FLOAT64_IEEE AION_auto_mode_request_CM_double_rad_s       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x00205648
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_YawRateOffset ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double_rad_s       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x00205650
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.get_YawRateSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
-    ECU_ADDRESS                       0x00205840
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.lateral_control_req ""  
-    SLONG AION_auto_mode_request_CM_Control_request       0             0       0 3  
-    ECU_ADDRESS                       0x00205808
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.lateral_control_req_test ""  
-    SLONG AION_auto_mode_request_CM_Control_request       0             0       0 3  
-    ECU_ADDRESS                       0x00205804
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.longitudinal_control_req ""  
-    SLONG AION_auto_mode_request_CM_Control_request       0             0       0 3  
-    ECU_ADDRESS                       0x00205800
+    ECU_ADDRESS                       0x00204568
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.set_AutoTrqWhlReq ""  
-    SLONG AION_auto_mode_request_CM_int32       0             0       -2147483648 2147483647  
-    ECU_ADDRESS                       0x002057D0
+    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x00204590
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.set_BeamReq ""  
     SLONG AION_auto_mode_request_CM_Beam_request__       0             0       0 3  
-    ECU_ADDRESS                       0x0020580C
+    ECU_ADDRESS                       0x002046A0
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_B.set_BodyCtrlReq ""  
+    SLONG AION_auto_mode_request_CM_Enable_request__       0             0       0 1  
+    ECU_ADDRESS                       0x00204688
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.set_BrakeReq ""  
     FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x002056A0
+    ECU_ADDRESS                       0x002045A8
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_B.set_Checksum1 ""  
+    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
+    ECU_ADDRESS                       0x0020466C
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_B.set_Checksum2 ""  
+    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
+    ECU_ADDRESS                       0x00204638
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_B.set_Checksum3 ""  
+    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 2147483646  
+    ECU_ADDRESS                       0x00204640
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_B.set_Etx ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x00204558
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_B.set_FunctionCode ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x00204540
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.set_GearLvlReq ""  
-    SLONG AION_auto_mode_request_CM_AION_gear       0             0       0 7  
-    ECU_ADDRESS                       0x00205818
+    SLONG AION_auto_mode_request_CM_Gear_request       0             0       0 7  
+    ECU_ADDRESS                       0x00204684
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.set_GearLvlReqVD ""  
     SLONG AION_auto_mode_request_CM_Validation_status       0             0       0 1  
-    ECU_ADDRESS                       0x002057D4
+    ECU_ADDRESS                       0x00204670
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.set_HornRingReq ""  
     SLONG AION_auto_mode_request_CM_Active_request__       0             0       0 1  
-    ECU_ADDRESS                       0x00205814
+    ECU_ADDRESS                       0x002046C0
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_B.set_MsgCounter1 ""  
+    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
+    ECU_ADDRESS                       0x00204634
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_B.set_MsgCounter2 ""  
+    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
+    ECU_ADDRESS                       0x0020463C
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_B.set_MsgCounter3 ""  
+    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 2147483646  
+    ECU_ADDRESS                       0x00204644
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_B.set_Parameter ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x00204550
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.set_SteerAngReq ""  
     FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x00205640
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.set_SteerAngSpdLimt ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x00205658
+    ECU_ADDRESS                       0x00204538
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.set_SteerWhlTorqReq ""  
     FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x00205630
+    ECU_ADDRESS                       0x00204570
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_B.set_Stx ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x00204530
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_B.set_TurnLightReq ""  
     SLONG AION_auto_mode_request_CM_Light_request__       0             0       0 3  
-    ECU_ADDRESS                       0x002057DC
+    ECU_ADDRESS                       0x00204678
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_B.y ""  
-    SLONG AION_auto_mode_request_CM_Control_status       0             0       0 3  
-    ECU_ADDRESS                       0x002057F8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_B.y_f ""  
-    SLONG AION_auto_mode_request_CM_Control_status       0             0       0 3  
-    ECU_ADDRESS                       0x002057FC
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_DW.adcu_msg_count ""  
+  /begin MEASUREMENT  AION_auto_mode_request_B.set_VolumeCode ""  
     FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x002055C0
+    ECU_ADDRESS                       0x00204548
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCM_info_get_CtrlAvailable ""  
+  /begin MEASUREMENT  AION_auto_mode_request_DW.HoldFlag ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x002044E8
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_DW.flag ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x002044E0
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_DW.is_active_c2_AION_auto_mode_request ""  
+    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
+    ECU_ADDRESS                       0x00204510
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_DW.is_active_c3_AION_auto_mode_request ""  
+    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 255  
+    ECU_ADDRESS                       0x00204511
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_DW.is_c2_AION_auto_mode_request ""  
+    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
+    ECU_ADDRESS                       0x00204508
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_DW.is_c3_AION_auto_mode_request ""  
+    ULONG AION_auto_mode_request_CM_uint32       0             0       0 2147483646  
+    ECU_ADDRESS                       0x0020450C
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_DW.sfEvent ""  
+    SLONG AION_auto_mode_request_CM_int32       0             0       -2147483648 2147483647  
+    ECU_ADDRESS                       0x00204500
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_DW.sfEvent_b ""  
+    SLONG AION_auto_mode_request_CM_int32       0             0       -2147483648 2147483647  
+    ECU_ADDRESS                       0x00204504
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_BCM_info_get_CtrlAvailable ""  
     SLONG AION_auto_mode_request_CM_Available_status       0             0       0 1  
-    ECU_ADDRESS                       0x0020559C
+    ECU_ADDRESS                       0x00204438
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCM_info_get_DriverDoorAjarSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002055A0
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_BCM_info_get_HazardLampSt ""  
+    SLONG AION_auto_mode_request_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x0020443C
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCM_info_get_FrontFogLampSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002055A1
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_BCM_info_get_HighBeamSt ""  
+    SLONG AION_auto_mode_request_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x00204440
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCM_info_get_FrontWiperSt ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_BCM_info_get_HornSt ""  
+    SLONG AION_auto_mode_request_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x00204444
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_BCM_info_get_KeySt ""  
     UBYTE AION_auto_mode_request_CM_uint8       0             0       0 3  
-    ECU_ADDRESS                       0x002055A2
+    ECU_ADDRESS                       0x00204448
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCM_info_get_HazardLampSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002055A3
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_BCM_info_get_LeftTurnLampSt ""  
+    SLONG AION_auto_mode_request_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x0020444C
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCM_info_get_HighBeamSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002055A4
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_BCM_info_get_LowBeamSt ""  
+    SLONG AION_auto_mode_request_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x00204450
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCM_info_get_HornSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002055A5
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_BCM_info_get_RightTurnLampSt ""  
+    SLONG AION_auto_mode_request_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x00204454
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCM_info_get_KeySt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 3  
-    ECU_ADDRESS                       0x002055A6
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCM_info_get_LeftTurnLampFaultSt ""  
-    SLONG AION_auto_mode_request_CM_Fault_status       0             0       0 1  
-    ECU_ADDRESS                       0x002055A8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCM_info_get_LeftTurnLampSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002055AC
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCM_info_get_LowBeamSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002055AD
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCM_info_get_PsngrDoorAjarSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002055AE
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCM_info_get_RLDoorAjarSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002055AF
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCM_info_get_RRDoorAjarSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002055B0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCM_info_get_RearFogLampSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002055B1
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCM_info_get_RightTurnLampFaultSt ""  
-    SLONG AION_auto_mode_request_CM_Fault_status       0             0       0 1  
-    ECU_ADDRESS                       0x002055B4
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCM_info_get_RightTurnLampSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002055B8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_ABSActiveSt ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_BCS_info_get_ABSActiveSt ""  
     UBYTE AION_auto_mode_request_CM_uint8__       0             0       0 1  
-    ECU_ADDRESS                       0x002053A0
+    ECU_ADDRESS                       0x00204398
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_ABSFaultSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8__       0             0       0 1  
-    ECU_ADDRESS                       0x002053A1
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_AEBActive ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002053EB
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_AEBAvailable ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002053EC
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_ActVehLaltrlAccel ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_BCS_info_get_ActVehLaltrlAccel ""  
     FLOAT64_IEEE AION_auto_mode_request_CM_double_m_s_2       0             0       -21.593 21.593  
-    ECU_ADDRESS                       0x00205448
+    ECU_ADDRESS                       0x002043B8
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_ActVehLaltrlAccelVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205450
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_ActVehLongAccel ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_BCS_info_get_ActVehLongAccel ""  
     FLOAT64_IEEE AION_auto_mode_request_CM_double_m_s_2       0             0       -21.593 21.593  
-    ECU_ADDRESS                       0x00205458
+    ECU_ADDRESS                       0x002043C0
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_ActVehLongAccelVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205460
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_CDDActive ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002053ED
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_CDDAvailable ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002053EE
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_CDDFail ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002053EF
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_FLWheelRotatedDirection ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205404
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_FLWheelRotatedDirectionVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205405
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_FLWheelSpd ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_BCS_info_get_VehSpd ""  
     FLOAT64_IEEE AION_auto_mode_request_CM_double_km_h       0             0       0 240  
-    ECU_ADDRESS                       0x00205408
+    ECU_ADDRESS                       0x002043A0
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_FLWheelSpdEdgesSum ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 4095  
-    ECU_ADDRESS                       0x002053B4
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_FLWheelSpdEdgesSumVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002053B8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_FLWheelSpdVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205410
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_FRWheelRotatedDirection ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205411
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_FRWheelRotatedDirectionVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205412
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_FRWheelSpd ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double_km_h       0             0       0 240  
-    ECU_ADDRESS                       0x00205418
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_FRWheelSpdEdgesSum ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 4095  
-    ECU_ADDRESS                       0x002053BC
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_FRWheelSpdEdgesSumVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002053C0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_FRWheelSpdVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205420
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_HDCCtrlSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8__       0             0       0 3  
-    ECU_ADDRESS                       0x002053E9
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_HDCErrSt ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_BCS_info_get_VehSpdVD ""  
     UBYTE AION_auto_mode_request_CM_uint8__       0             0       0 1  
-    ECU_ADDRESS                       0x002053EA
+    ECU_ADDRESS                       0x002043A8
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_MasterCylinderPr ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double_bar       0             0       0 250  
-    ECU_ADDRESS                       0x002053F0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_MasterCylinderPrOffset ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double_bar       0             0       -15 15  
-    ECU_ADDRESS                       0x002053F8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_MasterCylinderPrOffsetVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8__       0             0       0 1  
-    ECU_ADDRESS                       0x00205400
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_MasterCylinderPrVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8__       0             0       0 1  
-    ECU_ADDRESS                       0x00205401
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_NoBrakeForce ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205402
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_RLWheelRotatedDirection ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205421
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_RLWheelRotatedDirectionVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205422
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_RLWheelSpd ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double_km_h       0             0       0 240  
-    ECU_ADDRESS                       0x00205428
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_RLWheelSpdEdgesSum ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 4095  
-    ECU_ADDRESS                       0x002053C4
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_RLWheelSpdEdgesSumVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002053C8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_RLWheelSpdVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205430
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_RRWheelRotatedDirection ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205431
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_RRWheelRotatedDirectionVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205432
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_RRWheelSpd ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double_km_h       0             0       0 240  
-    ECU_ADDRESS                       0x00205438
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_RRWheelSpdEdgesSum ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 4095  
-    ECU_ADDRESS                       0x002053CC
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_RRWheelSpdEdgesSumVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002053D0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_RRWheelSpdVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205440
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_VDCActiveSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8__       0             0       0 1  
-    ECU_ADDRESS                       0x002053A2
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_VDCFaultSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8__       0             0       0 1  
-    ECU_ADDRESS                       0x002053A3
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_VehLaltrlAccelOffset ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double_m_s_2       0             0       -21.593 21.593  
-    ECU_ADDRESS                       0x00205468
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_VehLongAccelOffset ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double_m_s_2       0             0       -21.593 21.593  
-    ECU_ADDRESS                       0x00205470
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_VehSpd ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double_km_h       0             0       0 240  
-    ECU_ADDRESS                       0x002053A8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_VehSpdVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8__       0             0       0 1  
-    ECU_ADDRESS                       0x002053B0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_VehicleStandStillSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 3  
-    ECU_ADDRESS                       0x00205403
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_YawRate ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_BCS_info_get_YawRate ""  
     FLOAT64_IEEE AION_auto_mode_request_CM_double_rad_s       0             0       -2.0943 1.9047234375  
-    ECU_ADDRESS                       0x002053D8
+    ECU_ADDRESS                       0x002043B0
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_YawRateOffset ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double_rad_s       0             0       -0.13 0.13  
-    ECU_ADDRESS                       0x002053E0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_BCS_info_get_YawRateSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002053E8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_EPB_info_get_FailSt ""  
-    SLONG AION_auto_mode_request_CM_Error_status       0             0       0 1  
-    ECU_ADDRESS                       0x00205574
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_EPB_info_get_SwitchSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 3  
-    ECU_ADDRESS                       0x00205578
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_EPB_info_get_SwitchStVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205579
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_EPB_info_get_SysSt ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_EPB_info_get_SysSt ""  
     UBYTE AION_auto_mode_request_CM_uint8       0             0       0 7  
-    ECU_ADDRESS                       0x0020557A
+    ECU_ADDRESS                       0x00204419
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_EPS_info_get_SteeringAngle ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_EPS_info_get_SteeringAngle ""  
     FLOAT64_IEEE AION_auto_mode_request_CM_double_deg       0             0       -780 779.9  
-    ECU_ADDRESS                       0x00205580
+    ECU_ADDRESS                       0x00204420
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_EPS_info_get_SteeringAngleSpd ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_EPS_info_get_SteeringAngleSpd ""  
     ULONG AION_auto_mode_request_CM_uint32_deg_sec       0             0       0 1016  
-    ECU_ADDRESS                       0x00205588
+    ECU_ADDRESS                       0x00204428
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_EPS_info_get_SteeringAngleSpdVD ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_EPS_info_get_SteeringAngleSpdVD ""  
     UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x0020558C
+    ECU_ADDRESS                       0x0020442C
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_EPS_info_get_SteeringAngleVD ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_EPS_info_get_SteeringAngleVD ""  
     UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x0020558D
+    ECU_ADDRESS                       0x0020442D
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_EPS_info_get_StrngWhlTorq ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_EPS_info_get_StrngWhlTorq ""  
     FLOAT64_IEEE AION_auto_mode_request_CM_double_Nm       0             0       -12.5 12.5  
-    ECU_ADDRESS                       0x00205590
+    ECU_ADDRESS                       0x00204430
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_EPS_info_get_StrngWhlTorqVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205598
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_IMU_info_get_AccelerationX ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double_g       0             0       -10 10  
+    ECU_ADDRESS                       0x002044A0
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_EPS_info_get_ThermalSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 3  
-    ECU_ADDRESS                       0x00205599
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_IMU_info_get_AccelerationY ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double_g       0             0       -10 10  
+    ECU_ADDRESS                       0x002044A8
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_EPS_info_get_WarnLamp ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x0020559A
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_IMU_info_get_AccelerationZ ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double_g       0             0       -10 10  
+    ECU_ADDRESS                       0x002044B0
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_Checksum1 ""  
-    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 255  
-    ECU_ADDRESS                       0x002054D4
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_IMU_info_get_Altitude ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double_m       0             0       -200 8000  
+    ECU_ADDRESS                       0x002044C8
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_Checksum10 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 255  
-    ECU_ADDRESS                       0x002054DC
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_IMU_info_get_AngleSpeedX ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double___s       0             0       -360 360  
+    ECU_ADDRESS                       0x00204488
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_Checksum11 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 255  
-    ECU_ADDRESS                       0x002054E4
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_IMU_info_get_AngleSpeedY ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double___s       0             0       -360 360  
+    ECU_ADDRESS                       0x00204490
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_Checksum12 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 255  
-    ECU_ADDRESS                       0x002054EC
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_IMU_info_get_AngleSpeedZ ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double___s       0             0       -360 360  
+    ECU_ADDRESS                       0x00204498
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_Checksum13 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 255  
-    ECU_ADDRESS                       0x002054F4
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_IMU_info_get_GPSTime ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double_s       0             0       0 []  
+    ECU_ADDRESS                       0x00204460
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_Checksum16 ""  
-    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 205  
-    ECU_ADDRESS                       0x0020551C
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_IMU_info_get_GPSWeek ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x00204458
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_Checksum17 ""  
-    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 255  
-    ECU_ADDRESS                       0x00205524
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_IMU_info_get_Heading ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double__       0             0       0 359.99  
+    ECU_ADDRESS                       0x00204468
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_Checksum18 ""  
-    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 255  
-    ECU_ADDRESS                       0x0020552C
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_IMU_info_get_IMUWorkStatus ""  
+    SLONG AION_auto_mode_request_CM_IMU_Status       0             0       0 91  
+    ECU_ADDRESS                       0x00204480
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_Checksum2 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 255  
-    ECU_ADDRESS                       0x00205534
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_IMU_info_get_Latitude ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double__       0             0       -90 90  
+    ECU_ADDRESS                       0x002044B8
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_Checksum3 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 255  
-    ECU_ADDRESS                       0x0020553C
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_IMU_info_get_Longitude ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double__       0             0       -180 180  
+    ECU_ADDRESS                       0x002044C0
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_Checksum4 ""  
-    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 255  
-    ECU_ADDRESS                       0x00205544
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_IMU_info_get_Pitch ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double__       0             0       -90 90  
+    ECU_ADDRESS                       0x00204470
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_Checksum5 ""  
-    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 255  
-    ECU_ADDRESS                       0x0020554C
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_IMU_info_get_Roll ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double__       0             0       -180 180  
+    ECU_ADDRESS                       0x00204478
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_Checksum6 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 255  
-    ECU_ADDRESS                       0x00205554
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_Checksum7 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 255  
-    ECU_ADDRESS                       0x0020555C
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_Checksum8 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 255  
-    ECU_ADDRESS                       0x00205564
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_Checksum9 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 255  
-    ECU_ADDRESS                       0x0020556C
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_EStopSwSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002054FC
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_EStopSwStVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002054FD
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_LatAutoCheckReport ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_SCU_info_get_LatAutoCheckReport ""  
     ULONG AION_auto_mode_request_CM_uint32       0             0       0 15  
-    ECU_ADDRESS                       0x00205500
+    ECU_ADDRESS                       0x00204400
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_LatCtrlMode ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_SCU_info_get_LatCtrlMode ""  
     SLONG AION_auto_mode_request_CM_Control_status       0             0       0 3  
-    ECU_ADDRESS                       0x00205504
+    ECU_ADDRESS                       0x00204404
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_LatQuitReport ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_SCU_info_get_LatQuitReport ""  
     ULONG AION_auto_mode_request_CM_uint32       0             0       0 255  
-    ECU_ADDRESS                       0x00205508
+    ECU_ADDRESS                       0x00204408
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_LngAutoCheckIReport ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_SCU_info_get_LngAutoCheckIReport ""  
     ULONG AION_auto_mode_request_CM_uint32       0             0       0 65535  
-    ECU_ADDRESS                       0x0020550C
+    ECU_ADDRESS                       0x0020440C
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_LngCtrlMode ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_SCU_info_get_LngCtrlMode ""  
     SLONG AION_auto_mode_request_CM_Control_status       0             0       0 3  
-    ECU_ADDRESS                       0x00205510
+    ECU_ADDRESS                       0x00204410
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_LngQuitReport ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_SCU_info_get_LngQuitReport ""  
     ULONG AION_auto_mode_request_CM_uint32       0             0       0 65535  
-    ECU_ADDRESS                       0x00205514
+    ECU_ADDRESS                       0x00204414
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_MsgCounter1 ""  
-    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 15  
-    ECU_ADDRESS                       0x002054D8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_MsgCounter10 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 15  
-    ECU_ADDRESS                       0x002054E0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_MsgCounter11 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 15  
-    ECU_ADDRESS                       0x002054E8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_MsgCounter12 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 15  
-    ECU_ADDRESS                       0x002054F0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_MsgCounter13 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 15  
-    ECU_ADDRESS                       0x002054F8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_MsgCounter16 ""  
-    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 15  
-    ECU_ADDRESS                       0x00205520
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_MsgCounter17 ""  
-    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 15  
-    ECU_ADDRESS                       0x00205528
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_MsgCounter18 ""  
-    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 15  
-    ECU_ADDRESS                       0x00205530
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_MsgCounter2 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 15  
-    ECU_ADDRESS                       0x00205538
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_MsgCounter3 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 15  
-    ECU_ADDRESS                       0x00205540
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_MsgCounter4 ""  
-    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 15  
-    ECU_ADDRESS                       0x00205548
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_MsgCounter5 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 15  
-    ECU_ADDRESS                       0x00205550
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_MsgCounter6 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 15  
-    ECU_ADDRESS                       0x00205558
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_MsgCounter7 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 15  
-    ECU_ADDRESS                       0x00205560
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_MsgCounter8 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 15  
-    ECU_ADDRESS                       0x00205568
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_MsgCounter9 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 15  
-    ECU_ADDRESS                       0x00205570
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SCU_info_get_StrngWhlIntv ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_SCU_info_get_StrngWhlIntv ""  
     UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205518
+    ECU_ADDRESS                       0x00204418
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SRS_info_get_DriverSeatBeltSt ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_SRS_info_get_DriverSeatBeltSt ""  
     UBYTE AION_auto_mode_request_CM_uint8       0             0       0 3  
-    ECU_ADDRESS                       0x0020557B
+    ECU_ADDRESS                       0x0020441A
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_SRS_info_get_PsngrSeatBeltSt ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_SRS_info_get_PsngrSeatBeltSt ""  
     UBYTE AION_auto_mode_request_CM_uint8       0             0       0 3  
-    ECU_ADDRESS                       0x0020557C
+    ECU_ADDRESS                       0x0020441B
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_VCU_info_get_ACCButtInfo ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_VCU_info_get_ACCButtInfo ""  
     ULONG AION_auto_mode_request_CM_uint32       0             0       0 255  
-    ECU_ADDRESS                       0x002054A4
+    ECU_ADDRESS                       0x002043FC
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_VCU_info_get_ACCMaxRecpDecel ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double_m_s2       0             0       -5 7.75  
-    ECU_ADDRESS                       0x00205490
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_VCU_info_get_ACCMaxRecpDecelVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205498
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_VCU_info_get_AccElecECFail ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_VCU_info_get_AccElecECFail ""  
     UBYTE AION_auto_mode_request_CM_uint8__       0             0       0 1  
-    ECU_ADDRESS                       0x002054A8
+    ECU_ADDRESS                       0x002043F0
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_VCU_info_get_ActRecpTorq ""  
-    ULONG AION_auto_mode_request_CM_uint32_Nm       0             0       0 2000  
-    ECU_ADDRESS                       0x00205484
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_VCU_info_get_ActRecpTorqSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 3  
-    ECU_ADDRESS                       0x00205488
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_VCU_info_get_ActVehWheelTorq ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_VCU_info_get_ActVehWheelTorq ""  
     ULONG AION_auto_mode_request_CM_uint32_Nm       0             0       0 10000  
-    ECU_ADDRESS                       0x0020549C
+    ECU_ADDRESS                       0x002043C8
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_VCU_info_get_BrkPedalSt ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_VCU_info_get_BrkPedalSt ""  
     UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002054C0
+    ECU_ADDRESS                       0x002043F8
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_VCU_info_get_BrkPedalStVD ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_VCU_info_get_CrntGearLvl ""  
+    SLONG AION_auto_mode_request_CM_Gear_status       0             0       0 4  
+    ECU_ADDRESS                       0x002043DC
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_VCU_info_get_CrntGearLvlVD ""  
     UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002054C1
+    ECU_ADDRESS                       0x002043E0
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_VCU_info_get_CrntGearLvl ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 7  
-    ECU_ADDRESS                       0x00205489
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_VCU_info_get_GasPedalActPst ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       0 100  
+    ECU_ADDRESS                       0x002043E8
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_VCU_info_get_CrntGearLvlVD ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_VCU_info_get_GearLeverIntv ""  
     UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x0020548A
+    ECU_ADDRESS                       0x002043CC
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_VCU_info_get_GasPedalActPst ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double__       0             0       0 99.96  
-    ECU_ADDRESS                       0x002054B0
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_VCU_info_get_VehDrvMod ""  
+    SLONG AION_auto_mode_request_CM_Drive_status__       0             0       0 5  
+    ECU_ADDRESS                       0x002043D0
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_VCU_info_get_GasPedalActPstVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002054B8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_VCU_info_get_GasPedalVirtualPst ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double__       0             0       0 99.96  
-    ECU_ADDRESS                       0x002054C8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_VCU_info_get_GasPedalVirtualPstVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002054D0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_VCU_info_get_GearLeverIntv ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205478
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_VCU_info_get_LateralAssistBtnInfo ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002054A0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_VCU_info_get_LateralAssistBtnInfoVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002054A1
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_VCU_info_get_VehDrvMod ""  
-    UBYTE AION_auto_mode_request_CM_uint8__       0             0       0 7  
-    ECU_ADDRESS                       0x00205479
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_VCU_info_get_VehRdySt ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_VCU_info_get_VehRdySt ""  
     SLONG AION_auto_mode_request_CM_Ready_status__       0             0       0 1  
-    ECU_ADDRESS                       0x0020547C
+    ECU_ADDRESS                       0x002043D4
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_VCU_info_get_VehRng ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_VCU_info_get_VehRng ""  
     ULONG AION_auto_mode_request_CM_uint32_km       0             0       0 1000  
-    ECU_ADDRESS                       0x00205480
+    ECU_ADDRESS                       0x002043D8
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_get_VCU_info_get_VehWheelTorqMax ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_get_VCU_info_get_VehWheelTorqMax ""  
     ULONG AION_auto_mode_request_CM_uint32_Nm       0             0       0 10000  
-    ECU_ADDRESS                       0x002054BC
+    ECU_ADDRESS                       0x002043F4
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_set_ADCU_info_set_BeamReq ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_set_ADCU_info_set_BeamReq ""  
     SLONG AION_auto_mode_request_CM_Beam_request__       0             0       0 3  
-    ECU_ADDRESS                       0x00205390
+    ECU_ADDRESS                       0x00204350
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_set_ADCU_info_set_BodyCtrlReq ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_set_ADCU_info_set_BodyCtrlReq ""  
     SLONG AION_auto_mode_request_CM_Enable_request__       0             0       0 1  
-    ECU_ADDRESS                       0x00205394
+    ECU_ADDRESS                       0x00204354
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_set_ADCU_info_set_Checksum1 ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_set_ADCU_info_set_Checksum1 ""  
     ULONG AION_auto_mode_request_CM_uint32       0             0       0 255  
-    ECU_ADDRESS                       0x00205378
+    ECU_ADDRESS                       0x00204338
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_set_ADCU_info_set_Checksum2 ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_set_ADCU_info_set_Checksum2 ""  
     ULONG AION_auto_mode_request_CM_uint32       0             0       0 255  
-    ECU_ADDRESS                       0x00205380
+    ECU_ADDRESS                       0x00204340
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_set_ADCU_info_set_Checksum3 ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_set_ADCU_info_set_Checksum3 ""  
     ULONG AION_auto_mode_request_CM_uint32__       0             0       0 255  
-    ECU_ADDRESS                       0x00205388
+    ECU_ADDRESS                       0x00204348
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_set_ADCU_info_set_HornRingReq ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_set_ADCU_info_set_HornRingReq ""  
     SLONG AION_auto_mode_request_CM_Active_request__       0             0       0 1  
-    ECU_ADDRESS                       0x00205398
+    ECU_ADDRESS                       0x00204358
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_set_ADCU_info_set_MsgCounter1 ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_set_ADCU_info_set_MsgCounter1 ""  
     ULONG AION_auto_mode_request_CM_uint32       0             0       0 15  
-    ECU_ADDRESS                       0x0020537C
+    ECU_ADDRESS                       0x0020433C
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_set_ADCU_info_set_MsgCounter2 ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_set_ADCU_info_set_MsgCounter2 ""  
     ULONG AION_auto_mode_request_CM_uint32       0             0       0 15  
-    ECU_ADDRESS                       0x00205384
+    ECU_ADDRESS                       0x00204344
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_set_ADCU_info_set_MsgCounter3 ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_set_ADCU_info_set_MsgCounter3 ""  
     ULONG AION_auto_mode_request_CM_uint32__       0             0       0 15  
-    ECU_ADDRESS                       0x0020538C
+    ECU_ADDRESS                       0x0020434C
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_set_ADCU_info_set_TurnLightReq ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_set_ADCU_info_set_TurnLightReq ""  
     SLONG AION_auto_mode_request_CM_Light_request__       0             0       0 3  
-    ECU_ADDRESS                       0x0020539C
+    ECU_ADDRESS                       0x0020435C
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_set_lateral_control_info_set_LatCtrlReq ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_set_SPK_info_set_Chk ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x00204388
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_set_SPK_info_set_Etx ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x00204390
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_set_SPK_info_set_FunctionCode ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x00204368
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_set_SPK_info_set_Parameter ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x00204380
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_set_SPK_info_set_SoundSourceCode ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x00204370
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_set_SPK_info_set_Stx ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x00204360
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_set_SPK_info_set_VolumeCode ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x00204378
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_set_lateral_control_info_set_LatCtrlReq ""  
     SLONG AION_auto_mode_request_CM_Control_request       0             0       0 3  
-    ECU_ADDRESS                       0x00205340
+    ECU_ADDRESS                       0x00204300
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_set_lateral_control_info_set_SteerAngReq ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_set_lateral_control_info_set_SteerAngReq ""  
     FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x00205350
+    ECU_ADDRESS                       0x00204308
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_set_lateral_control_info_set_SteerAngSpdLimt ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_set_lateral_control_info_set_SteerWhlTorqReq ""  
     FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x00205358
+    ECU_ADDRESS                       0x00204310
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_set_lateral_control_info_set_SteerWhlTorqReq ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x00205348
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_set_longitudinal_control_info_set_AutoTrqWhlReq ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       0 5000  
+    ECU_ADDRESS                       0x00204320
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_set_longitudinal_control_info_set_AutoTrqWhlReq ""  
-    SLONG AION_auto_mode_request_CM_int32       0             0       0 []  
-    ECU_ADDRESS                       0x00205364
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_set_longitudinal_control_info_set_BrakeReq ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -16 16  
+    ECU_ADDRESS                       0x00204328
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_set_longitudinal_control_info_set_BrakeReq ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       0 []  
-    ECU_ADDRESS                       0x00205368
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_set_longitudinal_control_info_set_GearLvlReq ""  
+    SLONG AION_auto_mode_request_CM_Gear_request       0             0       0 7  
+    ECU_ADDRESS                       0x00204330
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_set_longitudinal_control_info_set_GearLvlReq ""  
-    SLONG AION_auto_mode_request_CM_AION_gear       0             0       0 7  
-    ECU_ADDRESS                       0x00205370
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_set_longitudinal_control_info_set_GearLvlReqVD ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_set_longitudinal_control_info_set_GearLvlReqVD ""  
     SLONG AION_auto_mode_request_CM_Validation_status       0             0       0 1  
-    ECU_ADDRESS                       0x00205374
+    ECU_ADDRESS                       0x00204334
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_U.control_available_set_longitudinal_control_info_set_LngCtrlReq ""  
+  /begin MEASUREMENT  AION_auto_mode_request_U.InBus_set_longitudinal_control_info_set_LngCtrlReq ""  
     SLONG AION_auto_mode_request_CM_Control_request       0             0       0 3  
-    ECU_ADDRESS                       0x00205360
+    ECU_ADDRESS                       0x00204318
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCM_info_get_CtrlAvailable ""  
     SLONG AION_auto_mode_request_CM_Available_status       0             0       0 1  
-    ECU_ADDRESS                       0x0020531C
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCM_info_get_DriverDoorAjarSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205320
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCM_info_get_FrontFogLampSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205321
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCM_info_get_FrontWiperSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 3  
-    ECU_ADDRESS                       0x00205322
+    ECU_ADDRESS                       0x00204258
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCM_info_get_HazardLampSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205323
+    SLONG AION_auto_mode_request_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x0020425C
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCM_info_get_HighBeamSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205324
+    SLONG AION_auto_mode_request_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x00204260
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCM_info_get_HornSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205325
+    SLONG AION_auto_mode_request_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x00204264
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCM_info_get_KeySt ""  
     UBYTE AION_auto_mode_request_CM_uint8       0             0       0 3  
-    ECU_ADDRESS                       0x00205326
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCM_info_get_LeftTurnLampFaultSt ""  
-    SLONG AION_auto_mode_request_CM_Fault_status       0             0       0 1  
-    ECU_ADDRESS                       0x00205328
+    ECU_ADDRESS                       0x00204268
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCM_info_get_LeftTurnLampSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x0020532C
+    SLONG AION_auto_mode_request_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x0020426C
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCM_info_get_LowBeamSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x0020532D
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCM_info_get_PsngrDoorAjarSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x0020532E
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCM_info_get_RLDoorAjarSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x0020532F
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCM_info_get_RRDoorAjarSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205330
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCM_info_get_RearFogLampSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205331
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCM_info_get_RightTurnLampFaultSt ""  
-    SLONG AION_auto_mode_request_CM_Fault_status       0             0       0 1  
-    ECU_ADDRESS                       0x00205334
+    SLONG AION_auto_mode_request_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x00204270
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCM_info_get_RightTurnLampSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205338
+    SLONG AION_auto_mode_request_CM_Active_status       0             0       0 1  
+    ECU_ADDRESS                       0x00204274
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_ABSActiveSt ""  
     UBYTE AION_auto_mode_request_CM_uint8__       0             0       0 1  
-    ECU_ADDRESS                       0x00205120
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_ABSFaultSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8__       0             0       0 1  
-    ECU_ADDRESS                       0x00205121
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_AEBActive ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x0020516B
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_AEBAvailable ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x0020516C
+    ECU_ADDRESS                       0x002041B8
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_ActVehLaltrlAccel ""  
     FLOAT64_IEEE AION_auto_mode_request_CM_double_m_s_2       0             0       -21.593 21.593  
-    ECU_ADDRESS                       0x002051C8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_ActVehLaltrlAccelVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002051D0
+    ECU_ADDRESS                       0x002041D8
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_ActVehLongAccel ""  
     FLOAT64_IEEE AION_auto_mode_request_CM_double_m_s_2       0             0       -21.593 21.593  
-    ECU_ADDRESS                       0x002051D8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_ActVehLongAccelVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002051E0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_CDDActive ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x0020516D
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_CDDAvailable ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x0020516E
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_CDDFail ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x0020516F
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_FLWheelRotatedDirection ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205184
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_FLWheelRotatedDirectionVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205185
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_FLWheelSpd ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double_km_h       0             0       0 240  
-    ECU_ADDRESS                       0x00205188
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_FLWheelSpdEdgesSum ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 4095  
-    ECU_ADDRESS                       0x00205134
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_FLWheelSpdEdgesSumVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205138
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_FLWheelSpdVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205190
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_FRWheelRotatedDirection ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205191
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_FRWheelRotatedDirectionVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205192
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_FRWheelSpd ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double_km_h       0             0       0 240  
-    ECU_ADDRESS                       0x00205198
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_FRWheelSpdEdgesSum ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 4095  
-    ECU_ADDRESS                       0x0020513C
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_FRWheelSpdEdgesSumVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205140
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_FRWheelSpdVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002051A0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_HDCCtrlSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8__       0             0       0 3  
-    ECU_ADDRESS                       0x00205169
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_HDCErrSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8__       0             0       0 1  
-    ECU_ADDRESS                       0x0020516A
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_MasterCylinderPr ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double_bar       0             0       0 250  
-    ECU_ADDRESS                       0x00205170
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_MasterCylinderPrOffset ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double_bar       0             0       -15 15  
-    ECU_ADDRESS                       0x00205178
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_MasterCylinderPrOffsetVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8__       0             0       0 1  
-    ECU_ADDRESS                       0x00205180
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_MasterCylinderPrVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8__       0             0       0 1  
-    ECU_ADDRESS                       0x00205181
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_NoBrakeForce ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205182
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_RLWheelRotatedDirection ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002051A1
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_RLWheelRotatedDirectionVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002051A2
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_RLWheelSpd ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double_km_h       0             0       0 240  
-    ECU_ADDRESS                       0x002051A8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_RLWheelSpdEdgesSum ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 4095  
-    ECU_ADDRESS                       0x00205144
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_RLWheelSpdEdgesSumVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205148
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_RLWheelSpdVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002051B0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_RRWheelRotatedDirection ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002051B1
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_RRWheelRotatedDirectionVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002051B2
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_RRWheelSpd ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double_km_h       0             0       0 240  
-    ECU_ADDRESS                       0x002051B8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_RRWheelSpdEdgesSum ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 4095  
-    ECU_ADDRESS                       0x0020514C
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_RRWheelSpdEdgesSumVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205150
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_RRWheelSpdVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002051C0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_VDCActiveSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8__       0             0       0 1  
-    ECU_ADDRESS                       0x00205122
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_VDCFaultSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8__       0             0       0 1  
-    ECU_ADDRESS                       0x00205123
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_VehLaltrlAccelOffset ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double_m_s_2       0             0       -21.593 21.593  
-    ECU_ADDRESS                       0x002051E8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_VehLongAccelOffset ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double_m_s_2       0             0       -21.593 21.593  
-    ECU_ADDRESS                       0x002051F0
+    ECU_ADDRESS                       0x002041E0
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_VehSpd ""  
     FLOAT64_IEEE AION_auto_mode_request_CM_double_km_h       0             0       0 240  
-    ECU_ADDRESS                       0x00205128
+    ECU_ADDRESS                       0x002041C0
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_VehSpdVD ""  
     UBYTE AION_auto_mode_request_CM_uint8__       0             0       0 1  
-    ECU_ADDRESS                       0x00205130
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_VehicleStandStillSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 3  
-    ECU_ADDRESS                       0x00205183
+    ECU_ADDRESS                       0x002041C8
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_YawRate ""  
     FLOAT64_IEEE AION_auto_mode_request_CM_double_rad_s       0             0       -2.0943 1.9047234375  
-    ECU_ADDRESS                       0x00205158
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_YawRateOffset ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double_rad_s       0             0       -0.13 0.13  
-    ECU_ADDRESS                       0x00205160
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_BCS_info_get_YawRateSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205168
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_EPB_info_get_FailSt ""  
-    SLONG AION_auto_mode_request_CM_Error_status       0             0       0 1  
-    ECU_ADDRESS                       0x002052F4
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_EPB_info_get_SwitchSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 3  
-    ECU_ADDRESS                       0x002052F8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_EPB_info_get_SwitchStVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002052F9
+    ECU_ADDRESS                       0x002041D0
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_EPB_info_get_SysSt ""  
     UBYTE AION_auto_mode_request_CM_uint8       0             0       0 7  
-    ECU_ADDRESS                       0x002052FA
+    ECU_ADDRESS                       0x00204239
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_EPS_info_get_SteeringAngle ""  
     FLOAT64_IEEE AION_auto_mode_request_CM_double_deg       0             0       -780 779.9  
-    ECU_ADDRESS                       0x00205300
+    ECU_ADDRESS                       0x00204240
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_EPS_info_get_SteeringAngleSpd ""  
     ULONG AION_auto_mode_request_CM_uint32_deg_sec       0             0       0 1016  
-    ECU_ADDRESS                       0x00205308
+    ECU_ADDRESS                       0x00204248
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_EPS_info_get_SteeringAngleSpdVD ""  
     UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x0020530C
+    ECU_ADDRESS                       0x0020424C
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_EPS_info_get_SteeringAngleVD ""  
     UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x0020530D
+    ECU_ADDRESS                       0x0020424D
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_EPS_info_get_StrngWhlTorq ""  
     FLOAT64_IEEE AION_auto_mode_request_CM_double_Nm       0             0       -12.5 12.5  
-    ECU_ADDRESS                       0x00205310
+    ECU_ADDRESS                       0x00204250
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_EPS_info_get_StrngWhlTorqVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205318
+  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_IMU_info_get_AccelerationX ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double_g       0             0       -10 10  
+    ECU_ADDRESS                       0x002042C0
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_EPS_info_get_ThermalSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 3  
-    ECU_ADDRESS                       0x00205319
+  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_IMU_info_get_AccelerationY ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double_g       0             0       -10 10  
+    ECU_ADDRESS                       0x002042C8
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_EPS_info_get_WarnLamp ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x0020531A
+  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_IMU_info_get_AccelerationZ ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double_g       0             0       -10 10  
+    ECU_ADDRESS                       0x002042D0
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_Checksum1 ""  
-    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 255  
-    ECU_ADDRESS                       0x00205254
+  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_IMU_info_get_Altitude ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double_m       0             0       -200 8000  
+    ECU_ADDRESS                       0x002042E8
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_Checksum10 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 255  
-    ECU_ADDRESS                       0x0020525C
+  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_IMU_info_get_AngleSpeedX ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double___s       0             0       -360 360  
+    ECU_ADDRESS                       0x002042A8
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_Checksum11 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 255  
-    ECU_ADDRESS                       0x00205264
+  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_IMU_info_get_AngleSpeedY ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double___s       0             0       -360 360  
+    ECU_ADDRESS                       0x002042B0
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_Checksum12 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 255  
-    ECU_ADDRESS                       0x0020526C
+  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_IMU_info_get_AngleSpeedZ ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double___s       0             0       -360 360  
+    ECU_ADDRESS                       0x002042B8
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_Checksum13 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 255  
-    ECU_ADDRESS                       0x00205274
+  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_IMU_info_get_GPSTime ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double_s       0             0       0 []  
+    ECU_ADDRESS                       0x00204280
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_Checksum16 ""  
-    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 205  
-    ECU_ADDRESS                       0x0020529C
+  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_IMU_info_get_GPSWeek ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x00204278
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_Checksum17 ""  
-    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 255  
-    ECU_ADDRESS                       0x002052A4
+  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_IMU_info_get_Heading ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double__       0             0       0 359.99  
+    ECU_ADDRESS                       0x00204288
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_Checksum18 ""  
-    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 255  
-    ECU_ADDRESS                       0x002052AC
+  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_IMU_info_get_IMUWorkStatus ""  
+    SLONG AION_auto_mode_request_CM_IMU_Status       0             0       0 91  
+    ECU_ADDRESS                       0x002042A0
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_Checksum2 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 255  
-    ECU_ADDRESS                       0x002052B4
+  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_IMU_info_get_Latitude ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double__       0             0       -90 90  
+    ECU_ADDRESS                       0x002042D8
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_Checksum3 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 255  
-    ECU_ADDRESS                       0x002052BC
+  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_IMU_info_get_Longitude ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double__       0             0       -180 180  
+    ECU_ADDRESS                       0x002042E0
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_Checksum4 ""  
-    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 255  
-    ECU_ADDRESS                       0x002052C4
+  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_IMU_info_get_Pitch ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double__       0             0       -90 90  
+    ECU_ADDRESS                       0x00204290
   /end MEASUREMENT 
 
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_Checksum5 ""  
-    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 255  
-    ECU_ADDRESS                       0x002052CC
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_Checksum6 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 255  
-    ECU_ADDRESS                       0x002052D4
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_Checksum7 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 255  
-    ECU_ADDRESS                       0x002052DC
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_Checksum8 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 255  
-    ECU_ADDRESS                       0x002052E4
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_Checksum9 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 255  
-    ECU_ADDRESS                       0x002052EC
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_EStopSwSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x0020527C
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_EStopSwStVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x0020527D
+  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_IMU_info_get_Roll ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double__       0             0       -180 180  
+    ECU_ADDRESS                       0x00204298
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_LatAutoCheckReport ""  
     ULONG AION_auto_mode_request_CM_uint32       0             0       0 15  
-    ECU_ADDRESS                       0x00205280
+    ECU_ADDRESS                       0x00204220
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_LatCtrlMode ""  
     SLONG AION_auto_mode_request_CM_Control_status       0             0       0 3  
-    ECU_ADDRESS                       0x00205284
+    ECU_ADDRESS                       0x00204224
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_LatQuitReport ""  
     ULONG AION_auto_mode_request_CM_uint32       0             0       0 255  
-    ECU_ADDRESS                       0x00205288
+    ECU_ADDRESS                       0x00204228
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_LngAutoCheckIReport ""  
     ULONG AION_auto_mode_request_CM_uint32       0             0       0 65535  
-    ECU_ADDRESS                       0x0020528C
+    ECU_ADDRESS                       0x0020422C
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_LngCtrlMode ""  
     SLONG AION_auto_mode_request_CM_Control_status       0             0       0 3  
-    ECU_ADDRESS                       0x00205290
+    ECU_ADDRESS                       0x00204230
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_LngQuitReport ""  
     ULONG AION_auto_mode_request_CM_uint32       0             0       0 65535  
-    ECU_ADDRESS                       0x00205294
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_MsgCounter1 ""  
-    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 15  
-    ECU_ADDRESS                       0x00205258
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_MsgCounter10 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 15  
-    ECU_ADDRESS                       0x00205260
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_MsgCounter11 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 15  
-    ECU_ADDRESS                       0x00205268
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_MsgCounter12 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 15  
-    ECU_ADDRESS                       0x00205270
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_MsgCounter13 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 15  
-    ECU_ADDRESS                       0x00205278
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_MsgCounter16 ""  
-    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 15  
-    ECU_ADDRESS                       0x002052A0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_MsgCounter17 ""  
-    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 15  
-    ECU_ADDRESS                       0x002052A8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_MsgCounter18 ""  
-    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 15  
-    ECU_ADDRESS                       0x002052B0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_MsgCounter2 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 15  
-    ECU_ADDRESS                       0x002052B8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_MsgCounter3 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 15  
-    ECU_ADDRESS                       0x002052C0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_MsgCounter4 ""  
-    ULONG AION_auto_mode_request_CM_uint32__       0             0       0 15  
-    ECU_ADDRESS                       0x002052C8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_MsgCounter5 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 15  
-    ECU_ADDRESS                       0x002052D0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_MsgCounter6 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 15  
-    ECU_ADDRESS                       0x002052D8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_MsgCounter7 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 15  
-    ECU_ADDRESS                       0x002052E0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_MsgCounter8 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 15  
-    ECU_ADDRESS                       0x002052E8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_MsgCounter9 ""  
-    ULONG AION_auto_mode_request_CM_uint32       0             0       0 15  
-    ECU_ADDRESS                       0x002052F0
+    ECU_ADDRESS                       0x00204234
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SCU_info_get_StrngWhlIntv ""  
     UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205298
+    ECU_ADDRESS                       0x00204238
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SRS_info_get_DriverSeatBeltSt ""  
     UBYTE AION_auto_mode_request_CM_uint8       0             0       0 3  
-    ECU_ADDRESS                       0x002052FB
+    ECU_ADDRESS                       0x0020423A
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_SRS_info_get_PsngrSeatBeltSt ""  
     UBYTE AION_auto_mode_request_CM_uint8       0             0       0 3  
-    ECU_ADDRESS                       0x002052FC
+    ECU_ADDRESS                       0x0020423B
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_VCU_info_get_ACCButtInfo ""  
     ULONG AION_auto_mode_request_CM_uint32       0             0       0 255  
-    ECU_ADDRESS                       0x00205224
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_VCU_info_get_ACCMaxRecpDecel ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double_m_s2       0             0       -5 7.75  
-    ECU_ADDRESS                       0x00205210
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_VCU_info_get_ACCMaxRecpDecelVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205218
+    ECU_ADDRESS                       0x0020421C
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_VCU_info_get_AccElecECFail ""  
     UBYTE AION_auto_mode_request_CM_uint8__       0             0       0 1  
-    ECU_ADDRESS                       0x00205228
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_VCU_info_get_ActRecpTorq ""  
-    ULONG AION_auto_mode_request_CM_uint32_Nm       0             0       0 2000  
-    ECU_ADDRESS                       0x00205204
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_VCU_info_get_ActRecpTorqSt ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 3  
-    ECU_ADDRESS                       0x00205208
+    ECU_ADDRESS                       0x00204210
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_VCU_info_get_ActVehWheelTorq ""  
     ULONG AION_auto_mode_request_CM_uint32_Nm       0             0       0 10000  
-    ECU_ADDRESS                       0x0020521C
+    ECU_ADDRESS                       0x002041E8
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_VCU_info_get_BrkPedalSt ""  
     UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205240
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_VCU_info_get_BrkPedalStVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205241
+    ECU_ADDRESS                       0x00204218
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_VCU_info_get_CrntGearLvl ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 7  
-    ECU_ADDRESS                       0x00205209
+    SLONG AION_auto_mode_request_CM_Gear_status       0             0       0 4  
+    ECU_ADDRESS                       0x002041FC
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_VCU_info_get_CrntGearLvlVD ""  
     UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x0020520A
+    ECU_ADDRESS                       0x00204200
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_VCU_info_get_GasPedalActPst ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double__       0             0       0 99.96  
-    ECU_ADDRESS                       0x00205230
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_VCU_info_get_GasPedalActPstVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205238
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_VCU_info_get_GasPedalVirtualPst ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double__       0             0       0 99.96  
-    ECU_ADDRESS                       0x00205248
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_VCU_info_get_GasPedalVirtualPstVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205250
+    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       0 100  
+    ECU_ADDRESS                       0x00204208
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_VCU_info_get_GearLeverIntv ""  
     UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x002051F8
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_VCU_info_get_LateralAssistBtnInfo ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205220
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_VCU_info_get_LateralAssistBtnInfoVD ""  
-    UBYTE AION_auto_mode_request_CM_uint8       0             0       0 1  
-    ECU_ADDRESS                       0x00205221
+    ECU_ADDRESS                       0x002041EC
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_VCU_info_get_VehDrvMod ""  
-    UBYTE AION_auto_mode_request_CM_uint8__       0             0       0 7  
-    ECU_ADDRESS                       0x002051F9
+    SLONG AION_auto_mode_request_CM_Drive_status__       0             0       0 5  
+    ECU_ADDRESS                       0x002041F0
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_VCU_info_get_VehRdySt ""  
     SLONG AION_auto_mode_request_CM_Ready_status__       0             0       0 1  
-    ECU_ADDRESS                       0x002051FC
+    ECU_ADDRESS                       0x002041F4
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_VCU_info_get_VehRng ""  
     ULONG AION_auto_mode_request_CM_uint32_km       0             0       0 1000  
-    ECU_ADDRESS                       0x00205200
+    ECU_ADDRESS                       0x002041F8
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_get_VCU_info_get_VehWheelTorqMax ""  
     ULONG AION_auto_mode_request_CM_uint32_Nm       0             0       0 10000  
-    ECU_ADDRESS                       0x0020523C
+    ECU_ADDRESS                       0x00204214
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_set_ADCU_info_set_BeamReq ""  
     SLONG AION_auto_mode_request_CM_Beam_request__       0             0       0 3  
-    ECU_ADDRESS                       0x00205110
+    ECU_ADDRESS                       0x00204170
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_set_ADCU_info_set_BodyCtrlReq ""  
     SLONG AION_auto_mode_request_CM_Enable_request__       0             0       0 1  
-    ECU_ADDRESS                       0x00205114
+    ECU_ADDRESS                       0x00204174
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_set_ADCU_info_set_Checksum1 ""  
     ULONG AION_auto_mode_request_CM_uint32       0             0       0 255  
-    ECU_ADDRESS                       0x002050F8
+    ECU_ADDRESS                       0x00204158
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_set_ADCU_info_set_Checksum2 ""  
     ULONG AION_auto_mode_request_CM_uint32       0             0       0 255  
-    ECU_ADDRESS                       0x00205100
+    ECU_ADDRESS                       0x00204160
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_set_ADCU_info_set_Checksum3 ""  
     ULONG AION_auto_mode_request_CM_uint32__       0             0       0 255  
-    ECU_ADDRESS                       0x00205108
+    ECU_ADDRESS                       0x00204168
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_set_ADCU_info_set_HornRingReq ""  
     SLONG AION_auto_mode_request_CM_Active_request__       0             0       0 1  
-    ECU_ADDRESS                       0x00205118
+    ECU_ADDRESS                       0x00204178
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_set_ADCU_info_set_MsgCounter1 ""  
     ULONG AION_auto_mode_request_CM_uint32       0             0       0 15  
-    ECU_ADDRESS                       0x002050FC
+    ECU_ADDRESS                       0x0020415C
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_set_ADCU_info_set_MsgCounter2 ""  
     ULONG AION_auto_mode_request_CM_uint32       0             0       0 15  
-    ECU_ADDRESS                       0x00205104
+    ECU_ADDRESS                       0x00204164
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_set_ADCU_info_set_MsgCounter3 ""  
     ULONG AION_auto_mode_request_CM_uint32__       0             0       0 15  
-    ECU_ADDRESS                       0x0020510C
+    ECU_ADDRESS                       0x0020416C
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_set_ADCU_info_set_TurnLightReq ""  
     SLONG AION_auto_mode_request_CM_Light_request__       0             0       0 3  
-    ECU_ADDRESS                       0x0020511C
+    ECU_ADDRESS                       0x0020417C
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_set_SPK_info_set_Chk ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x002041A8
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_set_SPK_info_set_Etx ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x002041B0
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_set_SPK_info_set_FunctionCode ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x00204188
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_set_SPK_info_set_Parameter ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x002041A0
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_set_SPK_info_set_SoundSourceCode ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x00204190
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_set_SPK_info_set_Stx ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x00204180
+  /end MEASUREMENT 
+
+  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_set_SPK_info_set_VolumeCode ""  
+    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
+    ECU_ADDRESS                       0x00204198
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_set_lateral_control_info_set_LatCtrlReq ""  
     SLONG AION_auto_mode_request_CM_Control_request       0             0       0 3  
-    ECU_ADDRESS                       0x002050C0
+    ECU_ADDRESS                       0x00204120
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_set_lateral_control_info_set_SteerAngReq ""  
     FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x002050D0
-  /end MEASUREMENT 
-
-  /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_set_lateral_control_info_set_SteerAngSpdLimt ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x002050D8
+    ECU_ADDRESS                       0x00204128
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_set_lateral_control_info_set_SteerWhlTorqReq ""  
     FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -1.7E+308 1.7E+308  
-    ECU_ADDRESS                       0x002050C8
+    ECU_ADDRESS                       0x00204130
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_set_longitudinal_control_info_set_AutoTrqWhlReq ""  
-    SLONG AION_auto_mode_request_CM_int32       0             0       0 []  
-    ECU_ADDRESS                       0x002050E4
+    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       0 5000  
+    ECU_ADDRESS                       0x00204140
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_set_longitudinal_control_info_set_BrakeReq ""  
-    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       0 []  
-    ECU_ADDRESS                       0x002050E8
+    FLOAT64_IEEE AION_auto_mode_request_CM_double       0             0       -16 16  
+    ECU_ADDRESS                       0x00204148
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_set_longitudinal_control_info_set_GearLvlReq ""  
-    SLONG AION_auto_mode_request_CM_AION_gear       0             0       0 7  
-    ECU_ADDRESS                       0x002050F0
+    SLONG AION_auto_mode_request_CM_Gear_request       0             0       0 7  
+    ECU_ADDRESS                       0x00204150
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_set_longitudinal_control_info_set_GearLvlReqVD ""  
     SLONG AION_auto_mode_request_CM_Validation_status       0             0       0 1  
-    ECU_ADDRESS                       0x002050F4
+    ECU_ADDRESS                       0x00204154
   /end MEASUREMENT 
 
   /begin MEASUREMENT  AION_auto_mode_request_Y.OutBus_set_longitudinal_control_info_set_LngCtrlReq ""  
     SLONG AION_auto_mode_request_CM_Control_request       0             0       0 3  
-    ECU_ADDRESS                       0x002050E0
+    ECU_ADDRESS                       0x00204138
   /end MEASUREMENT 
-
-  /begin COMPU_METHOD AION_auto_mode_request_CM_AION_gear ""  
-    TAB_VERB "%0.6" ""  
-    COMPU_TAB_REF VTAB_FOR_AION_auto_mode_request_CM_AION_gear  
-  /end COMPU_METHOD
-
-  /begin COMPU_VTAB VTAB_FOR_AION_auto_mode_request_CM_AION_gear "Enumerated data type: AION_gear"  
-    TAB_VERB 8  
-    0 "NoRequest"  
-    1 "P"  
-    2 "R"  
-    3 "N"  
-    4 "D"  
-    5 "Reserved_gear"  
-    6 "Reserved1_gear"  
-    7 "Reserved2_gear"  
-  /end COMPU_VTAB
 
   /begin COMPU_METHOD AION_auto_mode_request_CM_Active_request__ ""  
     TAB_VERB "%0.6" "-"  
@@ -3346,6 +2102,17 @@ ASAP2_VERSION  1 71
     TAB_VERB 2  
     0 "NotActiveRequest"  
     1 "ActiveRequest"  
+  /end COMPU_VTAB
+
+  /begin COMPU_METHOD AION_auto_mode_request_CM_Active_status ""  
+    TAB_VERB "%0.6" ""  
+    COMPU_TAB_REF VTAB_FOR_AION_auto_mode_request_CM_Active_status  
+  /end COMPU_METHOD
+
+  /begin COMPU_VTAB VTAB_FOR_AION_auto_mode_request_CM_Active_status "Enumerated data type: Active_status"  
+    TAB_VERB 2  
+    0 "NotActiveStatus"  
+    1 "ActiveStatus"  
   /end COMPU_VTAB
 
   /begin COMPU_METHOD AION_auto_mode_request_CM_Available_status ""  
@@ -3398,6 +2165,21 @@ ASAP2_VERSION  1 71
     3 "FaultStatus"  
   /end COMPU_VTAB
 
+  /begin COMPU_METHOD AION_auto_mode_request_CM_Drive_status__ ""  
+    TAB_VERB "%0.6" "-"  
+    COMPU_TAB_REF VTAB_FOR_AION_auto_mode_request_CM_Drive_status__  
+  /end COMPU_METHOD
+
+  /begin COMPU_VTAB VTAB_FOR_AION_auto_mode_request_CM_Drive_status__ "Enumerated data type: Drive_status"  
+    TAB_VERB 6  
+    0 "InvalidDriveStatus"  
+    1 "EcoPlusModeStatus"  
+    2 "EcoModeStatus"  
+    3 "NormalModeStatus"  
+    4 "DrivingModeStatus"  
+    5 "SportModeStatus"  
+  /end COMPU_VTAB
+
   /begin COMPU_METHOD AION_auto_mode_request_CM_Enable_request__ ""  
     TAB_VERB "%0.6" "-"  
     COMPU_TAB_REF VTAB_FOR_AION_auto_mode_request_CM_Enable_request__  
@@ -3409,26 +2191,51 @@ ASAP2_VERSION  1 71
     1 "Enable"  
   /end COMPU_VTAB
 
-  /begin COMPU_METHOD AION_auto_mode_request_CM_Error_status ""  
+  /begin COMPU_METHOD AION_auto_mode_request_CM_Gear_request ""  
     TAB_VERB "%0.6" ""  
-    COMPU_TAB_REF VTAB_FOR_AION_auto_mode_request_CM_Error_status  
+    COMPU_TAB_REF VTAB_FOR_AION_auto_mode_request_CM_Gear_request  
   /end COMPU_METHOD
 
-  /begin COMPU_VTAB VTAB_FOR_AION_auto_mode_request_CM_Error_status "Enumerated data type: Error_status"  
-    TAB_VERB 2  
-    0 "NoError"  
-    1 "Error"  
+  /begin COMPU_VTAB VTAB_FOR_AION_auto_mode_request_CM_Gear_request "Enumerated data type: Gear_request"  
+    TAB_VERB 8  
+    0 "NoRequest"  
+    1 "P"  
+    2 "R"  
+    3 "N"  
+    4 "D"  
+    5 "Reserved_gear"  
+    6 "Reserved1_gear"  
+    7 "Reserved2_gear"  
   /end COMPU_VTAB
 
-  /begin COMPU_METHOD AION_auto_mode_request_CM_Fault_status ""  
+  /begin COMPU_METHOD AION_auto_mode_request_CM_Gear_status ""  
     TAB_VERB "%0.6" ""  
-    COMPU_TAB_REF VTAB_FOR_AION_auto_mode_request_CM_Fault_status  
+    COMPU_TAB_REF VTAB_FOR_AION_auto_mode_request_CM_Gear_status  
   /end COMPU_METHOD
 
-  /begin COMPU_VTAB VTAB_FOR_AION_auto_mode_request_CM_Fault_status "Enumerated data type: Fault_status"  
-    TAB_VERB 2  
-    0 "NotFault"  
-    1 "Fault"  
+  /begin COMPU_VTAB VTAB_FOR_AION_auto_mode_request_CM_Gear_status "Enumerated data type: Gear_status"  
+    TAB_VERB 5  
+    0 "InvalidGearStatus"  
+    1 "DriveGearStatus"  
+    2 "NeutralGearStatus"  
+    3 "ReverseGearStatus"  
+    4 "ParkGearStatus"  
+  /end COMPU_VTAB
+
+  /begin COMPU_METHOD AION_auto_mode_request_CM_IMU_Status ""  
+    TAB_VERB "%0.6" ""  
+    COMPU_TAB_REF VTAB_FOR_AION_auto_mode_request_CM_IMU_Status  
+  /end COMPU_METHOD
+
+  /begin COMPU_VTAB VTAB_FOR_AION_auto_mode_request_CM_IMU_Status "Enumerated data type: IMU_Status"  
+    TAB_VERB 7  
+    0 "Initialization"  
+    3 "Single_Point_Location"  
+    4 "Single_Point_Orientation"  
+    69 "RTK_INT_Location"  
+    75 "RTK_INT_Orientation"  
+    85 "RTK_FLOAT_Location"  
+    91 "RTK_FLOAT_Orientation"  
   /end COMPU_VTAB
 
   /begin COMPU_METHOD AION_auto_mode_request_CM_Light_request__ ""  
@@ -3475,23 +2282,27 @@ ASAP2_VERSION  1 71
   /end COMPU_METHOD
 
   /begin COMPU_METHOD AION_auto_mode_request_CM_double__ ""  
-    IDENTICAL "%15.10" "%"  
+    IDENTICAL "%15.10" "°"  
   /end COMPU_METHOD
 
-  /begin COMPU_METHOD AION_auto_mode_request_CM_double_bar ""  
-    IDENTICAL "%15.10" "bar"  
+  /begin COMPU_METHOD AION_auto_mode_request_CM_double___s ""  
+    IDENTICAL "%15.10" "°/s"  
   /end COMPU_METHOD
 
   /begin COMPU_METHOD AION_auto_mode_request_CM_double_deg ""  
     IDENTICAL "%15.10" "deg"  
   /end COMPU_METHOD
 
+  /begin COMPU_METHOD AION_auto_mode_request_CM_double_g ""  
+    IDENTICAL "%15.10" "g"  
+  /end COMPU_METHOD
+
   /begin COMPU_METHOD AION_auto_mode_request_CM_double_km_h ""  
     IDENTICAL "%15.10" "km/h"  
   /end COMPU_METHOD
 
-  /begin COMPU_METHOD AION_auto_mode_request_CM_double_m_s2 ""  
-    IDENTICAL "%15.10" "m/s2"  
+  /begin COMPU_METHOD AION_auto_mode_request_CM_double_m ""  
+    IDENTICAL "%15.10" "m"  
   /end COMPU_METHOD
 
   /begin COMPU_METHOD AION_auto_mode_request_CM_double_m_s_2 ""  
@@ -3500,6 +2311,10 @@ ASAP2_VERSION  1 71
 
   /begin COMPU_METHOD AION_auto_mode_request_CM_double_rad_s ""  
     IDENTICAL "%15.10" "rad/s"  
+  /end COMPU_METHOD
+
+  /begin COMPU_METHOD AION_auto_mode_request_CM_double_s ""  
+    IDENTICAL "%15.10" "s"  
   /end COMPU_METHOD
 
   /begin COMPU_METHOD AION_auto_mode_request_CM_int32 ""  
@@ -3533,6 +2348,10 @@ ASAP2_VERSION  1 71
   /begin COMPU_METHOD AION_auto_mode_request_CM_uint8__ ""  
     IDENTICAL "%3.0" "-"  
   /end COMPU_METHOD
+
+  /begin  RECORD_LAYOUT FixLookup_FLOAT64_IEEE
+    FNC_VALUES 1 FLOAT64_IEEE COLUMN_DIR DIRECT
+  /end  RECORD_LAYOUT 
 
   /begin  RECORD_LAYOUT Scalar_FLOAT64_IEEE
     FNC_VALUES 1 FLOAT64_IEEE COLUMN_DIR DIRECT

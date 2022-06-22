@@ -2,9 +2,9 @@
  * Code generation for system model 'AION_auto_mode_request'
  *
  * Model                      : AION_auto_mode_request
- * Model version              : 1.101
+ * Model version              : 1.109
  * Simulink Coder version : 9.5 (R2021a) 14-Nov-2020
- * C++ source code generated on : Fri Jun 10 15:54:19 2022
+ * C++ source code generated on : Tue Jun 21 15:24:41 2022
  *
  * Note that the functions contained in this file are part of a Simulink
  * model, and are not self-contained algorithms.
@@ -12,13 +12,64 @@
 
 #include "AION_auto_mode_request.h"
 #include "AION_auto_mode_request_private.h"
+#include "look1_binlxpw.h"
+
+/* Named constants for Chart: '<Root>/Chart' */
+const uint32_T AION_auto_mode_request_IN_Name = 1U;
+const uint32_T AION_auto_mode_request_IN_Name1 = 2U;
+P_AION_auto_mode_request_T AION_auto_mode_request_P = {
+  /* Mask Parameter: BitwiseAND_BitMask
+   * Referenced by: '<Root>/Bitwise AND'
+   */
+  1U,
+
+  /* Expression: [76 77 78 79 72]
+   * Referenced by: '<Root>/SPK_Chk'
+   */
+  { 76.0, 77.0, 78.0, 79.0, 72.0 },
+
+  /* Expression: [0:4]
+   * Referenced by: '<Root>/SPK_Chk'
+   */
+  { 0.0, 1.0, 2.0, 3.0, 4.0 }
+};
+
+/* System initialize for referenced model: 'AION_auto_mode_request' */
+void AION_auto_mode_request_Init(B_AION_auto_mode_request_c_T *localB,
+  DW_AION_auto_mode_request_f_T *localDW)
+{
+  /* SystemInitialize for Chart: '<Root>/Chart' */
+  localDW->is_active_c3_AION_auto_mode_request = 0U;
+  localDW->is_c3_AION_auto_mode_request = 0U;
+  localB->LatCtrlReq = 0.0;
+  localB->QlightChannel_f = 0U;
+
+  /* SystemInitialize for Chart: '<Root>/Chart2' */
+  localDW->is_active_c2_AION_auto_mode_request = 0U;
+  localDW->is_c2_AION_auto_mode_request = 0U;
+  localB->LngCtrlReq = 0.0;
+}
+
+/* System reset for referenced model: 'AION_auto_mode_request' */
+void AION_auto_mode_request_Reset(B_AION_auto_mode_request_c_T *localB,
+  DW_AION_auto_mode_request_f_T *localDW)
+{
+  /* SystemReset for Chart: '<Root>/Chart' */
+  localDW->is_active_c3_AION_auto_mode_request = 0U;
+  localDW->is_c3_AION_auto_mode_request = 0U;
+  localB->LatCtrlReq = 0.0;
+  localB->QlightChannel_f = 0U;
+
+  /* SystemReset for Chart: '<Root>/Chart2' */
+  localDW->is_active_c2_AION_auto_mode_request = 0U;
+  localDW->is_c2_AION_auto_mode_request = 0U;
+  localB->LngCtrlReq = 0.0;
+}
 
 /* Output and update for referenced model: 'AION_auto_mode_request' */
-void AION_auto_mode_request(const Control_request
-  *rtu_InBus_set_lateral_control_info_set_LatCtrlReq, const real_T
+void AION_auto_mode_request(const real_T
   *rtu_InBus_set_lateral_control_info_set_SteerAngReq, const real_T
-  *rtu_InBus_set_lateral_control_info_set_SteerWhlTorqReq, const Control_request
-  *rtu_InBus_set_longitudinal_control_info_set_LngCtrlReq, const real_T
+  *rtu_InBus_set_lateral_control_info_set_SteerWhlTorqReq, const real_T
   *rtu_InBus_set_longitudinal_control_info_set_AutoTrqWhlReq, const real_T
   *rtu_InBus_set_longitudinal_control_info_set_BrakeReq, const Gear_request
   *rtu_InBus_set_longitudinal_control_info_set_GearLvlReq, const
@@ -32,7 +83,12 @@ void AION_auto_mode_request(const Control_request
   *rtu_InBus_set_ADCU_info_set_BeamReq, const Enable_request
   *rtu_InBus_set_ADCU_info_set_BodyCtrlReq, const Active_request
   *rtu_InBus_set_ADCU_info_set_HornRingReq, const Light_request
-  *rtu_InBus_set_ADCU_info_set_TurnLightReq, const uint8_T
+  *rtu_InBus_set_ADCU_info_set_TurnLightReq, const real_T
+  *rtu_InBus_set_SPK_info_set_Stx, const real_T
+  *rtu_InBus_set_SPK_info_set_FunctionCode, const real_T
+  *rtu_InBus_set_SPK_info_set_VolumeCode, const real_T
+  *rtu_InBus_set_SPK_info_set_Parameter, const real_T
+  *rtu_InBus_set_SPK_info_set_Etx, const uint8_T
   *rtu_InBus_get_BCS_info_get_ABSActiveSt, const real_T
   *rtu_InBus_get_BCS_info_get_VehSpd, const uint8_T
   *rtu_InBus_get_BCS_info_get_VehSpdVD, const real_T
@@ -50,6 +106,7 @@ void AION_auto_mode_request(const Control_request
   *rtu_InBus_get_VCU_info_get_AccElecECFail, const uint32_T
   *rtu_InBus_get_VCU_info_get_VehWheelTorqMax, const uint8_T
   *rtu_InBus_get_VCU_info_get_BrkPedalSt, const uint32_T
+  *rtu_InBus_get_VCU_info_get_ACCButtInfo, const uint32_T
   *rtu_InBus_get_SCU_info_get_LatAutoCheckReport, const Control_status
   *rtu_InBus_get_SCU_info_get_LatCtrlMode, const uint32_T
   *rtu_InBus_get_SCU_info_get_LatQuitReport, const uint32_T
@@ -105,8 +162,14 @@ void AION_auto_mode_request(const Control_request
   *rty_OutBus_set_ADCU_info_set_BeamReq, Enable_request
   *rty_OutBus_set_ADCU_info_set_BodyCtrlReq, Active_request
   *rty_OutBus_set_ADCU_info_set_HornRingReq, Light_request
-  *rty_OutBus_set_ADCU_info_set_TurnLightReq, uint8_T
-  *rty_OutBus_get_BCS_info_get_ABSActiveSt, real_T
+  *rty_OutBus_set_ADCU_info_set_TurnLightReq, real_T
+  *rty_OutBus_set_SPK_info_set_Stx, real_T
+  *rty_OutBus_set_SPK_info_set_FunctionCode, real_T
+  *rty_OutBus_set_SPK_info_set_SoundSourceCode, real_T
+  *rty_OutBus_set_SPK_info_set_VolumeCode, real_T
+  *rty_OutBus_set_SPK_info_set_Parameter, real_T
+  *rty_OutBus_set_SPK_info_set_Chk, real_T *rty_OutBus_set_SPK_info_set_Etx,
+  uint8_T *rty_OutBus_get_BCS_info_get_ABSActiveSt, real_T
   *rty_OutBus_get_BCS_info_get_VehSpd, uint8_T
   *rty_OutBus_get_BCS_info_get_VehSpdVD, real_T
   *rty_OutBus_get_BCS_info_get_YawRate, real_T
@@ -123,6 +186,7 @@ void AION_auto_mode_request(const Control_request
   *rty_OutBus_get_VCU_info_get_AccElecECFail, uint32_T
   *rty_OutBus_get_VCU_info_get_VehWheelTorqMax, uint8_T
   *rty_OutBus_get_VCU_info_get_BrkPedalSt, uint32_T
+  *rty_OutBus_get_VCU_info_get_ACCButtInfo, uint32_T
   *rty_OutBus_get_SCU_info_get_LatAutoCheckReport, Control_status
   *rty_OutBus_get_SCU_info_get_LatCtrlMode, uint32_T
   *rty_OutBus_get_SCU_info_get_LatQuitReport, uint32_T
@@ -159,79 +223,93 @@ void AION_auto_mode_request(const Control_request
   *rty_OutBus_get_IMU_info_get_AccelerationZ, real_T
   *rty_OutBus_get_IMU_info_get_Latitude, real_T
   *rty_OutBus_get_IMU_info_get_Longitude, real_T
-  *rty_OutBus_get_IMU_info_get_Altitude, B_AION_auto_mode_request_c_T *localB)
+  *rty_OutBus_get_IMU_info_get_Altitude, B_AION_auto_mode_request_c_T *localB,
+  DW_AION_auto_mode_request_f_T *localDW)
 {
-  /* MATLAB Function: '<Root>/Lateral_control_status_judge' */
-  /* MATLAB Function 'Lateral_control_status_judge': '<S1>:1' */
-  if (*rtu_InBus_set_lateral_control_info_set_LatCtrlReq == Auto) {
-    /* '<S1>:1:10' */
-    /* '<S1>:1:12' */
-    switch (*rtu_InBus_get_SCU_info_get_LatCtrlMode) {
-     case QuitStatus:
-      /* '<S1>:1:14' */
-      localB->lateral_control_req = Manual;
-      break;
+  real_T tmp;
+  boolean_T guard1 = false;
+  boolean_T sf_internal_predicateOutput;
 
-     case ManualStatus:
-      /* '<S1>:1:16' */
-      localB->lateral_control_req = Auto;
-      break;
+  /* S-Function (sfix_bitop): '<Root>/Bitwise AND' */
+  localB->BitwiseAND = *rtu_InBus_get_VCU_info_get_ACCButtInfo &
+    AION_auto_mode_request_P.BitwiseAND_BitMask;
 
-     case AutoStatus:
-      /* '<S1>:1:18' */
-      localB->lateral_control_req = Auto;
-      break;
+  /* Chart: '<Root>/Chart' */
+  /* Gateway: Chart */
+  /* During: Chart */
+  if (localDW->is_active_c3_AION_auto_mode_request == 0U) {
+    /* Entry: Chart */
+    localDW->is_active_c3_AION_auto_mode_request = 1U;
 
-     default:
-      /* '<S1>:1:20' */
-      localB->lateral_control_req = Manual;
-      break;
+    /* Entry Internal: Chart */
+    /* Transition: '<S1>:17' */
+    localDW->is_c3_AION_auto_mode_request = AION_auto_mode_request_IN_Name1;
+
+    /* Entry 'Name1': '<S1>:16' */
+    localB->LatCtrlReq = 0.0;
+  } else if (localDW->is_c3_AION_auto_mode_request ==
+             AION_auto_mode_request_IN_Name) {
+    /* During 'Name': '<S1>:3' */
+    guard1 = false;
+    if (localB->BitwiseAND == 0U) {
+      /* Transition: '<S1>:7' */
+      localB->QlightChannel_f = 2U;
+      guard1 = true;
+    } else {
+      sf_internal_predicateOutput = ((static_cast<int32_T>
+        (*rtu_InBus_get_SCU_info_get_LatCtrlMode) == 1) || (static_cast<int32_T>
+        (*rtu_InBus_get_SCU_info_get_LatCtrlMode) == 3));
+      if (sf_internal_predicateOutput) {
+        /* Transition: '<S1>:5' */
+        localB->QlightChannel_f = 3U;
+        guard1 = true;
+      } else {
+        localB->LatCtrlReq = 1.0;
+        localB->QlightChannel_f = 0U;
+      }
+    }
+
+    if (guard1) {
+      localDW->is_c3_AION_auto_mode_request = AION_auto_mode_request_IN_Name1;
+
+      /* Entry 'Name1': '<S1>:16' */
+      localB->LatCtrlReq = 0.0;
     }
   } else {
-    /* '<S1>:1:23' */
-    localB->lateral_control_req = Manual;
-  }
+    /* During 'Name1': '<S1>:16' */
+    sf_internal_predicateOutput = ((static_cast<int32_T>
+      (*rtu_InBus_get_SCU_info_get_LatCtrlMode) == 0) && (localB->BitwiseAND ==
+      1U));
+    if (sf_internal_predicateOutput) {
+      /* Transition: '<S1>:6' */
+      localB->QlightChannel_f = 1U;
+      localDW->is_c3_AION_auto_mode_request = AION_auto_mode_request_IN_Name;
 
-  /* End of MATLAB Function: '<Root>/Lateral_control_status_judge' */
-  /* MATLAB Function: '<Root>/Longitudinal_control_status_judge' */
-  /* MATLAB Function 'Longitudinal_control_status_judge': '<S2>:1' */
-  if (*rtu_InBus_set_longitudinal_control_info_set_LngCtrlReq == Auto) {
-    /* '<S2>:1:11' */
-    /* '<S2>:1:13' */
-    switch (*rtu_InBus_get_SCU_info_get_LngCtrlMode) {
-     case QuitStatus:
-      /* '<S2>:1:15' */
-      localB->longitudinal_control_req = Manual;
-      break;
-
-     case ManualStatus:
-      /* '<S2>:1:17' */
-      localB->longitudinal_control_req = Auto;
-      break;
-
-     case AutoStatus:
-      /* '<S2>:1:19' */
-      localB->longitudinal_control_req = Auto;
-      break;
-
-     default:
-      /* '<S2>:1:21' */
-      localB->longitudinal_control_req = Manual;
-      break;
+      /* Entry 'Name': '<S1>:3' */
+      localB->LatCtrlReq = 1.0;
+    } else {
+      localB->LatCtrlReq = 0.0;
+      localB->QlightChannel_f = 0U;
     }
-  } else {
-    /* '<S2>:1:24' */
-    localB->longitudinal_control_req = Manual;
   }
 
-  /* End of MATLAB Function: '<Root>/Longitudinal_control_status_judge' */
-  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
-  *rty_OutBus_set_lateral_control_info_set_LatCtrlReq =
-    localB->lateral_control_req;
+  /* End of Chart: '<Root>/Chart' */
+
+  /* DataTypeConversion: '<Root>/Data Type Conversion4' */
+  localB->QlightChannel = localB->QlightChannel_f;
+
+  /* Lookup_n-D: '<Root>/SPK_Chk' incorporates:
+   *  DataTypeConversion: '<Root>/Data Type Conversion4'
+   */
+  localB->SPK_Chk = look1_binlxpw(localB->QlightChannel,
+    AION_auto_mode_request_P.SPK_Chk_bp01Data,
+    AION_auto_mode_request_P.SPK_Chk_tableData, 4U);
 
   /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
-  *rty_OutBus_set_longitudinal_control_info_set_LngCtrlReq =
-    localB->longitudinal_control_req;
+  *rty_OutBus_set_SPK_info_set_SoundSourceCode = localB->QlightChannel;
+
+  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
+  *rty_OutBus_set_SPK_info_set_Chk = localB->SPK_Chk;
 
   /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
   *rty_OutBus_set_ADCU_info_set_MsgCounter1 =
@@ -269,12 +347,29 @@ void AION_auto_mode_request(const Control_request
     *rtu_InBus_set_ADCU_info_set_TurnLightReq;
 
   /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
-  *rty_OutBus_get_BCS_info_get_ABSActiveSt =
-    *rtu_InBus_get_BCS_info_get_ABSActiveSt;
+  *rty_OutBus_set_SPK_info_set_Stx = *rtu_InBus_set_SPK_info_set_Stx;
 
   /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
   *rty_OutBus_set_lateral_control_info_set_SteerAngReq =
     *rtu_InBus_set_lateral_control_info_set_SteerAngReq;
+
+  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
+  *rty_OutBus_set_SPK_info_set_FunctionCode =
+    *rtu_InBus_set_SPK_info_set_FunctionCode;
+
+  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
+  *rty_OutBus_set_SPK_info_set_VolumeCode =
+    *rtu_InBus_set_SPK_info_set_VolumeCode;
+
+  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
+  *rty_OutBus_set_SPK_info_set_Parameter = *rtu_InBus_set_SPK_info_set_Parameter;
+
+  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
+  *rty_OutBus_set_SPK_info_set_Etx = *rtu_InBus_set_SPK_info_set_Etx;
+
+  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
+  *rty_OutBus_get_BCS_info_get_ABSActiveSt =
+    *rtu_InBus_get_BCS_info_get_ABSActiveSt;
 
   /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
   *rty_OutBus_get_BCS_info_get_VehSpd = *rtu_InBus_get_BCS_info_get_VehSpd;
@@ -284,6 +379,10 @@ void AION_auto_mode_request(const Control_request
 
   /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
   *rty_OutBus_get_BCS_info_get_YawRate = *rtu_InBus_get_BCS_info_get_YawRate;
+
+  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
+  *rty_OutBus_set_lateral_control_info_set_SteerWhlTorqReq =
+    *rtu_InBus_set_lateral_control_info_set_SteerWhlTorqReq;
 
   /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
   *rty_OutBus_get_BCS_info_get_ActVehLaltrlAccel =
@@ -311,10 +410,6 @@ void AION_auto_mode_request(const Control_request
   *rty_OutBus_get_VCU_info_get_VehRng = *rtu_InBus_get_VCU_info_get_VehRng;
 
   /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
-  *rty_OutBus_set_lateral_control_info_set_SteerWhlTorqReq =
-    *rtu_InBus_set_lateral_control_info_set_SteerWhlTorqReq;
-
-  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
   *rty_OutBus_get_VCU_info_get_CrntGearLvl =
     *rtu_InBus_get_VCU_info_get_CrntGearLvl;
 
@@ -339,6 +434,10 @@ void AION_auto_mode_request(const Control_request
     *rtu_InBus_get_VCU_info_get_BrkPedalSt;
 
   /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
+  *rty_OutBus_get_VCU_info_get_ACCButtInfo =
+    *rtu_InBus_get_VCU_info_get_ACCButtInfo;
+
+  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
   *rty_OutBus_get_SCU_info_get_LatAutoCheckReport =
     *rtu_InBus_get_SCU_info_get_LatAutoCheckReport;
 
@@ -361,6 +460,10 @@ void AION_auto_mode_request(const Control_request
   /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
   *rty_OutBus_get_SCU_info_get_LngQuitReport =
     *rtu_InBus_get_SCU_info_get_LngQuitReport;
+
+  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
+  *rty_OutBus_set_longitudinal_control_info_set_AutoTrqWhlReq =
+    *rtu_InBus_set_longitudinal_control_info_set_AutoTrqWhlReq;
 
   /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
   *rty_OutBus_get_SCU_info_get_StrngWhlIntv =
@@ -394,16 +497,16 @@ void AION_auto_mode_request(const Control_request
     *rtu_InBus_get_EPS_info_get_SteeringAngleVD;
 
   /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
-  *rty_OutBus_set_longitudinal_control_info_set_AutoTrqWhlReq =
-    *rtu_InBus_set_longitudinal_control_info_set_AutoTrqWhlReq;
-
-  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
   *rty_OutBus_get_EPS_info_get_StrngWhlTorq =
     *rtu_InBus_get_EPS_info_get_StrngWhlTorq;
 
   /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
   *rty_OutBus_get_BCM_info_get_CtrlAvailable =
     *rtu_InBus_get_BCM_info_get_CtrlAvailable;
+
+  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
+  *rty_OutBus_set_longitudinal_control_info_set_BrakeReq =
+    *rtu_InBus_set_longitudinal_control_info_set_BrakeReq;
 
   /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
   *rty_OutBus_get_BCM_info_get_HazardLampSt =
@@ -434,14 +537,14 @@ void AION_auto_mode_request(const Control_request
   *rty_OutBus_get_IMU_info_get_GPSWeek = *rtu_InBus_get_IMU_info_get_GPSWeek;
 
   /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
-  *rty_OutBus_set_longitudinal_control_info_set_BrakeReq =
-    *rtu_InBus_set_longitudinal_control_info_set_BrakeReq;
-
-  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
   *rty_OutBus_get_IMU_info_get_GPSTime = *rtu_InBus_get_IMU_info_get_GPSTime;
 
   /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
   *rty_OutBus_get_IMU_info_get_Heading = *rtu_InBus_get_IMU_info_get_Heading;
+
+  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
+  *rty_OutBus_set_longitudinal_control_info_set_GearLvlReq =
+    *rtu_InBus_set_longitudinal_control_info_set_GearLvlReq;
 
   /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
   *rty_OutBus_get_IMU_info_get_Pitch = *rtu_InBus_get_IMU_info_get_Pitch;
@@ -474,15 +577,15 @@ void AION_auto_mode_request(const Control_request
     *rtu_InBus_get_IMU_info_get_AccelerationY;
 
   /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
-  *rty_OutBus_set_longitudinal_control_info_set_GearLvlReq =
-    *rtu_InBus_set_longitudinal_control_info_set_GearLvlReq;
-
-  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
   *rty_OutBus_get_IMU_info_get_AccelerationZ =
     *rtu_InBus_get_IMU_info_get_AccelerationZ;
 
   /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
   *rty_OutBus_get_IMU_info_get_Latitude = *rtu_InBus_get_IMU_info_get_Latitude;
+
+  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
+  *rty_OutBus_set_longitudinal_control_info_set_GearLvlReqVD =
+    *rtu_InBus_set_longitudinal_control_info_set_GearLvlReqVD;
 
   /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
   *rty_OutBus_get_IMU_info_get_Longitude = *rtu_InBus_get_IMU_info_get_Longitude;
@@ -491,12 +594,100 @@ void AION_auto_mode_request(const Control_request
   *rty_OutBus_get_IMU_info_get_Altitude = *rtu_InBus_get_IMU_info_get_Altitude;
 
   /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
-  *rty_OutBus_set_longitudinal_control_info_set_GearLvlReqVD =
-    *rtu_InBus_set_longitudinal_control_info_set_GearLvlReqVD;
-
-  /* SignalConversion generated from: '<Root>/OutBus_Outport_1' */
   *rty_OutBus_set_ADCU_info_set_Checksum1 =
     *rtu_InBus_set_ADCU_info_set_Checksum1;
+
+  /* Chart: '<Root>/Chart2' */
+  /* Gateway: Chart2 */
+  /* During: Chart2 */
+  if (localDW->is_active_c2_AION_auto_mode_request == 0U) {
+    /* Entry: Chart2 */
+    localDW->is_active_c2_AION_auto_mode_request = 1U;
+
+    /* Entry Internal: Chart2 */
+    /* Transition: '<S2>:1' */
+    localDW->is_c2_AION_auto_mode_request = AION_auto_mode_request_IN_Name1;
+
+    /* Entry 'Name1': '<S2>:3' */
+    localB->LngCtrlReq = 0.0;
+  } else if (localDW->is_c2_AION_auto_mode_request ==
+             AION_auto_mode_request_IN_Name) {
+    /* During 'Name': '<S2>:2' */
+    guard1 = false;
+    if (localB->BitwiseAND == 0U) {
+      /* Transition: '<S2>:6' */
+      guard1 = true;
+    } else {
+      sf_internal_predicateOutput = ((static_cast<int32_T>
+        (*rtu_InBus_get_SCU_info_get_LngCtrlMode) == 1) || (static_cast<int32_T>
+        (*rtu_InBus_get_SCU_info_get_LngCtrlMode) == 3));
+      if (sf_internal_predicateOutput) {
+        /* Transition: '<S2>:5' */
+        guard1 = true;
+      } else {
+        localB->LngCtrlReq = 1.0;
+      }
+    }
+
+    if (guard1) {
+      localDW->is_c2_AION_auto_mode_request = AION_auto_mode_request_IN_Name1;
+
+      /* Entry 'Name1': '<S2>:3' */
+      localB->LngCtrlReq = 0.0;
+    }
+  } else {
+    /* During 'Name1': '<S2>:3' */
+    sf_internal_predicateOutput = ((static_cast<int32_T>
+      (*rtu_InBus_get_SCU_info_get_LngCtrlMode) == 0) && (localB->BitwiseAND ==
+      1U));
+    if (sf_internal_predicateOutput) {
+      /* Transition: '<S2>:4' */
+      localDW->is_c2_AION_auto_mode_request = AION_auto_mode_request_IN_Name;
+
+      /* Entry 'Name': '<S2>:2' */
+      localB->LngCtrlReq = 1.0;
+    } else {
+      localB->LngCtrlReq = 0.0;
+    }
+  }
+
+  /* End of Chart: '<Root>/Chart2' */
+
+  /* DataTypeConversion: '<Root>/Data Type Conversion2' */
+  tmp = std::floor(localB->LatCtrlReq);
+  if (rtIsNaN(tmp) || rtIsInf(tmp)) {
+    tmp = 0.0;
+  } else {
+    tmp = std::fmod(tmp, 256.0);
+  }
+
+  /* DataTypeConversion: '<Root>/Data Type Conversion2' */
+  localB->DataTypeConversion2 = static_cast<uint8_T>(tmp < 0.0 ?
+    static_cast<int32_T>(static_cast<uint8_T>(-static_cast<int8_T>
+    (static_cast<uint8_T>(-tmp)))) : static_cast<int32_T>(static_cast<uint8_T>
+    (tmp)));
+
+  /* DataTypeConversion: '<Root>/Data Type Conversion1' */
+  *rty_OutBus_set_lateral_control_info_set_LatCtrlReq =
+    static_cast<Control_request>(localB->DataTypeConversion2);
+
+  /* DataTypeConversion: '<Root>/Data Type Conversion10' */
+  tmp = std::floor(localB->LngCtrlReq);
+  if (rtIsNaN(tmp) || rtIsInf(tmp)) {
+    tmp = 0.0;
+  } else {
+    tmp = std::fmod(tmp, 256.0);
+  }
+
+  /* DataTypeConversion: '<Root>/Data Type Conversion10' */
+  localB->DataTypeConversion10 = static_cast<uint8_T>(tmp < 0.0 ?
+    static_cast<int32_T>(static_cast<uint8_T>(-static_cast<int8_T>
+    (static_cast<uint8_T>(-tmp)))) : static_cast<int32_T>(static_cast<uint8_T>
+    (tmp)));
+
+  /* DataTypeConversion: '<Root>/Data Type Conversion9' */
+  *rty_OutBus_set_longitudinal_control_info_set_LngCtrlReq =
+    static_cast<Control_request>(localB->DataTypeConversion10);
 }
 
 /* Model initialize function */
@@ -506,13 +697,21 @@ void AION_auto_mode_request_initialize(const char_T **rt_errorStatus,
 {
   /* Registration code */
 
+  /* initialize non-finites */
+  rt_InitInfAndNaN(sizeof(real_T));
+
   /* initialize error status */
   rtmSetErrorStatusPointer(AION_auto_mode_request_M, rt_errorStatus);
 
   /* block I/O */
+  (void) std::memset((static_cast<void *>(localB)), 0,
+                     sizeof(B_AION_auto_mode_request_c_T));
+
   {
-    localB->longitudinal_control_req = Manual;
-    localB->lateral_control_req = Manual;
+    localB->QlightChannel = 0.0;
+    localB->SPK_Chk = 0.0;
+    localB->LngCtrlReq = 0.0;
+    localB->LatCtrlReq = 0.0;
   }
 
   /* states (dwork) */

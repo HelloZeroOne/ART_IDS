@@ -7,11 +7,48 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
-    NumChartData   0 \
+    NumChartData   5 \
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
       IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "sfEvent"\
+      Description  "ActiveChartEvent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_active_c3_AION_auto_mode_request"\
+      Description  "StateIsActive"\
+      SFName       "is_active_c3_AION_auto_mode_request"\
+      Path         "is_active_c3_AION_auto_mode_request"\
+      SrcLocation  ""\
+      IsTestPoint  1\
+    }\
+    ChartData {\
+      Name         "is_c3_AION_auto_mode_request"\
+      Description  "StateActiveChild"\
+      SFName       "is_c3_AION_auto_mode_request"\
+      Path         "is_c3_AION_auto_mode_request"\
+      SrcLocation  ""\
+      IsTestPoint  1\
+    }\
+    ChartData {\
+      Name         "flag"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "flag"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "HoldFlag"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "HoldFlag"\
+      SrcLocation  ""\
     }\
   }
   %return ChartDataElements

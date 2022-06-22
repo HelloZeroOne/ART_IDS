@@ -88,8 +88,9 @@ extern void AION_signal_transfer(const real_T
   real_T *rtu_ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_14_VCU_VehRdySt,
   const real_T
   *rtu_ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_15_VCU_CrntGearLvl, const
-  real_T *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_GPSWeek, const real_T
-  *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_GPSTime, const real_T
+  real_T *rtu_ADCU_InputPort_InputCAN_bus_SCU2ADCU_bus_SCU_17_VCU_ACCButtInfo,
+  const real_T *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_GPSWeek, const
+  real_T *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_GPSTime, const real_T
   *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Heading, const real_T
   *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Pitch, const real_T
   *rtu_ADCU_InputPort_InputCAN_bus_IMU2ADCU_bus_Roll, const real_T
@@ -122,7 +123,14 @@ extern void AION_signal_transfer(const real_T
   *rtu_ADCU_InternalOutputPort_set_ADCU_info_set_BodyCtrlReq, const
   Active_request *rtu_ADCU_InternalOutputPort_set_ADCU_info_set_HornRingReq,
   const Light_request
-  *rtu_ADCU_InternalOutputPort_set_ADCU_info_set_TurnLightReq, Control_request
+  *rtu_ADCU_InternalOutputPort_set_ADCU_info_set_TurnLightReq, const real_T
+  *rtu_ADCU_InternalOutputPort_set_SPK_info_set_Stx, const real_T
+  *rtu_ADCU_InternalOutputPort_set_SPK_info_set_FunctionCode, const real_T
+  *rtu_ADCU_InternalOutputPort_set_SPK_info_set_SoundSourceCode, const real_T
+  *rtu_ADCU_InternalOutputPort_set_SPK_info_set_VolumeCode, const real_T
+  *rtu_ADCU_InternalOutputPort_set_SPK_info_set_Parameter, const real_T
+  *rtu_ADCU_InternalOutputPort_set_SPK_info_set_Chk, const real_T
+  *rtu_ADCU_InternalOutputPort_set_SPK_info_set_Etx, Control_request
   *rty_ADCU_InternalInputPort_set_lateral_control_info_set_LatCtrlReq, real_T
   *rty_ADCU_InternalInputPort_set_lateral_control_info_set_SteerAngReq, real_T
   *rty_ADCU_InternalInputPort_set_lateral_control_info_set_SteerWhlTorqReq,
@@ -144,7 +152,14 @@ extern void AION_signal_transfer(const real_T
   *rty_ADCU_InternalInputPort_set_ADCU_info_set_BeamReq, Enable_request
   *rty_ADCU_InternalInputPort_set_ADCU_info_set_BodyCtrlReq, Active_request
   *rty_ADCU_InternalInputPort_set_ADCU_info_set_HornRingReq, Light_request
-  *rty_ADCU_InternalInputPort_set_ADCU_info_set_TurnLightReq, uint8_T
+  *rty_ADCU_InternalInputPort_set_ADCU_info_set_TurnLightReq, real_T
+  *rty_ADCU_InternalInputPort_set_SPK_info_set_Stx, real_T
+  *rty_ADCU_InternalInputPort_set_SPK_info_set_FunctionCode, real_T
+  *rty_ADCU_InternalInputPort_set_SPK_info_set_SoundSourceCode, real_T
+  *rty_ADCU_InternalInputPort_set_SPK_info_set_VolumeCode, real_T
+  *rty_ADCU_InternalInputPort_set_SPK_info_set_Parameter, real_T
+  *rty_ADCU_InternalInputPort_set_SPK_info_set_Chk, real_T
+  *rty_ADCU_InternalInputPort_set_SPK_info_set_Etx, uint8_T
   *rty_ADCU_InternalInputPort_get_BCS_info_get_ABSActiveSt, real_T
   *rty_ADCU_InternalInputPort_get_BCS_info_get_VehSpd, uint8_T
   *rty_ADCU_InternalInputPort_get_BCS_info_get_VehSpdVD, real_T
@@ -162,6 +177,7 @@ extern void AION_signal_transfer(const real_T
   *rty_ADCU_InternalInputPort_get_VCU_info_get_AccElecECFail, uint32_T
   *rty_ADCU_InternalInputPort_get_VCU_info_get_VehWheelTorqMax, uint8_T
   *rty_ADCU_InternalInputPort_get_VCU_info_get_BrkPedalSt, uint32_T
+  *rty_ADCU_InternalInputPort_get_VCU_info_get_ACCButtInfo, uint32_T
   *rty_ADCU_InternalInputPort_get_SCU_info_get_LatAutoCheckReport,
   Control_status *rty_ADCU_InternalInputPort_get_SCU_info_get_LatCtrlMode,
   uint32_T *rty_ADCU_InternalInputPort_get_SCU_info_get_LatQuitReport, uint32_T *
@@ -213,6 +229,13 @@ extern void AION_signal_transfer(const real_T
   real_T *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_3_ADCU_BodyCtrlReq,
   real_T *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_3_ADCU_HornRingReq,
   real_T *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SCU_bus_ADCU_3_ADCU_TurnLightReq,
+  real_T *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SPK_bus_ADCU_Stx, real_T
+  *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SPK_bus_ADCU_FunctionCode, real_T
+  *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SPK_bus_ADCU_SoundSourceCode, real_T
+  *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SPK_bus_ADCU_VolumeCode, real_T
+  *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SPK_bus_ADCU_Parameter, real_T
+  *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SPK_bus_ADCU_Chk, real_T
+  *rty_ADCU_OuputPort_OutputCAN_bus_ADCU2SPK_bus_ADCU_Etx,
   B_AION_signal_transfer_c_T *localB);
 
 /*-

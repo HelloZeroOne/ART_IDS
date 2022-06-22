@@ -16,6 +16,9 @@ struct AION_IDS_SPEEDGOAT_cal_type {
   CAN_DATATYPE RT2_InitialCondition; /* Computed Parameter: RT2_InitialCondition
                                       * Referenced by: '<S19>/RT2'
                                       */
+  CAN_DATATYPE RT_InitialCondition;   /* Computed Parameter: RT_InitialCondition
+                                       * Referenced by: '<S20>/RT'
+                                       */
   real_T IMU2ADCU_CAN_read_P1_Size[2];
                                 /* Computed Parameter: IMU2ADCU_CAN_read_P1_Size
                                  * Referenced by: '<S11>/IMU2ADCU_CAN_read'
@@ -603,9 +606,21 @@ struct AION_IDS_SPEEDGOAT_cal_type {
   real_T BrakeReq_test_InitialCondition;/* Expression: 0
                                          * Referenced by: synthesized block
                                          */
+  real_T SPK_Chk_tableData[5];         /* Expression: [76 77 78 79 72]
+                                        * Referenced by: '<S5>/SPK_Chk'
+                                        */
+  real_T SPK_Chk_bp01Data[5];          /* Expression: [0:4]
+                                        * Referenced by: '<S5>/SPK_Chk'
+                                        */
+  real_T SPK_Chk_InitialCondition;     /* Expression: 0
+                                        * Referenced by: synthesized block
+                                        */
   real_T TmpRTBAtAION_auto_mode_requestInport2_InitialCondition;/* Expression: 0
                                                                  * Referenced by: synthesized block
                                                                  */
+  real_T TmpRTBAtAION_auto_mode_requestInport21_InitialCondition;/* Expression: 0
+                                                                  * Referenced by: synthesized block
+                                                                  */
   real_T TmpRTBAtAION_auto_mode_requestInport3_InitialCondition;/* Expression: 0
                                                                  * Referenced by: synthesized block
                                                                  */
@@ -672,6 +687,36 @@ struct AION_IDS_SPEEDGOAT_cal_type {
   real_T get_YawRate_InitialCondition; /* Expression: 0
                                         * Referenced by: synthesized block
                                         */
+  real_T Constant9_Value;              /* Expression: 2
+                                        * Referenced by: '<S5>/Constant9'
+                                        */
+  real_T set_Etx_InitialCondition;     /* Expression: 0
+                                        * Referenced by: synthesized block
+                                        */
+  real_T Constant6_Value;              /* Expression: 81
+                                        * Referenced by: '<S5>/Constant6'
+                                        */
+  real_T set_FunctionCode_InitialCondition;/* Expression: 0
+                                            * Referenced by: synthesized block
+                                            */
+  real_T Constant8_Value;              /* Expression: 0
+                                        * Referenced by: '<S5>/Constant8'
+                                        */
+  real_T set_Parameter_InitialCondition;/* Expression: 0
+                                         * Referenced by: synthesized block
+                                         */
+  real_T Constant5_Value;              /* Expression: 1
+                                        * Referenced by: '<S5>/Constant5'
+                                        */
+  real_T set_Stx_InitialCondition;     /* Expression: 0
+                                        * Referenced by: synthesized block
+                                        */
+  real_T Constant7_Value;              /* Expression: 28
+                                        * Referenced by: '<S5>/Constant7'
+                                        */
+  real_T set_VolumeCode_InitialCondition;/* Expression: 0
+                                          * Referenced by: synthesized block
+                                          */
   real_T ADCU2SCU_Steer_Command_CAN_write_P1_Size[2];
                  /* Computed Parameter: ADCU2SCU_Steer_Command_CAN_write_P1_Size
                   * Referenced by: '<S19>/ADCU2SCU_Steer_Command_CAN_write'
@@ -722,25 +767,25 @@ struct AION_IDS_SPEEDGOAT_cal_type {
   real_T ADCU2SCU_Steer_Command_CAN_write_P7;/* Expression: isFDMod
                                               * Referenced by: '<S19>/ADCU2SCU_Steer_Command_CAN_write'
                                               */
-  real_T Constant6_Value;              /* Expression: 1
+  real_T Constant6_Value_e;            /* Expression: 1
                                         * Referenced by: '<S17>/Constant6'
                                         */
   real_T Constant11_Value;             /* Expression: 0
                                         * Referenced by: '<S17>/Constant11'
                                         */
-  real_T Constant5_Value;              /* Expression: 0
+  real_T Constant5_Value_g;            /* Expression: 0
                                         * Referenced by: '<S17>/Constant5'
                                         */
   real_T Constant_Value;               /* Expression: 0
                                         * Referenced by: '<S17>/Constant'
                                         */
-  real_T Constant7_Value;              /* Expression: 0
+  real_T Constant7_Value_e;            /* Expression: 0
                                         * Referenced by: '<S17>/Constant7'
                                         */
-  real_T Constant8_Value;              /* Expression: 0
+  real_T Constant8_Value_m;            /* Expression: 0
                                         * Referenced by: '<S17>/Constant8'
                                         */
-  real_T Constant9_Value;              /* Expression: 0
+  real_T Constant9_Value_f;            /* Expression: 0
                                         * Referenced by: '<S17>/Constant9'
                                         */
   real_T Constant10_Value;             /* Expression: 0
@@ -749,6 +794,56 @@ struct AION_IDS_SPEEDGOAT_cal_type {
   real_T Constant1_Value;              /* Expression: 23
                                         * Referenced by: '<S17>/Constant1'
                                         */
+  real_T ADCU2SPK_Brake_Command_CAN_write_P1_Size[2];
+                 /* Computed Parameter: ADCU2SPK_Brake_Command_CAN_write_P1_Size
+                  * Referenced by: '<S20>/ADCU2SPK_Brake_Command_CAN_write'
+                  */
+  real_T ADCU2SPK_Brake_Command_CAN_write_P1;/* Expression: id
+                                              * Referenced by: '<S20>/ADCU2SPK_Brake_Command_CAN_write'
+                                              */
+  real_T ADCU2SPK_Brake_Command_CAN_write_P2_Size[2];
+                 /* Computed Parameter: ADCU2SPK_Brake_Command_CAN_write_P2_Size
+                  * Referenced by: '<S20>/ADCU2SPK_Brake_Command_CAN_write'
+                  */
+  real_T ADCU2SPK_Brake_Command_CAN_write_P2;/* Expression: sampleTime
+                                              * Referenced by: '<S20>/ADCU2SPK_Brake_Command_CAN_write'
+                                              */
+  real_T ADCU2SPK_Brake_Command_CAN_write_P3_Size[2];
+                 /* Computed Parameter: ADCU2SPK_Brake_Command_CAN_write_P3_Size
+                  * Referenced by: '<S20>/ADCU2SPK_Brake_Command_CAN_write'
+                  */
+  real_T ADCU2SPK_Brake_Command_CAN_write_P3;/* Expression: messageType
+                                              * Referenced by: '<S20>/ADCU2SPK_Brake_Command_CAN_write'
+                                              */
+  real_T ADCU2SPK_Brake_Command_CAN_write_P4_Size[2];
+                 /* Computed Parameter: ADCU2SPK_Brake_Command_CAN_write_P4_Size
+                  * Referenced by: '<S20>/ADCU2SPK_Brake_Command_CAN_write'
+                  */
+  real_T ADCU2SPK_Brake_Command_CAN_write_P4;/* Expression: enaStatusPort
+                                              * Referenced by: '<S20>/ADCU2SPK_Brake_Command_CAN_write'
+                                              */
+  real_T ADCU2SPK_Brake_Command_CAN_write_P5_Size[2];
+                 /* Computed Parameter: ADCU2SPK_Brake_Command_CAN_write_P5_Size
+                  * Referenced by: '<S20>/ADCU2SPK_Brake_Command_CAN_write'
+                  */
+  real_T ADCU2SPK_Brake_Command_CAN_write_P5[5];
+                      /* Computed Parameter: ADCU2SPK_Brake_Command_CAN_write_P5
+                       * Referenced by: '<S20>/ADCU2SPK_Brake_Command_CAN_write'
+                       */
+  real_T ADCU2SPK_Brake_Command_CAN_write_P6_Size[2];
+                 /* Computed Parameter: ADCU2SPK_Brake_Command_CAN_write_P6_Size
+                  * Referenced by: '<S20>/ADCU2SPK_Brake_Command_CAN_write'
+                  */
+  real_T ADCU2SPK_Brake_Command_CAN_write_P6;/* Expression: ptIdx
+                                              * Referenced by: '<S20>/ADCU2SPK_Brake_Command_CAN_write'
+                                              */
+  real_T ADCU2SPK_Brake_Command_CAN_write_P7_Size[2];
+                 /* Computed Parameter: ADCU2SPK_Brake_Command_CAN_write_P7_Size
+                  * Referenced by: '<S20>/ADCU2SPK_Brake_Command_CAN_write'
+                  */
+  real_T ADCU2SPK_Brake_Command_CAN_write_P7;/* Expression: isFDMod
+                                              * Referenced by: '<S20>/ADCU2SPK_Brake_Command_CAN_write'
+                                              */
   Active_request TmpRTBAtAION_auto_mode_requestInport17_InitialCondition;
   /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport17_InitialCondition
    * Referenced by: synthesized block
@@ -783,14 +878,6 @@ struct AION_IDS_SPEEDGOAT_cal_type {
                         */
   Beam_request TmpRTBAtAION_auto_mode_requestInport15_InitialCondition;
   /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport15_InitialCondition
-   * Referenced by: synthesized block
-   */
-  Control_request TmpRTBAtAION_auto_mode_requestInport1_InitialCondition;
-  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport1_InitialCondition
-   * Referenced by: synthesized block
-   */
-  Control_request TmpRTBAtAION_auto_mode_requestInport4_InitialCondition;
-  /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport4_InitialCondition
    * Referenced by: synthesized block
    */
   Control_status get_LatCtrlMode_InitialCondition;
@@ -833,6 +920,10 @@ struct AION_IDS_SPEEDGOAT_cal_type {
   /* Computed Parameter: TmpRTBAtAION_auto_mode_requestInport8_InitialCondition
    * Referenced by: synthesized block
    */
+  uint32_T get_ACCButtInfo_InitialCondition;
+                         /* Computed Parameter: get_ACCButtInfo_InitialCondition
+                          * Referenced by: synthesized block
+                          */
   uint32_T get_ActVehWheelTorq_InitialCondition;
                      /* Computed Parameter: get_ActVehWheelTorq_InitialCondition
                       * Referenced by: synthesized block

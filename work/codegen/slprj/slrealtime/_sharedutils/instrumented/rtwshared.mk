@@ -2,7 +2,7 @@
 ## Makefile generated for component 'rtwshared'. 
 ## 
 ## Makefile     : rtwshared.mk
-## Generated on : Fri Jun 10 16:05:08 2022
+## Generated on : Thu Jun 16 14:11:07 2022
 ## Final product: ./rtwshared.a
 ## Product type : static library
 ## 
@@ -149,7 +149,7 @@ DEFINES = $(DEFINES_) $(DEFINES_BUILD_ARGS) $(DEFINES_CUSTOM) $(DEFINES_STANDARD
 ## SOURCE FILES
 ###########################################################################
 
-SRCS = $(START_DIR)/slprj/slrealtime/_sharedutils/Vector_projection_get_closest_point_m_IUTniha0.cpp $(START_DIR)/slprj/slrealtime/_sharedutils/mod_2xj8za9I.cpp $(START_DIR)/slprj/slrealtime/_sharedutils/rtGetInf.cpp $(START_DIR)/slprj/slrealtime/_sharedutils/rtGetNaN.cpp $(START_DIR)/slprj/slrealtime/_sharedutils/rt_nonfinite.cpp
+SRCS = $(START_DIR)/slprj/slrealtime/_sharedutils/Vector_projection_get_closest_point_m_IUTniha0.cpp $(START_DIR)/slprj/slrealtime/_sharedutils/mod_2xj8za9I.cpp $(START_DIR)/slprj/slrealtime/_sharedutils/rtGetInf.cpp $(START_DIR)/slprj/slrealtime/_sharedutils/rtGetNaN.cpp $(START_DIR)/slprj/slrealtime/_sharedutils/rt_nonfinite.cpp $(START_DIR)/slprj/slrealtime/_sharedutils/look1_binlxpw.cpp
 
 ALL_SRCS = $(SRCS)
 
@@ -157,7 +157,7 @@ ALL_SRCS = $(SRCS)
 ## OBJECTS
 ###########################################################################
 
-OBJS = Vector_projection_get_closest_point_m_IUTniha0.o mod_2xj8za9I.o rtGetInf.o rtGetNaN.o rt_nonfinite.o
+OBJS = Vector_projection_get_closest_point_m_IUTniha0.o mod_2xj8za9I.o rtGetInf.o rtGetNaN.o rt_nonfinite.o look1_binlxpw.o
 
 ALL_OBJS = $(OBJS)
 
@@ -315,6 +315,10 @@ rtGetNaN.o : $(START_DIR)/slprj/slrealtime/_sharedutils/rtGetNaN.cpp
 
 
 rt_nonfinite.o : $(START_DIR)/slprj/slrealtime/_sharedutils/rt_nonfinite.cpp
+	$(CPP) $(CPPFLAGS) -o $@ $<
+
+
+look1_binlxpw.o : $(START_DIR)/slprj/slrealtime/_sharedutils/look1_binlxpw.cpp
 	$(CPP) $(CPPFLAGS) -o $@ $<
 
 
